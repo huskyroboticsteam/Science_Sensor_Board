@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.249ms
+Loading plugins phase: Elapsed time ==> 0s.191ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -d CY8C4247AZI-M485 -s C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -d CY8C4247AZI-M485 -s C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.518ms
+Elaboration phase: Elapsed time ==> 3s.548ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.140ms
+HDL generation phase: Elapsed time ==> 0s.124ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -24,24 +24,24 @@ HDL generation phase: Elapsed time ==> 0s.140ms
 
 ======================================================================
 Compiling:  gas sensor.v
-Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 gas sensor.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 gas sensor.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  gas sensor.v
-Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 gas sensor.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 gas sensor.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  gas sensor.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Jan 28 18:02:55 2025
+Wed Feb 05 18:40:00 2025
 
 
 ======================================================================
@@ -51,31 +51,31 @@ Options  :    -yv2 -q10 gas sensor.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Jan 28 18:02:55 2025
+Wed Feb 05 18:40:00 2025
 
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 
 vpp:  No errors.
 
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'gas sensor.ctl'.
 
 vlogfe:  No errors.
@@ -84,31 +84,31 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  gas sensor.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Jan 28 18:02:55 2025
+Wed Feb 05 18:40:00 2025
 
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.ctl'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 
 tovif:  No errors.
 
@@ -116,32 +116,32 @@ tovif:  No errors.
 ======================================================================
 Compiling:  gas sensor.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -dcpsoc3 -verilog gas sensor.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Jan 28 18:02:55 2025
+Wed Feb 05 18:40:01 2025
 
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.ctl'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\codegentemp\gas sensor.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -389,18 +389,18 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp
-Warp Program   : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj" -dcpsoc3 "gas sensor.v" -verilog
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj" -dcpsoc3 "gas sensor.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.050ms
+Warp synthesis phase: Elapsed time ==> 0s.968ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 28 January 2025 18:02:56
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -d CY8C4247AZI-M485 gas sensor.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Wednesday, 05 February 2025 18:40:01
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\testing gas sensor\gas sensor.cydsn\gas sensor.cyprj -d CY8C4247AZI-M485 gas sensor.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.015ms
+Design parsing phase: Elapsed time ==> 0s.014ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1675,8 +1675,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    1 :    1 :    2 : 50.00 %
   8-bit IDAC                  :    1 :    1 :    2 : 50.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.156ms
-Tech Mapping phase: Elapsed time ==> 0s.187ms
+Technology Mapping: Elapsed time ==> 0s.096ms
+Tech Mapping phase: Elapsed time ==> 0s.126ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1735,15 +1735,15 @@ Input_Pin_1(0)                      : [IOP=(2)][IoId=(4)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.4383771s
+Elapsed time ==> 0.4843277s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 1s.194ms
+Analog Placement phase: Elapsed time ==> 1s.204ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0632249 secs
+Route success=True, Iterations=1 Elapsed=0.0465696 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.062ms
+Analog Routing phase: Elapsed time ==> 0s.046ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1996,12 +1996,12 @@ Mux Info {
     }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.046ms
+Analog Code Generation phase: Elapsed time ==> 0s.043ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.6 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2025,14 +2025,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.015ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.031ms
+Partitioning: Elapsed time ==> 0s.024ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3967,33 +3967,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connect
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.140ms
-Digital Placement phase: Elapsed time ==> 1s.109ms
+Digital component placer commit/Report: Elapsed time ==> 0s.070ms
+Digital Placement phase: Elapsed time ==> 1s.387ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
-"C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "gas sensor_r.vh2" --pcf-path "gas sensor.pco" --des-name "gas sensor" --dsf-path "gas sensor.dsf" --sdc-path "gas sensor.sdc" --lib-path "gas sensor_r.lib"
+"C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "gas sensor_r.vh2" --pcf-path "gas sensor.pco" --des-name "gas sensor" --dsf-path "gas sensor.dsf" --sdc-path "gas sensor.sdc" --lib-path "gas sensor_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.838ms
+Digital Routing phase: Elapsed time ==> 0s.970ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.265ms
+Bitstream Generation phase: Elapsed time ==> 0s.278ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.031ms
+Bitstream Verification phase: Elapsed time ==> 0s.041ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in gas sensor_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.484ms
+Static timing analysis phase: Elapsed time ==> 0s.523ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.234ms
+Design database save phase: Elapsed time ==> 0s.363ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.563ms
+cydsfit: Elapsed time ==> 5s.173ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.579ms
-API generation phase: Elapsed time ==> 6s.545ms
-Dependency generation phase: Elapsed time ==> 0s.031ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+Fitter phase: Elapsed time ==> 5s.173ms
+API generation phase: Elapsed time ==> 7s.991ms
+Dependency generation phase: Elapsed time ==> 0s.032ms
+Cleanup phase: Elapsed time ==> 0s.002ms
