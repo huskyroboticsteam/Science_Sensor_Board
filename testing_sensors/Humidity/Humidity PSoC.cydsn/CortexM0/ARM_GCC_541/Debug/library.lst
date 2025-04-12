@@ -1,0 +1,2926 @@
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"library.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.crc8,"ax",%progbits
+  20              		.align	2
+  21              		.code	16
+  22              		.thumb_func
+  23              		.type	crc8, %function
+  24              	crc8:
+  25              	.LFB34:
+  26              		.file 1 "library.c"
+   1:library.c     **** #include "project.h"
+   2:library.c     **** #include <math.h>
+   3:library.c     **** #include <library.h>
+   4:library.c     **** 
+   5:library.c     **** 
+   6:library.c     **** // CRC-8 calculation for SHT31 (Polynomial 0x31)
+   7:library.c     **** static uint8_t crc8(const uint8_t *data, int len) {
+  27              		.loc 1 7 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 30B5     		push	{r4, r5, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 5, -8
+  36              		.cfi_offset 14, -4
+  37 0002 0500     		movs	r5, r0
+  38              	.LVL1:
+  39              	.LBB2:
+   8:library.c     ****     const uint8_t POLYNOMIAL = 0x31;
+   9:library.c     ****     uint8_t crc = 0xFF;
+  10:library.c     **** 
+  11:library.c     ****     for (int j = 0; j < len; ++j) {
+  40              		.loc 1 11 0
+  41 0004 0024     		movs	r4, #0
+  42              	.LBE2:
+   9:library.c     **** 
+  43              		.loc 1 9 0
+  44 0006 FF20     		movs	r0, #255
+  45              	.LVL2:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 2
+
+
+  46              	.LBB4:
+  47              		.loc 1 11 0
+  48 0008 11E0     		b	.L2
+  49              	.LVL3:
+  50              	.L7:
+  12:library.c     ****         crc ^= data[j];
+  51              		.loc 1 12 0
+  52 000a 2B5D     		ldrb	r3, [r5, r4]
+  53 000c 5840     		eors	r0, r3
+  54              	.LVL4:
+  55              	.LBB3:
+  13:library.c     ****         for (int i = 0; i < 8; ++i) {
+  56              		.loc 1 13 0
+  57 000e 0023     		movs	r3, #0
+  58 0010 0AE0     		b	.L3
+  59              	.LVL5:
+  60              	.L6:
+  14:library.c     ****             crc = (crc & 0x80) ? (crc << 1) ^ POLYNOMIAL : (crc << 1);
+  61              		.loc 1 14 0
+  62 0012 42B2     		sxtb	r2, r0
+  63 0014 002A     		cmp	r2, #0
+  64 0016 04DA     		bge	.L4
+  65              		.loc 1 14 0 is_stmt 0 discriminator 1
+  66 0018 4000     		lsls	r0, r0, #1
+  67              	.LVL6:
+  68 001a 3122     		movs	r2, #49
+  69              	.LVL7:
+  70 001c 5040     		eors	r0, r2
+  71 001e C0B2     		uxtb	r0, r0
+  72 0020 01E0     		b	.L5
+  73              	.LVL8:
+  74              	.L4:
+  75              		.loc 1 14 0 discriminator 2
+  76 0022 4000     		lsls	r0, r0, #1
+  77              	.LVL9:
+  78 0024 C0B2     		uxtb	r0, r0
+  79              	.LVL10:
+  80              	.L5:
+  13:library.c     ****         for (int i = 0; i < 8; ++i) {
+  81              		.loc 1 13 0 is_stmt 1 discriminator 4
+  82 0026 0133     		adds	r3, r3, #1
+  83              	.LVL11:
+  84              	.L3:
+  13:library.c     ****         for (int i = 0; i < 8; ++i) {
+  85              		.loc 1 13 0 is_stmt 0 discriminator 2
+  86 0028 072B     		cmp	r3, #7
+  87 002a F2DD     		ble	.L6
+  88              	.LBE3:
+  11:library.c     ****         crc ^= data[j];
+  89              		.loc 1 11 0 is_stmt 1 discriminator 2
+  90 002c 0134     		adds	r4, r4, #1
+  91              	.LVL12:
+  92              	.L2:
+  11:library.c     ****         crc ^= data[j];
+  93              		.loc 1 11 0 is_stmt 0 discriminator 1
+  94 002e 8C42     		cmp	r4, r1
+  95 0030 EBDB     		blt	.L7
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 3
+
+
+  96              	.LBE4:
+  15:library.c     ****         }
+  16:library.c     ****     }
+  17:library.c     ****     return crc;
+  18:library.c     **** }
+  97              		.loc 1 18 0 is_stmt 1
+  98              		@ sp needed
+  99              	.LVL13:
+ 100              	.LVL14:
+ 101 0032 30BD     		pop	{r4, r5, pc}
+ 102              		.cfi_endproc
+ 103              	.LFE34:
+ 104              		.size	crc8, .-crc8
+ 105              		.section	.text.writeCommand,"ax",%progbits
+ 106              		.align	2
+ 107              		.code	16
+ 108              		.thumb_func
+ 109              		.type	writeCommand, %function
+ 110              	writeCommand:
+ 111              	.LFB35:
+  19:library.c     **** 
+  20:library.c     **** static bool writeCommand(uint16_t command) {
+ 112              		.loc 1 20 0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              	.LVL15:
+ 117 0000 10B5     		push	{r4, lr}
+ 118              		.cfi_def_cfa_offset 8
+ 119              		.cfi_offset 4, -8
+ 120              		.cfi_offset 14, -4
+ 121              	.LVL16:
+  21:library.c     ****     uint8_t cmd[2] = { command >> 8, command & 0xFF };
+  22:library.c     ****     
+  23:library.c     ****     uint8_t err = 0;
+  24:library.c     ****     
+  25:library.c     ****     I2C_I2CMasterClearStatus();
+ 122              		.loc 1 25 0
+ 123 0002 FFF7FEFF 		bl	I2C_I2CMasterClearStatus
+ 124              	.LVL17:
+  26:library.c     ****     
+  27:library.c     ****     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
+ 125              		.loc 1 27 0
+ 126 0006 1422     		movs	r2, #20
+ 127 0008 0021     		movs	r1, #0
+ 128 000a 4420     		movs	r0, #68
+ 129 000c FFF7FEFF 		bl	I2C_I2CMasterSendStart
+ 130              	.LVL18:
+ 131 0010 C0B2     		uxtb	r0, r0
+ 132              	.LVL19:
+  28:library.c     ****     if (err)
+ 133              		.loc 1 28 0
+ 134 0012 0028     		cmp	r0, #0
+ 135 0014 01D0     		beq	.L10
+  29:library.c     ****         return false;
+ 136              		.loc 1 29 0
+ 137 0016 0020     		movs	r0, #0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 4
+
+
+ 138              	.LVL20:
+ 139 0018 00E0     		b	.L9
+ 140              	.LVL21:
+ 141              	.L10:
+  30:library.c     ****     
+  31:library.c     ****     return true;
+ 142              		.loc 1 31 0
+ 143 001a 0120     		movs	r0, #1
+ 144              	.LVL22:
+ 145              	.L9:
+  32:library.c     **** }
+ 146              		.loc 1 32 0
+ 147              		@ sp needed
+ 148 001c 10BD     		pop	{r4, pc}
+ 149              		.cfi_endproc
+ 150              	.LFE35:
+ 151              		.size	writeCommand, .-writeCommand
+ 152 001e C046     		.section	.text.SHT31_Init,"ax",%progbits
+ 153              		.align	2
+ 154              		.global	SHT31_Init
+ 155              		.code	16
+ 156              		.thumb_func
+ 157              		.type	SHT31_Init, %function
+ 158              	SHT31_Init:
+ 159              	.LFB36:
+  33:library.c     **** 
+  34:library.c     **** 
+  35:library.c     **** bool SHT31_Init(void) {
+ 160              		.loc 1 35 0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164 0000 10B5     		push	{r4, lr}
+ 165              		.cfi_def_cfa_offset 8
+ 166              		.cfi_offset 4, -8
+ 167              		.cfi_offset 14, -4
+ 168              	.LVL23:
+  36:library.c     ****     uint8_t status = 0;
+  37:library.c     ****     I2C_Start();
+ 169              		.loc 1 37 0
+ 170 0002 FFF7FEFF 		bl	I2C_Start
+ 171              	.LVL24:
+  38:library.c     ****     
+  39:library.c     ****     I2C_I2CMasterClearStatus();
+ 172              		.loc 1 39 0
+ 173 0006 FFF7FEFF 		bl	I2C_I2CMasterClearStatus
+ 174              	.LVL25:
+  40:library.c     ****     
+  41:library.c     ****     status = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+ 175              		.loc 1 41 0
+ 176 000a 1422     		movs	r2, #20
+ 177 000c 0121     		movs	r1, #1
+ 178 000e 4420     		movs	r0, #68
+ 179 0010 FFF7FEFF 		bl	I2C_I2CMasterSendStart
+ 180              	.LVL26:
+ 181 0014 C4B2     		uxtb	r4, r0
+ 182              	.LVL27:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 5
+
+
+  42:library.c     ****     
+  43:library.c     ****     I2C_I2CMasterSendStop(TIMEOUT);
+ 183              		.loc 1 43 0
+ 184 0016 1420     		movs	r0, #20
+ 185 0018 FFF7FEFF 		bl	I2C_I2CMasterSendStop
+ 186              	.LVL28:
+  44:library.c     ****     
+  45:library.c     ****     return (status == I2C_I2C_MSTR_NO_ERROR);
+ 187              		.loc 1 45 0
+ 188 001c 6042     		rsbs	r0, r4, #0
+ 189 001e 6041     		adcs	r0, r0, r4
+ 190              	.LVL29:
+ 191 0020 C0B2     		uxtb	r0, r0
+  46:library.c     **** }
+ 192              		.loc 1 46 0
+ 193              		@ sp needed
+ 194 0022 10BD     		pop	{r4, pc}
+ 195              		.cfi_endproc
+ 196              	.LFE36:
+ 197              		.size	SHT31_Init, .-SHT31_Init
+ 198              		.section	.text.SHT31_ReadStatus,"ax",%progbits
+ 199              		.align	2
+ 200              		.global	SHT31_ReadStatus
+ 201              		.code	16
+ 202              		.thumb_func
+ 203              		.type	SHT31_ReadStatus, %function
+ 204              	SHT31_ReadStatus:
+ 205              	.LFB37:
+  47:library.c     ****  //if (I2C_MasterReadBuf(SHT31_I2C_ADDR, buffer, len, I2C_MODE_COMPLETE_XFER) != I2C_MSTR_NO_ERROR)
+  48:library.c     ****        // return false;
+  49:library.c     **** 
+  50:library.c     **** uint16_t SHT31_ReadStatus(void) {
+ 206              		.loc 1 50 0
+ 207              		.cfi_startproc
+ 208              		@ args = 0, pretend = 0, frame = 8
+ 209              		@ frame_needed = 0, uses_anonymous_args = 0
+ 210 0000 00B5     		push	{lr}
+ 211              		.cfi_def_cfa_offset 4
+ 212              		.cfi_offset 14, -4
+ 213 0002 83B0     		sub	sp, sp, #12
+ 214              		.cfi_def_cfa_offset 16
+ 215              	.LVL30:
+  51:library.c     ****     uint8_t err = 0;
+  52:library.c     ****     writeCommand(SHT31_READSTATUS);
+ 216              		.loc 1 52 0
+ 217 0004 1248     		ldr	r0, .L14
+ 218 0006 FFF7FEFF 		bl	writeCommand
+ 219              	.LVL31:
+  53:library.c     **** 
+  54:library.c     ****     I2C_I2CMasterClearStatus();
+ 220              		.loc 1 54 0
+ 221 000a FFF7FEFF 		bl	I2C_I2CMasterClearStatus
+ 222              	.LVL32:
+  55:library.c     ****     
+  56:library.c     ****     I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+ 223              		.loc 1 56 0
+ 224 000e 1422     		movs	r2, #20
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 6
+
+
+ 225 0010 0121     		movs	r1, #1
+ 226 0012 4420     		movs	r0, #68
+ 227 0014 FFF7FEFF 		bl	I2C_I2CMasterSendStart
+ 228              	.LVL33:
+  57:library.c     ****     uint8_t data[3] = {0};
+ 229              		.loc 1 57 0
+ 230 0018 0322     		movs	r2, #3
+ 231 001a 0021     		movs	r1, #0
+ 232 001c 01A8     		add	r0, sp, #4
+ 233 001e FFF7FEFF 		bl	memset
+ 234              	.LVL34:
+  58:library.c     **** 
+  59:library.c     ****     CyDelay(2);
+ 235              		.loc 1 59 0
+ 236 0022 0220     		movs	r0, #2
+ 237 0024 FFF7FEFF 		bl	CyDelay
+ 238              	.LVL35:
+  60:library.c     ****     
+  61:library.c     ****     err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, data, 3, I2C_I2C_MODE_COMPLETE_XFER);
+ 239              		.loc 1 61 0
+ 240 0028 0023     		movs	r3, #0
+ 241 002a 0322     		movs	r2, #3
+ 242 002c 01A9     		add	r1, sp, #4
+ 243 002e 4420     		movs	r0, #68
+ 244 0030 FFF7FEFF 		bl	I2C_I2CMasterReadBuf
+ 245              	.LVL36:
+ 246 0034 C0B2     		uxtb	r0, r0
+ 247              	.LVL37:
+  62:library.c     ****     
+  63:library.c     ****     if(err){
+ 248              		.loc 1 63 0
+ 249 0036 0028     		cmp	r0, #0
+ 250 0038 02D0     		beq	.L13
+ 251              	.LBB5:
+  64:library.c     ****         I2C_I2CMasterSendStop(TIMEOUT);
+ 252              		.loc 1 64 0
+ 253 003a 1420     		movs	r0, #20
+ 254              	.LVL38:
+ 255 003c FFF7FEFF 		bl	I2C_I2CMasterSendStop
+ 256              	.LVL39:
+ 257              	.L13:
+ 258              	.LBE5:
+  65:library.c     ****     }
+  66:library.c     ****     
+  67:library.c     ****     uint16_t status = ((uint16_t)data[0] << 8) | data[1];
+ 259              		.loc 1 67 0
+ 260 0040 01AB     		add	r3, sp, #4
+ 261 0042 1878     		ldrb	r0, [r3]
+ 262 0044 0002     		lsls	r0, r0, #8
+ 263 0046 5B78     		ldrb	r3, [r3, #1]
+ 264 0048 1843     		orrs	r0, r3
+ 265              	.LVL40:
+  68:library.c     ****     
+  69:library.c     ****     return status;
+  70:library.c     **** }
+ 266              		.loc 1 70 0
+ 267 004a 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 7
+
+
+ 268              		@ sp needed
+ 269 004c 00BD     		pop	{pc}
+ 270              	.L15:
+ 271 004e C046     		.align	2
+ 272              	.L14:
+ 273 0050 2DF30000 		.word	62253
+ 274              		.cfi_endproc
+ 275              	.LFE37:
+ 276              		.size	SHT31_ReadStatus, .-SHT31_ReadStatus
+ 277              		.section	.text.SHT31_Reset,"ax",%progbits
+ 278              		.align	2
+ 279              		.global	SHT31_Reset
+ 280              		.code	16
+ 281              		.thumb_func
+ 282              		.type	SHT31_Reset, %function
+ 283              	SHT31_Reset:
+ 284              	.LFB38:
+  71:library.c     **** 
+  72:library.c     **** void SHT31_Reset(void) {
+ 285              		.loc 1 72 0
+ 286              		.cfi_startproc
+ 287              		@ args = 0, pretend = 0, frame = 0
+ 288              		@ frame_needed = 0, uses_anonymous_args = 0
+ 289 0000 10B5     		push	{r4, lr}
+ 290              		.cfi_def_cfa_offset 8
+ 291              		.cfi_offset 4, -8
+ 292              		.cfi_offset 14, -4
+  73:library.c     ****     writeCommand(SHT31_SOFTRESET);
+ 293              		.loc 1 73 0
+ 294 0002 0348     		ldr	r0, .L17
+ 295 0004 FFF7FEFF 		bl	writeCommand
+ 296              	.LVL41:
+  74:library.c     ****     CyDelay(10);
+ 297              		.loc 1 74 0
+ 298 0008 0A20     		movs	r0, #10
+ 299 000a FFF7FEFF 		bl	CyDelay
+ 300              	.LVL42:
+  75:library.c     **** }
+ 301              		.loc 1 75 0
+ 302              		@ sp needed
+ 303 000e 10BD     		pop	{r4, pc}
+ 304              	.L18:
+ 305              		.align	2
+ 306              	.L17:
+ 307 0010 A2300000 		.word	12450
+ 308              		.cfi_endproc
+ 309              	.LFE38:
+ 310              		.size	SHT31_Reset, .-SHT31_Reset
+ 311              		.section	.text.SHT31_Heater,"ax",%progbits
+ 312              		.align	2
+ 313              		.global	SHT31_Heater
+ 314              		.code	16
+ 315              		.thumb_func
+ 316              		.type	SHT31_Heater, %function
+ 317              	SHT31_Heater:
+ 318              	.LFB39:
+  76:library.c     **** 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 8
+
+
+  77:library.c     **** void SHT31_Heater(bool enable) {
+ 319              		.loc 1 77 0
+ 320              		.cfi_startproc
+ 321              		@ args = 0, pretend = 0, frame = 0
+ 322              		@ frame_needed = 0, uses_anonymous_args = 0
+ 323              	.LVL43:
+ 324 0000 10B5     		push	{r4, lr}
+ 325              		.cfi_def_cfa_offset 8
+ 326              		.cfi_offset 4, -8
+ 327              		.cfi_offset 14, -4
+  78:library.c     ****     writeCommand(enable ? SHT31_HEATEREN : SHT31_HEATERDIS);
+ 328              		.loc 1 78 0
+ 329 0002 0028     		cmp	r0, #0
+ 330 0004 01D0     		beq	.L21
+ 331 0006 0448     		ldr	r0, .L22
+ 332              	.LVL44:
+ 333 0008 00E0     		b	.L20
+ 334              	.LVL45:
+ 335              	.L21:
+ 336 000a 0448     		ldr	r0, .L22+4
+ 337              	.LVL46:
+ 338              	.L20:
+ 339              		.loc 1 78 0 is_stmt 0 discriminator 4
+ 340 000c FFF7FEFF 		bl	writeCommand
+ 341              	.LVL47:
+  79:library.c     ****     CyDelay(1);
+ 342              		.loc 1 79 0 is_stmt 1 discriminator 4
+ 343 0010 0120     		movs	r0, #1
+ 344 0012 FFF7FEFF 		bl	CyDelay
+ 345              	.LVL48:
+  80:library.c     **** }
+ 346              		.loc 1 80 0 discriminator 4
+ 347              		@ sp needed
+ 348 0016 10BD     		pop	{r4, pc}
+ 349              	.L23:
+ 350              		.align	2
+ 351              	.L22:
+ 352 0018 6D300000 		.word	12397
+ 353 001c 66300000 		.word	12390
+ 354              		.cfi_endproc
+ 355              	.LFE39:
+ 356              		.size	SHT31_Heater, .-SHT31_Heater
+ 357              		.section	.text.SHT31_IsHeaterEnabled,"ax",%progbits
+ 358              		.align	2
+ 359              		.global	SHT31_IsHeaterEnabled
+ 360              		.code	16
+ 361              		.thumb_func
+ 362              		.type	SHT31_IsHeaterEnabled, %function
+ 363              	SHT31_IsHeaterEnabled:
+ 364              	.LFB40:
+  81:library.c     **** 
+  82:library.c     **** bool SHT31_IsHeaterEnabled(void) {
+ 365              		.loc 1 82 0
+ 366              		.cfi_startproc
+ 367              		@ args = 0, pretend = 0, frame = 0
+ 368              		@ frame_needed = 0, uses_anonymous_args = 0
+ 369 0000 10B5     		push	{r4, lr}
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 9
+
+
+ 370              		.cfi_def_cfa_offset 8
+ 371              		.cfi_offset 4, -8
+ 372              		.cfi_offset 14, -4
+  83:library.c     ****     uint16_t reg = SHT31_ReadStatus();
+ 373              		.loc 1 83 0
+ 374 0002 FFF7FEFF 		bl	SHT31_ReadStatus
+ 375              	.LVL49:
+  84:library.c     ****     return (reg != 0xFFFF) && (reg & (1 << SHT31_REG_HEATER_BIT));
+ 376              		.loc 1 84 0
+ 377 0006 054B     		ldr	r3, .L28
+ 378 0008 9842     		cmp	r0, r3
+ 379 000a 03D0     		beq	.L26
+ 380              		.loc 1 84 0 is_stmt 0 discriminator 1
+ 381 000c 8304     		lsls	r3, r0, #18
+ 382 000e 03D4     		bmi	.L27
+ 383              		.loc 1 84 0
+ 384 0010 0020     		movs	r0, #0
+ 385              	.LVL50:
+ 386 0012 02E0     		b	.L25
+ 387              	.LVL51:
+ 388              	.L26:
+ 389 0014 0020     		movs	r0, #0
+ 390              	.LVL52:
+ 391 0016 00E0     		b	.L25
+ 392              	.LVL53:
+ 393              	.L27:
+ 394 0018 0120     		movs	r0, #1
+ 395              	.LVL54:
+ 396              	.L25:
+  85:library.c     **** }
+ 397              		.loc 1 85 0 is_stmt 1 discriminator 6
+ 398              		@ sp needed
+ 399 001a 10BD     		pop	{r4, pc}
+ 400              	.L29:
+ 401              		.align	2
+ 402              	.L28:
+ 403 001c FFFF0000 		.word	65535
+ 404              		.cfi_endproc
+ 405              	.LFE40:
+ 406              		.size	SHT31_IsHeaterEnabled, .-SHT31_IsHeaterEnabled
+ 407              		.global	__aeabi_i2f
+ 408              		.global	__aeabi_fdiv
+ 409              		.global	__aeabi_ui2f
+ 410              		.section	.text.SHT31_ReadTempHum,"ax",%progbits
+ 411              		.align	2
+ 412              		.global	SHT31_ReadTempHum
+ 413              		.code	16
+ 414              		.thumb_func
+ 415              		.type	SHT31_ReadTempHum, %function
+ 416              	SHT31_ReadTempHum:
+ 417              	.LFB41:
+  86:library.c     **** 
+  87:library.c     **** bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
+ 418              		.loc 1 87 0
+ 419              		.cfi_startproc
+ 420              		@ args = 0, pretend = 0, frame = 8
+ 421              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 10
+
+
+ 422              	.LVL55:
+ 423 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 424              		.cfi_def_cfa_offset 20
+ 425              		.cfi_offset 4, -20
+ 426              		.cfi_offset 5, -16
+ 427              		.cfi_offset 6, -12
+ 428              		.cfi_offset 7, -8
+ 429              		.cfi_offset 14, -4
+ 430 0002 83B0     		sub	sp, sp, #12
+ 431              		.cfi_def_cfa_offset 32
+ 432 0004 0600     		movs	r6, r0
+ 433 0006 0D00     		movs	r5, r1
+  88:library.c     ****     uint8_t readbuffer[6];
+  89:library.c     ****     uint8_t err;
+  90:library.c     ****     if (!writeCommand(SHT31_MEAS_HIGHREP))
+ 434              		.loc 1 90 0
+ 435 0008 9020     		movs	r0, #144
+ 436              	.LVL56:
+ 437 000a 8001     		lsls	r0, r0, #6
+ 438 000c FFF7FEFF 		bl	writeCommand
+ 439              	.LVL57:
+ 440 0010 041E     		subs	r4, r0, #0
+ 441 0012 4CD0     		beq	.L31
+  91:library.c     ****         return false;
+  92:library.c     ****     
+  93:library.c     ****     CyDelay(20);
+ 442              		.loc 1 93 0
+ 443 0014 1420     		movs	r0, #20
+ 444 0016 FFF7FEFF 		bl	CyDelay
+ 445              	.LVL58:
+  94:library.c     **** 
+  95:library.c     ****     //read status
+  96:library.c     ****     I2C_I2CMasterClearStatus();
+ 446              		.loc 1 96 0
+ 447 001a FFF7FEFF 		bl	I2C_I2CMasterClearStatus
+ 448              	.LVL59:
+  97:library.c     ****     
+  98:library.c     ****     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+ 449              		.loc 1 98 0
+ 450 001e 1422     		movs	r2, #20
+ 451 0020 0121     		movs	r1, #1
+ 452 0022 4420     		movs	r0, #68
+ 453 0024 FFF7FEFF 		bl	I2C_I2CMasterSendStart
+ 454              	.LVL60:
+  99:library.c     ****     uint8_t data[3] = {0};
+ 100:library.c     **** 
+ 101:library.c     ****     CyDelay(2);
+ 455              		.loc 1 101 0
+ 456 0028 0220     		movs	r0, #2
+ 457 002a FFF7FEFF 		bl	CyDelay
+ 458              	.LVL61:
+ 102:library.c     **** 
+ 103:library.c     ****     err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, readbuffer, 6, I2C_I2C_MODE_COMPLETE_XFER);
+ 459              		.loc 1 103 0
+ 460 002e 0023     		movs	r3, #0
+ 461 0030 0622     		movs	r2, #6
+ 462 0032 6946     		mov	r1, sp
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 11
+
+
+ 463 0034 4420     		movs	r0, #68
+ 464 0036 FFF7FEFF 		bl	I2C_I2CMasterReadBuf
+ 465              	.LVL62:
+ 466 003a C0B2     		uxtb	r0, r0
+ 467              	.LVL63:
+ 104:library.c     ****     
+ 105:library.c     ****     if(err){
+ 468              		.loc 1 105 0
+ 469 003c 0028     		cmp	r0, #0
+ 470 003e 02D0     		beq	.L32
+ 471              	.LBB6:
+ 106:library.c     ****         I2C_I2CMasterSendStop(TIMEOUT);
+ 472              		.loc 1 106 0
+ 473 0040 1420     		movs	r0, #20
+ 474              	.LVL64:
+ 475 0042 FFF7FEFF 		bl	I2C_I2CMasterSendStop
+ 476              	.LVL65:
+ 477              	.L32:
+ 478              	.LBE6:
+ 107:library.c     ****     }
+ 108:library.c     ****     
+ 109:library.c     ****     if (readbuffer[2] != crc8(readbuffer, 2) || readbuffer[5] != crc8(readbuffer + 3, 2))
+ 479              		.loc 1 109 0
+ 480 0046 6B46     		mov	r3, sp
+ 481 0048 9F78     		ldrb	r7, [r3, #2]
+ 482 004a 0221     		movs	r1, #2
+ 483 004c 6846     		mov	r0, sp
+ 484 004e FFF7FEFF 		bl	crc8
+ 485              	.LVL66:
+ 486 0052 8742     		cmp	r7, r0
+ 487 0054 28D1     		bne	.L33
+ 488              		.loc 1 109 0 is_stmt 0 discriminator 1
+ 489 0056 6B46     		mov	r3, sp
+ 490 0058 5F79     		ldrb	r7, [r3, #5]
+ 491 005a 0221     		movs	r1, #2
+ 492 005c D81C     		adds	r0, r3, #3
+ 493 005e FFF7FEFF 		bl	crc8
+ 494              	.LVL67:
+ 495 0062 8742     		cmp	r7, r0
+ 496 0064 22D1     		bne	.L34
+ 110:library.c     ****         return false;
+ 111:library.c     **** 
+ 112:library.c     ****     int32_t stemp = ((uint32_t)readbuffer[0] << 8) | readbuffer[1];
+ 497              		.loc 1 112 0 is_stmt 1
+ 498 0066 6B46     		mov	r3, sp
+ 499 0068 1878     		ldrb	r0, [r3]
+ 500 006a 0002     		lsls	r0, r0, #8
+ 501 006c 5B78     		ldrb	r3, [r3, #1]
+ 502 006e 1843     		orrs	r0, r3
+ 503              	.LVL68:
+ 113:library.c     ****     stemp = ((4375 * stemp) >> 14) - 4500;
+ 504              		.loc 1 113 0
+ 505 0070 104B     		ldr	r3, .L35
+ 506 0072 5843     		muls	r0, r3
+ 507              	.LVL69:
+ 508 0074 8013     		asrs	r0, r0, #14
+ 509 0076 104B     		ldr	r3, .L35+4
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 12
+
+
+ 510 0078 9C46     		mov	ip, r3
+ 511 007a 6044     		add	r0, r0, ip
+ 512              	.LVL70:
+ 114:library.c     ****     float temp;
+ 115:library.c     ****     temp = (float)stemp / 100.0f;
+ 513              		.loc 1 115 0
+ 514 007c FFF7FEFF 		bl	__aeabi_i2f
+ 515              	.LVL71:
+ 516 0080 0E49     		ldr	r1, .L35+8
+ 517 0082 FFF7FEFF 		bl	__aeabi_fdiv
+ 518              	.LVL72:
+ 519 0086 071C     		adds	r7, r0, #0
+ 520              	.LVL73:
+ 116:library.c     **** 
+ 117:library.c     ****     uint32_t shum = ((uint32_t)readbuffer[3] << 8) | readbuffer[4];
+ 521              		.loc 1 117 0
+ 522 0088 6B46     		mov	r3, sp
+ 523 008a D878     		ldrb	r0, [r3, #3]
+ 524              	.LVL74:
+ 525 008c 0002     		lsls	r0, r0, #8
+ 526 008e 1B79     		ldrb	r3, [r3, #4]
+ 527 0090 1843     		orrs	r0, r3
+ 528              	.LVL75:
+ 118:library.c     ****     shum = (625 * shum) >> 12;
+ 529              		.loc 1 118 0
+ 530 0092 0B4B     		ldr	r3, .L35+12
+ 531 0094 5843     		muls	r0, r3
+ 532              	.LVL76:
+ 533 0096 000B     		lsrs	r0, r0, #12
+ 534              	.LVL77:
+ 119:library.c     ****     float humidity;
+ 120:library.c     ****     humidity = (float)shum / 100.0f;
+ 535              		.loc 1 120 0
+ 536 0098 FFF7FEFF 		bl	__aeabi_ui2f
+ 537              	.LVL78:
+ 538 009c 0749     		ldr	r1, .L35+8
+ 539 009e FFF7FEFF 		bl	__aeabi_fdiv
+ 540              	.LVL79:
+ 121:library.c     ****     
+ 122:library.c     ****     *outTemp = temp;
+ 541              		.loc 1 122 0
+ 542 00a2 3760     		str	r7, [r6]
+ 123:library.c     ****     *outHum = humidity;
+ 543              		.loc 1 123 0
+ 544 00a4 2860     		str	r0, [r5]
+ 124:library.c     ****     
+ 125:library.c     ****     return true;
+ 545              		.loc 1 125 0
+ 546 00a6 02E0     		b	.L31
+ 547              	.LVL80:
+ 548              	.L33:
+ 110:library.c     **** 
+ 549              		.loc 1 110 0
+ 550 00a8 0024     		movs	r4, #0
+ 551 00aa 00E0     		b	.L31
+ 552              	.L34:
+ 553 00ac 0024     		movs	r4, #0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 13
+
+
+ 554              	.L31:
+ 126:library.c     **** }
+ 555              		.loc 1 126 0
+ 556 00ae 2000     		movs	r0, r4
+ 557 00b0 03B0     		add	sp, sp, #12
+ 558              		@ sp needed
+ 559              	.LVL81:
+ 560              	.LVL82:
+ 561 00b2 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 562              	.L36:
+ 563              		.align	2
+ 564              	.L35:
+ 565 00b4 17110000 		.word	4375
+ 566 00b8 6CEEFFFF 		.word	-4500
+ 567 00bc 0000C842 		.word	1120403456
+ 568 00c0 71020000 		.word	625
+ 569              		.cfi_endproc
+ 570              	.LFE41:
+ 571              		.size	SHT31_ReadTempHum, .-SHT31_ReadTempHum
+ 572              		.section	.text.SHT31_ReadTemperature,"ax",%progbits
+ 573              		.align	2
+ 574              		.global	SHT31_ReadTemperature
+ 575              		.code	16
+ 576              		.thumb_func
+ 577              		.type	SHT31_ReadTemperature, %function
+ 578              	SHT31_ReadTemperature:
+ 579              	.LFB42:
+ 127:library.c     **** 
+ 128:library.c     **** float SHT31_ReadTemperature(void) {
+ 580              		.loc 1 128 0
+ 581              		.cfi_startproc
+ 582              		@ args = 0, pretend = 0, frame = 8
+ 583              		@ frame_needed = 0, uses_anonymous_args = 0
+ 584 0000 00B5     		push	{lr}
+ 585              		.cfi_def_cfa_offset 4
+ 586              		.cfi_offset 14, -4
+ 587 0002 83B0     		sub	sp, sp, #12
+ 588              		.cfi_def_cfa_offset 16
+ 129:library.c     ****     float t;
+ 130:library.c     ****     return SHT31_ReadTempHum(&t, NULL) ? t : NAN;
+ 589              		.loc 1 130 0
+ 590 0004 0021     		movs	r1, #0
+ 591 0006 01A8     		add	r0, sp, #4
+ 592 0008 FFF7FEFF 		bl	SHT31_ReadTempHum
+ 593              	.LVL83:
+ 594 000c 0028     		cmp	r0, #0
+ 595 000e 01D0     		beq	.L39
+ 596              		.loc 1 130 0 is_stmt 0 discriminator 1
+ 597 0010 0198     		ldr	r0, [sp, #4]
+ 598 0012 00E0     		b	.L38
+ 599              	.L39:
+ 600              		.loc 1 130 0
+ 601 0014 0148     		ldr	r0, .L40
+ 602              	.L38:
+ 131:library.c     **** }
+ 603              		.loc 1 131 0 is_stmt 1 discriminator 4
+ 604 0016 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 14
+
+
+ 605              		@ sp needed
+ 606 0018 00BD     		pop	{pc}
+ 607              	.L41:
+ 608 001a C046     		.align	2
+ 609              	.L40:
+ 610 001c 0000C07F 		.word	2143289344
+ 611              		.cfi_endproc
+ 612              	.LFE42:
+ 613              		.size	SHT31_ReadTemperature, .-SHT31_ReadTemperature
+ 614              		.section	.text.SHT31_ReadHumidity,"ax",%progbits
+ 615              		.align	2
+ 616              		.global	SHT31_ReadHumidity
+ 617              		.code	16
+ 618              		.thumb_func
+ 619              		.type	SHT31_ReadHumidity, %function
+ 620              	SHT31_ReadHumidity:
+ 621              	.LFB43:
+ 132:library.c     **** 
+ 133:library.c     **** float SHT31_ReadHumidity(void) {
+ 622              		.loc 1 133 0
+ 623              		.cfi_startproc
+ 624              		@ args = 0, pretend = 0, frame = 8
+ 625              		@ frame_needed = 0, uses_anonymous_args = 0
+ 626 0000 00B5     		push	{lr}
+ 627              		.cfi_def_cfa_offset 4
+ 628              		.cfi_offset 14, -4
+ 629 0002 83B0     		sub	sp, sp, #12
+ 630              		.cfi_def_cfa_offset 16
+ 134:library.c     ****     float h;
+ 135:library.c     ****     return SHT31_ReadTempHum(NULL, &h) ? h : NAN;
+ 631              		.loc 1 135 0
+ 632 0004 01A9     		add	r1, sp, #4
+ 633 0006 0020     		movs	r0, #0
+ 634 0008 FFF7FEFF 		bl	SHT31_ReadTempHum
+ 635              	.LVL84:
+ 636 000c 0028     		cmp	r0, #0
+ 637 000e 01D0     		beq	.L44
+ 638              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 639 0010 0198     		ldr	r0, [sp, #4]
+ 640 0012 00E0     		b	.L43
+ 641              	.L44:
+ 642              		.loc 1 135 0
+ 643 0014 0148     		ldr	r0, .L45
+ 644              	.L43:
+ 136:library.c     **** }
+ 645              		.loc 1 136 0 is_stmt 1 discriminator 4
+ 646 0016 03B0     		add	sp, sp, #12
+ 647              		@ sp needed
+ 648 0018 00BD     		pop	{pc}
+ 649              	.L46:
+ 650 001a C046     		.align	2
+ 651              	.L45:
+ 652 001c 0000C07F 		.word	2143289344
+ 653              		.cfi_endproc
+ 654              	.LFE43:
+ 655              		.size	SHT31_ReadHumidity, .-SHT31_ReadHumidity
+ 656              		.text
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 15
+
+
+ 657              	.Letext0:
+ 658              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 659              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 660              		.file 4 "Generated_Source\\PSoC4/I2C.h"
+ 661              		.file 5 "Generated_Source\\PSoC4/CyLib.h"
+ 662              		.section	.debug_info,"",%progbits
+ 663              	.Ldebug_info0:
+ 664 0000 16070000 		.4byte	0x716
+ 665 0004 0400     		.2byte	0x4
+ 666 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 667 000a 04       		.byte	0x4
+ 668 000b 01       		.uleb128 0x1
+ 669 000c 14010000 		.4byte	.LASF51
+ 670 0010 0C       		.byte	0xc
+ 671 0011 E0000000 		.4byte	.LASF52
+ 672 0015 8E000000 		.4byte	.LASF53
+ 673 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 674 001d 00000000 		.4byte	0
+ 675 0021 00000000 		.4byte	.Ldebug_line0
+ 676 0025 02       		.uleb128 0x2
+ 677 0026 01       		.byte	0x1
+ 678 0027 06       		.byte	0x6
+ 679 0028 39020000 		.4byte	.LASF0
+ 680 002c 03       		.uleb128 0x3
+ 681 002d F6010000 		.4byte	.LASF3
+ 682 0031 02       		.byte	0x2
+ 683 0032 1D       		.byte	0x1d
+ 684 0033 37000000 		.4byte	0x37
+ 685 0037 02       		.uleb128 0x2
+ 686 0038 01       		.byte	0x1
+ 687 0039 08       		.byte	0x8
+ 688 003a 0B020000 		.4byte	.LASF1
+ 689 003e 02       		.uleb128 0x2
+ 690 003f 02       		.byte	0x2
+ 691 0040 05       		.byte	0x5
+ 692 0041 2D000000 		.4byte	.LASF2
+ 693 0045 03       		.uleb128 0x3
+ 694 0046 76000000 		.4byte	.LASF4
+ 695 004a 02       		.byte	0x2
+ 696 004b 2B       		.byte	0x2b
+ 697 004c 50000000 		.4byte	0x50
+ 698 0050 02       		.uleb128 0x2
+ 699 0051 02       		.byte	0x2
+ 700 0052 07       		.byte	0x7
+ 701 0053 A0020000 		.4byte	.LASF5
+ 702 0057 03       		.uleb128 0x3
+ 703 0058 FE020000 		.4byte	.LASF6
+ 704 005c 02       		.byte	0x2
+ 705 005d 3F       		.byte	0x3f
+ 706 005e 62000000 		.4byte	0x62
+ 707 0062 02       		.uleb128 0x2
+ 708 0063 04       		.byte	0x4
+ 709 0064 05       		.byte	0x5
+ 710 0065 CC010000 		.4byte	.LASF7
+ 711 0069 03       		.uleb128 0x3
+ 712 006a 55000000 		.4byte	.LASF8
+ 713 006e 02       		.byte	0x2
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 16
+
+
+ 714 006f 41       		.byte	0x41
+ 715 0070 74000000 		.4byte	0x74
+ 716 0074 02       		.uleb128 0x2
+ 717 0075 04       		.byte	0x4
+ 718 0076 07       		.byte	0x7
+ 719 0077 D1020000 		.4byte	.LASF9
+ 720 007b 02       		.uleb128 0x2
+ 721 007c 08       		.byte	0x8
+ 722 007d 05       		.byte	0x5
+ 723 007e B7010000 		.4byte	.LASF10
+ 724 0082 02       		.uleb128 0x2
+ 725 0083 08       		.byte	0x8
+ 726 0084 07       		.byte	0x7
+ 727 0085 45020000 		.4byte	.LASF11
+ 728 0089 04       		.uleb128 0x4
+ 729 008a 04       		.byte	0x4
+ 730 008b 05       		.byte	0x5
+ 731 008c 696E7400 		.ascii	"int\000"
+ 732 0090 02       		.uleb128 0x2
+ 733 0091 04       		.byte	0x4
+ 734 0092 07       		.byte	0x7
+ 735 0093 65020000 		.4byte	.LASF12
+ 736 0097 03       		.uleb128 0x3
+ 737 0098 08030000 		.4byte	.LASF13
+ 738 009c 03       		.byte	0x3
+ 739 009d 18       		.byte	0x18
+ 740 009e 2C000000 		.4byte	0x2c
+ 741 00a2 03       		.uleb128 0x3
+ 742 00a3 72020000 		.4byte	.LASF14
+ 743 00a7 03       		.byte	0x3
+ 744 00a8 24       		.byte	0x24
+ 745 00a9 45000000 		.4byte	0x45
+ 746 00ad 03       		.uleb128 0x3
+ 747 00ae 98020000 		.4byte	.LASF15
+ 748 00b2 03       		.byte	0x3
+ 749 00b3 2C       		.byte	0x2c
+ 750 00b4 57000000 		.4byte	0x57
+ 751 00b8 03       		.uleb128 0x3
+ 752 00b9 5C020000 		.4byte	.LASF16
+ 753 00bd 03       		.byte	0x3
+ 754 00be 30       		.byte	0x30
+ 755 00bf 69000000 		.4byte	0x69
+ 756 00c3 02       		.uleb128 0x2
+ 757 00c4 04       		.byte	0x4
+ 758 00c5 04       		.byte	0x4
+ 759 00c6 B1010000 		.4byte	.LASF17
+ 760 00ca 02       		.uleb128 0x2
+ 761 00cb 08       		.byte	0x8
+ 762 00cc 04       		.byte	0x4
+ 763 00cd E3020000 		.4byte	.LASF18
+ 764 00d1 02       		.uleb128 0x2
+ 765 00d2 01       		.byte	0x1
+ 766 00d3 08       		.byte	0x8
+ 767 00d4 93020000 		.4byte	.LASF19
+ 768 00d8 02       		.uleb128 0x2
+ 769 00d9 04       		.byte	0x4
+ 770 00da 07       		.byte	0x7
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 17
+
+
+ 771 00db 4C000000 		.4byte	.LASF20
+ 772 00df 02       		.uleb128 0x2
+ 773 00e0 08       		.byte	0x8
+ 774 00e1 04       		.byte	0x4
+ 775 00e2 19020000 		.4byte	.LASF21
+ 776 00e6 05       		.uleb128 0x5
+ 777 00e7 EA020000 		.4byte	.LASF24
+ 778 00eb 01       		.byte	0x1
+ 779 00ec 07       		.byte	0x7
+ 780 00ed 97000000 		.4byte	0x97
+ 781 00f1 00000000 		.4byte	.LFB34
+ 782 00f5 34000000 		.4byte	.LFE34-.LFB34
+ 783 00f9 01       		.uleb128 0x1
+ 784 00fa 9C       		.byte	0x9c
+ 785 00fb 61010000 		.4byte	0x161
+ 786 00ff 06       		.uleb128 0x6
+ 787 0100 CC020000 		.4byte	.LASF22
+ 788 0104 01       		.byte	0x1
+ 789 0105 07       		.byte	0x7
+ 790 0106 61010000 		.4byte	0x161
+ 791 010a 00000000 		.4byte	.LLST0
+ 792 010e 07       		.uleb128 0x7
+ 793 010f 6C656E00 		.ascii	"len\000"
+ 794 0113 01       		.byte	0x1
+ 795 0114 07       		.byte	0x7
+ 796 0115 89000000 		.4byte	0x89
+ 797 0119 01       		.uleb128 0x1
+ 798 011a 51       		.byte	0x51
+ 799 011b 08       		.uleb128 0x8
+ 800 011c 00020000 		.4byte	.LASF23
+ 801 0120 01       		.byte	0x1
+ 802 0121 08       		.byte	0x8
+ 803 0122 67010000 		.4byte	0x167
+ 804 0126 31       		.byte	0x31
+ 805 0127 09       		.uleb128 0x9
+ 806 0128 63726300 		.ascii	"crc\000"
+ 807 012c 01       		.byte	0x1
+ 808 012d 09       		.byte	0x9
+ 809 012e 97000000 		.4byte	0x97
+ 810 0132 2C000000 		.4byte	.LLST1
+ 811 0136 0A       		.uleb128 0xa
+ 812 0137 00000000 		.4byte	.Ldebug_ranges0+0
+ 813 013b 09       		.uleb128 0x9
+ 814 013c 6A00     		.ascii	"j\000"
+ 815 013e 01       		.byte	0x1
+ 816 013f 0B       		.byte	0xb
+ 817 0140 89000000 		.4byte	0x89
+ 818 0144 78000000 		.4byte	.LLST2
+ 819 0148 0B       		.uleb128 0xb
+ 820 0149 0E000000 		.4byte	.LBB3
+ 821 014d 1E000000 		.4byte	.LBE3-.LBB3
+ 822 0151 09       		.uleb128 0x9
+ 823 0152 6900     		.ascii	"i\000"
+ 824 0154 01       		.byte	0x1
+ 825 0155 0D       		.byte	0xd
+ 826 0156 89000000 		.4byte	0x89
+ 827 015a 97000000 		.4byte	.LLST3
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 18
+
+
+ 828 015e 00       		.byte	0
+ 829 015f 00       		.byte	0
+ 830 0160 00       		.byte	0
+ 831 0161 0C       		.uleb128 0xc
+ 832 0162 04       		.byte	0x4
+ 833 0163 67010000 		.4byte	0x167
+ 834 0167 0D       		.uleb128 0xd
+ 835 0168 97000000 		.4byte	0x97
+ 836 016c 05       		.uleb128 0x5
+ 837 016d 2C020000 		.4byte	.LASF25
+ 838 0171 01       		.byte	0x1
+ 839 0172 14       		.byte	0x14
+ 840 0173 F4010000 		.4byte	0x1f4
+ 841 0177 00000000 		.4byte	.LFB35
+ 842 017b 1E000000 		.4byte	.LFE35-.LFB35
+ 843 017f 01       		.uleb128 0x1
+ 844 0180 9C       		.byte	0x9c
+ 845 0181 F4010000 		.4byte	0x1f4
+ 846 0185 06       		.uleb128 0x6
+ 847 0186 39030000 		.4byte	.LASF26
+ 848 018a 01       		.byte	0x1
+ 849 018b 14       		.byte	0x14
+ 850 018c A2000000 		.4byte	0xa2
+ 851 0190 B6000000 		.4byte	.LLST4
+ 852 0194 0E       		.uleb128 0xe
+ 853 0195 636D6400 		.ascii	"cmd\000"
+ 854 0199 01       		.byte	0x1
+ 855 019a 15       		.byte	0x15
+ 856 019b FB010000 		.4byte	0x1fb
+ 857 019f 09       		.uleb128 0x9
+ 858 01a0 65727200 		.ascii	"err\000"
+ 859 01a4 01       		.byte	0x1
+ 860 01a5 17       		.byte	0x17
+ 861 01a6 97000000 		.4byte	0x97
+ 862 01aa D7000000 		.4byte	.LLST5
+ 863 01ae 0F       		.uleb128 0xf
+ 864 01af EA000000 		.4byte	.LASF27
+ 865 01b3 01       		.byte	0x1
+ 866 01b4 19       		.byte	0x19
+ 867 01b5 89000000 		.4byte	0x89
+ 868 01b9 BF010000 		.4byte	0x1bf
+ 869 01bd 10       		.uleb128 0x10
+ 870 01be 00       		.byte	0
+ 871 01bf 0F       		.uleb128 0xf
+ 872 01c0 18030000 		.4byte	.LASF28
+ 873 01c4 01       		.byte	0x1
+ 874 01c5 1B       		.byte	0x1b
+ 875 01c6 89000000 		.4byte	0x89
+ 876 01ca D0010000 		.4byte	0x1d0
+ 877 01ce 10       		.uleb128 0x10
+ 878 01cf 00       		.byte	0
+ 879 01d0 11       		.uleb128 0x11
+ 880 01d1 06000000 		.4byte	.LVL17
+ 881 01d5 CE060000 		.4byte	0x6ce
+ 882 01d9 12       		.uleb128 0x12
+ 883 01da 10000000 		.4byte	.LVL18
+ 884 01de D9060000 		.4byte	0x6d9
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 19
+
+
+ 885 01e2 13       		.uleb128 0x13
+ 886 01e3 01       		.uleb128 0x1
+ 887 01e4 50       		.byte	0x50
+ 888 01e5 02       		.uleb128 0x2
+ 889 01e6 08       		.byte	0x8
+ 890 01e7 44       		.byte	0x44
+ 891 01e8 13       		.uleb128 0x13
+ 892 01e9 01       		.uleb128 0x1
+ 893 01ea 51       		.byte	0x51
+ 894 01eb 01       		.uleb128 0x1
+ 895 01ec 30       		.byte	0x30
+ 896 01ed 13       		.uleb128 0x13
+ 897 01ee 01       		.uleb128 0x1
+ 898 01ef 52       		.byte	0x52
+ 899 01f0 01       		.uleb128 0x1
+ 900 01f1 44       		.byte	0x44
+ 901 01f2 00       		.byte	0
+ 902 01f3 00       		.byte	0
+ 903 01f4 02       		.uleb128 0x2
+ 904 01f5 01       		.byte	0x1
+ 905 01f6 02       		.byte	0x2
+ 906 01f7 B3020000 		.4byte	.LASF29
+ 907 01fb 14       		.uleb128 0x14
+ 908 01fc 97000000 		.4byte	0x97
+ 909 0200 0B020000 		.4byte	0x20b
+ 910 0204 15       		.uleb128 0x15
+ 911 0205 D8000000 		.4byte	0xd8
+ 912 0209 01       		.byte	0x1
+ 913 020a 00       		.byte	0
+ 914 020b 16       		.uleb128 0x16
+ 915 020c D5010000 		.4byte	.LASF32
+ 916 0210 01       		.byte	0x1
+ 917 0211 23       		.byte	0x23
+ 918 0212 F4010000 		.4byte	0x1f4
+ 919 0216 00000000 		.4byte	.LFB36
+ 920 021a 24000000 		.4byte	.LFE36-.LFB36
+ 921 021e 01       		.uleb128 0x1
+ 922 021f 9C       		.byte	0x9c
+ 923 0220 A6020000 		.4byte	0x2a6
+ 924 0224 17       		.uleb128 0x17
+ 925 0225 8C020000 		.4byte	.LASF30
+ 926 0229 01       		.byte	0x1
+ 927 022a 24       		.byte	0x24
+ 928 022b 97000000 		.4byte	0x97
+ 929 022f 01010000 		.4byte	.LLST6
+ 930 0233 0F       		.uleb128 0xf
+ 931 0234 EA000000 		.4byte	.LASF27
+ 932 0238 01       		.byte	0x1
+ 933 0239 19       		.byte	0x19
+ 934 023a 89000000 		.4byte	0x89
+ 935 023e 44020000 		.4byte	0x244
+ 936 0242 10       		.uleb128 0x10
+ 937 0243 00       		.byte	0
+ 938 0244 0F       		.uleb128 0xf
+ 939 0245 18030000 		.4byte	.LASF28
+ 940 0249 01       		.byte	0x1
+ 941 024a 1B       		.byte	0x1b
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 20
+
+
+ 942 024b 89000000 		.4byte	0x89
+ 943 024f 55020000 		.4byte	0x255
+ 944 0253 10       		.uleb128 0x10
+ 945 0254 00       		.byte	0
+ 946 0255 0F       		.uleb128 0xf
+ 947 0256 12000000 		.4byte	.LASF31
+ 948 025a 01       		.byte	0x1
+ 949 025b 2B       		.byte	0x2b
+ 950 025c 89000000 		.4byte	0x89
+ 951 0260 66020000 		.4byte	0x266
+ 952 0264 10       		.uleb128 0x10
+ 953 0265 00       		.byte	0
+ 954 0266 11       		.uleb128 0x11
+ 955 0267 06000000 		.4byte	.LVL24
+ 956 026b E4060000 		.4byte	0x6e4
+ 957 026f 11       		.uleb128 0x11
+ 958 0270 0A000000 		.4byte	.LVL25
+ 959 0274 CE060000 		.4byte	0x6ce
+ 960 0278 18       		.uleb128 0x18
+ 961 0279 14000000 		.4byte	.LVL26
+ 962 027d D9060000 		.4byte	0x6d9
+ 963 0281 96020000 		.4byte	0x296
+ 964 0285 13       		.uleb128 0x13
+ 965 0286 01       		.uleb128 0x1
+ 966 0287 50       		.byte	0x50
+ 967 0288 02       		.uleb128 0x2
+ 968 0289 08       		.byte	0x8
+ 969 028a 44       		.byte	0x44
+ 970 028b 13       		.uleb128 0x13
+ 971 028c 01       		.uleb128 0x1
+ 972 028d 51       		.byte	0x51
+ 973 028e 01       		.uleb128 0x1
+ 974 028f 31       		.byte	0x31
+ 975 0290 13       		.uleb128 0x13
+ 976 0291 01       		.uleb128 0x1
+ 977 0292 52       		.byte	0x52
+ 978 0293 01       		.uleb128 0x1
+ 979 0294 44       		.byte	0x44
+ 980 0295 00       		.byte	0
+ 981 0296 12       		.uleb128 0x12
+ 982 0297 1C000000 		.4byte	.LVL28
+ 983 029b EF060000 		.4byte	0x6ef
+ 984 029f 13       		.uleb128 0x13
+ 985 02a0 01       		.uleb128 0x1
+ 986 02a1 50       		.byte	0x50
+ 987 02a2 01       		.uleb128 0x1
+ 988 02a3 44       		.byte	0x44
+ 989 02a4 00       		.byte	0
+ 990 02a5 00       		.byte	0
+ 991 02a6 16       		.uleb128 0x16
+ 992 02a7 03010000 		.4byte	.LASF33
+ 993 02ab 01       		.byte	0x1
+ 994 02ac 32       		.byte	0x32
+ 995 02ad A2000000 		.4byte	0xa2
+ 996 02b1 00000000 		.4byte	.LFB37
+ 997 02b5 54000000 		.4byte	.LFE37-.LFB37
+ 998 02b9 01       		.uleb128 0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 21
+
+
+ 999 02ba 9C       		.byte	0x9c
+ 1000 02bb D8030000 		.4byte	0x3d8
+ 1001 02bf 09       		.uleb128 0x9
+ 1002 02c0 65727200 		.ascii	"err\000"
+ 1003 02c4 01       		.byte	0x1
+ 1004 02c5 33       		.byte	0x33
+ 1005 02c6 97000000 		.4byte	0x97
+ 1006 02ca 20010000 		.4byte	.LLST7
+ 1007 02ce 0F       		.uleb128 0xf
+ 1008 02cf EA000000 		.4byte	.LASF27
+ 1009 02d3 01       		.byte	0x1
+ 1010 02d4 19       		.byte	0x19
+ 1011 02d5 89000000 		.4byte	0x89
+ 1012 02d9 DF020000 		.4byte	0x2df
+ 1013 02dd 10       		.uleb128 0x10
+ 1014 02de 00       		.byte	0
+ 1015 02df 0F       		.uleb128 0xf
+ 1016 02e0 18030000 		.4byte	.LASF28
+ 1017 02e4 01       		.byte	0x1
+ 1018 02e5 1B       		.byte	0x1b
+ 1019 02e6 89000000 		.4byte	0x89
+ 1020 02ea F0020000 		.4byte	0x2f0
+ 1021 02ee 10       		.uleb128 0x10
+ 1022 02ef 00       		.byte	0
+ 1023 02f0 19       		.uleb128 0x19
+ 1024 02f1 CC020000 		.4byte	.LASF22
+ 1025 02f5 01       		.byte	0x1
+ 1026 02f6 39       		.byte	0x39
+ 1027 02f7 D8030000 		.4byte	0x3d8
+ 1028 02fb 02       		.uleb128 0x2
+ 1029 02fc 91       		.byte	0x91
+ 1030 02fd 74       		.sleb128 -12
+ 1031 02fe 0F       		.uleb128 0xf
+ 1032 02ff 37000000 		.4byte	.LASF34
+ 1033 0303 01       		.byte	0x1
+ 1034 0304 3D       		.byte	0x3d
+ 1035 0305 89000000 		.4byte	0x89
+ 1036 0309 0F030000 		.4byte	0x30f
+ 1037 030d 10       		.uleb128 0x10
+ 1038 030e 00       		.byte	0
+ 1039 030f 19       		.uleb128 0x19
+ 1040 0310 8C020000 		.4byte	.LASF30
+ 1041 0314 01       		.byte	0x1
+ 1042 0315 43       		.byte	0x43
+ 1043 0316 A2000000 		.4byte	0xa2
+ 1044 031a 01       		.uleb128 0x1
+ 1045 031b 50       		.byte	0x50
+ 1046 031c 1A       		.uleb128 0x1a
+ 1047 031d 3A000000 		.4byte	.LBB5
+ 1048 0321 06000000 		.4byte	.LBE5-.LBB5
+ 1049 0325 4A030000 		.4byte	0x34a
+ 1050 0329 0F       		.uleb128 0xf
+ 1051 032a 12000000 		.4byte	.LASF31
+ 1052 032e 01       		.byte	0x1
+ 1053 032f 2B       		.byte	0x2b
+ 1054 0330 89000000 		.4byte	0x89
+ 1055 0334 3A030000 		.4byte	0x33a
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 22
+
+
+ 1056 0338 10       		.uleb128 0x10
+ 1057 0339 00       		.byte	0
+ 1058 033a 12       		.uleb128 0x12
+ 1059 033b 40000000 		.4byte	.LVL39
+ 1060 033f EF060000 		.4byte	0x6ef
+ 1061 0343 13       		.uleb128 0x13
+ 1062 0344 01       		.uleb128 0x1
+ 1063 0345 50       		.byte	0x50
+ 1064 0346 01       		.uleb128 0x1
+ 1065 0347 44       		.byte	0x44
+ 1066 0348 00       		.byte	0
+ 1067 0349 00       		.byte	0
+ 1068 034a 18       		.uleb128 0x18
+ 1069 034b 0A000000 		.4byte	.LVL31
+ 1070 034f 6C010000 		.4byte	0x16c
+ 1071 0353 5F030000 		.4byte	0x35f
+ 1072 0357 13       		.uleb128 0x13
+ 1073 0358 01       		.uleb128 0x1
+ 1074 0359 50       		.byte	0x50
+ 1075 035a 03       		.uleb128 0x3
+ 1076 035b 0B       		.byte	0xb
+ 1077 035c 2DF3     		.2byte	0xf32d
+ 1078 035e 00       		.byte	0
+ 1079 035f 11       		.uleb128 0x11
+ 1080 0360 0E000000 		.4byte	.LVL32
+ 1081 0364 CE060000 		.4byte	0x6ce
+ 1082 0368 18       		.uleb128 0x18
+ 1083 0369 18000000 		.4byte	.LVL33
+ 1084 036d D9060000 		.4byte	0x6d9
+ 1085 0371 86030000 		.4byte	0x386
+ 1086 0375 13       		.uleb128 0x13
+ 1087 0376 01       		.uleb128 0x1
+ 1088 0377 50       		.byte	0x50
+ 1089 0378 02       		.uleb128 0x2
+ 1090 0379 08       		.byte	0x8
+ 1091 037a 44       		.byte	0x44
+ 1092 037b 13       		.uleb128 0x13
+ 1093 037c 01       		.uleb128 0x1
+ 1094 037d 51       		.byte	0x51
+ 1095 037e 01       		.uleb128 0x1
+ 1096 037f 31       		.byte	0x31
+ 1097 0380 13       		.uleb128 0x13
+ 1098 0381 01       		.uleb128 0x1
+ 1099 0382 52       		.byte	0x52
+ 1100 0383 01       		.uleb128 0x1
+ 1101 0384 44       		.byte	0x44
+ 1102 0385 00       		.byte	0
+ 1103 0386 18       		.uleb128 0x18
+ 1104 0387 22000000 		.4byte	.LVL34
+ 1105 038b FA060000 		.4byte	0x6fa
+ 1106 038f A4030000 		.4byte	0x3a4
+ 1107 0393 13       		.uleb128 0x13
+ 1108 0394 01       		.uleb128 0x1
+ 1109 0395 50       		.byte	0x50
+ 1110 0396 02       		.uleb128 0x2
+ 1111 0397 91       		.byte	0x91
+ 1112 0398 74       		.sleb128 -12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 23
+
+
+ 1113 0399 13       		.uleb128 0x13
+ 1114 039a 01       		.uleb128 0x1
+ 1115 039b 51       		.byte	0x51
+ 1116 039c 01       		.uleb128 0x1
+ 1117 039d 30       		.byte	0x30
+ 1118 039e 13       		.uleb128 0x13
+ 1119 039f 01       		.uleb128 0x1
+ 1120 03a0 52       		.byte	0x52
+ 1121 03a1 01       		.uleb128 0x1
+ 1122 03a2 33       		.byte	0x33
+ 1123 03a3 00       		.byte	0
+ 1124 03a4 18       		.uleb128 0x18
+ 1125 03a5 28000000 		.4byte	.LVL35
+ 1126 03a9 03070000 		.4byte	0x703
+ 1127 03ad B7030000 		.4byte	0x3b7
+ 1128 03b1 13       		.uleb128 0x13
+ 1129 03b2 01       		.uleb128 0x1
+ 1130 03b3 50       		.byte	0x50
+ 1131 03b4 01       		.uleb128 0x1
+ 1132 03b5 32       		.byte	0x32
+ 1133 03b6 00       		.byte	0
+ 1134 03b7 12       		.uleb128 0x12
+ 1135 03b8 34000000 		.4byte	.LVL36
+ 1136 03bc 0E070000 		.4byte	0x70e
+ 1137 03c0 13       		.uleb128 0x13
+ 1138 03c1 01       		.uleb128 0x1
+ 1139 03c2 50       		.byte	0x50
+ 1140 03c3 02       		.uleb128 0x2
+ 1141 03c4 08       		.byte	0x8
+ 1142 03c5 44       		.byte	0x44
+ 1143 03c6 13       		.uleb128 0x13
+ 1144 03c7 01       		.uleb128 0x1
+ 1145 03c8 51       		.byte	0x51
+ 1146 03c9 02       		.uleb128 0x2
+ 1147 03ca 91       		.byte	0x91
+ 1148 03cb 74       		.sleb128 -12
+ 1149 03cc 13       		.uleb128 0x13
+ 1150 03cd 01       		.uleb128 0x1
+ 1151 03ce 52       		.byte	0x52
+ 1152 03cf 01       		.uleb128 0x1
+ 1153 03d0 33       		.byte	0x33
+ 1154 03d1 13       		.uleb128 0x13
+ 1155 03d2 01       		.uleb128 0x1
+ 1156 03d3 53       		.byte	0x53
+ 1157 03d4 01       		.uleb128 0x1
+ 1158 03d5 30       		.byte	0x30
+ 1159 03d6 00       		.byte	0
+ 1160 03d7 00       		.byte	0
+ 1161 03d8 14       		.uleb128 0x14
+ 1162 03d9 97000000 		.4byte	0x97
+ 1163 03dd E8030000 		.4byte	0x3e8
+ 1164 03e1 15       		.uleb128 0x15
+ 1165 03e2 D8000000 		.4byte	0xd8
+ 1166 03e6 02       		.byte	0x2
+ 1167 03e7 00       		.byte	0
+ 1168 03e8 1B       		.uleb128 0x1b
+ 1169 03e9 7B020000 		.4byte	.LASF35
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 24
+
+
+ 1170 03ed 01       		.byte	0x1
+ 1171 03ee 48       		.byte	0x48
+ 1172 03ef 00000000 		.4byte	.LFB38
+ 1173 03f3 14000000 		.4byte	.LFE38-.LFB38
+ 1174 03f7 01       		.uleb128 0x1
+ 1175 03f8 9C       		.byte	0x9c
+ 1176 03f9 22040000 		.4byte	0x422
+ 1177 03fd 18       		.uleb128 0x18
+ 1178 03fe 08000000 		.4byte	.LVL41
+ 1179 0402 6C010000 		.4byte	0x16c
+ 1180 0406 12040000 		.4byte	0x412
+ 1181 040a 13       		.uleb128 0x13
+ 1182 040b 01       		.uleb128 0x1
+ 1183 040c 50       		.byte	0x50
+ 1184 040d 03       		.uleb128 0x3
+ 1185 040e 0A       		.byte	0xa
+ 1186 040f A230     		.2byte	0x30a2
+ 1187 0411 00       		.byte	0
+ 1188 0412 12       		.uleb128 0x12
+ 1189 0413 0E000000 		.4byte	.LVL42
+ 1190 0417 03070000 		.4byte	0x703
+ 1191 041b 13       		.uleb128 0x13
+ 1192 041c 01       		.uleb128 0x1
+ 1193 041d 50       		.byte	0x50
+ 1194 041e 01       		.uleb128 0x1
+ 1195 041f 3A       		.byte	0x3a
+ 1196 0420 00       		.byte	0
+ 1197 0421 00       		.byte	0
+ 1198 0422 1B       		.uleb128 0x1b
+ 1199 0423 81000000 		.4byte	.LASF36
+ 1200 0427 01       		.byte	0x1
+ 1201 0428 4D       		.byte	0x4d
+ 1202 0429 00000000 		.4byte	.LFB39
+ 1203 042d 20000000 		.4byte	.LFE39-.LFB39
+ 1204 0431 01       		.uleb128 0x1
+ 1205 0432 9C       		.byte	0x9c
+ 1206 0433 5F040000 		.4byte	0x45f
+ 1207 0437 06       		.uleb128 0x6
+ 1208 0438 A2010000 		.4byte	.LASF37
+ 1209 043c 01       		.byte	0x1
+ 1210 043d 4D       		.byte	0x4d
+ 1211 043e F4010000 		.4byte	0x1f4
+ 1212 0442 3F010000 		.4byte	.LLST8
+ 1213 0446 11       		.uleb128 0x11
+ 1214 0447 10000000 		.4byte	.LVL47
+ 1215 044b 6C010000 		.4byte	0x16c
+ 1216 044f 12       		.uleb128 0x12
+ 1217 0450 16000000 		.4byte	.LVL48
+ 1218 0454 03070000 		.4byte	0x703
+ 1219 0458 13       		.uleb128 0x13
+ 1220 0459 01       		.uleb128 0x1
+ 1221 045a 50       		.byte	0x50
+ 1222 045b 01       		.uleb128 0x1
+ 1223 045c 31       		.byte	0x31
+ 1224 045d 00       		.byte	0
+ 1225 045e 00       		.byte	0
+ 1226 045f 16       		.uleb128 0x16
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 25
+
+
+ 1227 0460 60000000 		.4byte	.LASF38
+ 1228 0464 01       		.byte	0x1
+ 1229 0465 52       		.byte	0x52
+ 1230 0466 F4010000 		.4byte	0x1f4
+ 1231 046a 00000000 		.4byte	.LFB40
+ 1232 046e 20000000 		.4byte	.LFE40-.LFB40
+ 1233 0472 01       		.uleb128 0x1
+ 1234 0473 9C       		.byte	0x9c
+ 1235 0474 91040000 		.4byte	0x491
+ 1236 0478 09       		.uleb128 0x9
+ 1237 0479 72656700 		.ascii	"reg\000"
+ 1238 047d 01       		.byte	0x1
+ 1239 047e 53       		.byte	0x53
+ 1240 047f A2000000 		.4byte	0xa2
+ 1241 0483 79010000 		.4byte	.LLST9
+ 1242 0487 11       		.uleb128 0x11
+ 1243 0488 06000000 		.4byte	.LVL49
+ 1244 048c A6020000 		.4byte	0x2a6
+ 1245 0490 00       		.byte	0
+ 1246 0491 1C       		.uleb128 0x1c
+ 1247 0492 00000000 		.4byte	.LASF39
+ 1248 0496 01       		.byte	0x1
+ 1249 0497 57       		.byte	0x57
+ 1250 0498 F4010000 		.4byte	0x1f4
+ 1251 049c 00000000 		.4byte	.LFB41
+ 1252 04a0 C4000000 		.4byte	.LFE41-.LFB41
+ 1253 04a4 01       		.uleb128 0x1
+ 1254 04a5 9C       		.byte	0x9c
+ 1255 04a6 42060000 		.4byte	0x642
+ 1256 04aa 06       		.uleb128 0x6
+ 1257 04ab A9010000 		.4byte	.LASF40
+ 1258 04af 01       		.byte	0x1
+ 1259 04b0 57       		.byte	0x57
+ 1260 04b1 42060000 		.4byte	0x642
+ 1261 04b5 A2010000 		.4byte	.LLST10
+ 1262 04b9 06       		.uleb128 0x6
+ 1263 04ba 25020000 		.4byte	.LASF41
+ 1264 04be 01       		.byte	0x1
+ 1265 04bf 57       		.byte	0x57
+ 1266 04c0 42060000 		.4byte	0x642
+ 1267 04c4 CE010000 		.4byte	.LLST11
+ 1268 04c8 19       		.uleb128 0x19
+ 1269 04c9 41030000 		.4byte	.LASF42
+ 1270 04cd 01       		.byte	0x1
+ 1271 04ce 58       		.byte	0x58
+ 1272 04cf 48060000 		.4byte	0x648
+ 1273 04d3 02       		.uleb128 0x2
+ 1274 04d4 91       		.byte	0x91
+ 1275 04d5 60       		.sleb128 -32
+ 1276 04d6 09       		.uleb128 0x9
+ 1277 04d7 65727200 		.ascii	"err\000"
+ 1278 04db 01       		.byte	0x1
+ 1279 04dc 59       		.byte	0x59
+ 1280 04dd 97000000 		.4byte	0x97
+ 1281 04e1 FA010000 		.4byte	.LLST12
+ 1282 04e5 0F       		.uleb128 0xf
+ 1283 04e6 EA000000 		.4byte	.LASF27
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 26
+
+
+ 1284 04ea 01       		.byte	0x1
+ 1285 04eb 19       		.byte	0x19
+ 1286 04ec 89000000 		.4byte	0x89
+ 1287 04f0 F6040000 		.4byte	0x4f6
+ 1288 04f4 10       		.uleb128 0x10
+ 1289 04f5 00       		.byte	0
+ 1290 04f6 0F       		.uleb128 0xf
+ 1291 04f7 18030000 		.4byte	.LASF28
+ 1292 04fb 01       		.byte	0x1
+ 1293 04fc 1B       		.byte	0x1b
+ 1294 04fd 89000000 		.4byte	0x89
+ 1295 0501 07050000 		.4byte	0x507
+ 1296 0505 10       		.uleb128 0x10
+ 1297 0506 00       		.byte	0
+ 1298 0507 1D       		.uleb128 0x1d
+ 1299 0508 CC020000 		.4byte	.LASF22
+ 1300 050c 01       		.byte	0x1
+ 1301 050d 63       		.byte	0x63
+ 1302 050e D8030000 		.4byte	0x3d8
+ 1303 0512 0F       		.uleb128 0xf
+ 1304 0513 37000000 		.4byte	.LASF34
+ 1305 0517 01       		.byte	0x1
+ 1306 0518 3D       		.byte	0x3d
+ 1307 0519 89000000 		.4byte	0x89
+ 1308 051d 23050000 		.4byte	0x523
+ 1309 0521 10       		.uleb128 0x10
+ 1310 0522 00       		.byte	0
+ 1311 0523 17       		.uleb128 0x17
+ 1312 0524 EF020000 		.4byte	.LASF43
+ 1313 0528 01       		.byte	0x1
+ 1314 0529 70       		.byte	0x70
+ 1315 052a AD000000 		.4byte	0xad
+ 1316 052e 0D020000 		.4byte	.LLST13
+ 1317 0532 17       		.uleb128 0x17
+ 1318 0533 28000000 		.4byte	.LASF44
+ 1319 0537 01       		.byte	0x1
+ 1320 0538 72       		.byte	0x72
+ 1321 0539 C3000000 		.4byte	0xc3
+ 1322 053d 47020000 		.4byte	.LLST14
+ 1323 0541 17       		.uleb128 0x17
+ 1324 0542 87020000 		.4byte	.LASF45
+ 1325 0546 01       		.byte	0x1
+ 1326 0547 75       		.byte	0x75
+ 1327 0548 B8000000 		.4byte	0xb8
+ 1328 054c 65020000 		.4byte	.LLST15
+ 1329 0550 17       		.uleb128 0x17
+ 1330 0551 F5020000 		.4byte	.LASF46
+ 1331 0555 01       		.byte	0x1
+ 1332 0556 77       		.byte	0x77
+ 1333 0557 C3000000 		.4byte	0xc3
+ 1334 055b 9F020000 		.4byte	.LLST16
+ 1335 055f 1A       		.uleb128 0x1a
+ 1336 0560 40000000 		.4byte	.LBB6
+ 1337 0564 06000000 		.4byte	.LBE6-.LBB6
+ 1338 0568 8D050000 		.4byte	0x58d
+ 1339 056c 0F       		.uleb128 0xf
+ 1340 056d 12000000 		.4byte	.LASF31
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 27
+
+
+ 1341 0571 01       		.byte	0x1
+ 1342 0572 2B       		.byte	0x2b
+ 1343 0573 89000000 		.4byte	0x89
+ 1344 0577 7D050000 		.4byte	0x57d
+ 1345 057b 10       		.uleb128 0x10
+ 1346 057c 00       		.byte	0
+ 1347 057d 12       		.uleb128 0x12
+ 1348 057e 46000000 		.4byte	.LVL65
+ 1349 0582 EF060000 		.4byte	0x6ef
+ 1350 0586 13       		.uleb128 0x13
+ 1351 0587 01       		.uleb128 0x1
+ 1352 0588 50       		.byte	0x50
+ 1353 0589 01       		.uleb128 0x1
+ 1354 058a 44       		.byte	0x44
+ 1355 058b 00       		.byte	0
+ 1356 058c 00       		.byte	0
+ 1357 058d 18       		.uleb128 0x18
+ 1358 058e 10000000 		.4byte	.LVL57
+ 1359 0592 6C010000 		.4byte	0x16c
+ 1360 0596 A2050000 		.4byte	0x5a2
+ 1361 059a 13       		.uleb128 0x13
+ 1362 059b 01       		.uleb128 0x1
+ 1363 059c 50       		.byte	0x50
+ 1364 059d 03       		.uleb128 0x3
+ 1365 059e 0A       		.byte	0xa
+ 1366 059f 0024     		.2byte	0x2400
+ 1367 05a1 00       		.byte	0
+ 1368 05a2 18       		.uleb128 0x18
+ 1369 05a3 1A000000 		.4byte	.LVL58
+ 1370 05a7 03070000 		.4byte	0x703
+ 1371 05ab B5050000 		.4byte	0x5b5
+ 1372 05af 13       		.uleb128 0x13
+ 1373 05b0 01       		.uleb128 0x1
+ 1374 05b1 50       		.byte	0x50
+ 1375 05b2 01       		.uleb128 0x1
+ 1376 05b3 44       		.byte	0x44
+ 1377 05b4 00       		.byte	0
+ 1378 05b5 11       		.uleb128 0x11
+ 1379 05b6 1E000000 		.4byte	.LVL59
+ 1380 05ba CE060000 		.4byte	0x6ce
+ 1381 05be 18       		.uleb128 0x18
+ 1382 05bf 28000000 		.4byte	.LVL60
+ 1383 05c3 D9060000 		.4byte	0x6d9
+ 1384 05c7 DC050000 		.4byte	0x5dc
+ 1385 05cb 13       		.uleb128 0x13
+ 1386 05cc 01       		.uleb128 0x1
+ 1387 05cd 50       		.byte	0x50
+ 1388 05ce 02       		.uleb128 0x2
+ 1389 05cf 08       		.byte	0x8
+ 1390 05d0 44       		.byte	0x44
+ 1391 05d1 13       		.uleb128 0x13
+ 1392 05d2 01       		.uleb128 0x1
+ 1393 05d3 51       		.byte	0x51
+ 1394 05d4 01       		.uleb128 0x1
+ 1395 05d5 31       		.byte	0x31
+ 1396 05d6 13       		.uleb128 0x13
+ 1397 05d7 01       		.uleb128 0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 28
+
+
+ 1398 05d8 52       		.byte	0x52
+ 1399 05d9 01       		.uleb128 0x1
+ 1400 05da 44       		.byte	0x44
+ 1401 05db 00       		.byte	0
+ 1402 05dc 18       		.uleb128 0x18
+ 1403 05dd 2E000000 		.4byte	.LVL61
+ 1404 05e1 03070000 		.4byte	0x703
+ 1405 05e5 EF050000 		.4byte	0x5ef
+ 1406 05e9 13       		.uleb128 0x13
+ 1407 05ea 01       		.uleb128 0x1
+ 1408 05eb 50       		.byte	0x50
+ 1409 05ec 01       		.uleb128 0x1
+ 1410 05ed 32       		.byte	0x32
+ 1411 05ee 00       		.byte	0
+ 1412 05ef 18       		.uleb128 0x18
+ 1413 05f0 3A000000 		.4byte	.LVL62
+ 1414 05f4 0E070000 		.4byte	0x70e
+ 1415 05f8 13060000 		.4byte	0x613
+ 1416 05fc 13       		.uleb128 0x13
+ 1417 05fd 01       		.uleb128 0x1
+ 1418 05fe 50       		.byte	0x50
+ 1419 05ff 02       		.uleb128 0x2
+ 1420 0600 08       		.byte	0x8
+ 1421 0601 44       		.byte	0x44
+ 1422 0602 13       		.uleb128 0x13
+ 1423 0603 01       		.uleb128 0x1
+ 1424 0604 51       		.byte	0x51
+ 1425 0605 02       		.uleb128 0x2
+ 1426 0606 7D       		.byte	0x7d
+ 1427 0607 00       		.sleb128 0
+ 1428 0608 13       		.uleb128 0x13
+ 1429 0609 01       		.uleb128 0x1
+ 1430 060a 52       		.byte	0x52
+ 1431 060b 01       		.uleb128 0x1
+ 1432 060c 36       		.byte	0x36
+ 1433 060d 13       		.uleb128 0x13
+ 1434 060e 01       		.uleb128 0x1
+ 1435 060f 53       		.byte	0x53
+ 1436 0610 01       		.uleb128 0x1
+ 1437 0611 30       		.byte	0x30
+ 1438 0612 00       		.byte	0
+ 1439 0613 18       		.uleb128 0x18
+ 1440 0614 52000000 		.4byte	.LVL66
+ 1441 0618 E6000000 		.4byte	0xe6
+ 1442 061c 2C060000 		.4byte	0x62c
+ 1443 0620 13       		.uleb128 0x13
+ 1444 0621 01       		.uleb128 0x1
+ 1445 0622 50       		.byte	0x50
+ 1446 0623 02       		.uleb128 0x2
+ 1447 0624 7D       		.byte	0x7d
+ 1448 0625 00       		.sleb128 0
+ 1449 0626 13       		.uleb128 0x13
+ 1450 0627 01       		.uleb128 0x1
+ 1451 0628 51       		.byte	0x51
+ 1452 0629 01       		.uleb128 0x1
+ 1453 062a 32       		.byte	0x32
+ 1454 062b 00       		.byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 29
+
+
+ 1455 062c 12       		.uleb128 0x12
+ 1456 062d 62000000 		.4byte	.LVL67
+ 1457 0631 E6000000 		.4byte	0xe6
+ 1458 0635 13       		.uleb128 0x13
+ 1459 0636 01       		.uleb128 0x1
+ 1460 0637 50       		.byte	0x50
+ 1461 0638 02       		.uleb128 0x2
+ 1462 0639 7D       		.byte	0x7d
+ 1463 063a 03       		.sleb128 3
+ 1464 063b 13       		.uleb128 0x13
+ 1465 063c 01       		.uleb128 0x1
+ 1466 063d 51       		.byte	0x51
+ 1467 063e 01       		.uleb128 0x1
+ 1468 063f 32       		.byte	0x32
+ 1469 0640 00       		.byte	0
+ 1470 0641 00       		.byte	0
+ 1471 0642 0C       		.uleb128 0xc
+ 1472 0643 04       		.byte	0x4
+ 1473 0644 C3000000 		.4byte	0xc3
+ 1474 0648 14       		.uleb128 0x14
+ 1475 0649 97000000 		.4byte	0x97
+ 1476 064d 58060000 		.4byte	0x658
+ 1477 0651 15       		.uleb128 0x15
+ 1478 0652 D8000000 		.4byte	0xd8
+ 1479 0656 05       		.byte	0x5
+ 1480 0657 00       		.byte	0
+ 1481 0658 16       		.uleb128 0x16
+ 1482 0659 E0010000 		.4byte	.LASF47
+ 1483 065d 01       		.byte	0x1
+ 1484 065e 80       		.byte	0x80
+ 1485 065f C3000000 		.4byte	0xc3
+ 1486 0663 00000000 		.4byte	.LFB42
+ 1487 0667 20000000 		.4byte	.LFE42-.LFB42
+ 1488 066b 01       		.uleb128 0x1
+ 1489 066c 9C       		.byte	0x9c
+ 1490 066d 93060000 		.4byte	0x693
+ 1491 0671 1E       		.uleb128 0x1e
+ 1492 0672 7400     		.ascii	"t\000"
+ 1493 0674 01       		.byte	0x1
+ 1494 0675 81       		.byte	0x81
+ 1495 0676 C3000000 		.4byte	0xc3
+ 1496 067a 02       		.uleb128 0x2
+ 1497 067b 91       		.byte	0x91
+ 1498 067c 74       		.sleb128 -12
+ 1499 067d 12       		.uleb128 0x12
+ 1500 067e 0C000000 		.4byte	.LVL83
+ 1501 0682 91040000 		.4byte	0x491
+ 1502 0686 13       		.uleb128 0x13
+ 1503 0687 01       		.uleb128 0x1
+ 1504 0688 50       		.byte	0x50
+ 1505 0689 02       		.uleb128 0x2
+ 1506 068a 91       		.byte	0x91
+ 1507 068b 74       		.sleb128 -12
+ 1508 068c 13       		.uleb128 0x13
+ 1509 068d 01       		.uleb128 0x1
+ 1510 068e 51       		.byte	0x51
+ 1511 068f 01       		.uleb128 0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 30
+
+
+ 1512 0690 30       		.byte	0x30
+ 1513 0691 00       		.byte	0
+ 1514 0692 00       		.byte	0
+ 1515 0693 16       		.uleb128 0x16
+ 1516 0694 B9020000 		.4byte	.LASF48
+ 1517 0698 01       		.byte	0x1
+ 1518 0699 85       		.byte	0x85
+ 1519 069a C3000000 		.4byte	0xc3
+ 1520 069e 00000000 		.4byte	.LFB43
+ 1521 06a2 20000000 		.4byte	.LFE43-.LFB43
+ 1522 06a6 01       		.uleb128 0x1
+ 1523 06a7 9C       		.byte	0x9c
+ 1524 06a8 CE060000 		.4byte	0x6ce
+ 1525 06ac 1E       		.uleb128 0x1e
+ 1526 06ad 6800     		.ascii	"h\000"
+ 1527 06af 01       		.byte	0x1
+ 1528 06b0 86       		.byte	0x86
+ 1529 06b1 C3000000 		.4byte	0xc3
+ 1530 06b5 02       		.uleb128 0x2
+ 1531 06b6 91       		.byte	0x91
+ 1532 06b7 74       		.sleb128 -12
+ 1533 06b8 12       		.uleb128 0x12
+ 1534 06b9 0C000000 		.4byte	.LVL84
+ 1535 06bd 91040000 		.4byte	0x491
+ 1536 06c1 13       		.uleb128 0x13
+ 1537 06c2 01       		.uleb128 0x1
+ 1538 06c3 50       		.byte	0x50
+ 1539 06c4 01       		.uleb128 0x1
+ 1540 06c5 30       		.byte	0x30
+ 1541 06c6 13       		.uleb128 0x13
+ 1542 06c7 01       		.uleb128 0x1
+ 1543 06c8 51       		.byte	0x51
+ 1544 06c9 02       		.uleb128 0x2
+ 1545 06ca 91       		.byte	0x91
+ 1546 06cb 74       		.sleb128 -12
+ 1547 06cc 00       		.byte	0
+ 1548 06cd 00       		.byte	0
+ 1549 06ce 1F       		.uleb128 0x1f
+ 1550 06cf EA000000 		.4byte	.LASF27
+ 1551 06d3 EA000000 		.4byte	.LASF27
+ 1552 06d7 01       		.byte	0x1
+ 1553 06d8 19       		.byte	0x19
+ 1554 06d9 1F       		.uleb128 0x1f
+ 1555 06da 18030000 		.4byte	.LASF28
+ 1556 06de 18030000 		.4byte	.LASF28
+ 1557 06e2 01       		.byte	0x1
+ 1558 06e3 1B       		.byte	0x1b
+ 1559 06e4 1F       		.uleb128 0x1f
+ 1560 06e5 2F030000 		.4byte	.LASF49
+ 1561 06e9 2F030000 		.4byte	.LASF49
+ 1562 06ed 04       		.byte	0x4
+ 1563 06ee 72       		.byte	0x72
+ 1564 06ef 1F       		.uleb128 0x1f
+ 1565 06f0 12000000 		.4byte	.LASF31
+ 1566 06f4 12000000 		.4byte	.LASF31
+ 1567 06f8 01       		.byte	0x1
+ 1568 06f9 2B       		.byte	0x2b
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 31
+
+
+ 1569 06fa 20       		.uleb128 0x20
+ 1570 06fb C5010000 		.4byte	.LASF54
+ 1571 06ff C5010000 		.4byte	.LASF54
+ 1572 0703 1F       		.uleb128 0x1f
+ 1573 0704 10030000 		.4byte	.LASF50
+ 1574 0708 10030000 		.4byte	.LASF50
+ 1575 070c 05       		.byte	0x5
+ 1576 070d EC       		.byte	0xec
+ 1577 070e 1F       		.uleb128 0x1f
+ 1578 070f 37000000 		.4byte	.LASF34
+ 1579 0713 37000000 		.4byte	.LASF34
+ 1580 0717 01       		.byte	0x1
+ 1581 0718 3D       		.byte	0x3d
+ 1582 0719 00       		.byte	0
+ 1583              		.section	.debug_abbrev,"",%progbits
+ 1584              	.Ldebug_abbrev0:
+ 1585 0000 01       		.uleb128 0x1
+ 1586 0001 11       		.uleb128 0x11
+ 1587 0002 01       		.byte	0x1
+ 1588 0003 25       		.uleb128 0x25
+ 1589 0004 0E       		.uleb128 0xe
+ 1590 0005 13       		.uleb128 0x13
+ 1591 0006 0B       		.uleb128 0xb
+ 1592 0007 03       		.uleb128 0x3
+ 1593 0008 0E       		.uleb128 0xe
+ 1594 0009 1B       		.uleb128 0x1b
+ 1595 000a 0E       		.uleb128 0xe
+ 1596 000b 55       		.uleb128 0x55
+ 1597 000c 17       		.uleb128 0x17
+ 1598 000d 11       		.uleb128 0x11
+ 1599 000e 01       		.uleb128 0x1
+ 1600 000f 10       		.uleb128 0x10
+ 1601 0010 17       		.uleb128 0x17
+ 1602 0011 00       		.byte	0
+ 1603 0012 00       		.byte	0
+ 1604 0013 02       		.uleb128 0x2
+ 1605 0014 24       		.uleb128 0x24
+ 1606 0015 00       		.byte	0
+ 1607 0016 0B       		.uleb128 0xb
+ 1608 0017 0B       		.uleb128 0xb
+ 1609 0018 3E       		.uleb128 0x3e
+ 1610 0019 0B       		.uleb128 0xb
+ 1611 001a 03       		.uleb128 0x3
+ 1612 001b 0E       		.uleb128 0xe
+ 1613 001c 00       		.byte	0
+ 1614 001d 00       		.byte	0
+ 1615 001e 03       		.uleb128 0x3
+ 1616 001f 16       		.uleb128 0x16
+ 1617 0020 00       		.byte	0
+ 1618 0021 03       		.uleb128 0x3
+ 1619 0022 0E       		.uleb128 0xe
+ 1620 0023 3A       		.uleb128 0x3a
+ 1621 0024 0B       		.uleb128 0xb
+ 1622 0025 3B       		.uleb128 0x3b
+ 1623 0026 0B       		.uleb128 0xb
+ 1624 0027 49       		.uleb128 0x49
+ 1625 0028 13       		.uleb128 0x13
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 32
+
+
+ 1626 0029 00       		.byte	0
+ 1627 002a 00       		.byte	0
+ 1628 002b 04       		.uleb128 0x4
+ 1629 002c 24       		.uleb128 0x24
+ 1630 002d 00       		.byte	0
+ 1631 002e 0B       		.uleb128 0xb
+ 1632 002f 0B       		.uleb128 0xb
+ 1633 0030 3E       		.uleb128 0x3e
+ 1634 0031 0B       		.uleb128 0xb
+ 1635 0032 03       		.uleb128 0x3
+ 1636 0033 08       		.uleb128 0x8
+ 1637 0034 00       		.byte	0
+ 1638 0035 00       		.byte	0
+ 1639 0036 05       		.uleb128 0x5
+ 1640 0037 2E       		.uleb128 0x2e
+ 1641 0038 01       		.byte	0x1
+ 1642 0039 03       		.uleb128 0x3
+ 1643 003a 0E       		.uleb128 0xe
+ 1644 003b 3A       		.uleb128 0x3a
+ 1645 003c 0B       		.uleb128 0xb
+ 1646 003d 3B       		.uleb128 0x3b
+ 1647 003e 0B       		.uleb128 0xb
+ 1648 003f 27       		.uleb128 0x27
+ 1649 0040 19       		.uleb128 0x19
+ 1650 0041 49       		.uleb128 0x49
+ 1651 0042 13       		.uleb128 0x13
+ 1652 0043 11       		.uleb128 0x11
+ 1653 0044 01       		.uleb128 0x1
+ 1654 0045 12       		.uleb128 0x12
+ 1655 0046 06       		.uleb128 0x6
+ 1656 0047 40       		.uleb128 0x40
+ 1657 0048 18       		.uleb128 0x18
+ 1658 0049 9742     		.uleb128 0x2117
+ 1659 004b 19       		.uleb128 0x19
+ 1660 004c 01       		.uleb128 0x1
+ 1661 004d 13       		.uleb128 0x13
+ 1662 004e 00       		.byte	0
+ 1663 004f 00       		.byte	0
+ 1664 0050 06       		.uleb128 0x6
+ 1665 0051 05       		.uleb128 0x5
+ 1666 0052 00       		.byte	0
+ 1667 0053 03       		.uleb128 0x3
+ 1668 0054 0E       		.uleb128 0xe
+ 1669 0055 3A       		.uleb128 0x3a
+ 1670 0056 0B       		.uleb128 0xb
+ 1671 0057 3B       		.uleb128 0x3b
+ 1672 0058 0B       		.uleb128 0xb
+ 1673 0059 49       		.uleb128 0x49
+ 1674 005a 13       		.uleb128 0x13
+ 1675 005b 02       		.uleb128 0x2
+ 1676 005c 17       		.uleb128 0x17
+ 1677 005d 00       		.byte	0
+ 1678 005e 00       		.byte	0
+ 1679 005f 07       		.uleb128 0x7
+ 1680 0060 05       		.uleb128 0x5
+ 1681 0061 00       		.byte	0
+ 1682 0062 03       		.uleb128 0x3
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 33
+
+
+ 1683 0063 08       		.uleb128 0x8
+ 1684 0064 3A       		.uleb128 0x3a
+ 1685 0065 0B       		.uleb128 0xb
+ 1686 0066 3B       		.uleb128 0x3b
+ 1687 0067 0B       		.uleb128 0xb
+ 1688 0068 49       		.uleb128 0x49
+ 1689 0069 13       		.uleb128 0x13
+ 1690 006a 02       		.uleb128 0x2
+ 1691 006b 18       		.uleb128 0x18
+ 1692 006c 00       		.byte	0
+ 1693 006d 00       		.byte	0
+ 1694 006e 08       		.uleb128 0x8
+ 1695 006f 34       		.uleb128 0x34
+ 1696 0070 00       		.byte	0
+ 1697 0071 03       		.uleb128 0x3
+ 1698 0072 0E       		.uleb128 0xe
+ 1699 0073 3A       		.uleb128 0x3a
+ 1700 0074 0B       		.uleb128 0xb
+ 1701 0075 3B       		.uleb128 0x3b
+ 1702 0076 0B       		.uleb128 0xb
+ 1703 0077 49       		.uleb128 0x49
+ 1704 0078 13       		.uleb128 0x13
+ 1705 0079 1C       		.uleb128 0x1c
+ 1706 007a 0B       		.uleb128 0xb
+ 1707 007b 00       		.byte	0
+ 1708 007c 00       		.byte	0
+ 1709 007d 09       		.uleb128 0x9
+ 1710 007e 34       		.uleb128 0x34
+ 1711 007f 00       		.byte	0
+ 1712 0080 03       		.uleb128 0x3
+ 1713 0081 08       		.uleb128 0x8
+ 1714 0082 3A       		.uleb128 0x3a
+ 1715 0083 0B       		.uleb128 0xb
+ 1716 0084 3B       		.uleb128 0x3b
+ 1717 0085 0B       		.uleb128 0xb
+ 1718 0086 49       		.uleb128 0x49
+ 1719 0087 13       		.uleb128 0x13
+ 1720 0088 02       		.uleb128 0x2
+ 1721 0089 17       		.uleb128 0x17
+ 1722 008a 00       		.byte	0
+ 1723 008b 00       		.byte	0
+ 1724 008c 0A       		.uleb128 0xa
+ 1725 008d 0B       		.uleb128 0xb
+ 1726 008e 01       		.byte	0x1
+ 1727 008f 55       		.uleb128 0x55
+ 1728 0090 17       		.uleb128 0x17
+ 1729 0091 00       		.byte	0
+ 1730 0092 00       		.byte	0
+ 1731 0093 0B       		.uleb128 0xb
+ 1732 0094 0B       		.uleb128 0xb
+ 1733 0095 01       		.byte	0x1
+ 1734 0096 11       		.uleb128 0x11
+ 1735 0097 01       		.uleb128 0x1
+ 1736 0098 12       		.uleb128 0x12
+ 1737 0099 06       		.uleb128 0x6
+ 1738 009a 00       		.byte	0
+ 1739 009b 00       		.byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 34
+
+
+ 1740 009c 0C       		.uleb128 0xc
+ 1741 009d 0F       		.uleb128 0xf
+ 1742 009e 00       		.byte	0
+ 1743 009f 0B       		.uleb128 0xb
+ 1744 00a0 0B       		.uleb128 0xb
+ 1745 00a1 49       		.uleb128 0x49
+ 1746 00a2 13       		.uleb128 0x13
+ 1747 00a3 00       		.byte	0
+ 1748 00a4 00       		.byte	0
+ 1749 00a5 0D       		.uleb128 0xd
+ 1750 00a6 26       		.uleb128 0x26
+ 1751 00a7 00       		.byte	0
+ 1752 00a8 49       		.uleb128 0x49
+ 1753 00a9 13       		.uleb128 0x13
+ 1754 00aa 00       		.byte	0
+ 1755 00ab 00       		.byte	0
+ 1756 00ac 0E       		.uleb128 0xe
+ 1757 00ad 34       		.uleb128 0x34
+ 1758 00ae 00       		.byte	0
+ 1759 00af 03       		.uleb128 0x3
+ 1760 00b0 08       		.uleb128 0x8
+ 1761 00b1 3A       		.uleb128 0x3a
+ 1762 00b2 0B       		.uleb128 0xb
+ 1763 00b3 3B       		.uleb128 0x3b
+ 1764 00b4 0B       		.uleb128 0xb
+ 1765 00b5 49       		.uleb128 0x49
+ 1766 00b6 13       		.uleb128 0x13
+ 1767 00b7 00       		.byte	0
+ 1768 00b8 00       		.byte	0
+ 1769 00b9 0F       		.uleb128 0xf
+ 1770 00ba 2E       		.uleb128 0x2e
+ 1771 00bb 01       		.byte	0x1
+ 1772 00bc 3F       		.uleb128 0x3f
+ 1773 00bd 19       		.uleb128 0x19
+ 1774 00be 03       		.uleb128 0x3
+ 1775 00bf 0E       		.uleb128 0xe
+ 1776 00c0 3A       		.uleb128 0x3a
+ 1777 00c1 0B       		.uleb128 0xb
+ 1778 00c2 3B       		.uleb128 0x3b
+ 1779 00c3 0B       		.uleb128 0xb
+ 1780 00c4 49       		.uleb128 0x49
+ 1781 00c5 13       		.uleb128 0x13
+ 1782 00c6 3C       		.uleb128 0x3c
+ 1783 00c7 19       		.uleb128 0x19
+ 1784 00c8 01       		.uleb128 0x1
+ 1785 00c9 13       		.uleb128 0x13
+ 1786 00ca 00       		.byte	0
+ 1787 00cb 00       		.byte	0
+ 1788 00cc 10       		.uleb128 0x10
+ 1789 00cd 18       		.uleb128 0x18
+ 1790 00ce 00       		.byte	0
+ 1791 00cf 00       		.byte	0
+ 1792 00d0 00       		.byte	0
+ 1793 00d1 11       		.uleb128 0x11
+ 1794 00d2 898201   		.uleb128 0x4109
+ 1795 00d5 00       		.byte	0
+ 1796 00d6 11       		.uleb128 0x11
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 35
+
+
+ 1797 00d7 01       		.uleb128 0x1
+ 1798 00d8 31       		.uleb128 0x31
+ 1799 00d9 13       		.uleb128 0x13
+ 1800 00da 00       		.byte	0
+ 1801 00db 00       		.byte	0
+ 1802 00dc 12       		.uleb128 0x12
+ 1803 00dd 898201   		.uleb128 0x4109
+ 1804 00e0 01       		.byte	0x1
+ 1805 00e1 11       		.uleb128 0x11
+ 1806 00e2 01       		.uleb128 0x1
+ 1807 00e3 31       		.uleb128 0x31
+ 1808 00e4 13       		.uleb128 0x13
+ 1809 00e5 00       		.byte	0
+ 1810 00e6 00       		.byte	0
+ 1811 00e7 13       		.uleb128 0x13
+ 1812 00e8 8A8201   		.uleb128 0x410a
+ 1813 00eb 00       		.byte	0
+ 1814 00ec 02       		.uleb128 0x2
+ 1815 00ed 18       		.uleb128 0x18
+ 1816 00ee 9142     		.uleb128 0x2111
+ 1817 00f0 18       		.uleb128 0x18
+ 1818 00f1 00       		.byte	0
+ 1819 00f2 00       		.byte	0
+ 1820 00f3 14       		.uleb128 0x14
+ 1821 00f4 01       		.uleb128 0x1
+ 1822 00f5 01       		.byte	0x1
+ 1823 00f6 49       		.uleb128 0x49
+ 1824 00f7 13       		.uleb128 0x13
+ 1825 00f8 01       		.uleb128 0x1
+ 1826 00f9 13       		.uleb128 0x13
+ 1827 00fa 00       		.byte	0
+ 1828 00fb 00       		.byte	0
+ 1829 00fc 15       		.uleb128 0x15
+ 1830 00fd 21       		.uleb128 0x21
+ 1831 00fe 00       		.byte	0
+ 1832 00ff 49       		.uleb128 0x49
+ 1833 0100 13       		.uleb128 0x13
+ 1834 0101 2F       		.uleb128 0x2f
+ 1835 0102 0B       		.uleb128 0xb
+ 1836 0103 00       		.byte	0
+ 1837 0104 00       		.byte	0
+ 1838 0105 16       		.uleb128 0x16
+ 1839 0106 2E       		.uleb128 0x2e
+ 1840 0107 01       		.byte	0x1
+ 1841 0108 3F       		.uleb128 0x3f
+ 1842 0109 19       		.uleb128 0x19
+ 1843 010a 03       		.uleb128 0x3
+ 1844 010b 0E       		.uleb128 0xe
+ 1845 010c 3A       		.uleb128 0x3a
+ 1846 010d 0B       		.uleb128 0xb
+ 1847 010e 3B       		.uleb128 0x3b
+ 1848 010f 0B       		.uleb128 0xb
+ 1849 0110 27       		.uleb128 0x27
+ 1850 0111 19       		.uleb128 0x19
+ 1851 0112 49       		.uleb128 0x49
+ 1852 0113 13       		.uleb128 0x13
+ 1853 0114 11       		.uleb128 0x11
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 36
+
+
+ 1854 0115 01       		.uleb128 0x1
+ 1855 0116 12       		.uleb128 0x12
+ 1856 0117 06       		.uleb128 0x6
+ 1857 0118 40       		.uleb128 0x40
+ 1858 0119 18       		.uleb128 0x18
+ 1859 011a 9742     		.uleb128 0x2117
+ 1860 011c 19       		.uleb128 0x19
+ 1861 011d 01       		.uleb128 0x1
+ 1862 011e 13       		.uleb128 0x13
+ 1863 011f 00       		.byte	0
+ 1864 0120 00       		.byte	0
+ 1865 0121 17       		.uleb128 0x17
+ 1866 0122 34       		.uleb128 0x34
+ 1867 0123 00       		.byte	0
+ 1868 0124 03       		.uleb128 0x3
+ 1869 0125 0E       		.uleb128 0xe
+ 1870 0126 3A       		.uleb128 0x3a
+ 1871 0127 0B       		.uleb128 0xb
+ 1872 0128 3B       		.uleb128 0x3b
+ 1873 0129 0B       		.uleb128 0xb
+ 1874 012a 49       		.uleb128 0x49
+ 1875 012b 13       		.uleb128 0x13
+ 1876 012c 02       		.uleb128 0x2
+ 1877 012d 17       		.uleb128 0x17
+ 1878 012e 00       		.byte	0
+ 1879 012f 00       		.byte	0
+ 1880 0130 18       		.uleb128 0x18
+ 1881 0131 898201   		.uleb128 0x4109
+ 1882 0134 01       		.byte	0x1
+ 1883 0135 11       		.uleb128 0x11
+ 1884 0136 01       		.uleb128 0x1
+ 1885 0137 31       		.uleb128 0x31
+ 1886 0138 13       		.uleb128 0x13
+ 1887 0139 01       		.uleb128 0x1
+ 1888 013a 13       		.uleb128 0x13
+ 1889 013b 00       		.byte	0
+ 1890 013c 00       		.byte	0
+ 1891 013d 19       		.uleb128 0x19
+ 1892 013e 34       		.uleb128 0x34
+ 1893 013f 00       		.byte	0
+ 1894 0140 03       		.uleb128 0x3
+ 1895 0141 0E       		.uleb128 0xe
+ 1896 0142 3A       		.uleb128 0x3a
+ 1897 0143 0B       		.uleb128 0xb
+ 1898 0144 3B       		.uleb128 0x3b
+ 1899 0145 0B       		.uleb128 0xb
+ 1900 0146 49       		.uleb128 0x49
+ 1901 0147 13       		.uleb128 0x13
+ 1902 0148 02       		.uleb128 0x2
+ 1903 0149 18       		.uleb128 0x18
+ 1904 014a 00       		.byte	0
+ 1905 014b 00       		.byte	0
+ 1906 014c 1A       		.uleb128 0x1a
+ 1907 014d 0B       		.uleb128 0xb
+ 1908 014e 01       		.byte	0x1
+ 1909 014f 11       		.uleb128 0x11
+ 1910 0150 01       		.uleb128 0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 37
+
+
+ 1911 0151 12       		.uleb128 0x12
+ 1912 0152 06       		.uleb128 0x6
+ 1913 0153 01       		.uleb128 0x1
+ 1914 0154 13       		.uleb128 0x13
+ 1915 0155 00       		.byte	0
+ 1916 0156 00       		.byte	0
+ 1917 0157 1B       		.uleb128 0x1b
+ 1918 0158 2E       		.uleb128 0x2e
+ 1919 0159 01       		.byte	0x1
+ 1920 015a 3F       		.uleb128 0x3f
+ 1921 015b 19       		.uleb128 0x19
+ 1922 015c 03       		.uleb128 0x3
+ 1923 015d 0E       		.uleb128 0xe
+ 1924 015e 3A       		.uleb128 0x3a
+ 1925 015f 0B       		.uleb128 0xb
+ 1926 0160 3B       		.uleb128 0x3b
+ 1927 0161 0B       		.uleb128 0xb
+ 1928 0162 27       		.uleb128 0x27
+ 1929 0163 19       		.uleb128 0x19
+ 1930 0164 11       		.uleb128 0x11
+ 1931 0165 01       		.uleb128 0x1
+ 1932 0166 12       		.uleb128 0x12
+ 1933 0167 06       		.uleb128 0x6
+ 1934 0168 40       		.uleb128 0x40
+ 1935 0169 18       		.uleb128 0x18
+ 1936 016a 9742     		.uleb128 0x2117
+ 1937 016c 19       		.uleb128 0x19
+ 1938 016d 01       		.uleb128 0x1
+ 1939 016e 13       		.uleb128 0x13
+ 1940 016f 00       		.byte	0
+ 1941 0170 00       		.byte	0
+ 1942 0171 1C       		.uleb128 0x1c
+ 1943 0172 2E       		.uleb128 0x2e
+ 1944 0173 01       		.byte	0x1
+ 1945 0174 3F       		.uleb128 0x3f
+ 1946 0175 19       		.uleb128 0x19
+ 1947 0176 03       		.uleb128 0x3
+ 1948 0177 0E       		.uleb128 0xe
+ 1949 0178 3A       		.uleb128 0x3a
+ 1950 0179 0B       		.uleb128 0xb
+ 1951 017a 3B       		.uleb128 0x3b
+ 1952 017b 0B       		.uleb128 0xb
+ 1953 017c 27       		.uleb128 0x27
+ 1954 017d 19       		.uleb128 0x19
+ 1955 017e 49       		.uleb128 0x49
+ 1956 017f 13       		.uleb128 0x13
+ 1957 0180 11       		.uleb128 0x11
+ 1958 0181 01       		.uleb128 0x1
+ 1959 0182 12       		.uleb128 0x12
+ 1960 0183 06       		.uleb128 0x6
+ 1961 0184 40       		.uleb128 0x40
+ 1962 0185 18       		.uleb128 0x18
+ 1963 0186 9642     		.uleb128 0x2116
+ 1964 0188 19       		.uleb128 0x19
+ 1965 0189 01       		.uleb128 0x1
+ 1966 018a 13       		.uleb128 0x13
+ 1967 018b 00       		.byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 38
+
+
+ 1968 018c 00       		.byte	0
+ 1969 018d 1D       		.uleb128 0x1d
+ 1970 018e 34       		.uleb128 0x34
+ 1971 018f 00       		.byte	0
+ 1972 0190 03       		.uleb128 0x3
+ 1973 0191 0E       		.uleb128 0xe
+ 1974 0192 3A       		.uleb128 0x3a
+ 1975 0193 0B       		.uleb128 0xb
+ 1976 0194 3B       		.uleb128 0x3b
+ 1977 0195 0B       		.uleb128 0xb
+ 1978 0196 49       		.uleb128 0x49
+ 1979 0197 13       		.uleb128 0x13
+ 1980 0198 00       		.byte	0
+ 1981 0199 00       		.byte	0
+ 1982 019a 1E       		.uleb128 0x1e
+ 1983 019b 34       		.uleb128 0x34
+ 1984 019c 00       		.byte	0
+ 1985 019d 03       		.uleb128 0x3
+ 1986 019e 08       		.uleb128 0x8
+ 1987 019f 3A       		.uleb128 0x3a
+ 1988 01a0 0B       		.uleb128 0xb
+ 1989 01a1 3B       		.uleb128 0x3b
+ 1990 01a2 0B       		.uleb128 0xb
+ 1991 01a3 49       		.uleb128 0x49
+ 1992 01a4 13       		.uleb128 0x13
+ 1993 01a5 02       		.uleb128 0x2
+ 1994 01a6 18       		.uleb128 0x18
+ 1995 01a7 00       		.byte	0
+ 1996 01a8 00       		.byte	0
+ 1997 01a9 1F       		.uleb128 0x1f
+ 1998 01aa 2E       		.uleb128 0x2e
+ 1999 01ab 00       		.byte	0
+ 2000 01ac 3F       		.uleb128 0x3f
+ 2001 01ad 19       		.uleb128 0x19
+ 2002 01ae 3C       		.uleb128 0x3c
+ 2003 01af 19       		.uleb128 0x19
+ 2004 01b0 6E       		.uleb128 0x6e
+ 2005 01b1 0E       		.uleb128 0xe
+ 2006 01b2 03       		.uleb128 0x3
+ 2007 01b3 0E       		.uleb128 0xe
+ 2008 01b4 3A       		.uleb128 0x3a
+ 2009 01b5 0B       		.uleb128 0xb
+ 2010 01b6 3B       		.uleb128 0x3b
+ 2011 01b7 0B       		.uleb128 0xb
+ 2012 01b8 00       		.byte	0
+ 2013 01b9 00       		.byte	0
+ 2014 01ba 20       		.uleb128 0x20
+ 2015 01bb 2E       		.uleb128 0x2e
+ 2016 01bc 00       		.byte	0
+ 2017 01bd 3F       		.uleb128 0x3f
+ 2018 01be 19       		.uleb128 0x19
+ 2019 01bf 3C       		.uleb128 0x3c
+ 2020 01c0 19       		.uleb128 0x19
+ 2021 01c1 6E       		.uleb128 0x6e
+ 2022 01c2 0E       		.uleb128 0xe
+ 2023 01c3 03       		.uleb128 0x3
+ 2024 01c4 0E       		.uleb128 0xe
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 39
+
+
+ 2025 01c5 00       		.byte	0
+ 2026 01c6 00       		.byte	0
+ 2027 01c7 00       		.byte	0
+ 2028              		.section	.debug_loc,"",%progbits
+ 2029              	.Ldebug_loc0:
+ 2030              	.LLST0:
+ 2031 0000 00000000 		.4byte	.LVL0
+ 2032 0004 08000000 		.4byte	.LVL2
+ 2033 0008 0100     		.2byte	0x1
+ 2034 000a 50       		.byte	0x50
+ 2035 000b 08000000 		.4byte	.LVL2
+ 2036 000f 32000000 		.4byte	.LVL14
+ 2037 0013 0100     		.2byte	0x1
+ 2038 0015 55       		.byte	0x55
+ 2039 0016 32000000 		.4byte	.LVL14
+ 2040 001a 34000000 		.4byte	.LFE34
+ 2041 001e 0400     		.2byte	0x4
+ 2042 0020 F3       		.byte	0xf3
+ 2043 0021 01       		.uleb128 0x1
+ 2044 0022 50       		.byte	0x50
+ 2045 0023 9F       		.byte	0x9f
+ 2046 0024 00000000 		.4byte	0
+ 2047 0028 00000000 		.4byte	0
+ 2048              	.LLST1:
+ 2049 002c 04000000 		.4byte	.LVL1
+ 2050 0030 0A000000 		.4byte	.LVL3
+ 2051 0034 0300     		.2byte	0x3
+ 2052 0036 09       		.byte	0x9
+ 2053 0037 FF       		.byte	0xff
+ 2054 0038 9F       		.byte	0x9f
+ 2055 0039 0A000000 		.4byte	.LVL3
+ 2056 003d 1A000000 		.4byte	.LVL6
+ 2057 0041 0100     		.2byte	0x1
+ 2058 0043 50       		.byte	0x50
+ 2059 0044 1A000000 		.4byte	.LVL6
+ 2060 0048 1C000000 		.4byte	.LVL7
+ 2061 004c 0100     		.2byte	0x1
+ 2062 004e 52       		.byte	0x52
+ 2063 004f 22000000 		.4byte	.LVL8
+ 2064 0053 24000000 		.4byte	.LVL9
+ 2065 0057 0100     		.2byte	0x1
+ 2066 0059 50       		.byte	0x50
+ 2067 005a 24000000 		.4byte	.LVL9
+ 2068 005e 26000000 		.4byte	.LVL10
+ 2069 0062 0100     		.2byte	0x1
+ 2070 0064 52       		.byte	0x52
+ 2071 0065 26000000 		.4byte	.LVL10
+ 2072 0069 34000000 		.4byte	.LFE34
+ 2073 006d 0100     		.2byte	0x1
+ 2074 006f 50       		.byte	0x50
+ 2075 0070 00000000 		.4byte	0
+ 2076 0074 00000000 		.4byte	0
+ 2077              	.LLST2:
+ 2078 0078 04000000 		.4byte	.LVL1
+ 2079 007c 0A000000 		.4byte	.LVL3
+ 2080 0080 0200     		.2byte	0x2
+ 2081 0082 30       		.byte	0x30
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 40
+
+
+ 2082 0083 9F       		.byte	0x9f
+ 2083 0084 0A000000 		.4byte	.LVL3
+ 2084 0088 32000000 		.4byte	.LVL13
+ 2085 008c 0100     		.2byte	0x1
+ 2086 008e 54       		.byte	0x54
+ 2087 008f 00000000 		.4byte	0
+ 2088 0093 00000000 		.4byte	0
+ 2089              	.LLST3:
+ 2090 0097 0E000000 		.4byte	.LVL4
+ 2091 009b 12000000 		.4byte	.LVL5
+ 2092 009f 0200     		.2byte	0x2
+ 2093 00a1 30       		.byte	0x30
+ 2094 00a2 9F       		.byte	0x9f
+ 2095 00a3 12000000 		.4byte	.LVL5
+ 2096 00a7 2E000000 		.4byte	.LVL12
+ 2097 00ab 0100     		.2byte	0x1
+ 2098 00ad 53       		.byte	0x53
+ 2099 00ae 00000000 		.4byte	0
+ 2100 00b2 00000000 		.4byte	0
+ 2101              	.LLST4:
+ 2102 00b6 00000000 		.4byte	.LVL15
+ 2103 00ba 05000000 		.4byte	.LVL17-1
+ 2104 00be 0100     		.2byte	0x1
+ 2105 00c0 50       		.byte	0x50
+ 2106 00c1 05000000 		.4byte	.LVL17-1
+ 2107 00c5 1E000000 		.4byte	.LFE35
+ 2108 00c9 0400     		.2byte	0x4
+ 2109 00cb F3       		.byte	0xf3
+ 2110 00cc 01       		.uleb128 0x1
+ 2111 00cd 50       		.byte	0x50
+ 2112 00ce 9F       		.byte	0x9f
+ 2113 00cf 00000000 		.4byte	0
+ 2114 00d3 00000000 		.4byte	0
+ 2115              	.LLST5:
+ 2116 00d7 02000000 		.4byte	.LVL16
+ 2117 00db 12000000 		.4byte	.LVL19
+ 2118 00df 0200     		.2byte	0x2
+ 2119 00e1 30       		.byte	0x30
+ 2120 00e2 9F       		.byte	0x9f
+ 2121 00e3 12000000 		.4byte	.LVL19
+ 2122 00e7 18000000 		.4byte	.LVL20
+ 2123 00eb 0100     		.2byte	0x1
+ 2124 00ed 50       		.byte	0x50
+ 2125 00ee 1A000000 		.4byte	.LVL21
+ 2126 00f2 1C000000 		.4byte	.LVL22
+ 2127 00f6 0100     		.2byte	0x1
+ 2128 00f8 50       		.byte	0x50
+ 2129 00f9 00000000 		.4byte	0
+ 2130 00fd 00000000 		.4byte	0
+ 2131              	.LLST6:
+ 2132 0101 02000000 		.4byte	.LVL23
+ 2133 0105 16000000 		.4byte	.LVL27
+ 2134 0109 0200     		.2byte	0x2
+ 2135 010b 30       		.byte	0x30
+ 2136 010c 9F       		.byte	0x9f
+ 2137 010d 16000000 		.4byte	.LVL27
+ 2138 0111 20000000 		.4byte	.LVL29
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 41
+
+
+ 2139 0115 0100     		.2byte	0x1
+ 2140 0117 54       		.byte	0x54
+ 2141 0118 00000000 		.4byte	0
+ 2142 011c 00000000 		.4byte	0
+ 2143              	.LLST7:
+ 2144 0120 04000000 		.4byte	.LVL30
+ 2145 0124 36000000 		.4byte	.LVL37
+ 2146 0128 0200     		.2byte	0x2
+ 2147 012a 30       		.byte	0x30
+ 2148 012b 9F       		.byte	0x9f
+ 2149 012c 36000000 		.4byte	.LVL37
+ 2150 0130 3C000000 		.4byte	.LVL38
+ 2151 0134 0100     		.2byte	0x1
+ 2152 0136 50       		.byte	0x50
+ 2153 0137 00000000 		.4byte	0
+ 2154 013b 00000000 		.4byte	0
+ 2155              	.LLST8:
+ 2156 013f 00000000 		.4byte	.LVL43
+ 2157 0143 08000000 		.4byte	.LVL44
+ 2158 0147 0100     		.2byte	0x1
+ 2159 0149 50       		.byte	0x50
+ 2160 014a 08000000 		.4byte	.LVL44
+ 2161 014e 0A000000 		.4byte	.LVL45
+ 2162 0152 0400     		.2byte	0x4
+ 2163 0154 F3       		.byte	0xf3
+ 2164 0155 01       		.uleb128 0x1
+ 2165 0156 50       		.byte	0x50
+ 2166 0157 9F       		.byte	0x9f
+ 2167 0158 0A000000 		.4byte	.LVL45
+ 2168 015c 0C000000 		.4byte	.LVL46
+ 2169 0160 0100     		.2byte	0x1
+ 2170 0162 50       		.byte	0x50
+ 2171 0163 0C000000 		.4byte	.LVL46
+ 2172 0167 20000000 		.4byte	.LFE39
+ 2173 016b 0400     		.2byte	0x4
+ 2174 016d F3       		.byte	0xf3
+ 2175 016e 01       		.uleb128 0x1
+ 2176 016f 50       		.byte	0x50
+ 2177 0170 9F       		.byte	0x9f
+ 2178 0171 00000000 		.4byte	0
+ 2179 0175 00000000 		.4byte	0
+ 2180              	.LLST9:
+ 2181 0179 06000000 		.4byte	.LVL49
+ 2182 017d 12000000 		.4byte	.LVL50
+ 2183 0181 0100     		.2byte	0x1
+ 2184 0183 50       		.byte	0x50
+ 2185 0184 14000000 		.4byte	.LVL51
+ 2186 0188 16000000 		.4byte	.LVL52
+ 2187 018c 0100     		.2byte	0x1
+ 2188 018e 50       		.byte	0x50
+ 2189 018f 18000000 		.4byte	.LVL53
+ 2190 0193 1A000000 		.4byte	.LVL54
+ 2191 0197 0100     		.2byte	0x1
+ 2192 0199 50       		.byte	0x50
+ 2193 019a 00000000 		.4byte	0
+ 2194 019e 00000000 		.4byte	0
+ 2195              	.LLST10:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 42
+
+
+ 2196 01a2 00000000 		.4byte	.LVL55
+ 2197 01a6 0A000000 		.4byte	.LVL56
+ 2198 01aa 0100     		.2byte	0x1
+ 2199 01ac 50       		.byte	0x50
+ 2200 01ad 0A000000 		.4byte	.LVL56
+ 2201 01b1 B2000000 		.4byte	.LVL82
+ 2202 01b5 0100     		.2byte	0x1
+ 2203 01b7 56       		.byte	0x56
+ 2204 01b8 B2000000 		.4byte	.LVL82
+ 2205 01bc C4000000 		.4byte	.LFE41
+ 2206 01c0 0400     		.2byte	0x4
+ 2207 01c2 F3       		.byte	0xf3
+ 2208 01c3 01       		.uleb128 0x1
+ 2209 01c4 50       		.byte	0x50
+ 2210 01c5 9F       		.byte	0x9f
+ 2211 01c6 00000000 		.4byte	0
+ 2212 01ca 00000000 		.4byte	0
+ 2213              	.LLST11:
+ 2214 01ce 00000000 		.4byte	.LVL55
+ 2215 01d2 0F000000 		.4byte	.LVL57-1
+ 2216 01d6 0100     		.2byte	0x1
+ 2217 01d8 51       		.byte	0x51
+ 2218 01d9 0F000000 		.4byte	.LVL57-1
+ 2219 01dd B2000000 		.4byte	.LVL81
+ 2220 01e1 0100     		.2byte	0x1
+ 2221 01e3 55       		.byte	0x55
+ 2222 01e4 B2000000 		.4byte	.LVL81
+ 2223 01e8 C4000000 		.4byte	.LFE41
+ 2224 01ec 0400     		.2byte	0x4
+ 2225 01ee F3       		.byte	0xf3
+ 2226 01ef 01       		.uleb128 0x1
+ 2227 01f0 51       		.byte	0x51
+ 2228 01f1 9F       		.byte	0x9f
+ 2229 01f2 00000000 		.4byte	0
+ 2230 01f6 00000000 		.4byte	0
+ 2231              	.LLST12:
+ 2232 01fa 3C000000 		.4byte	.LVL63
+ 2233 01fe 42000000 		.4byte	.LVL64
+ 2234 0202 0100     		.2byte	0x1
+ 2235 0204 50       		.byte	0x50
+ 2236 0205 00000000 		.4byte	0
+ 2237 0209 00000000 		.4byte	0
+ 2238              	.LLST13:
+ 2239 020d 70000000 		.4byte	.LVL68
+ 2240 0211 74000000 		.4byte	.LVL69
+ 2241 0215 0100     		.2byte	0x1
+ 2242 0217 50       		.byte	0x50
+ 2243 0218 74000000 		.4byte	.LVL69
+ 2244 021c 7C000000 		.4byte	.LVL70
+ 2245 0220 1200     		.2byte	0x12
+ 2246 0222 7D       		.byte	0x7d
+ 2247 0223 00       		.sleb128 0
+ 2248 0224 94       		.byte	0x94
+ 2249 0225 01       		.byte	0x1
+ 2250 0226 08       		.byte	0x8
+ 2251 0227 FF       		.byte	0xff
+ 2252 0228 1A       		.byte	0x1a
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 43
+
+
+ 2253 0229 38       		.byte	0x38
+ 2254 022a 24       		.byte	0x24
+ 2255 022b 7D       		.byte	0x7d
+ 2256 022c 01       		.sleb128 1
+ 2257 022d 94       		.byte	0x94
+ 2258 022e 01       		.byte	0x1
+ 2259 022f 08       		.byte	0x8
+ 2260 0230 FF       		.byte	0xff
+ 2261 0231 1A       		.byte	0x1a
+ 2262 0232 21       		.byte	0x21
+ 2263 0233 9F       		.byte	0x9f
+ 2264 0234 7C000000 		.4byte	.LVL70
+ 2265 0238 7F000000 		.4byte	.LVL71-1
+ 2266 023c 0100     		.2byte	0x1
+ 2267 023e 50       		.byte	0x50
+ 2268 023f 00000000 		.4byte	0
+ 2269 0243 00000000 		.4byte	0
+ 2270              	.LLST14:
+ 2271 0247 88000000 		.4byte	.LVL73
+ 2272 024b 8C000000 		.4byte	.LVL74
+ 2273 024f 0100     		.2byte	0x1
+ 2274 0251 50       		.byte	0x50
+ 2275 0252 8C000000 		.4byte	.LVL74
+ 2276 0256 A8000000 		.4byte	.LVL80
+ 2277 025a 0100     		.2byte	0x1
+ 2278 025c 57       		.byte	0x57
+ 2279 025d 00000000 		.4byte	0
+ 2280 0261 00000000 		.4byte	0
+ 2281              	.LLST15:
+ 2282 0265 92000000 		.4byte	.LVL75
+ 2283 0269 96000000 		.4byte	.LVL76
+ 2284 026d 0100     		.2byte	0x1
+ 2285 026f 50       		.byte	0x50
+ 2286 0270 96000000 		.4byte	.LVL76
+ 2287 0274 98000000 		.4byte	.LVL77
+ 2288 0278 1200     		.2byte	0x12
+ 2289 027a 7D       		.byte	0x7d
+ 2290 027b 03       		.sleb128 3
+ 2291 027c 94       		.byte	0x94
+ 2292 027d 01       		.byte	0x1
+ 2293 027e 08       		.byte	0x8
+ 2294 027f FF       		.byte	0xff
+ 2295 0280 1A       		.byte	0x1a
+ 2296 0281 38       		.byte	0x38
+ 2297 0282 24       		.byte	0x24
+ 2298 0283 7D       		.byte	0x7d
+ 2299 0284 04       		.sleb128 4
+ 2300 0285 94       		.byte	0x94
+ 2301 0286 01       		.byte	0x1
+ 2302 0287 08       		.byte	0x8
+ 2303 0288 FF       		.byte	0xff
+ 2304 0289 1A       		.byte	0x1a
+ 2305 028a 21       		.byte	0x21
+ 2306 028b 9F       		.byte	0x9f
+ 2307 028c 98000000 		.4byte	.LVL77
+ 2308 0290 9B000000 		.4byte	.LVL78-1
+ 2309 0294 0100     		.2byte	0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 44
+
+
+ 2310 0296 50       		.byte	0x50
+ 2311 0297 00000000 		.4byte	0
+ 2312 029b 00000000 		.4byte	0
+ 2313              	.LLST16:
+ 2314 029f A2000000 		.4byte	.LVL79
+ 2315 02a3 A8000000 		.4byte	.LVL80
+ 2316 02a7 0100     		.2byte	0x1
+ 2317 02a9 50       		.byte	0x50
+ 2318 02aa 00000000 		.4byte	0
+ 2319 02ae 00000000 		.4byte	0
+ 2320              		.section	.debug_aranges,"",%progbits
+ 2321 0000 64000000 		.4byte	0x64
+ 2322 0004 0200     		.2byte	0x2
+ 2323 0006 00000000 		.4byte	.Ldebug_info0
+ 2324 000a 04       		.byte	0x4
+ 2325 000b 00       		.byte	0
+ 2326 000c 0000     		.2byte	0
+ 2327 000e 0000     		.2byte	0
+ 2328 0010 00000000 		.4byte	.LFB34
+ 2329 0014 34000000 		.4byte	.LFE34-.LFB34
+ 2330 0018 00000000 		.4byte	.LFB35
+ 2331 001c 1E000000 		.4byte	.LFE35-.LFB35
+ 2332 0020 00000000 		.4byte	.LFB36
+ 2333 0024 24000000 		.4byte	.LFE36-.LFB36
+ 2334 0028 00000000 		.4byte	.LFB37
+ 2335 002c 54000000 		.4byte	.LFE37-.LFB37
+ 2336 0030 00000000 		.4byte	.LFB38
+ 2337 0034 14000000 		.4byte	.LFE38-.LFB38
+ 2338 0038 00000000 		.4byte	.LFB39
+ 2339 003c 20000000 		.4byte	.LFE39-.LFB39
+ 2340 0040 00000000 		.4byte	.LFB40
+ 2341 0044 20000000 		.4byte	.LFE40-.LFB40
+ 2342 0048 00000000 		.4byte	.LFB41
+ 2343 004c C4000000 		.4byte	.LFE41-.LFB41
+ 2344 0050 00000000 		.4byte	.LFB42
+ 2345 0054 20000000 		.4byte	.LFE42-.LFB42
+ 2346 0058 00000000 		.4byte	.LFB43
+ 2347 005c 20000000 		.4byte	.LFE43-.LFB43
+ 2348 0060 00000000 		.4byte	0
+ 2349 0064 00000000 		.4byte	0
+ 2350              		.section	.debug_ranges,"",%progbits
+ 2351              	.Ldebug_ranges0:
+ 2352 0000 04000000 		.4byte	.LBB2
+ 2353 0004 06000000 		.4byte	.LBE2
+ 2354 0008 08000000 		.4byte	.LBB4
+ 2355 000c 32000000 		.4byte	.LBE4
+ 2356 0010 00000000 		.4byte	0
+ 2357 0014 00000000 		.4byte	0
+ 2358 0018 00000000 		.4byte	.LFB34
+ 2359 001c 34000000 		.4byte	.LFE34
+ 2360 0020 00000000 		.4byte	.LFB35
+ 2361 0024 1E000000 		.4byte	.LFE35
+ 2362 0028 00000000 		.4byte	.LFB36
+ 2363 002c 24000000 		.4byte	.LFE36
+ 2364 0030 00000000 		.4byte	.LFB37
+ 2365 0034 54000000 		.4byte	.LFE37
+ 2366 0038 00000000 		.4byte	.LFB38
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 45
+
+
+ 2367 003c 14000000 		.4byte	.LFE38
+ 2368 0040 00000000 		.4byte	.LFB39
+ 2369 0044 20000000 		.4byte	.LFE39
+ 2370 0048 00000000 		.4byte	.LFB40
+ 2371 004c 20000000 		.4byte	.LFE40
+ 2372 0050 00000000 		.4byte	.LFB41
+ 2373 0054 C4000000 		.4byte	.LFE41
+ 2374 0058 00000000 		.4byte	.LFB42
+ 2375 005c 20000000 		.4byte	.LFE42
+ 2376 0060 00000000 		.4byte	.LFB43
+ 2377 0064 20000000 		.4byte	.LFE43
+ 2378 0068 00000000 		.4byte	0
+ 2379 006c 00000000 		.4byte	0
+ 2380              		.section	.debug_line,"",%progbits
+ 2381              	.Ldebug_line0:
+ 2382 0000 88020000 		.section	.debug_str,"MS",%progbits,1
+ 2382      02004801 
+ 2382      00000201 
+ 2382      FB0E0D00 
+ 2382      01010101 
+ 2383              	.LASF39:
+ 2384 0000 53485433 		.ascii	"SHT31_ReadTempHum\000"
+ 2384      315F5265 
+ 2384      61645465 
+ 2384      6D704875 
+ 2384      6D00
+ 2385              	.LASF31:
+ 2386 0012 4932435F 		.ascii	"I2C_I2CMasterSendStop\000"
+ 2386      4932434D 
+ 2386      61737465 
+ 2386      7253656E 
+ 2386      6453746F 
+ 2387              	.LASF44:
+ 2388 0028 74656D70 		.ascii	"temp\000"
+ 2388      00
+ 2389              	.LASF2:
+ 2390 002d 73686F72 		.ascii	"short int\000"
+ 2390      7420696E 
+ 2390      7400
+ 2391              	.LASF34:
+ 2392 0037 4932435F 		.ascii	"I2C_I2CMasterReadBuf\000"
+ 2392      4932434D 
+ 2392      61737465 
+ 2392      72526561 
+ 2392      64427566 
+ 2393              	.LASF20:
+ 2394 004c 73697A65 		.ascii	"sizetype\000"
+ 2394      74797065 
+ 2394      00
+ 2395              	.LASF8:
+ 2396 0055 5F5F7569 		.ascii	"__uint32_t\000"
+ 2396      6E743332 
+ 2396      5F7400
+ 2397              	.LASF38:
+ 2398 0060 53485433 		.ascii	"SHT31_IsHeaterEnabled\000"
+ 2398      315F4973 
+ 2398      48656174 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 46
+
+
+ 2398      6572456E 
+ 2398      61626C65 
+ 2399              	.LASF4:
+ 2400 0076 5F5F7569 		.ascii	"__uint16_t\000"
+ 2400      6E743136 
+ 2400      5F7400
+ 2401              	.LASF36:
+ 2402 0081 53485433 		.ascii	"SHT31_Heater\000"
+ 2402      315F4865 
+ 2402      61746572 
+ 2402      00
+ 2403              	.LASF53:
+ 2404 008e 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
+ 2404      73657273 
+ 2404      5C626563 
+ 2404      63615C44 
+ 2404      6F63756D 
+ 2405 00bc 5F426F61 		.ascii	"_Board\\Humidity\\Humidity PSoC.cydsn\000"
+ 2405      72645C48 
+ 2405      756D6964 
+ 2405      6974795C 
+ 2405      48756D69 
+ 2406              	.LASF52:
+ 2407 00e0 6C696272 		.ascii	"library.c\000"
+ 2407      6172792E 
+ 2407      6300
+ 2408              	.LASF27:
+ 2409 00ea 4932435F 		.ascii	"I2C_I2CMasterClearStatus\000"
+ 2409      4932434D 
+ 2409      61737465 
+ 2409      72436C65 
+ 2409      61725374 
+ 2410              	.LASF33:
+ 2411 0103 53485433 		.ascii	"SHT31_ReadStatus\000"
+ 2411      315F5265 
+ 2411      61645374 
+ 2411      61747573 
+ 2411      00
+ 2412              	.LASF51:
+ 2413 0114 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2413      43313120 
+ 2413      352E342E 
+ 2413      31203230 
+ 2413      31363036 
+ 2414 0147 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2414      20726576 
+ 2414      6973696F 
+ 2414      6E203233 
+ 2414      37373135 
+ 2415 017a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2415      66756E63 
+ 2415      74696F6E 
+ 2415      2D736563 
+ 2415      74696F6E 
+ 2416              	.LASF37:
+ 2417 01a2 656E6162 		.ascii	"enable\000"
+ 2417      6C6500
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 47
+
+
+ 2418              	.LASF40:
+ 2419 01a9 6F757454 		.ascii	"outTemp\000"
+ 2419      656D7000 
+ 2420              	.LASF17:
+ 2421 01b1 666C6F61 		.ascii	"float\000"
+ 2421      7400
+ 2422              	.LASF10:
+ 2423 01b7 6C6F6E67 		.ascii	"long long int\000"
+ 2423      206C6F6E 
+ 2423      6720696E 
+ 2423      7400
+ 2424              	.LASF54:
+ 2425 01c5 6D656D73 		.ascii	"memset\000"
+ 2425      657400
+ 2426              	.LASF7:
+ 2427 01cc 6C6F6E67 		.ascii	"long int\000"
+ 2427      20696E74 
+ 2427      00
+ 2428              	.LASF32:
+ 2429 01d5 53485433 		.ascii	"SHT31_Init\000"
+ 2429      315F496E 
+ 2429      697400
+ 2430              	.LASF47:
+ 2431 01e0 53485433 		.ascii	"SHT31_ReadTemperature\000"
+ 2431      315F5265 
+ 2431      61645465 
+ 2431      6D706572 
+ 2431      61747572 
+ 2432              	.LASF3:
+ 2433 01f6 5F5F7569 		.ascii	"__uint8_t\000"
+ 2433      6E74385F 
+ 2433      7400
+ 2434              	.LASF23:
+ 2435 0200 504F4C59 		.ascii	"POLYNOMIAL\000"
+ 2435      4E4F4D49 
+ 2435      414C00
+ 2436              	.LASF1:
+ 2437 020b 756E7369 		.ascii	"unsigned char\000"
+ 2437      676E6564 
+ 2437      20636861 
+ 2437      7200
+ 2438              	.LASF21:
+ 2439 0219 6C6F6E67 		.ascii	"long double\000"
+ 2439      20646F75 
+ 2439      626C6500 
+ 2440              	.LASF41:
+ 2441 0225 6F757448 		.ascii	"outHum\000"
+ 2441      756D00
+ 2442              	.LASF25:
+ 2443 022c 77726974 		.ascii	"writeCommand\000"
+ 2443      65436F6D 
+ 2443      6D616E64 
+ 2443      00
+ 2444              	.LASF0:
+ 2445 0239 7369676E 		.ascii	"signed char\000"
+ 2445      65642063 
+ 2445      68617200 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 48
+
+
+ 2446              	.LASF11:
+ 2447 0245 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2447      206C6F6E 
+ 2447      6720756E 
+ 2447      7369676E 
+ 2447      65642069 
+ 2448              	.LASF16:
+ 2449 025c 75696E74 		.ascii	"uint32_t\000"
+ 2449      33325F74 
+ 2449      00
+ 2450              	.LASF12:
+ 2451 0265 756E7369 		.ascii	"unsigned int\000"
+ 2451      676E6564 
+ 2451      20696E74 
+ 2451      00
+ 2452              	.LASF14:
+ 2453 0272 75696E74 		.ascii	"uint16_t\000"
+ 2453      31365F74 
+ 2453      00
+ 2454              	.LASF35:
+ 2455 027b 53485433 		.ascii	"SHT31_Reset\000"
+ 2455      315F5265 
+ 2455      73657400 
+ 2456              	.LASF45:
+ 2457 0287 7368756D 		.ascii	"shum\000"
+ 2457      00
+ 2458              	.LASF30:
+ 2459 028c 73746174 		.ascii	"status\000"
+ 2459      757300
+ 2460              	.LASF19:
+ 2461 0293 63686172 		.ascii	"char\000"
+ 2461      00
+ 2462              	.LASF15:
+ 2463 0298 696E7433 		.ascii	"int32_t\000"
+ 2463      325F7400 
+ 2464              	.LASF5:
+ 2465 02a0 73686F72 		.ascii	"short unsigned int\000"
+ 2465      7420756E 
+ 2465      7369676E 
+ 2465      65642069 
+ 2465      6E7400
+ 2466              	.LASF29:
+ 2467 02b3 5F426F6F 		.ascii	"_Bool\000"
+ 2467      6C00
+ 2468              	.LASF48:
+ 2469 02b9 53485433 		.ascii	"SHT31_ReadHumidity\000"
+ 2469      315F5265 
+ 2469      61644875 
+ 2469      6D696469 
+ 2469      747900
+ 2470              	.LASF22:
+ 2471 02cc 64617461 		.ascii	"data\000"
+ 2471      00
+ 2472              	.LASF9:
+ 2473 02d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2473      20756E73 
+ 2473      69676E65 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccgjRcJw.s 			page 49
+
+
+ 2473      6420696E 
+ 2473      7400
+ 2474              	.LASF18:
+ 2475 02e3 646F7562 		.ascii	"double\000"
+ 2475      6C6500
+ 2476              	.LASF24:
+ 2477 02ea 63726338 		.ascii	"crc8\000"
+ 2477      00
+ 2478              	.LASF43:
+ 2479 02ef 7374656D 		.ascii	"stemp\000"
+ 2479      7000
+ 2480              	.LASF46:
+ 2481 02f5 68756D69 		.ascii	"humidity\000"
+ 2481      64697479 
+ 2481      00
+ 2482              	.LASF6:
+ 2483 02fe 5F5F696E 		.ascii	"__int32_t\000"
+ 2483      7433325F 
+ 2483      7400
+ 2484              	.LASF13:
+ 2485 0308 75696E74 		.ascii	"uint8_t\000"
+ 2485      385F7400 
+ 2486              	.LASF50:
+ 2487 0310 43794465 		.ascii	"CyDelay\000"
+ 2487      6C617900 
+ 2488              	.LASF28:
+ 2489 0318 4932435F 		.ascii	"I2C_I2CMasterSendStart\000"
+ 2489      4932434D 
+ 2489      61737465 
+ 2489      7253656E 
+ 2489      64537461 
+ 2490              	.LASF49:
+ 2491 032f 4932435F 		.ascii	"I2C_Start\000"
+ 2491      53746172 
+ 2491      7400
+ 2492              	.LASF26:
+ 2493 0339 636F6D6D 		.ascii	"command\000"
+ 2493      616E6400 
+ 2494              	.LASF42:
+ 2495 0341 72656164 		.ascii	"readbuffer\000"
+ 2495      62756666 
+ 2495      657200
+ 2496              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

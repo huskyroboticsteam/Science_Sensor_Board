@@ -1,0 +1,6 @@
+C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj|f85e1fe9-9bf5-4589-833b-e0724880b88a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b1620517-5925-49c3-924d-a19b57049c64
+C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|9abd24cb-d57e-4ad3-bf0a-9961c11a9f15
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|365937c9-93ef-4af4-9005-054c7976ff39
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c3d77db4-cd34-4589-913f-b7dc94729d09
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e63f3e6f-0ab2-412d-b6b0-b51ca0d3b619
