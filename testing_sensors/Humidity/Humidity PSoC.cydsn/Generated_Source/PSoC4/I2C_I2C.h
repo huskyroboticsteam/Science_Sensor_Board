@@ -26,7 +26,7 @@
 *   Initial Parameter Constants
 ****************************************/
 
-#define I2C_I2C_MODE                   (1u)
+#define I2C_I2C_MODE                   (2u)
 #define I2C_I2C_OVS_FACTOR_LOW         (8u)
 #define I2C_I2C_OVS_FACTOR_HIGH        (8u)
 #define I2C_I2C_MEDIAN_FILTER_ENABLE   (1u)
@@ -34,7 +34,7 @@
 #define I2C_I2C_SLAVE_ADDRESS_MASK     (0xFEu)
 #define I2C_I2C_ACCEPT_ADDRESS         (0u)
 #define I2C_I2C_ACCEPT_GENERAL_CALL    (0u)
-#define I2C_I2C_WAKE_ENABLE            (1u)
+#define I2C_I2C_WAKE_ENABLE            (0u)
 #define I2C_I2C_DATA_RATE              (100u)
 #define I2C_I2C_DATA_RATE_ACTUAL       (100u)
 #define I2C_I2C_CLOCK_FROM_TERM        (0u)

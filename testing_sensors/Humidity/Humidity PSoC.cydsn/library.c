@@ -1,7 +1,7 @@
-#include "project.h"
+#include <project.h>
 #include <math.h>
 #include <library.h>
-
+#include <I2C.h>
 
 // CRC-8 calculation for SHT31 (Polynomial 0x31)
 static uint8_t crc8(const uint8_t *data, int len) {
@@ -32,7 +32,7 @@ static bool writeCommand(uint16_t command) {
 }
 
 
-bool SHT31_Init(void) {
+bool SHT31_Init() {
     uint8_t status = 0;
     I2C_Start();
     
