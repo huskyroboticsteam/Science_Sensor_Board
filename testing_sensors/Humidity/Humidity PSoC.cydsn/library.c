@@ -25,6 +25,16 @@ static bool writeCommand(uint16_t command) {
     I2C_I2CMasterClearStatus();
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
+    
+    if(err){
+        UART_UartPutString("Error with write Command\r\n");
+    }
+    
+    //err = I2C_I2CMasterWriteBuf(SHT31_I2C_ADDR, cmd, 2, I2C_I2C_MODE_COMPLETE_XFER);
+    
+    err = I2C_I2CMasterWriteByte(cmd[0], TIMEOUT);
+    err = I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
+    
     if (err)
         return false;
     
@@ -49,7 +59,10 @@ bool SHT31_Init() {
 
 uint16_t SHT31_ReadStatus(void) {
     uint8_t err = 0;
-    writeCommand(SHT31_READSTATUS);
+    if(!writeCommand(SHT31_READSTATUS)){
+        I2C_I2CMasterSendStop(TIMEOUT);
+        UART_UartPutString("Error with Read Status: writeCommand\r\n");
+    }
 
     I2C_I2CMasterClearStatus();
     
@@ -58,10 +71,14 @@ uint16_t SHT31_ReadStatus(void) {
 
     CyDelay(2);
     
-    err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, data, 3, I2C_I2C_MODE_COMPLETE_XFER);
+    //err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, data, 3, I2C_I2C_MODE_COMPLETE_XFER);
+    I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[0], TIMEOUT);
+    I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[1], TIMEOUT);
+    I2C_I2CMasterReadByte(I2C_I2C_NAK_DATA, &data[2], TIMEOUT);
     
     if(err){
         I2C_I2CMasterSendStop(TIMEOUT);
+         UART_UartPutString("Error with Read Status: ReadBuf\r\n");
     }
     
     uint16_t status = ((uint16_t)data[0] << 8) | data[1];

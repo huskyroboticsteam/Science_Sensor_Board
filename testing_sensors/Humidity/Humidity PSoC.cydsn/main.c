@@ -27,7 +27,7 @@ int main(void)
     } else {
         UART_UartPutString("DISABLED\r\n");
     }
-
+/*
     for(;;)
     {
         float t = SHT31_ReadTemperature();
@@ -52,6 +52,7 @@ int main(void)
         CyDelay(1000);
 
     }
+    */
     
 }
 

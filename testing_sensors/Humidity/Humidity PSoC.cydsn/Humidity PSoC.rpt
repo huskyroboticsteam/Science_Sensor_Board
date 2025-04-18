@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 5s.123ms
+Loading plugins phase: Elapsed time ==> 6s.995ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 -s C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 -s C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 11s.271ms
+Elaboration phase: Elapsed time ==> 25s.762ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.131ms
+HDL generation phase: Elapsed time ==> 0s.182ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -24,24 +24,24 @@ HDL generation phase: Elapsed time ==> 0s.131ms
 
 ======================================================================
 Compiling:  Humidity PSoC.v
-Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
+Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Humidity PSoC.v
-Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
+Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Wed Apr 16 18:33:44 2025
+Thu Apr 17 18:04:16 2025
 
 
 ======================================================================
@@ -51,31 +51,31 @@ Options  :    -yv2 -q10 Humidity PSoC.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Wed Apr 16 18:33:44 2025
+Thu Apr 17 18:04:16 2025
 
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 
 vpp:  No errors.
 
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'Humidity PSoC.ctl'.
 
 vlogfe:  No errors.
@@ -84,31 +84,31 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Wed Apr 16 18:33:44 2025
+Thu Apr 17 18:04:17 2025
 
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 
 tovif:  No errors.
 
@@ -116,32 +116,32 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Wed Apr 16 18:33:44 2025
+Thu Apr 17 18:04:18 2025
 
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -389,18 +389,18 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
-Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj" -dcpsoc3 "Humidity PSoC.v" -verilog
+CYPRESS_DIR    : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp
+Warp Program   : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj" -dcpsoc3 "Humidity PSoC.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.933ms
+Warp synthesis phase: Elapsed time ==> 3s.867ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Wednesday, 16 April 2025 18:33:45
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 Humidity PSoC.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Thursday, 17 April 2025 18:04:19
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 Humidity PSoC.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.020ms
+Design parsing phase: Elapsed time ==> 0s.042ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1681,8 +1681,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    1 :    1 :    2 : 50.00 %
   8-bit IDAC                  :    1 :    1 :    2 : 50.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.093ms
-Tech Mapping phase: Elapsed time ==> 0s.117ms
+Technology Mapping: Elapsed time ==> 0s.188ms
+Tech Mapping phase: Elapsed time ==> 0s.258ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1742,15 +1742,15 @@ Input_Pin_1(0)                      : [IOP=(2)][IoId=(3)]
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
 Info: plm.M0038: The pin named \I2C:scl(0)\ at location [IOP=(5)][IoId=(0)] prevents usage of special purposes: F(CSD,1). (App=cydsfit)
-Elapsed time ==> 0.5095037s
+Elapsed time ==> 0.6024948s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 1s.323ms
+Analog Placement phase: Elapsed time ==> 1s.643ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0612380 secs
+Route success=True, Iterations=1 Elapsed=0.0563277 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.064ms
+Analog Routing phase: Elapsed time ==> 0s.065ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2003,12 +2003,12 @@ Mux Info {
     }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.042ms
+Analog Code Generation phase: Elapsed time ==> 0s.033ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.6 sec.
+I2076: Total run-time: 0.8 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2032,14 +2032,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.002ms
+PLD Packing: Elapsed time ==> 0s.005ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.032ms
+Partitioning: Elapsed time ==> 0s.022ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3975,33 +3975,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connect
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.065ms
-Digital Placement phase: Elapsed time ==> 1s.368ms
+Digital component placer commit/Report: Elapsed time ==> 0s.188ms
+Digital Placement phase: Elapsed time ==> 1s.537ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
-"C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Humidity PSoC_r.vh2" --pcf-path "Humidity PSoC.pco" --des-name "Humidity PSoC" --dsf-path "Humidity PSoC.dsf" --sdc-path "Humidity PSoC.sdc" --lib-path "Humidity PSoC_r.lib"
+"C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Humidity PSoC_r.vh2" --pcf-path "Humidity PSoC.pco" --des-name "Humidity PSoC" --dsf-path "Humidity PSoC.dsf" --sdc-path "Humidity PSoC.sdc" --lib-path "Humidity PSoC_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.958ms
+Digital Routing phase: Elapsed time ==> 1s.154ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.279ms
+Bitstream Generation phase: Elapsed time ==> 0s.364ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.047ms
+Bitstream Verification phase: Elapsed time ==> 0s.041ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Humidity PSoC_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.522ms
+Static timing analysis phase: Elapsed time ==> 0s.510ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.415ms
+Design database save phase: Elapsed time ==> 0s.448ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 5s.325ms
+cydsfit: Elapsed time ==> 6s.296ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 5s.325ms
-API generation phase: Elapsed time ==> 9s.741ms
-Dependency generation phase: Elapsed time ==> 0s.021ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 6s.297ms
+API generation phase: Elapsed time ==> 11s.054ms
+Dependency generation phase: Elapsed time ==> 0s.063ms
+Cleanup phase: Elapsed time ==> 0s.000ms
