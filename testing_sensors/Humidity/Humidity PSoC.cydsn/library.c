@@ -78,6 +78,9 @@ bool SHT31_Init() {
     
     I2C_I2CMasterSendStop(TIMEOUT);
     
+    char buffer[64];
+    sprintf(buffer, "status = %d\t", status);
+    UART_UartPutString(buffer);
     return (status == I2C_I2C_MSTR_NO_ERROR);
 }
  //if (I2C_MasterReadBuf(SHT31_I2C_ADDR, buffer, len, I2C_MODE_COMPLETE_XFER) != I2C_MSTR_NO_ERROR)
@@ -120,6 +123,8 @@ uint16_t SHT31_ReadStatus(void) {
     
     uint16_t status = ((uint16_t)data[0] << 8) | data[1];
     
+    I2C_I2CMasterSendStop(TIMEOUT);
+    
     return status;
 }
 
@@ -158,7 +163,11 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
     
-    if(err){
+    char buffer[64];
+    sprintf(buffer, "read tempHum status = %d\t", err);
+    UART_UartPutString(buffer);
+    
+    if(err != I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with Read Temp Hum: SendStart\r\n");
         I2C_I2CMasterSendStop(TIMEOUT);
     }
@@ -174,7 +183,6 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     CyDelay(50);
     
     //err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, readbuffer, 6, I2C_I2C_MODE_COMPLETE_XFER);
-    char buffer[64];
     for(int i = 0; i < 6; i++){
         CyDelay(50);
         err = I2C_I2CMasterReadByte((i<5) ? I2C_I2C_ACK_DATA : I2C_I2C_NAK_DATA, &readbuffer[i], TIMEOUT);
@@ -204,7 +212,7 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     *outTemp = temp;
     *outHum = humidity;
     
-    //I2C_I2CMasterSendStop(TIMEOUT);
+    I2C_I2CMasterSendStop(TIMEOUT);
     
     return true;
 }
