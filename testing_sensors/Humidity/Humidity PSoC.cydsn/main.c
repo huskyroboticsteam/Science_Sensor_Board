@@ -27,9 +27,8 @@ int main(void)
     } else {
         UART_UartPutString("DISABLED\r\n");
     }
-/*
-    for(;;)
-    {
+
+    //for(;;){
         float t = SHT31_ReadTemperature();
         float h = SHT31_ReadHumidity();
 
@@ -51,8 +50,8 @@ int main(void)
 
         CyDelay(1000);
 
-    }
-    */
+    //}
+    
     
 }
 
