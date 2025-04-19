@@ -555,7 +555,7 @@ END GROUP
                 0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
                 0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
 
-.text           0x00000000     0x2552
+.text           0x00000000     0x2582
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -576,341 +576,342 @@ END GROUP
  .text          0x00000348       0x60 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
  .text.crc8     0x000003a8       0x34 .\CortexM0\ARM_GCC_541\Debug\library.o
  .text.writeCommand
-                0x000003dc       0x58 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x000003dc       0x88 .\CortexM0\ARM_GCC_541\Debug\library.o
  .text.SHT31_Init
-                0x00000434       0x24 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x00000434                SHT31_Init
+                0x00000464       0x24 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x00000464                SHT31_Init
  .text.SHT31_ReadStatus
-                0x00000458       0x84 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x00000458                SHT31_ReadStatus
+                0x00000488       0x84 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x00000488                SHT31_ReadStatus
  .text.SHT31_IsHeaterEnabled
-                0x000004dc       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x000004dc                SHT31_IsHeaterEnabled
+                0x0000050c       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x0000050c                SHT31_IsHeaterEnabled
  .text.SHT31_ReadTempHum
-                0x000004fc      0x100 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x000004fc                SHT31_ReadTempHum
+                0x0000052c      0x100 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x0000052c                SHT31_ReadTempHum
  .text.SHT31_ReadTemperature
-                0x000005fc       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x000005fc                SHT31_ReadTemperature
+                0x0000062c       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x0000062c                SHT31_ReadTemperature
  .text.SHT31_ReadHumidity
-                0x0000061c       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
-                0x0000061c                SHT31_ReadHumidity
- .text.main     0x0000063c       0xe0 .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x0000063c                main
+                0x0000064c       0x20 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x0000064c                SHT31_ReadHumidity
+ .text.main     0x0000066c       0xe0 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x0000066c                main
  .text.cfg_write_bytes32
-                0x0000071c       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000074c       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x00000750        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000780        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.SetAnalogRoutingPumps
-                0x0000075c       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
-                0x0000075c                SetAnalogRoutingPumps
+                0x0000078c       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000078c                SetAnalogRoutingPumps
  .text.AnalogSetDefault
-                0x0000077c       0x7c .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000007ac       0x7c .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.IntDefaultHandler
-                0x000007f8       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x000007f8                IntDefaultHandler
- .text._sbrk    0x00000808       0x30 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000808                _sbrk
- .text.Start_c  0x00000838       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000838                Start_c
+                0x00000828       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000828                IntDefaultHandler
+ .text._sbrk    0x00000838       0x30 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000838                _sbrk
+ .text.Start_c  0x00000868       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000868                Start_c
  .text.initialize_psoc
-                0x00000880       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000880                initialize_psoc
+                0x000008b0       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x000008b0                initialize_psoc
  .text.UART_ScbModePostEnable
-                0x000008cc        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+                0x000008fc        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
  .text.UART_Init
-                0x000008d4        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
-                0x000008d4                UART_Init
+                0x00000904        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+                0x00000904                UART_Init
  .text.UART_Enable
-                0x000008dc       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
-                0x000008dc                UART_Enable
+                0x0000090c       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+                0x0000090c                UART_Enable
  .text.UART_Start
-                0x000008f4       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
-                0x000008f4                UART_Start
+                0x00000924       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+                0x00000924                UART_Start
  .text.UART_UartInit
-                0x00000914       0xa8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
-                0x00000914                UART_UartInit
+                0x00000944       0xa8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
+                0x00000944                UART_UartInit
  .text.UART_UartPostEnable
-                0x000009bc       0x24 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
-                0x000009bc                UART_UartPostEnable
+                0x000009ec       0x24 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
+                0x000009ec                UART_UartPostEnable
  .text.UART_UartPutString
-                0x000009e0       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
-                0x000009e0                UART_UartPutString
+                0x00000a10       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
+                0x00000a10                UART_UartPutString
  .text.I2C_ScbEnableIntr
-                0x000009f8        0xc .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+                0x00000a28        0xc .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
  .text.I2C_Init
-                0x00000a04        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
-                0x00000a04                I2C_Init
+                0x00000a34        0x8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+                0x00000a34                I2C_Init
  .text.I2C_Enable
-                0x00000a0c       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
-                0x00000a0c                I2C_Enable
+                0x00000a3c       0x18 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+                0x00000a3c                I2C_Enable
  .text.I2C_Start
-                0x00000a24       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
-                0x00000a24                I2C_Start
+                0x00000a54       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+                0x00000a54                I2C_Start
  .text.I2C_I2CInit
-                0x00000a44       0xb8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
-                0x00000a44                I2C_I2CInit
+                0x00000a74       0xb8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
+                0x00000a74                I2C_I2CInit
  .text.I2C_I2CFwBlockReset
-                0x00000afc       0x5c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
-                0x00000afc                I2C_I2CFwBlockReset
+                0x00000b2c       0x5c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
+                0x00000b2c                I2C_I2CFwBlockReset
  .text.I2C_I2CMasterWaitOneUnit
-                0x00000b58       0x28 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000b88       0x28 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
  .text.I2C_I2CMasterHandleStatus
-                0x00000b80       0xc4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000bb0       0xc4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
  .text.I2C_I2CMasterSendStart
-                0x00000c44       0xc4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000c44                I2C_I2CMasterSendStart
+                0x00000c74       0xc4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000c74                I2C_I2CMasterSendStart
  .text.I2C_I2CMasterSendStop
-                0x00000d08       0x58 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000d08                I2C_I2CMasterSendStop
+                0x00000d38       0x58 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000d38                I2C_I2CMasterSendStop
  .text.I2C_I2CMasterWriteByte
-                0x00000d60       0x48 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000d60                I2C_I2CMasterWriteByte
+                0x00000d90       0x48 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000d90                I2C_I2CMasterWriteByte
  .text.I2C_I2CMasterReadByte
-                0x00000da8       0x7c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000da8                I2C_I2CMasterReadByte
+                0x00000dd8       0x7c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000dd8                I2C_I2CMasterReadByte
  .text.I2C_I2CMasterClearStatus
-                0x00000e24       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000e24                I2C_I2CMasterClearStatus
+                0x00000e54       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000e54                I2C_I2CMasterClearStatus
  .text.I2C_I2CReStartGeneration
-                0x00000e44       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000e44                I2C_I2CReStartGeneration
+                0x00000e74       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000e74                I2C_I2CReStartGeneration
  .text.I2C_I2CMasterSendRestart
-                0x00000e64       0x68 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
-                0x00000e64                I2C_I2CMasterSendRestart
+                0x00000e94       0x68 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+                0x00000e94                I2C_I2CMasterSendRestart
  .text.CySysClkImoDisableWcoLock
-                0x00000ecc       0x54 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000ecc                CySysClkImoDisableWcoLock
+                0x00000efc       0x54 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000efc                CySysClkImoDisableWcoLock
  .text.CySysClkImoGetWcoLock
-                0x00000f20       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f20                CySysClkImoGetWcoLock
+                0x00000f50       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000f50                CySysClkImoGetWcoLock
  .text.CyIntEnable
-                0x00000f34       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f34                CyIntEnable
+                0x00000f64       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000f64                CyIntEnable
  .text.CyIntDisable
-                0x00000f48       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f48                CyIntDisable
- .text.CyHalt   0x00000f5c        0x4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f5c                CyHalt
+                0x00000f78       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000f78                CyIntDisable
+ .text.CyHalt   0x00000f8c        0x4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000f8c                CyHalt
  .text.CyIntSetVector
-                0x00000f60       0x24 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f60                CyIntSetVector
+                0x00000f90       0x24 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000f90                CyIntSetVector
  .text.CyIntSetPriority
-                0x00000f84       0x4c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000f84                CyIntSetPriority
- .text.CyDelay  0x00000fd0       0x30 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00000fd0                CyDelay
+                0x00000fb4       0x4c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00000fb4                CyIntSetPriority
+ .text.CyDelay  0x00001000       0x30 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00001000                CyDelay
  .text.CySysClkImoEnableWcoLock
-                0x00001000       0xf4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00001000                CySysClkImoEnableWcoLock
+                0x00001030       0xf4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00001030                CySysClkImoEnableWcoLock
  .text.CySysClkWriteImoFreq
-                0x000010f4       0x80 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x000010f4                CySysClkWriteImoFreq
+                0x00001124       0x80 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x00001124                CySysClkWriteImoFreq
  .text.CyDelayUs
-                0x00001174       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00001174                CyDelayUs
+                0x000011a4       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x000011a4                CyDelayUs
  .text.CySysWdtLocked
-                0x00001188       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x000011b8       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
  .text.CySysClkWcoEnabled
-                0x0000119c       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
-                0x0000119c                CySysClkWcoEnabled
+                0x000011cc       0x14 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x000011cc                CySysClkWcoEnabled
  .text.CySysWdtLock
-                0x000011b0       0x1c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
-                0x000011b0                CySysWdtLock
+                0x000011e0       0x1c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x000011e0                CySysWdtLock
  .text.CySysWdtUnlock
-                0x000011cc       0x30 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
-                0x000011cc                CySysWdtUnlock
+                0x000011fc       0x30 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x000011fc                CySysWdtUnlock
  .text.CySysWdtClearInterrupt
-                0x000011fc       0x4c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
-                0x000011fc                CySysWdtClearInterrupt
+                0x0000122c       0x4c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x0000122c                CySysWdtClearInterrupt
  .text.CySysWdtIsr
-                0x00001248       0xa4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
-                0x00001248                CySysWdtIsr
- *fill*         0x000012ec        0x4 
- .text          0x000012f0       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
-                0x000012f0                CyDelayCycles
-                0x00001302                CyEnterCriticalSection
-                0x0000130a                CyExitCriticalSection
+                0x00001278       0xa4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+                0x00001278                CySysWdtIsr
+ *fill*         0x0000131c        0x4 
+ .text          0x00001320       0x20 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
+                0x00001320                CyDelayCycles
+                0x00001332                CyEnterCriticalSection
+                0x0000133a                CyExitCriticalSection
  .text.UART_SpiUartWriteTxData
-                0x00001310       0x1c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
-                0x00001310                UART_SpiUartWriteTxData
+                0x00001340       0x1c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
+                0x00001340                UART_SpiUartWriteTxData
  .text.I2C_I2C_ISR
-                0x0000132c      0x340 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
-                0x0000132c                I2C_I2C_ISR
+                0x0000135c      0x340 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
+                0x0000135c                I2C_I2C_ISR
  .text.CySysFlashSetWaitCycles
-                0x0000166c       0x54 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
-                0x0000166c                CySysFlashSetWaitCycles
- .text          0x000016c0      0x114 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
-                0x000016c0                __aeabi_uidiv
-                0x000016c0                __udivsi3
-                0x000017cc                __aeabi_uidivmod
- .text          0x000017d4        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x000017d4                __aeabi_idiv0
-                0x000017d4                __aeabi_ldiv0
- .text          0x000017d8      0x234 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
-                0x000017d8                __aeabi_fdiv
- .text          0x00001a0c       0x30 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unordsf2.o)
-                0x00001a0c                __aeabi_fcmpun
- .text          0x00001a3c       0x90 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
-                0x00001a3c                __aeabi_i2f
- .text          0x00001acc       0x7c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsisf.o)
-                0x00001acc                __aeabi_ui2f
- .text          0x00001b48       0xa8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
-                0x00001b48                __aeabi_f2d
- .text          0x00001bf0       0x3c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
-                0x00001bf0                __clzsi2
- .text.__errno  0x00001c2c        0xc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
-                0x00001c2c                __errno
+                0x0000169c       0x54 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
+                0x0000169c                CySysFlashSetWaitCycles
+ .text          0x000016f0      0x114 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x000016f0                __aeabi_uidiv
+                0x000016f0                __udivsi3
+                0x000017fc                __aeabi_uidivmod
+ .text          0x00001804        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00001804                __aeabi_idiv0
+                0x00001804                __aeabi_ldiv0
+ .text          0x00001808      0x234 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+                0x00001808                __aeabi_fdiv
+ .text          0x00001a3c       0x30 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unordsf2.o)
+                0x00001a3c                __aeabi_fcmpun
+ .text          0x00001a6c       0x90 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+                0x00001a6c                __aeabi_i2f
+ .text          0x00001afc       0x7c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsisf.o)
+                0x00001afc                __aeabi_ui2f
+ .text          0x00001b78       0xa8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+                0x00001b78                __aeabi_f2d
+ .text          0x00001c20       0x3c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x00001c20                __clzsi2
+ .text.__errno  0x00001c5c        0xc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x00001c5c                __errno
  .text.__libc_init_array
-                0x00001c38       0x4c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x00001c38                __libc_init_array
- .text.memcpy   0x00001c84       0x12 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x00001c84                memcpy
- .text.memset   0x00001c96       0x10 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
-                0x00001c96                memset
- *fill*         0x00001ca6        0x2 
+                0x00001c68       0x4c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00001c68                __libc_init_array
+ .text.memcpy   0x00001cb4       0x12 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00001cb4                memcpy
+ .text.memset   0x00001cc6       0x10 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00001cc6                memset
+ *fill*         0x00001cd6        0x2 
  .text.snprintf
-                0x00001ca8       0x64 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-snprintf.o)
-                0x00001ca8                sniprintf
-                0x00001ca8                snprintf
- .text.sprintf  0x00001d0c       0x44 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
-                0x00001d0c                siprintf
-                0x00001d0c                sprintf
+                0x00001cd8       0x64 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-snprintf.o)
+                0x00001cd8                sniprintf
+                0x00001cd8                snprintf
+ .text.sprintf  0x00001d3c       0x44 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+                0x00001d3c                siprintf
+                0x00001d3c                sprintf
  .text.__ssputs_r
-                0x00001d50       0xc4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x00001d50                __ssputs_r
+                0x00001d80       0xc4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001d80                __ssputs_r
  .text._svfprintf_r
-                0x00001e14      0x1fc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x00001e14                _svfiprintf_r
-                0x00001e14                _svfprintf_r
+                0x00001e44      0x1fc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001e44                _svfiprintf_r
+                0x00001e44                _svfprintf_r
  .text._printf_common
-                0x00002010       0xdc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00002010                _printf_common
+                0x00002040       0xdc c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00002040                _printf_common
  .text._printf_i
-                0x000020ec      0x244 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000020ec                _printf_i
- .text.memchr   0x00002330       0x16 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
-                0x00002330                memchr
- .text.memmove  0x00002346       0x2a c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
-                0x00002346                memmove
- .text._free_r  0x00002370       0x98 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
-                0x00002370                _free_r
+                0x0000211c      0x244 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000211c                _printf_i
+ .text.memchr   0x00002360       0x16 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x00002360                memchr
+ .text.memmove  0x00002376       0x2a c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                0x00002376                memmove
+ .text._free_r  0x000023a0       0x98 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                0x000023a0                _free_r
  .text._malloc_r
-                0x00002408       0xc0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x00002408                _malloc_r
+                0x00002438       0xc0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00002438                _malloc_r
  .text._realloc_r
-                0x000024c8       0x4c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
-                0x000024c8                _realloc_r
- .text._sbrk_r  0x00002514       0x24 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
-                0x00002514                _sbrk_r
+                0x000024f8       0x4c c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x000024f8                _realloc_r
+ .text._sbrk_r  0x00002544       0x24 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                0x00002544                _sbrk_r
  .text.__malloc_lock
-                0x00002538        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
-                0x00002538                __malloc_lock
+                0x00002568        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                0x00002568                __malloc_lock
  .text.__malloc_unlock
-                0x0000253a        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
-                0x0000253a                __malloc_unlock
+                0x0000256a        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                0x0000256a                __malloc_unlock
  .text._malloc_usable_size_r
-                0x0000253c       0x16 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
-                0x0000253c                _malloc_usable_size_r
+                0x0000256c       0x16 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x0000256c                _malloc_usable_size_r
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x00002552        0x0 linker stubs
+ .glue_7t       0x00002582        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00002552        0x0 linker stubs
+ .glue_7        0x00002582        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x00002552        0x0 linker stubs
+ .vfp11_veneer  0x00002582        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00002554        0x0
- .v4_bx         0x00002554        0x0 linker stubs
+.v4_bx          0x00002584        0x0
+ .v4_bx         0x00002584        0x0 linker stubs
 
-.iplt           0x00002554        0x0
- .iplt          0x00002554        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.iplt           0x00002584        0x0
+ .iplt          0x00002584        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00002554        0x4
+.eh_frame       0x00002584        0x4
  *(.eh_frame)
- .eh_frame      0x00002554        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
- .eh_frame      0x00002554        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .eh_frame      0x00002584        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .eh_frame      0x00002584        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002558                __exidx_end = .
+                0x00002588                __exidx_end = .
 
-.rodata         0x00002558      0x348
+.rodata         0x00002588      0x358
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00002558      0x114 .\CortexM0\ARM_GCC_541\Debug\library.o
+                0x00002588      0x120 .\CortexM0\ARM_GCC_541\Debug\library.o
  .rodata.str1.4
-                0x0000266c       0xb8 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x000026a8       0xb8 .\CortexM0\ARM_GCC_541\Debug\main.o
                                  0xb6 (size before relaxing)
- .rodata        0x00002724       0x60 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .rodata        0x00002784       0x2e .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
-                0x00002784                cyImoFreqMhz2Reg
- *fill*         0x000027b2        0x2 
- .rodata        0x000027b4       0x80 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .rodata        0x00002760       0x60 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata        0x000027c0       0x2e .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+                0x000027c0                cyImoFreqMhz2Reg
+ *fill*         0x000027ee        0x2 
+ .rodata        0x000027f0       0x80 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
  .rodata.str1.1
-                0x00002834        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                0x00002870        0x2 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
  .rodata.str1.1
-                0x00002836       0x11 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00002872       0x11 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
-                0x00002847       0x22 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000286c                . = ALIGN (0x4)
- *fill*         0x00002869        0x3 
+                0x00002883       0x22 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000028a8                . = ALIGN (0x4)
+ *fill*         0x000028a5        0x3 
  *(.init)
- .init          0x0000286c        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x0000286c                _init
- .init          0x00002870        0x8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
-                0x00002878                . = ALIGN (0x4)
-                0x00002878                __preinit_array_start = .
+ .init          0x000028a8        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x000028a8                _init
+ .init          0x000028ac        0x8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x000028b4                . = ALIGN (0x4)
+                0x000028b4                __preinit_array_start = .
  *(.preinit_array)
-                0x00002878                __preinit_array_end = .
-                0x00002878                . = ALIGN (0x4)
-                0x00002878                __init_array_start = .
+                0x000028b4                __preinit_array_end = .
+                0x000028b4                . = ALIGN (0x4)
+                0x000028b4                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00002878        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
- .init_array    0x0000287c        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00002880                __init_array_end = .
-                0x00002880                . = ALIGN (0x4)
+ .init_array    0x000028b4        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .init_array    0x000028b8        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x000028bc                __init_array_end = .
+                0x000028bc                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00002880        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x00002880                _fini
- .fini          0x00002884        0x8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
-                0x0000288c                . = ALIGN (0x4)
-                0x0000288c                __fini_array_start = .
+ .fini          0x000028bc        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x000028bc                _fini
+ .fini          0x000028c0        0x8 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x000028c8                . = ALIGN (0x4)
+                0x000028c8                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x0000288c        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .fini_array    0x000028c8        0x4 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00002890                __fini_array_end = .
-                0x00002890                . = ALIGN (0x4)
+                0x000028cc                __fini_array_end = .
+                0x000028cc                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00002890                . = ALIGN (0x4)
+                0x000028cc                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00002890                . = ALIGN (0x4)
-                0x00002890                __cy_regions = .
-                0x00002890        0x4 LONG 0x28a0 __cy_region_init_ram
-                0x00002894        0x4 LONG 0x200000c0 __cy_region_start_data
-                0x00002898        0x4 LONG 0x88 __cy_region_init_size_ram
-                0x0000289c        0x4 LONG 0x88 __cy_region_zero_size_ram
-                0x000028a0                __cy_regions_end = .
-                0x000028a0                . = ALIGN (0x8)
-                0x000028a0                _etext = .
+                0x000028cc                . = ALIGN (0x4)
+                0x000028cc                __cy_regions = .
+                0x000028cc        0x4 LONG 0x28e0 __cy_region_init_ram
+                0x000028d0        0x4 LONG 0x200000c0 __cy_region_start_data
+                0x000028d4        0x4 LONG 0x88 __cy_region_init_size_ram
+                0x000028d8        0x4 LONG 0x88 __cy_region_zero_size_ram
+                0x000028dc                __cy_regions_end = .
+                0x000028e0                . = ALIGN (0x8)
+ *fill*         0x000028dc        0x4 
+                0x000028e0                _etext = .
 
 .cy_checksum_exclude
-                0x000028a0        0x0
+                0x000028e0        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x20000000       0xc0
@@ -922,7 +923,7 @@ END GROUP
 .noinit
  *(.noinit)
 
-.data           0x200000c0       0x88 load address 0x000028a0
+.data           0x200000c0       0x88 load address 0x000028e0
                 0x200000c0                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c0        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
@@ -948,10 +949,10 @@ END GROUP
  *(.ram)
                 0x20000148                _edata = .
 
-.igot.plt       0x20000148        0x0 load address 0x00002928
+.igot.plt       0x20000148        0x0 load address 0x00002968
  .igot.plt      0x20000148        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
-.bss            0x20000148       0x88 load address 0x00002928
+.bss            0x20000148       0x88 load address 0x00002968
                 0x20000148                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -992,11 +993,11 @@ END GROUP
                 0x200001d0                __end = .
                 0x200001d0                PROVIDE (end, .)
                 0x200001d0                PROVIDE (__bss_end__, .)
-                0x000028a0                __cy_region_init_ram = LOADADDR (.data)
+                0x000028e0                __cy_region_init_ram = LOADADDR (.data)
                 0x00000088                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000088                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x200001d0       0x80 load address 0x00002928
+.heap           0x200001d0       0x80 load address 0x00002968
                 0x200001d0                . = _end
                 0x20000250                . = (. + 0x80)
  *fill*         0x200001d0       0x80 
@@ -1036,8 +1037,8 @@ END GROUP
                 0x90600000        0x1 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00002928        0x0 load address 0x90600004
- .rel.iplt      0x00002928        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.rel.dyn        0x00002968        0x0 load address 0x90600004
+ .rel.iplt      0x00002968        0x0 c:/users/shahnaz/desktop/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -1095,24 +1096,24 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4acc
+.debug_info     0x00000000     0x4ba6
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x7e3 .\CortexM0\ARM_GCC_541\Debug\library.o
- .debug_info    0x000007e3      0x2b9 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_info    0x00000a9c      0x405 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00000ea1       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00000f99      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_info    0x0000133b      0x23a .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
- .debug_info    0x00001575      0x3b5 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
- .debug_info    0x0000192a      0x298 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
- .debug_info    0x00001bc2      0x195 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
- .debug_info    0x00001d57      0x813 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
- .debug_info    0x0000256a      0xd40 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
- .debug_info    0x000032aa     0x1058 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
- .debug_info    0x00004302       0xb2 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
- .debug_info    0x000043b4      0x220 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
- .debug_info    0x000045d4      0x1a8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
- .debug_info    0x0000477c      0x350 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
+ .debug_info    0x00000000      0x8bd .\CortexM0\ARM_GCC_541\Debug\library.o
+ .debug_info    0x000008bd      0x2b9 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_info    0x00000b76      0x405 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00000f7b       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00001073      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_info    0x00001415      0x23a .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+ .debug_info    0x0000164f      0x3b5 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
+ .debug_info    0x00001a04      0x298 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+ .debug_info    0x00001c9c      0x195 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
+ .debug_info    0x00001e31      0x813 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+ .debug_info    0x00002644      0xd40 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+ .debug_info    0x00003384     0x1058 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+ .debug_info    0x000043dc       0xb2 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
+ .debug_info    0x0000448e      0x220 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
+ .debug_info    0x000046ae      0x1a8 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
+ .debug_info    0x00004856      0x350 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
 
 .debug_abbrev   0x00000000     0x1441
  *(.debug_abbrev)
@@ -1133,24 +1134,24 @@ END GROUP
  .debug_abbrev  0x0000121b       0xa4 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
  .debug_abbrev  0x000012bf      0x182 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
 
-.debug_line     0x00000000     0x2038
+.debug_line     0x00000000     0x203c
  *(.debug_line)
- .debug_line    0x00000000      0x2d2 .\CortexM0\ARM_GCC_541\Debug\library.o
- .debug_line    0x000002d2      0x10b .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_line    0x000003dd      0x1be .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x0000059b      0x135 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x000006d0      0x22a .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_line    0x000008fa      0x108 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
- .debug_line    0x00000a02      0x1cf .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
- .debug_line    0x00000bd1      0x124 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
- .debug_line    0x00000cf5       0xc2 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
- .debug_line    0x00000db7      0x2fc .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
- .debug_line    0x000010b3      0x563 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
- .debug_line    0x00001616      0x5d1 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
- .debug_line    0x00001be7       0x68 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
- .debug_line    0x00001c4f      0x11a .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
- .debug_line    0x00001d69      0x15c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
- .debug_line    0x00001ec5      0x173 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
+ .debug_line    0x00000000      0x2d6 .\CortexM0\ARM_GCC_541\Debug\library.o
+ .debug_line    0x000002d6      0x10b .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_line    0x000003e1      0x1be .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x0000059f      0x135 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x000006d4      0x22a .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_line    0x000008fe      0x108 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART.o)
+ .debug_line    0x00000a06      0x1cf .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_UART.o)
+ .debug_line    0x00000bd5      0x124 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C.o)
+ .debug_line    0x00000cf9       0xc2 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C.o)
+ .debug_line    0x00000dbb      0x2fc .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_MASTER.o)
+ .debug_line    0x000010b7      0x563 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLib.o)
+ .debug_line    0x0000161a      0x5d1 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyLFClk.o)
+ .debug_line    0x00001beb       0x68 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyBootAsmGnu.o)
+ .debug_line    0x00001c53      0x11a .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(UART_SPI_UART.o)
+ .debug_line    0x00001d6d      0x15c .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(I2C_I2C_INT.o)
+ .debug_line    0x00001ec9      0x173 .\CortexM0\ARM_GCC_541\Debug\Humidity PSoC.a(CyFlash.o)
 
 .debug_frame    0x00000000     0x1784
  *(.debug_frame)

@@ -24,26 +24,35 @@ static bool writeCommand(uint16_t command) {
     
     uint8_t err = 0;
     
-    I2C_I2CMasterSendStop(TIMEOUT);
+    //I2C_I2CMasterSendStop(TIMEOUT);
     
     I2C_I2CMasterClearStatus();
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
-    
-    if(err){
+char buffer[64];
+    if(err != I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with write Command\r\n");
+        sprintf(buffer, "err = %d\n", err);
+        UART_UartPutString(buffer);
+        I2C_I2CMasterSendStop(TIMEOUT);
+        
     }
     
     //err = I2C_I2CMasterWriteBuf(SHT31_I2C_ADDR, cmd, 2, I2C_I2C_MODE_COMPLETE_XFER);
     
-    err = I2C_I2CMasterWriteByte(cmd[0], TIMEOUT);
+    CyDelay(20);
+    
     err = I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
     
-    if(err){
+
+    if(err != I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with writeCommand: writeByte\r\n");
+        sprintf(buffer, "err = %d\n", err);
+        UART_UartPutString(buffer);
+        I2C_I2CMasterSendStop(TIMEOUT);
     }
     
-    if (err)
+    if (err != I2C_I2C_MSTR_NO_ERROR)
         return false;
     
     return true;
@@ -80,7 +89,7 @@ uint16_t SHT31_ReadStatus(void) {
     I2C_I2CMasterSendRestart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
     uint8_t data[3] = {0};
     
-    if(err){
+    if(err != I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with Read Status: SendStart\r\n");
         I2C_I2CMasterSendStop(TIMEOUT);
     }
@@ -92,7 +101,7 @@ uint16_t SHT31_ReadStatus(void) {
     err = I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[1], TIMEOUT);
     err = I2C_I2CMasterReadByte(I2C_I2C_NAK_DATA, &data[2], TIMEOUT);
     
-    if(err){
+    if(err != I2C_I2C_MSTR_NO_ERROR){
         I2C_I2CMasterSendStop(TIMEOUT);
          UART_UartPutString("Error with Read Status: ReadBuf\r\n");
     }
@@ -154,7 +163,7 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     char buffer[64];
     for(int i = 0; i < 6; i++){
         err = I2C_I2CMasterReadByte((i<5) ? I2C_I2C_ACK_DATA : I2C_I2C_NAK_DATA, &readbuffer[i], TIMEOUT);
-        if(err){
+        if(err != I2C_I2C_MSTR_NO_ERROR){
             UART_UartPutString("Error with Read Temp Hum: readByte\r\n");
             sprintf(buffer, "i = %d\t", i);
             UART_UartPutString(buffer);
