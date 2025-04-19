@@ -1,5 +1,5 @@
 # Humidity PSoC
-# 2025-04-18 01:04:21Z
+# 2025-04-19 19:49:50Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -9,7 +9,7 @@ set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "ADC_1P(0)" iocell 2 6
 set_io "ADC_0(0)" iocell 2 0
 set_io "\CapSense:Cmod(0)\" iocell 4 2
-set_io "\CapSense:Sns(0)\" iocell 0 4
+set_io "\CapSense:Sns(0)\" iocell 4 6
 set_io "\CapSense:Sns(1)\" iocell 6 0
 set_io "ADC_1M(0)" iocell 2 7
 set_io "ADC_2(0)" iocell 1 5
@@ -20,8 +20,8 @@ set_io "CompP_1(0)" iocell 0 2
 set_io "CompM_1(0)" iocell 0 3
 set_io "\UART:tx(0)\" iocell 7 1
 set_io "\UART:rx(0)\" iocell 7 0
-set_io "\I2C:sda(0)\" iocell 5 1
-set_io "\I2C:scl(0)\" iocell 5 0
+set_io "\I2C:sda(0)\" iocell 3 1
+set_io "\I2C:scl(0)\" iocell 3 0
 set_location "\CapSense:CSD_FFB\" p4csdcell -1 -1 0
 set_location "\CapSense:IDAC2:cy_psoc4_idac\" p4csidac7cell -1 -1 0
 set_location "\CapSense:IDAC1:cy_psoc4_idac\" p4csidac8cell -1 -1 0

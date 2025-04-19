@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Apr 17 2025 18:04:21
+#File Generated:     Apr 19 2025 12:49:51
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name Humidity PSoC --netlist-vh2 Humidity PSoC_p.vh2 --arch p4_udb2x2 --arch-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata --ip-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/ip_blocks.cydata --rrg-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata --irq-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/irqconn.cydata --drq-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/triggerconn.cydata --dsi-conn-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/dsiconn.cydata --pins-file pins_64-TQFP.xml --lib-file Humidity PSoC_p.lib --sdc-file Humidity PSoC.sdc --io-pcf Humidity PSoC.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name Humidity PSoC --netlist-vh2 Humidity PSoC_p.vh2 --arch p4_udb2x2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/dsiconn.cydata --pins-file pins_64-TQFP.xml --lib-file Humidity PSoC_p.lib --sdc-file Humidity PSoC.sdc --io-pcf Humidity PSoC.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -23,7 +23,7 @@ Build Date : Sep  9 2019	11:45:12
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - Humidity PSoC_p.vh2
-Architecture file         - C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata
 Package                   - 
 Defparam file             - 
 SDC file                  - Humidity PSoC.sdc
@@ -34,7 +34,7 @@ IO Placement file         - Humidity PSoC.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "Humidity PSoC_p.vh2"
-D2065: Reading arch file : "C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design
@@ -111,5 +111,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.8 sec.
+I2076: Total run-time: 0.3 sec.
 

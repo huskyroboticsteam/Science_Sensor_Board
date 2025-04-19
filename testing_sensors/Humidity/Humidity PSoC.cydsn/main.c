@@ -12,8 +12,8 @@ int main(void)
     CyGlobalIntEnable;
     UART_Start();
     
-    
-     UART_UartPutString("SHT31 test\r\n");
+    UART_UartPutString("__________________________\r\n");
+    UART_UartPutString("SHT31 test\r\n");
     
     
     if (!SHT31_Init()) {
@@ -27,7 +27,20 @@ int main(void)
     } else {
         UART_UartPutString("DISABLED\r\n");
     }
+    
+    for(uint8_t addr = 0x40; addr <= 0x4F; addr++) {
+    I2C_I2CMasterClearStatus();
+    uint8_t err = I2C_I2CMasterSendStart(addr, I2C_I2C_WRITE_XFER_MODE, 10);
+    I2C_I2CMasterSendStop(10);
+    
+    if(err == I2C_I2C_MSTR_NO_ERROR){
+        char buffer[32];
+        sprintf(buffer, "Found I2C device at 0x%02X\r\n", addr);
+        UART_UartPutString(buffer);
+    }
+}
 
+    
     //for(;;){
         float t = SHT31_ReadTemperature();
         float h = SHT31_ReadHumidity();
@@ -51,6 +64,7 @@ int main(void)
         CyDelay(1000);
 
     //}
+    
     
     
 }

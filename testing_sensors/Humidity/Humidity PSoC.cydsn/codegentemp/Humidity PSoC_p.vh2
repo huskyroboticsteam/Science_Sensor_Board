@@ -1,5 +1,5 @@
 -- Project:   Humidity PSoC
--- Generated: 04/17/2025 18:04:21
+-- Generated: 04/19/2025 12:49:50
 -- PSoC Creator  4.4
 
 ENTITY \Humidity PSoC\ IS
@@ -207,7 +207,7 @@ ARCHITECTURE __DEFAULT__ OF \Humidity PSoC\ IS
     ATTRIBUTE lib_model OF \CapSense:Cmod(0)\ : LABEL IS "iocell3";
     ATTRIBUTE Location OF \CapSense:Cmod(0)\ : LABEL IS "P4[2]";
     ATTRIBUTE lib_model OF \CapSense:Sns(0)\ : LABEL IS "iocell4";
-    ATTRIBUTE Location OF \CapSense:Sns(0)\ : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF \CapSense:Sns(0)\ : LABEL IS "P4[6]";
     ATTRIBUTE lib_model OF \CapSense:Sns(1)\ : LABEL IS "iocell5";
     ATTRIBUTE Location OF \CapSense:Sns(1)\ : LABEL IS "P6[0]";
     ATTRIBUTE lib_model OF ADC_1M(0) : LABEL IS "iocell6";
@@ -242,9 +242,9 @@ ARCHITECTURE __DEFAULT__ OF \Humidity PSoC\ IS
     ATTRIBUTE lib_model OF \UART:rx(0)\ : LABEL IS "iocell27";
     ATTRIBUTE Location OF \UART:rx(0)\ : LABEL IS "P7[0]";
     ATTRIBUTE lib_model OF \I2C:sda(0)\ : LABEL IS "iocell28";
-    ATTRIBUTE Location OF \I2C:sda(0)\ : LABEL IS "P5[1]";
+    ATTRIBUTE Location OF \I2C:sda(0)\ : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF \I2C:scl(0)\ : LABEL IS "iocell29";
-    ATTRIBUTE Location OF \I2C:scl(0)\ : LABEL IS "P5[0]";
+    ATTRIBUTE Location OF \I2C:scl(0)\ : LABEL IS "P3[0]";
     ATTRIBUTE Location OF \CapSense:CSD_FFB\ : LABEL IS "F(CSD,0)";
     ATTRIBUTE Location OF \CapSense:IDAC2:cy_psoc4_idac\ : LABEL IS "F(CSIDAC7,0)";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell1";

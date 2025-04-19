@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Humidity</v>
 <v>Humidity\Humidity PSoC</v>
@@ -345,12 +345,11 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Humidity PSoC.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Humidity PSoC.cydsn\Humidity PSoC.cydwr" />
-<name v=".\Humidity PSoC.cydsn\cyapicallbacks.h" />
+<name v=".\Humidity PSoC.cydsn\main.c" />
 <name v=".\Humidity PSoC.cydsn\library.c" />
 <name v=".\Humidity PSoC.cydsn\library.h" />
-<name v=".\Humidity PSoC.cydsn\main.c" />
+<name v=".\Humidity PSoC.cydsn\Humidity PSoC.cydwr" />
+<name v=".\Humidity PSoC.cydsn\Generated_Source\PSoC4\I2C_I2C.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -358,7 +357,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1121, 508" SelectedTabbedMdiWindow="5fb18421-eed7-4412-8cac-f3eb70feeef8"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\TopDesign\TopDesign.cysch" Guid="5fb18421-eed7-4412-8cac-f3eb70feeef8" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cydwr" Guid="1fc2fc90-025a-4b9e-adb4-913725f9d88e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\cyapicallbacks.h" Guid="3565bdb7-96d7-457d-8a73-bd9ed9df9542" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\library.c" Guid="e45e9e7e-6f24-4416-b00e-71d2dd13ec7d" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\library.h" Guid="24582f34-aed1-4587-b23a-1037e4b5a8c4" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Humidity\Humidity PSoC.cydsn\main.c" Guid="0b74a88e-8d76-4dd8-8460-3774bc87485d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1107, 508" SelectedTabbedMdiWindow="5897a5dd-c941-41e0-8033-3ec7bebaa378"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\main.c" Guid="194a8338-b82d-4bef-b623-c3eb13a53d7e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.c" Guid="0443a492-1604-4440-a39b-84931aa2b7e6" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.h" Guid="8847e1bb-7e6f-4e83-a617-71a6bbe226da" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cydwr" Guid="9ae51d68-23ee-467b-9732-91c52ca60cf8" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4\I2C_I2C.h" Guid="5897a5dd-c941-41e0-8033-3ec7bebaa378" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

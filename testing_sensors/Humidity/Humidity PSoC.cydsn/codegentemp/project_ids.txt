@@ -1,6 +1,6 @@
-C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj|e20794eb-52d5-4f19-93d2-867952dab02e
-C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|91c0516a-db0d-4306-b57c-9bcfb0ea854c
-C:\Users\shahnaz\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|925b7083-3c80-4bc9-b2de-efbb07972a16
-C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|565db19e-216b-4a74-8993-fe2558222833
-C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a6a9534d-c6b9-4d80-8c9a-b805bf5650af
-C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c666e7e5-5596-427c-b1e6-9630ff5690c5
+C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj|859c1ea2-251b-4057-98ec-b5fa353ca08b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e3b77572-6d0b-4b0d-9eb8-ccd4f06b8b09
+C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7d5501c2-cba6-431a-b6cf-17167d9e4623
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2802650b-3116-4c4f-8b77-ffa28f35e706
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d1e2c0f1-bec2-4805-bde5-ac295c4d0bdb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8a40fe57-abaa-4964-92aa-e8ec3096d229

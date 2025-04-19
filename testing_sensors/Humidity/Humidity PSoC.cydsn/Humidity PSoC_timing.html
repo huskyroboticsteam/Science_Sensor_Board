@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> Humidity PSoC</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 04/17/25 18:04:24</td></tr>
+<td class="proptext"> 04/19/25 12:49:52</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4247AZI-M485</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -855,6 +855,75 @@ Clock_1MHz(FFB)</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">PWM_1_Out(0)_PAD</td>
+ <td class = "number">17.350</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">m0s8tcpwmcell</td>
+ <td class = "text_info">F(TCPWM,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\</td>
+ <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/clock</td>
+ <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_404</td>
+ <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
+ <td class = "text_info">PWM_1_Out(0)/pin_input</td>
+ <td class = "number">1.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell24</td>
+ <td class = "text_info">P3[6]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">PWM_1_Out(0)</td>
+ <td class = "text_info">PWM_1_Out(0)/pin_input</td>
+ <td class = "text_info">PWM_1_Out(0)/pad_out</td>
+ <td class = "number">16.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">PWM_1_Out(0)_PAD</td>
+ <td class = "text_info">PWM_1_Out(0)/pad_out</td>
+ <td class = "text_info">PWM_1_Out(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\PWM_2:cy_m0s8_tcpwm_1\/line</td>
  <td class = "text_info">PWM_2_Out(0)_PAD</td>
  <td class = "number">17.330</td>
@@ -908,75 +977,6 @@ Clock_1MHz(FFB)</span>
  <td class = "text_info">PWM_2_Out(0)_PAD</td>
  <td class = "text_info">PWM_2_Out(0)/pad_out</td>
  <td class = "text_info">PWM_2_Out(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
- <td class = "text_info">PWM_1_Out(0)_PAD</td>
- <td class = "number">16.090</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">m0s8tcpwmcell</td>
- <td class = "text_info">F(TCPWM,3)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\</td>
- <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/clock</td>
- <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_404</td>
- <td class = "text_info">\PWM_1:cy_m0s8_tcpwm_1\/line</td>
- <td class = "text_info">PWM_1_Out(0)/pin_input</td>
- <td class = "number">1.000</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell24</td>
- <td class = "text_info">P1[2]</td>
- <td class = "number">1</td>
- <td class = "text_info">PWM_1_Out(0)</td>
- <td class = "text_info">PWM_1_Out(0)/pin_input</td>
- <td class = "text_info">PWM_1_Out(0)/pad_out</td>
- <td class = "number">15.090</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">PWM_1_Out(0)_PAD</td>
- <td class = "text_info">PWM_1_Out(0)/pad_out</td>
- <td class = "text_info">PWM_1_Out(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 

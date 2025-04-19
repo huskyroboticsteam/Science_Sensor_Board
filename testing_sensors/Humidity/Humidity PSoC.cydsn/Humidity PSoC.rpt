@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 6s.995ms
+Loading plugins phase: Elapsed time ==> 0s.269ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 -s C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 -s C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 25s.762ms
+Elaboration phase: Elapsed time ==> 3s.239ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.182ms
+HDL generation phase: Elapsed time ==> 0s.130ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -24,24 +24,24 @@ HDL generation phase: Elapsed time ==> 0s.182ms
 
 ======================================================================
 Compiling:  Humidity PSoC.v
-Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Humidity PSoC.v
-Program  :   C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 Humidity PSoC.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu Apr 17 18:04:16 2025
+Sat Apr 19 12:49:48 2025
 
 
 ======================================================================
@@ -51,31 +51,31 @@ Options  :    -yv2 -q10 Humidity PSoC.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu Apr 17 18:04:16 2025
+Sat Apr 19 12:49:48 2025
 
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
-Flattening file 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 
 vpp:  No errors.
 
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'Humidity PSoC.ctl'.
 
 vlogfe:  No errors.
@@ -84,31 +84,31 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu Apr 17 18:04:17 2025
+Sat Apr 19 12:49:48 2025
 
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 
 tovif:  No errors.
 
@@ -116,32 +116,32 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Humidity PSoC.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -dcpsoc3 -verilog Humidity PSoC.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu Apr 17 18:04:18 2025
+Sat Apr 19 12:49:49 2025
 
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\codegentemp\Humidity PSoC.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -389,18 +389,18 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp
-Warp Program   : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj" -dcpsoc3 "Humidity PSoC.v" -verilog
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj" -dcpsoc3 "Humidity PSoC.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 3s.867ms
+Warp synthesis phase: Elapsed time ==> 1s.004ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Thursday, 17 April 2025 18:04:19
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 Humidity PSoC.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Saturday, 19 April 2025 12:49:49
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj -d CY8C4247AZI-M485 Humidity PSoC.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.042ms
+Design parsing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1681,8 +1681,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    1 :    1 :    2 : 50.00 %
   8-bit IDAC                  :    1 :    1 :    2 : 50.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.188ms
-Tech Mapping phase: Elapsed time ==> 0s.258ms
+Technology Mapping: Elapsed time ==> 0s.077ms
+Tech Mapping phase: Elapsed time ==> 0s.110ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1692,16 +1692,16 @@ Cell                                : Block
 =========================================================================
 \UART:tx(0)\                        : [IOP=(7)][IoId=(1)]                
 \UART:rx(0)\                        : [IOP=(7)][IoId=(0)]                
-\I2C:sda(0)\                        : [IOP=(5)][IoId=(1)]                
-\I2C:scl(0)\                        : [IOP=(5)][IoId=(0)]                
+\I2C:sda(0)\                        : [IOP=(3)][IoId=(1)]                
+\I2C:scl(0)\                        : [IOP=(3)][IoId=(0)]                
 ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
-\CapSense:Cmod(0)\                  : [IOP=(4)][IoId=(2)]                
-\CapSense:CSD_FFB\                  : CSD_[FFB(CSD,0)]                   
 \DieTemp:cy_psoc4_temp\             : TEMP_SARMUX0.TEMP0                 
 \ADC:cy_psoc4_sar\                  : SARADC_[FFB(SARADC,0)]             
 \UART:SCB\                          : SCB_[FFB(SCB,3)]                   
-\I2C:SCB\                           : SCB_[FFB(SCB,2)]                   
+\I2C:SCB\                           : SCB_[FFB(SCB,1)]                   
 LPCOMP_INT                          : LPCOMPBLOCK_[FFB(LPCOMPBLOCK,0)]   
+\CapSense:CSD_FFB\                  : CSD_[FFB(CSD,0)]                   
+\CapSense:Cmod(0)\                  : [IOP=(4)][IoId=(2)]                
 \CapSense:IDAC2:cy_psoc4_idac\      : CSIDAC7_[FFB(CSIDAC7,0)]           
 \CapSense:IDAC1:cy_psoc4_idac\      : CSIDAC8_[FFB(CSIDAC8,0)]           
 \Comp_0:cy_psoc4_lpcomp_1\          : LPCOMP_[FFB(LPCOMP,0)]             
@@ -1714,9 +1714,9 @@ CompP_1(0)                          : [IOP=(0)][IoId=(2)]
 CompM_1(0)                          : [IOP=(0)][IoId=(3)]                
 ADC_2(0)                            : [IOP=(1)][IoId=(0)]                
 ADC_3(0)                            : [IOP=(1)][IoId=(5)]                
-\SPI:SCB\                           : SCB_[FFB(SCB,0)]                   
 \SPI:sclk_s(0)\                     : [IOP=(1)][IoId=(2)]                
 \SPI:mosi_s(0)\                     : [IOP=(4)][IoId=(0)]                
+\SPI:SCB\                           : SCB_[FFB(SCB,0)]                   
 \SPI:ss_s(0)\                       : [IOP=(1)][IoId=(3)]                
 \SPI:miso_s(0)\                     : [IOP=(1)][IoId=(1)]                
 ADC_1P(0)                           : [IOP=(2)][IoId=(0)]                
@@ -1741,16 +1741,15 @@ Input_Pin_1(0)                      : [IOP=(2)][IoId=(3)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Info: plm.M0038: The pin named \I2C:scl(0)\ at location [IOP=(5)][IoId=(0)] prevents usage of special purposes: F(CSD,1). (App=cydsfit)
-Elapsed time ==> 0.6024948s
+Elapsed time ==> 0.4462033s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 1s.643ms
+Analog Placement phase: Elapsed time ==> 1s.147ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0563277 secs
+Route success=True, Iterations=1 Elapsed=0.0455335 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.065ms
+Analog Routing phase: Elapsed time ==> 0s.045ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1818,8 +1817,8 @@ Map of net to items {
     amuxbusa_csd
     P6_P40
     p6_0
-    P0_P44
-    p0_4
+    P4_P46
+    p4_6
     idac0_out
     swhv_1
   }
@@ -1878,8 +1877,8 @@ Map of item to net {
   amuxbusa_csd                                     -> \CapSense:Net_245_0\
   P6_P40                                           -> \CapSense:Net_245_0\
   p6_0                                             -> \CapSense:Net_245_0\
-  P0_P44                                           -> \CapSense:Net_245_0\
-  p0_4                                             -> \CapSense:Net_245_0\
+  P4_P46                                           -> \CapSense:Net_245_0\
+  p4_6                                             -> \CapSense:Net_245_0\
   idac0_out                                        -> \CapSense:Net_245_0\
   swhv_1                                           -> \CapSense:Net_245_0\
   cmod0                                            -> \CapSense:Net_398\
@@ -2003,12 +2002,12 @@ Mux Info {
     }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.033ms
+Analog Code Generation phase: Elapsed time ==> 0s.026ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.8 sec.
+I2076: Total run-time: 0.3 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2032,14 +2031,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.005ms
+PLD Packing: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.022ms
+Partitioning: Elapsed time ==> 0s.032ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2082,15 +2081,6 @@ LAB@[UDB=(1,0)][LB=0] #macrocells=1, #inputs=0, #pterms=0
 UDB [UDB=(1,1)] is empty.
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
-    interrupt: Name =ADC_EOC_Int
-        PORT MAP (
-            interrupt => Net_354 );
-        Properties:
-        {
-            int_type = "01"
-            is_nmi = 0
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =Input_1_Int
         PORT MAP (
             interrupt => Net_671 );
@@ -2099,7 +2089,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =Input_0_Int
         PORT MAP (
             interrupt => Net_670 );
@@ -2108,10 +2098,19 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(3)] 
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
     interrupt: Name =Wakeup_Pin_Int
         PORT MAP (
             interrupt => Net_4772 );
+        Properties:
+        {
+            int_type = "01"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(3)] 
+    interrupt: Name =ADC_EOC_Int
+        PORT MAP (
+            interrupt => Net_354 );
         Properties:
         {
             int_type = "01"
@@ -2126,7 +2125,7 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(10)] 
+  Intr@ [IntrContainer=(0)][IntrId=(9)] 
     interrupt: Name =\I2C:SCB_IRQ\
         PORT MAP (
             interrupt => Net_466 );
@@ -2172,7 +2171,73 @@ Intr container @ [IntrContainer=(0)]:
             is_nmi = 0
         }
 Drq container @ [DrqContainer=(0)]: empty
-Port 0 contains the following IO cells:
+Port 0 generates interrupt for logical port:
+    logicalport: Name =Input_Pin_1
+        PORT MAP (
+            in_clock_en => tmpOE__ADC_1P_net_0 ,
+            in_reset => zero ,
+            out_clock_en => tmpOE__ADC_1P_net_0 ,
+            out_reset => zero ,
+            interrupt => Net_671 );
+        Properties:
+        {
+            drive_mode = "001"
+            ibuf_enabled = "1"
+            id = "c0de87f6-3ce1-4837-a376-c54a5dde46bb"
+            init_dr_st = "0"
+            input_buffer_sel = "00"
+            input_clk_en = 0
+            input_sync = "0"
+            input_sync_mode = "0"
+            intr_mode = "10"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            ovt_hyst_trim = "0"
+            ovt_needed = "0"
+            ovt_slew_control = "00"
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = "00000000"
+            sio_hyst = "1"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vohsel = "00000000"
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
 [IoId=0]: 
 Pin : Name = CompP_0(0)
     Attributes:
@@ -2338,15 +2403,95 @@ Pin : Name = CompM_1(0)
     }
 
 [IoId=4]: 
-Pin : Name = \CapSense:Sns(0)\
+Pin : Name = Timer_Pin(0)
     Attributes:
-        Alias: Button0__BTN
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: SYNC
         Out Sync Option: AUTO
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Timer_Pin(0)__PA ,
+        fb => Net_3276 ,
+        pad => Timer_Pin(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = Input_Pin_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: FALLING
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, PORT_INTERRUPT
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Input_Pin_1(0)__PA ,
+        pad => Input_Pin_1(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = Output_Pin_0(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
         VTrip: EITHER
         Slew: FAST
         Input Sync needed: False
@@ -2358,87 +2503,6 @@ Pin : Name = \CapSense:Sns(0)\
         CaSense Mode: NEITHER
         Treat as pin: True
         Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: ANALOG
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => \CapSense:Sns(0)\__PA ,
-        pad => \CapSense:Sns(0)_PAD\ );
-    Properties:
-    {
-    }
-
-[IoId=5]: 
-Pin : Name = \SPI:miso_s(0)\
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => \SPI:miso_s(0)\__PA ,
-        pin_input => \SPI:miso_s_wire\ ,
-        pad => \SPI:miso_s(0)_PAD\ );
-    Properties:
-    {
-    }
-
-[IoId=6]: 
-Pin : Name = \SPI:sclk_s(0)\
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
         Is SIO: False
@@ -2453,23 +2517,22 @@ Pin : Name = \SPI:sclk_s(0)\
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => \SPI:sclk_s(0)\__PA ,
-        fb => \SPI:sclk_s_wire\ ,
-        pad => \SPI:sclk_s(0)_PAD\ );
+        pa_out => Output_Pin_0(0)__PA ,
+        pad => Output_Pin_0(0)_PAD );
     Properties:
     {
     }
 
 [IoId=7]: 
-Pin : Name = \SPI:ss_s(0)\
+Pin : Name = Output_Pin_1(0)
     Attributes:
         In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2494,26 +2557,25 @@ Pin : Name = \SPI:ss_s(0)\
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => \SPI:ss_s(0)\__PA ,
-        fb => \SPI:Net_1297\ ,
-        pad => \SPI:ss_s(0)_PAD\ );
+        pa_out => Output_Pin_1(0)__PA ,
+        pad => Output_Pin_1(0)_PAD );
     Properties:
     {
     }
 
 Port 1 generates interrupt for logical port:
-    logicalport: Name =Input_Pin_1
+    logicalport: Name =Input_Pin_0
         PORT MAP (
             in_clock_en => tmpOE__ADC_1P_net_0 ,
             in_reset => zero ,
             out_clock_en => tmpOE__ADC_1P_net_0 ,
             out_reset => zero ,
-            interrupt => Net_671 );
+            interrupt => Net_670 );
         Properties:
         {
             drive_mode = "001"
             ibuf_enabled = "1"
-            id = "c0de87f6-3ce1-4837-a376-c54a5dde46bb"
+            id = "8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"
             init_dr_st = "0"
             input_buffer_sel = "00"
             input_clk_en = 0
@@ -2610,56 +2672,15 @@ Pin : Name = ADC_3(0)
     }
 
 [IoId=1]: 
-Pin : Name = Timer_Pin(0)
+Pin : Name = \SPI:miso_s(0)\
     Attributes:
         In Group/Port: True
-        In Sync Option: SYNC
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: True
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Timer_Pin(0)__PA ,
-        fb => Net_3276 ,
-        pad => Timer_Pin(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
-Pin : Name = PWM_1_Out(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2684,15 +2705,97 @@ Pin : Name = PWM_1_Out(0)
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => PWM_1_Out(0)__PA ,
-        pin_input => Net_404 ,
-        pad => PWM_1_Out(0)_PAD );
+        pa_out => \SPI:miso_s(0)\__PA ,
+        pin_input => \SPI:miso_s_wire\ ,
+        pad => \SPI:miso_s(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = \SPI:sclk_s(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \SPI:sclk_s(0)\__PA ,
+        fb => \SPI:sclk_s_wire\ ,
+        pad => \SPI:sclk_s(0)_PAD\ );
     Properties:
     {
     }
 
 [IoId=3]: 
-Pin : Name = Input_Pin_1(0)
+Pin : Name = \SPI:ss_s(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \SPI:ss_s(0)\__PA ,
+        fb => \SPI:Net_1297\ ,
+        pad => \SPI:ss_s(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = Input_Pin_0(0)
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
@@ -2725,48 +2828,8 @@ Pin : Name = Input_Pin_1(0)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Input_Pin_1(0)__PA ,
-        pad => Input_Pin_1(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=4]: 
-Pin : Name = Output_Pin_0(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Output_Pin_0(0)__PA ,
-        pad => Output_Pin_0(0)_PAD );
+        pa_out => Input_Pin_0(0)__PA ,
+        pad => Input_Pin_0(0)_PAD );
     Properties:
     {
     }
@@ -2812,60 +2875,20 @@ Pin : Name = ADC_2(0)
     {
     }
 
-[IoId=6]: 
-Pin : Name = Output_Pin_1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Output_Pin_1(0)__PA ,
-        pad => Output_Pin_1(0)_PAD );
-    Properties:
-    {
-    }
-
 Port 2 generates interrupt for logical port:
-    logicalport: Name =Input_Pin_0
+    logicalport: Name =Wakeup_Pin
         PORT MAP (
             in_clock_en => tmpOE__ADC_1P_net_0 ,
             in_reset => zero ,
             out_clock_en => tmpOE__ADC_1P_net_0 ,
             out_reset => zero ,
-            interrupt => Net_670 );
+            interrupt => Net_4772 );
         Properties:
         {
-            drive_mode = "001"
+            drive_mode = "010"
             ibuf_enabled = "1"
-            id = "8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"
-            init_dr_st = "0"
+            id = "4c15b41e-e284-4978-99e7-5aaee19bd0ce"
+            init_dr_st = "1"
             input_buffer_sel = "00"
             input_clk_en = 0
             input_sync = "0"
@@ -2961,14 +2984,14 @@ Pin : Name = ADC_0(0)
     }
 
 [IoId=1]: 
-Pin : Name = Input_Pin_0(0)
+Pin : Name = Wakeup_Pin(0)
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
         Out Sync Option: AUTO
         Interrupt generated: True
         Interrupt mode: FALLING
-        Drive mode: HI_Z_DIGITAL
+        Drive mode: RES_PULL_UP
         VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
@@ -2991,11 +3014,11 @@ Pin : Name = Input_Pin_0(0)
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL, PORT_INTERRUPT
-        Initial Value: 0
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Input_Pin_0(0)__PA ,
-        pad => Input_Pin_0(0)_PAD );
+        pa_out => Wakeup_Pin(0)__PA ,
+        pad => Wakeup_Pin(0)_PAD );
     Properties:
     {
     }
@@ -3123,239 +3146,7 @@ Pin : Name = ADC_1M(0)
     {
     }
 
-Port 3 generates interrupt for logical port:
-    logicalport: Name =Wakeup_Pin
-        PORT MAP (
-            in_clock_en => tmpOE__ADC_1P_net_0 ,
-            in_reset => zero ,
-            out_clock_en => tmpOE__ADC_1P_net_0 ,
-            out_reset => zero ,
-            interrupt => Net_4772 );
-        Properties:
-        {
-            drive_mode = "010"
-            ibuf_enabled = "1"
-            id = "4c15b41e-e284-4978-99e7-5aaee19bd0ce"
-            init_dr_st = "1"
-            input_buffer_sel = "00"
-            input_clk_en = 0
-            input_sync = "0"
-            input_sync_mode = "0"
-            intr_mode = "10"
-            invert_in_clock = 0
-            invert_in_clock_en = 0
-            invert_in_reset = 0
-            invert_out_clock = 0
-            invert_out_clock_en = 0
-            invert_out_reset = 0
-            io_voltage = ""
-            layout_mode = "CONTIGUOUS"
-            oe_conn = "0"
-            oe_reset = 0
-            oe_sync = "0"
-            output_clk_en = 0
-            output_clock_mode = "0"
-            output_conn = "0"
-            output_mode = "0"
-            output_reset = 0
-            output_sync = "0"
-            ovt_hyst_trim = "0"
-            ovt_needed = "0"
-            ovt_slew_control = "00"
-            pa_in_clock = -1
-            pa_in_clock_en = -1
-            pa_in_reset = -1
-            pa_out_clock = -1
-            pa_out_clock_en = -1
-            pa_out_reset = -1
-            pin_aliases = ""
-            pin_mode = "I"
-            por_state = 4
-            port_alias_group = ""
-            port_alias_required = 0
-            sio_group_cnt = 0
-            sio_hifreq = "00000000"
-            sio_hyst = "1"
-            sio_ibuf = "00000000"
-            sio_info = "00"
-            sio_obuf = "00000000"
-            sio_refsel = "00000000"
-            sio_vohsel = "00000000"
-            sio_vtrip = "00000000"
-            slew_rate = "0"
-            spanning = 0
-            sw_only = 0
-            use_annotation = "0"
-            vtrip = "00"
-            width = 1
-        }
-    and contains the following IO cells:
-[IoId=0]: 
-Pin : Name = \SPI:mosi_s(0)\
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => \SPI:mosi_s(0)\__PA ,
-        fb => \SPI:mosi_s_wire\ ,
-        pad => \SPI:mosi_s(0)_PAD\ );
-    Properties:
-    {
-    }
-
-[IoId=1]: 
-Pin : Name = Wakeup_Pin(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
-        Interrupt generated: True
-        Interrupt mode: FALLING
-        Drive mode: RES_PULL_UP
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: False
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, PORT_INTERRUPT
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Wakeup_Pin(0)__PA ,
-        pad => Wakeup_Pin(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=4]: 
-Pin : Name = PWM_0_Out(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => PWM_0_Out(0)__PA ,
-        pin_input => Net_403 ,
-        pad => PWM_0_Out(0)_PAD );
-    Properties:
-    {
-    }
-
-Port 4 contains the following IO cells:
-[IoId=2]: 
-Pin : Name = \CapSense:Cmod(0)\
-    Attributes:
-        Alias: Cmod
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: NONE
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => \CapSense:Cmod(0)\__PA ,
-        analog_term => \CapSense:Net_398\ ,
-        pad => \CapSense:Cmod(0)_PAD\ );
-    Properties:
-    {
-    }
-
-Port 5 contains the following IO cells:
+Port 3 contains the following IO cells:
 [IoId=0]: 
 Pin : Name = \I2C:scl(0)\
     Attributes:
@@ -3438,6 +3229,214 @@ Pin : Name = \I2C:sda(0)\
     {
     }
 
+[IoId=4]: 
+Pin : Name = PWM_0_Out(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PWM_0_Out(0)__PA ,
+        pin_input => Net_403 ,
+        pad => PWM_0_Out(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = PWM_1_Out(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PWM_1_Out(0)__PA ,
+        pin_input => Net_404 ,
+        pad => PWM_1_Out(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 4 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = \SPI:mosi_s(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \SPI:mosi_s(0)\__PA ,
+        fb => \SPI:mosi_s_wire\ ,
+        pad => \SPI:mosi_s(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = \CapSense:Cmod(0)\
+    Attributes:
+        Alias: Cmod
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: NONE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \CapSense:Cmod(0)\__PA ,
+        analog_term => \CapSense:Net_398\ ,
+        pad => \CapSense:Cmod(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = \CapSense:Sns(0)\
+    Attributes:
+        Alias: Button0__BTN
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: ANALOG
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \CapSense:Sns(0)\__PA ,
+        pad => \CapSense:Sns(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Port 5 contains the following IO cells:
 Port 6 contains the following IO cells:
 [IoId=0]: 
 Pin : Name = \CapSense:Sns(1)\
@@ -3616,7 +3615,7 @@ LPCOMP group 0:
             needs_hibernate = 1
         }
 SCB group 0: 
-    SCB Block @ F(SCB,1): 
+    SCB Block @ F(SCB,0): 
     m0s8scbcell: Name =\SPI:SCB\
         PORT MAP (
             clock => \SPI:Net_847_ff2\ ,
@@ -3640,7 +3639,7 @@ SCB group 0:
             cy_registers = ""
             scb_mode = 1
         }
-    SCB Block @ F(SCB,2): 
+    SCB Block @ F(SCB,1): 
     m0s8scbcell: Name =\I2C:SCB\
         PORT MAP (
             clock => \I2C:Net_847_ff3\ ,
@@ -3939,33 +3938,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connect
      |   1 |       |      NONE |      HI_Z_ANALOG |         CompM_0(0) | Analog(Net_363)
      |   2 |       |      NONE |      HI_Z_ANALOG |         CompP_1(0) | Analog(Net_368)
      |   3 |       |      NONE |      HI_Z_ANALOG |         CompM_1(0) | Analog(Net_367)
-     |   4 |       |      NONE |      HI_Z_ANALOG |  \CapSense:Sns(0)\ | 
-     |   5 |       |      NONE |         CMOS_OUT |    \SPI:miso_s(0)\ | In(\SPI:miso_s_wire\)
-     |   6 |       |      NONE |     HI_Z_DIGITAL |    \SPI:sclk_s(0)\ | FB(\SPI:sclk_s_wire\)
-     |   7 |       |      NONE |     HI_Z_DIGITAL |      \SPI:ss_s(0)\ | FB(\SPI:Net_1297\)
+     |   4 |       |      NONE |     HI_Z_DIGITAL |       Timer_Pin(0) | FB(Net_3276)
+     |   5 |       |   FALLING |     HI_Z_DIGITAL |     Input_Pin_1(0) | 
+     |   6 |       |      NONE |         CMOS_OUT |    Output_Pin_0(0) | 
+     |   7 |       |      NONE |         CMOS_OUT |    Output_Pin_1(0) | 
 -----+-----+-------+-----------+------------------+--------------------+---------------------------
    1 |   0 |       |      NONE |      HI_Z_ANALOG |           ADC_3(0) | Analog(Net_682)
-     |   1 |       |      NONE |     HI_Z_DIGITAL |       Timer_Pin(0) | FB(Net_3276)
-     |   2 |       |      NONE |         CMOS_OUT |       PWM_1_Out(0) | In(Net_404)
-     |   3 |       |   FALLING |     HI_Z_DIGITAL |     Input_Pin_1(0) | 
-     |   4 |       |      NONE |         CMOS_OUT |    Output_Pin_0(0) | 
+     |   1 |       |      NONE |         CMOS_OUT |    \SPI:miso_s(0)\ | In(\SPI:miso_s_wire\)
+     |   2 |       |      NONE |     HI_Z_DIGITAL |    \SPI:sclk_s(0)\ | FB(\SPI:sclk_s_wire\)
+     |   3 |       |      NONE |     HI_Z_DIGITAL |      \SPI:ss_s(0)\ | FB(\SPI:Net_1297\)
+     |   4 |       |   FALLING |     HI_Z_DIGITAL |     Input_Pin_0(0) | 
      |   5 |       |      NONE |      HI_Z_ANALOG |           ADC_2(0) | Analog(Net_689)
-     |   6 |       |      NONE |         CMOS_OUT |    Output_Pin_1(0) | 
 -----+-----+-------+-----------+------------------+--------------------+---------------------------
    2 |   0 |       |      NONE |      HI_Z_ANALOG |           ADC_0(0) | Analog(Net_240)
-     |   1 |       |   FALLING |     HI_Z_DIGITAL |     Input_Pin_0(0) | 
+     |   1 |       |   FALLING |      RES_PULL_UP |      Wakeup_Pin(0) | 
      |   4 |       |      NONE |         CMOS_OUT |       PWM_2_Out(0) | In(Net_405)
      |   6 |       |      NONE |      HI_Z_ANALOG |          ADC_1P(0) | Analog(Net_242)
      |   7 |       |      NONE |      HI_Z_ANALOG |          ADC_1M(0) | Analog(Net_243)
 -----+-----+-------+-----------+------------------+--------------------+---------------------------
-   3 |   0 |       |      NONE |     HI_Z_DIGITAL |    \SPI:mosi_s(0)\ | FB(\SPI:mosi_s_wire\)
-     |   1 |       |   FALLING |      RES_PULL_UP |      Wakeup_Pin(0) | 
-     |   4 |       |      NONE |         CMOS_OUT |       PWM_0_Out(0) | In(Net_403)
------+-----+-------+-----------+------------------+--------------------+---------------------------
-   4 |   2 |       |      NONE |      HI_Z_ANALOG | \CapSense:Cmod(0)\ | Analog(\CapSense:Net_398\)
------+-----+-------+-----------+------------------+--------------------+---------------------------
-   5 |   0 |     * |      NONE |    OPEN_DRAIN_LO |       \I2C:scl(0)\ | FB(Net_482)
+   3 |   0 |     * |      NONE |    OPEN_DRAIN_LO |       \I2C:scl(0)\ | FB(Net_482)
      |   1 |     * |      NONE |    OPEN_DRAIN_LO |       \I2C:sda(0)\ | FB(Net_483)
+     |   4 |       |      NONE |         CMOS_OUT |       PWM_0_Out(0) | In(Net_403)
+     |   6 |       |      NONE |         CMOS_OUT |       PWM_1_Out(0) | In(Net_404)
+-----+-----+-------+-----------+------------------+--------------------+---------------------------
+   4 |   0 |       |      NONE |     HI_Z_DIGITAL |    \SPI:mosi_s(0)\ | FB(\SPI:mosi_s_wire\)
+     |   2 |       |      NONE |      HI_Z_ANALOG | \CapSense:Cmod(0)\ | Analog(\CapSense:Net_398\)
+     |   6 |       |      NONE |      HI_Z_ANALOG |  \CapSense:Sns(0)\ | 
 -----+-----+-------+-----------+------------------+--------------------+---------------------------
    6 |   0 |       |      NONE |      HI_Z_ANALOG |  \CapSense:Sns(1)\ | 
 -----+-----+-------+-----------+------------------+--------------------+---------------------------
@@ -3975,33 +3973,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connect
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.188ms
-Digital Placement phase: Elapsed time ==> 1s.537ms
+Digital component placer commit/Report: Elapsed time ==> 0s.047ms
+Digital Placement phase: Elapsed time ==> 0s.617ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
-"C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Humidity PSoC_r.vh2" --pcf-path "Humidity PSoC.pco" --des-name "Humidity PSoC" --dsf-path "Humidity PSoC.dsf" --sdc-path "Humidity PSoC.sdc" --lib-path "Humidity PSoC_r.lib"
+"C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Humidity PSoC_r.vh2" --pcf-path "Humidity PSoC.pco" --des-name "Humidity PSoC" --dsf-path "Humidity PSoC.dsf" --sdc-path "Humidity PSoC.sdc" --lib-path "Humidity PSoC_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.154ms
+Digital Routing phase: Elapsed time ==> 0s.836ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.364ms
+Bitstream Generation phase: Elapsed time ==> 0s.256ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.041ms
+Bitstream Verification phase: Elapsed time ==> 0s.035ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Humidity PSoC_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.510ms
+Static timing analysis phase: Elapsed time ==> 0s.265ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.448ms
+Design database save phase: Elapsed time ==> 0s.387ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 6s.296ms
+cydsfit: Elapsed time ==> 3s.936ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 6s.297ms
-API generation phase: Elapsed time ==> 11s.054ms
-Dependency generation phase: Elapsed time ==> 0s.063ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+Fitter phase: Elapsed time ==> 3s.936ms
+API generation phase: Elapsed time ==> 4s.580ms
+Dependency generation phase: Elapsed time ==> 0s.021ms
+Cleanup phase: Elapsed time ==> 0s.001ms

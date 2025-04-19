@@ -18,18 +18,20 @@ static uint8_t crc8(const uint8_t *data, int len) {
 }
 
 static bool writeCommand(uint16_t command) {
+    
     uint8_t cmd[2];
     cmd[0] = command >> 8;
     cmd[1] = command & 0xFF;
     
     uint8_t err = 0;
-    
-    //I2C_I2CMasterSendStop(TIMEOUT);
+    uint8_t err2 = 0;
     
     I2C_I2CMasterClearStatus();
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
-char buffer[64];
+    
+    char buffer[64];
+    
     if(err != I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with write Command\r\n");
         sprintf(buffer, "err = %d\n", err);
@@ -38,11 +40,12 @@ char buffer[64];
         
     }
     
-    //err = I2C_I2CMasterWriteBuf(SHT31_I2C_ADDR, cmd, 2, I2C_I2C_MODE_COMPLETE_XFER);
+    CyDelay(50);
     
-    CyDelay(20);
+    err = I2C_I2CMasterWriteByte(cmd[0], TIMEOUT);
     
-    err = I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
+    CyDelay(50);
+    err2 = I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
     
 
     if(err != I2C_I2C_MSTR_NO_ERROR){
@@ -51,7 +54,15 @@ char buffer[64];
         UART_UartPutString(buffer);
         I2C_I2CMasterSendStop(TIMEOUT);
     }
+        if(err2 != I2C_I2C_MSTR_NO_ERROR){
+        UART_UartPutString("Error with writeCommand: writeByte\r\n");
+        sprintf(buffer, "err = %d\n", err);
+        UART_UartPutString(buffer);
+        I2C_I2CMasterSendStop(TIMEOUT);
+    }
     
+    I2C_I2CMasterSendStop(TIMEOUT);
+        
     if (err != I2C_I2C_MSTR_NO_ERROR)
         return false;
     
@@ -62,8 +73,6 @@ char buffer[64];
 bool SHT31_Init() {
     uint8_t status = 0;
     I2C_Start();
-    
-    I2C_I2CMasterClearStatus();
     
     status = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
     
@@ -80,13 +89,13 @@ uint16_t SHT31_ReadStatus(void) {
         I2C_I2CMasterSendStop(TIMEOUT);
         UART_UartPutString("Error with Read Status: writeCommand\r\n");
     }
-/*
+
     I2C_I2CMasterClearStatus();
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
-    */
     
-    I2C_I2CMasterSendRestart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+    
+    //I2C_I2CMasterSendRestart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
     uint8_t data[3] = {0};
     
     if(err != I2C_I2C_MSTR_NO_ERROR){
@@ -94,12 +103,15 @@ uint16_t SHT31_ReadStatus(void) {
         I2C_I2CMasterSendStop(TIMEOUT);
     }
 
-    CyDelay(2);
+    CyDelay(50);
     
     //err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, data, 3, I2C_I2C_MODE_COMPLETE_XFER);
     err = I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[0], TIMEOUT);
+    CyDelay(50);
     err = I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[1], TIMEOUT);
+    CyDelay(50);
     err = I2C_I2CMasterReadByte(I2C_I2C_NAK_DATA, &data[2], TIMEOUT);
+    CyDelay(50);
     
     if(err != I2C_I2C_MSTR_NO_ERROR){
         I2C_I2CMasterSendStop(TIMEOUT);
@@ -141,27 +153,30 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
         UART_UartPutString("Error with Read Temp Hum: ClearStatus\r\n");
         I2C_I2CMasterSendStop(TIMEOUT);
     }
+    */
+    I2C_I2CMasterClearStatus();
     
     err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+    
     if(err){
         UART_UartPutString("Error with Read Temp Hum: SendStart\r\n");
         I2C_I2CMasterSendStop(TIMEOUT);
     }
-  */
-   
+   /*
     I2C_I2CMasterSendRestart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
     if(err){
         UART_UartPutString("Error with Read Status: SendRestart\r\n");
         I2C_I2CMasterSendStop(TIMEOUT);
     }
-    
+    */
     uint8_t data[3] = {0};
 
-    CyDelay(2);
+    CyDelay(50);
     
     //err = I2C_I2CMasterReadBuf(SHT31_I2C_ADDR, readbuffer, 6, I2C_I2C_MODE_COMPLETE_XFER);
     char buffer[64];
     for(int i = 0; i < 6; i++){
+        CyDelay(50);
         err = I2C_I2CMasterReadByte((i<5) ? I2C_I2C_ACK_DATA : I2C_I2C_NAK_DATA, &readbuffer[i], TIMEOUT);
         if(err != I2C_I2C_MSTR_NO_ERROR){
             UART_UartPutString("Error with Read Temp Hum: readByte\r\n");
@@ -188,6 +203,8 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     
     *outTemp = temp;
     *outHum = humidity;
+    
+    //I2C_I2CMasterSendStop(TIMEOUT);
     
     return true;
 }
