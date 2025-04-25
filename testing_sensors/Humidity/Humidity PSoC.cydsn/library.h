@@ -7,18 +7,14 @@
 
 #define SHT31_I2C_ADDR 0x44
 #define TIMEOUT 20
-#define SHT31_MEAS_HIGHREP_STRETCH                                             \
-  0x2C06 // Measurement High Repeatability with Clock Stretch Enabled /
-#define SHT31_MEAS_MEDREP_STRETCH                                              \
-  0x2C0D // Measurement Medium Repeatability with Clock Stretch Enabled/
-#define SHT31_MEAS_LOWREP_STRETCH                                              \
-  0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/
-#define SHT31_MEAS_HIGHREP                                                     \
-  0x2400 // Measurement High Repeatability with Clock Stretch Disabled /
-#define SHT31_MEAS_MEDREP                                                      \
-  0x240B // Measurement Medium Repeatability with Clock Stretch Disabled//
-#define SHT31_MEAS_LOWREP                                                      \
-  0x2416 // Measurement Low Repeatability with Clock Stretch Disabled */
+#define SHT31_MEAS_HIGHREP_STRETCH 0x2C06 // Measurement High Repeatability with Clock Stretch Enabled /
+#define SHT31_MEAS_MEDREP_STRETCH 0x2C0D // Measurement Medium Repeatability with Clock Stretch Enabled/
+#define SHT31_MEAS_LOWREP_STRETCH 0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/                                              \
+  
+#define SHT31_MEAS_HIGHREP 0x2400 // Measurement High Repeatability with Clock Stretch Disabled /                                                     \
+  
+#define SHT31_MEAS_MEDREP 0x240B // Measurement Medium Repeatability with Clock Stretch Disabled//
+#define SHT31_MEAS_LOWREP 0x2416 // Measurement Low Repeatability with Clock Stretch Disabled */
 
 #define SHT31_READSTATUS 0xF32D   // Read Out of Status Register //
 #define SHT31_CLEARSTATUS 0x3041  /**< Clear Status**/
