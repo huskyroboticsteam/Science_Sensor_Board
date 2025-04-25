@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 1
 
 
    1              		.syntax unified
@@ -19,17 +19,15 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.global	__aeabi_fcmpun
-  20              		.global	__aeabi_f2d
-  21              		.section	.text.main,"ax",%progbits
-  22              		.align	2
-  23              		.global	main
-  24              		.code	16
-  25              		.thumb_func
-  26              		.type	main, %function
-  27              	main:
-  28              	.LFB35:
-  29              		.file 1 "main.c"
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB35:
+  27              		.file 1 "main.c"
    1:main.c        **** #include <stdio.h>
    2:main.c        **** #include <stdbool.h>
    3:main.c        **** #include <math.h>
@@ -41,1410 +39,1085 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 1
    9:main.c        **** 
   10:main.c        **** int main(void)
   11:main.c        **** {
-  30              		.loc 1 11 0
-  31              		.cfi_startproc
-  32              		@ args = 0, pretend = 0, frame = 96
-  33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34 0000 30B5     		push	{r4, r5, lr}
-  35              		.cfi_def_cfa_offset 12
-  36              		.cfi_offset 4, -12
-  37              		.cfi_offset 5, -8
-  38              		.cfi_offset 14, -4
-  39 0002 9BB0     		sub	sp, sp, #108
-  40              		.cfi_def_cfa_offset 120
+  28              		.loc 1 11 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 32
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 30B5     		push	{r4, r5, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 5, -8
+  36              		.cfi_offset 14, -4
+  37 0002 89B0     		sub	sp, sp, #36
+  38              		.cfi_def_cfa_offset 48
   12:main.c        ****     
   13:main.c        ****     CyGlobalIntEnable;
-  41              		.loc 1 13 0
-  42              		.syntax divided
-  43              	@ 13 "main.c" 1
-  44 0004 62B6     		CPSIE   i
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 2
-
-
-  45              	@ 0 "" 2
+  39              		.loc 1 13 0
+  40              		.syntax divided
+  41              	@ 13 "main.c" 1
+  42 0004 62B6     		CPSIE   i
+  43              	@ 0 "" 2
   14:main.c        ****     UART_Start();
-  46              		.loc 1 14 0
-  47              		.thumb
-  48              		.syntax unified
-  49 0006 FFF7FEFF 		bl	UART_Start
-  50              	.LVL0:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 2
+
+
+  44              		.loc 1 14 0
+  45              		.thumb
+  46              		.syntax unified
+  47 0006 FFF7FEFF 		bl	UART_Start
+  48              	.LVL0:
   15:main.c        ****     
   16:main.c        ****     UART_UartPutString("__________________________\r\n");
-  51              		.loc 1 16 0
-  52 000a 3C48     		ldr	r0, .L10
-  53 000c FFF7FEFF 		bl	UART_UartPutString
-  54              	.LVL1:
+  49              		.loc 1 16 0
+  50 000a 1F48     		ldr	r0, .L6
+  51 000c FFF7FEFF 		bl	UART_UartPutString
+  52              	.LVL1:
   17:main.c        ****     UART_UartPutString("SHT31 test\r\n");
-  55              		.loc 1 17 0
-  56 0010 3B48     		ldr	r0, .L10+4
-  57 0012 FFF7FEFF 		bl	UART_UartPutString
-  58              	.LVL2:
+  53              		.loc 1 17 0
+  54 0010 1E48     		ldr	r0, .L6+4
+  55 0012 FFF7FEFF 		bl	UART_UartPutString
+  56              	.LVL2:
   18:main.c        ****     
   19:main.c        ****     CyDelay(100);
-  59              		.loc 1 19 0
-  60 0016 6420     		movs	r0, #100
-  61 0018 FFF7FEFF 		bl	CyDelay
-  62              	.LVL3:
+  57              		.loc 1 19 0
+  58 0016 6420     		movs	r0, #100
+  59 0018 FFF7FEFF 		bl	CyDelay
+  60              	.LVL3:
   20:main.c        ****     
   21:main.c        ****     if (!SHT31_Init()) {
-  63              		.loc 1 21 0
-  64 001c FFF7FEFF 		bl	SHT31_Init
-  65              	.LVL4:
-  66 0020 0028     		cmp	r0, #0
-  67 0022 02D1     		bne	.L2
+  61              		.loc 1 21 0
+  62 001c FFF7FEFF 		bl	SHT31_Init
+  63              	.LVL4:
+  64 0020 0028     		cmp	r0, #0
+  65 0022 02D1     		bne	.L2
   22:main.c        ****         UART_UartPutString("Couldn't find SHT31\r\n");
-  68              		.loc 1 22 0
-  69 0024 3748     		ldr	r0, .L10+8
-  70 0026 FFF7FEFF 		bl	UART_UartPutString
-  71              	.LVL5:
-  72              	.L2:
+  66              		.loc 1 22 0
+  67 0024 1A48     		ldr	r0, .L6+8
+  68 0026 FFF7FEFF 		bl	UART_UartPutString
+  69              	.LVL5:
+  70              	.L2:
   23:main.c        ****     }
   24:main.c        ****     
-  25:main.c        ****     UART_UartPutString("Heater Enabled State: ");
-  73              		.loc 1 25 0
-  74 002a 3748     		ldr	r0, .L10+12
-  75 002c FFF7FEFF 		bl	UART_UartPutString
-  76              	.LVL6:
-  26:main.c        ****     if (SHT31_IsHeaterEnabled()) {
-  77              		.loc 1 26 0
-  78 0030 FFF7FEFF 		bl	SHT31_IsHeaterEnabled
-  79              	.LVL7:
-  80 0034 0028     		cmp	r0, #0
-  81 0036 03D0     		beq	.L3
-  27:main.c        ****         UART_UartPutString("ENABLED\r\n");
-  82              		.loc 1 27 0
-  83 0038 3448     		ldr	r0, .L10+16
-  84 003a FFF7FEFF 		bl	UART_UartPutString
-  85              	.LVL8:
-  86 003e 02E0     		b	.L4
-  87              	.L3:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 3
+  25:main.c        ****     
+  26:main.c        ****     UART_UartPutString("Heater Enabled State: ");
+  71              		.loc 1 26 0
+  72 002a 1A48     		ldr	r0, .L6+12
+  73 002c FFF7FEFF 		bl	UART_UartPutString
+  74              	.LVL6:
+  27:main.c        ****     if (SHT31_IsHeaterEnabled()) {
+  75              		.loc 1 27 0
+  76 0030 FFF7FEFF 		bl	SHT31_IsHeaterEnabled
+  77              	.LVL7:
+  78 0034 0028     		cmp	r0, #0
+  79 0036 03D0     		beq	.L3
+  28:main.c        ****         UART_UartPutString("ENABLED\r\n");
+  80              		.loc 1 28 0
+  81 0038 1748     		ldr	r0, .L6+16
+  82 003a FFF7FEFF 		bl	UART_UartPutString
+  83              	.LVL8:
+  84 003e 02E0     		b	.L4
+  85              	.L3:
+  29:main.c        ****     } else {
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 3
 
 
-  28:main.c        ****     } else {
-  29:main.c        ****         UART_UartPutString("DISABLED\r\n");
-  88              		.loc 1 29 0
-  89 0040 3348     		ldr	r0, .L10+20
-  90 0042 FFF7FEFF 		bl	UART_UartPutString
-  91              	.LVL9:
-  92              	.L4:
-  30:main.c        ****     }
-  31:main.c        ****     
-  32:main.c        ****     CyDelay(1000);
-  93              		.loc 1 32 0
-  94 0046 FA25     		movs	r5, #250
-  95 0048 AD00     		lsls	r5, r5, #2
-  96 004a 2800     		movs	r0, r5
-  97 004c FFF7FEFF 		bl	CyDelay
-  98              	.LVL10:
-  33:main.c        ****     
-  34:main.c        ****     I2C_I2CMasterClearStatus();
-  99              		.loc 1 34 0
- 100 0050 FFF7FEFF 		bl	I2C_I2CMasterClearStatus
- 101              	.LVL11:
-  35:main.c        ****     uint8_t err = I2C_I2CMasterSendStart(0x44, I2C_I2C_WRITE_XFER_MODE, 10);
- 102              		.loc 1 35 0
- 103 0054 0A22     		movs	r2, #10
- 104 0056 0021     		movs	r1, #0
- 105 0058 4420     		movs	r0, #68
- 106 005a FFF7FEFF 		bl	I2C_I2CMasterSendStart
- 107              	.LVL12:
- 108 005e C4B2     		uxtb	r4, r0
- 109              	.LVL13:
-  36:main.c        ****     I2C_I2CMasterSendStop(TIMEOUT);
- 110              		.loc 1 36 0
- 111 0060 1420     		movs	r0, #20
- 112 0062 FFF7FEFF 		bl	I2C_I2CMasterSendStop
- 113              	.LVL14:
-  37:main.c        ****     
-  38:main.c        ****     CyDelay(1000);
- 114              		.loc 1 38 0
- 115 0066 2800     		movs	r0, r5
- 116 0068 FFF7FEFF 		bl	CyDelay
- 117              	.LVL15:
-  39:main.c        ****     if(err == I2C_I2C_MSTR_NO_ERROR){
- 118              		.loc 1 39 0
- 119 006c 002C     		cmp	r4, #0
- 120 006e 07D1     		bne	.L5
- 121              	.LBB2:
-  40:main.c        ****         char buffer[32];
-  41:main.c        ****         sprintf(buffer, "Found I2C device at 0x%02X\r\n", 0x44);
- 122              		.loc 1 41 0
- 123 0070 4422     		movs	r2, #68
- 124 0072 2849     		ldr	r1, .L10+24
- 125 0074 02A8     		add	r0, sp, #8
- 126 0076 FFF7FEFF 		bl	sprintf
- 127              	.LVL16:
-  42:main.c        ****         UART_UartPutString(buffer);
- 128              		.loc 1 42 0
- 129 007a 02A8     		add	r0, sp, #8
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 4
+  30:main.c        ****         UART_UartPutString("DISABLED\r\n");
+  86              		.loc 1 30 0
+  87 0040 1648     		ldr	r0, .L6+20
+  88 0042 FFF7FEFF 		bl	UART_UartPutString
+  89              	.LVL9:
+  90              	.L4:
+  31:main.c        ****     }
+  32:main.c        ****     
+  33:main.c        ****     CyDelay(1000);
+  91              		.loc 1 33 0
+  92 0046 FA25     		movs	r5, #250
+  93 0048 AD00     		lsls	r5, r5, #2
+  94 004a 2800     		movs	r0, r5
+  95 004c FFF7FEFF 		bl	CyDelay
+  96              	.LVL10:
+  34:main.c        ****     
+  35:main.c        ****     I2C_I2CMasterClearStatus();
+  97              		.loc 1 35 0
+  98 0050 FFF7FEFF 		bl	I2C_I2CMasterClearStatus
+  99              	.LVL11:
+  36:main.c        ****     uint8_t err = I2C_I2CMasterSendRestart(0x44, I2C_I2C_WRITE_XFER_MODE, 10);
+ 100              		.loc 1 36 0
+ 101 0054 0A22     		movs	r2, #10
+ 102 0056 0021     		movs	r1, #0
+ 103 0058 4420     		movs	r0, #68
+ 104 005a FFF7FEFF 		bl	I2C_I2CMasterSendRestart
+ 105              	.LVL12:
+ 106 005e C4B2     		uxtb	r4, r0
+ 107              	.LVL13:
+  37:main.c        ****     I2C_I2CMasterSendStop(TIMEOUT);
+ 108              		.loc 1 37 0
+ 109 0060 1420     		movs	r0, #20
+ 110 0062 FFF7FEFF 		bl	I2C_I2CMasterSendStop
+ 111              	.LVL14:
+  38:main.c        ****     
+  39:main.c        ****     CyDelay(1000);
+ 112              		.loc 1 39 0
+ 113 0066 2800     		movs	r0, r5
+ 114 0068 FFF7FEFF 		bl	CyDelay
+ 115              	.LVL15:
+  40:main.c        ****     if(err == I2C_I2C_MSTR_NO_ERROR){
+ 116              		.loc 1 40 0
+ 117 006c 002C     		cmp	r4, #0
+ 118 006e 07D1     		bne	.L5
+ 119              	.LBB2:
+  41:main.c        ****         char buffer[32];
+  42:main.c        ****         sprintf(buffer, "Found I2C device at 0x%02X\r\n", 0x44);
+ 120              		.loc 1 42 0
+ 121 0070 4422     		movs	r2, #68
+ 122 0072 0B49     		ldr	r1, .L6+24
+ 123 0074 6846     		mov	r0, sp
+ 124 0076 FFF7FEFF 		bl	sprintf
+ 125              	.LVL16:
+  43:main.c        ****         UART_UartPutString(buffer);
+ 126              		.loc 1 43 0
+ 127 007a 6846     		mov	r0, sp
+ 128 007c FFF7FEFF 		bl	UART_UartPutString
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 4
 
 
- 130 007c FFF7FEFF 		bl	UART_UartPutString
- 131              	.LVL17:
- 132              	.L5:
- 133              	.LBE2:
-  43:main.c        ****     } 
-  44:main.c        ****     
-  45:main.c        ****     CyDelay(50);
- 134              		.loc 1 45 0
- 135 0080 3220     		movs	r0, #50
- 136 0082 FFF7FEFF 		bl	CyDelay
- 137              	.LVL18:
-  46:main.c        ****     //for(;;){
-  47:main.c        ****         float t = SHT31_ReadTemperature();
- 138              		.loc 1 47 0
- 139 0086 FFF7FEFF 		bl	SHT31_ReadTemperature
- 140              	.LVL19:
- 141 008a 041C     		adds	r4, r0, #0
- 142              	.LVL20:
-  48:main.c        ****         float h = SHT31_ReadHumidity();
- 143              		.loc 1 48 0
- 144 008c FFF7FEFF 		bl	SHT31_ReadHumidity
- 145              	.LVL21:
- 146 0090 051C     		adds	r5, r0, #0
- 147              	.LVL22:
-  49:main.c        **** 
-  50:main.c        ****         char buffer[64];
-  51:main.c        ****         
-  52:main.c        ****         if (!isnan(t)) {
- 148              		.loc 1 52 0
- 149 0092 211C     		adds	r1, r4, #0
- 150 0094 201C     		adds	r0, r4, #0
- 151              	.LVL23:
- 152 0096 FFF7FEFF 		bl	__aeabi_fcmpun
- 153              	.LVL24:
- 154 009a 0028     		cmp	r0, #0
- 155 009c 0DD1     		bne	.L6
-  53:main.c        ****             snprintf(buffer, sizeof(buffer), "TempC = %.2f\t\t", t);
- 156              		.loc 1 53 0
- 157 009e 201C     		adds	r0, r4, #0
- 158 00a0 FFF7FEFF 		bl	__aeabi_f2d
- 159              	.LVL25:
- 160 00a4 0090     		str	r0, [sp]
- 161 00a6 0191     		str	r1, [sp, #4]
- 162 00a8 1B4A     		ldr	r2, .L10+28
- 163 00aa 4021     		movs	r1, #64
- 164 00ac 0AA8     		add	r0, sp, #40
- 165 00ae FFF7FEFF 		bl	snprintf
- 166              	.LVL26:
-  54:main.c        ****             UART_UartPutString(buffer);
- 167              		.loc 1 54 0
- 168 00b2 0AA8     		add	r0, sp, #40
- 169 00b4 FFF7FEFF 		bl	UART_UartPutString
- 170              	.LVL27:
- 171 00b8 02E0     		b	.L7
- 172              	.L6:
-  55:main.c        ****         } else {
-  56:main.c        ****             UART_UartPutString("Failed to read temperature\r\n");
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 5
+ 129              	.LVL17:
+ 130              	.L5:
+ 131              	.LBE2:
+  44:main.c        ****     } 
+  45:main.c        ****     /*
+  46:main.c        ****     CyDelay(50);
+  47:main.c        ****     //for(;;){
+  48:main.c        ****         float t = SHT31_ReadTemperature();
+  49:main.c        ****         float h = SHT31_ReadHumidity();
+  50:main.c        **** 
+  51:main.c        ****         char buffer[64];
+  52:main.c        ****         
+  53:main.c        ****         if (!isnan(t)) {
+  54:main.c        ****             snprintf(buffer, sizeof(buffer), "TempC = %.2f\t\t", t);
+  55:main.c        ****             UART_UartPutString(buffer);
+  56:main.c        ****         } else {
+  57:main.c        ****             UART_UartPutString("Failed to read temperature\r\n");
+  58:main.c        ****         }
+  59:main.c        **** 
+  60:main.c        ****         if (!isnan(h)) {
+  61:main.c        ****             snprintf(buffer, sizeof(buffer), "Hum. %% = %.2f\r\n", h);
+  62:main.c        ****             UART_UartPutString(buffer);
+  63:main.c        ****         } else {
+  64:main.c        ****             UART_UartPutString("Failed to read humidity\r\n");
+  65:main.c        ****         }
+  66:main.c        **** 
+  67:main.c        ****         CyDelay(1000);
+  68:main.c        ****         */
+  69:main.c        ****     //}
+  70:main.c        ****     
+  71:main.c        ****    
+  72:main.c        ****     
+  73:main.c        **** }
+ 132              		.loc 1 73 0
+ 133 0080 0020     		movs	r0, #0
+ 134 0082 09B0     		add	sp, sp, #36
+ 135              		@ sp needed
+ 136              	.LVL18:
+ 137 0084 30BD     		pop	{r4, r5, pc}
+ 138              	.L7:
+ 139 0086 C046     		.align	2
+ 140              	.L6:
+ 141 0088 00000000 		.word	.LC0
+ 142 008c 20000000 		.word	.LC2
+ 143 0090 30000000 		.word	.LC4
+ 144 0094 48000000 		.word	.LC6
+ 145 0098 60000000 		.word	.LC8
+ 146 009c 6C000000 		.word	.LC10
+ 147 00a0 78000000 		.word	.LC12
+ 148              		.cfi_endproc
+ 149              	.LFE35:
+ 150              		.size	main, .-main
+ 151              		.global	enableHeater
+ 152              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 153              		.align	2
+ 154              	.LC0:
+ 155 0000 5F5F5F5F 		.ascii	"__________________________\015\012\000"
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 5
 
 
- 173              		.loc 1 56 0
- 174 00ba 1848     		ldr	r0, .L10+32
- 175 00bc FFF7FEFF 		bl	UART_UartPutString
- 176              	.LVL28:
- 177              	.L7:
-  57:main.c        ****         }
-  58:main.c        **** 
-  59:main.c        ****         if (!isnan(h)) {
- 178              		.loc 1 59 0
- 179 00c0 291C     		adds	r1, r5, #0
- 180 00c2 281C     		adds	r0, r5, #0
- 181 00c4 FFF7FEFF 		bl	__aeabi_fcmpun
- 182              	.LVL29:
- 183 00c8 0028     		cmp	r0, #0
- 184 00ca 0DD1     		bne	.L8
-  60:main.c        ****             snprintf(buffer, sizeof(buffer), "Hum. %% = %.2f\r\n", h);
- 185              		.loc 1 60 0
- 186 00cc 281C     		adds	r0, r5, #0
- 187 00ce FFF7FEFF 		bl	__aeabi_f2d
- 188              	.LVL30:
- 189 00d2 0090     		str	r0, [sp]
- 190 00d4 0191     		str	r1, [sp, #4]
- 191 00d6 124A     		ldr	r2, .L10+36
- 192 00d8 4021     		movs	r1, #64
- 193 00da 0AA8     		add	r0, sp, #40
- 194 00dc FFF7FEFF 		bl	snprintf
- 195              	.LVL31:
-  61:main.c        ****             UART_UartPutString(buffer);
- 196              		.loc 1 61 0
- 197 00e0 0AA8     		add	r0, sp, #40
- 198 00e2 FFF7FEFF 		bl	UART_UartPutString
- 199              	.LVL32:
- 200 00e6 02E0     		b	.L9
- 201              	.L8:
-  62:main.c        ****         } else {
-  63:main.c        ****             UART_UartPutString("Failed to read humidity\r\n");
- 202              		.loc 1 63 0
- 203 00e8 0E48     		ldr	r0, .L10+40
- 204 00ea FFF7FEFF 		bl	UART_UartPutString
- 205              	.LVL33:
- 206              	.L9:
-  64:main.c        ****         }
-  65:main.c        **** 
-  66:main.c        ****         CyDelay(1000);
- 207              		.loc 1 66 0
- 208 00ee FA20     		movs	r0, #250
- 209 00f0 8000     		lsls	r0, r0, #2
- 210 00f2 FFF7FEFF 		bl	CyDelay
- 211              	.LVL34:
-  67:main.c        **** 
-  68:main.c        ****     //}
-  69:main.c        ****     
-  70:main.c        ****    
-  71:main.c        ****     
-  72:main.c        **** }
- 212              		.loc 1 72 0
- 213 00f6 0020     		movs	r0, #0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 6
+ 155      5F5F5F5F 
+ 155      5F5F5F5F 
+ 155      5F5F5F5F 
+ 155      5F5F5F5F 
+ 156 001d 000000   		.space	3
+ 157              	.LC2:
+ 158 0020 53485433 		.ascii	"SHT31 test\015\012\000"
+ 158      31207465 
+ 158      73740D0A 
+ 158      00
+ 159 002d 000000   		.space	3
+ 160              	.LC4:
+ 161 0030 436F756C 		.ascii	"Couldn't find SHT31\015\012\000"
+ 161      646E2774 
+ 161      2066696E 
+ 161      64205348 
+ 161      5433310D 
+ 162 0046 0000     		.space	2
+ 163              	.LC6:
+ 164 0048 48656174 		.ascii	"Heater Enabled State: \000"
+ 164      65722045 
+ 164      6E61626C 
+ 164      65642053 
+ 164      74617465 
+ 165 005f 00       		.space	1
+ 166              	.LC8:
+ 167 0060 454E4142 		.ascii	"ENABLED\015\012\000"
+ 167      4C45440D 
+ 167      0A00
+ 168 006a 0000     		.space	2
+ 169              	.LC10:
+ 170 006c 44495341 		.ascii	"DISABLED\015\012\000"
+ 170      424C4544 
+ 170      0D0A00
+ 171 0077 00       		.space	1
+ 172              	.LC12:
+ 173 0078 466F756E 		.ascii	"Found I2C device at 0x%02X\015\012\000"
+ 173      64204932 
+ 173      43206465 
+ 173      76696365 
+ 173      20617420 
+ 174              		.bss
+ 175              		.type	enableHeater, %object
+ 176              		.size	enableHeater, 1
+ 177              	enableHeater:
+ 178 0000 00       		.space	1
+ 179              		.text
+ 180              	.Letext0:
+ 181              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 182              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 183              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 184              		.file 5 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 185              		.file 6 "Generated_Source\\PSoC4/UART.h"
+ 186              		.file 7 "Generated_Source\\PSoC4/CyLib.h"
+ 187              		.file 8 "./library.h"
+ 188              		.file 9 "Generated_Source\\PSoC4/I2C_I2C.h"
+ 189              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 6
 
 
- 214 00f8 1BB0     		add	sp, sp, #108
- 215              		@ sp needed
- 216              	.LVL35:
- 217              	.LVL36:
- 218 00fa 30BD     		pop	{r4, r5, pc}
- 219              	.L11:
- 220              		.align	2
- 221              	.L10:
- 222 00fc 00000000 		.word	.LC0
- 223 0100 20000000 		.word	.LC2
- 224 0104 30000000 		.word	.LC4
- 225 0108 48000000 		.word	.LC6
- 226 010c 60000000 		.word	.LC8
- 227 0110 6C000000 		.word	.LC10
- 228 0114 78000000 		.word	.LC12
- 229 0118 98000000 		.word	.LC14
- 230 011c A8000000 		.word	.LC16
- 231 0120 C8000000 		.word	.LC18
- 232 0124 DC000000 		.word	.LC20
- 233              		.cfi_endproc
- 234              	.LFE35:
- 235              		.size	main, .-main
- 236              		.global	enableHeater
- 237              		.section	.rodata.str1.4,"aMS",%progbits,1
- 238              		.align	2
- 239              	.LC0:
- 240 0000 5F5F5F5F 		.ascii	"__________________________\015\012\000"
- 240      5F5F5F5F 
- 240      5F5F5F5F 
- 240      5F5F5F5F 
- 240      5F5F5F5F 
- 241 001d 000000   		.space	3
- 242              	.LC2:
- 243 0020 53485433 		.ascii	"SHT31 test\015\012\000"
- 243      31207465 
- 243      73740D0A 
- 243      00
- 244 002d 000000   		.space	3
- 245              	.LC4:
- 246 0030 436F756C 		.ascii	"Couldn't find SHT31\015\012\000"
- 246      646E2774 
- 246      2066696E 
- 246      64205348 
- 246      5433310D 
- 247 0046 0000     		.space	2
- 248              	.LC6:
- 249 0048 48656174 		.ascii	"Heater Enabled State: \000"
- 249      65722045 
- 249      6E61626C 
- 249      65642053 
- 249      74617465 
- 250 005f 00       		.space	1
- 251              	.LC8:
- 252 0060 454E4142 		.ascii	"ENABLED\015\012\000"
- 252      4C45440D 
- 252      0A00
- 253 006a 0000     		.space	2
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 7
+ 190              	.Ldebug_info0:
+ 191 0000 BF020000 		.4byte	0x2bf
+ 192 0004 0400     		.2byte	0x4
+ 193 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 194 000a 04       		.byte	0x4
+ 195 000b 01       		.uleb128 0x1
+ 196 000c 49010000 		.4byte	.LASF27
+ 197 0010 0C       		.byte	0xc
+ 198 0011 FA010000 		.4byte	.LASF28
+ 199 0015 0A000000 		.4byte	.LASF29
+ 200 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 201 001d 00000000 		.4byte	0
+ 202 0021 00000000 		.4byte	.Ldebug_line0
+ 203 0025 02       		.uleb128 0x2
+ 204 0026 01       		.byte	0x1
+ 205 0027 06       		.byte	0x6
+ 206 0028 36020000 		.4byte	.LASF0
+ 207 002c 03       		.uleb128 0x3
+ 208 002d 00000000 		.4byte	.LASF12
+ 209 0031 02       		.byte	0x2
+ 210 0032 1D       		.byte	0x1d
+ 211 0033 37000000 		.4byte	0x37
+ 212 0037 02       		.uleb128 0x2
+ 213 0038 01       		.byte	0x1
+ 214 0039 08       		.byte	0x8
+ 215 003a A5000000 		.4byte	.LASF1
+ 216 003e 02       		.uleb128 0x2
+ 217 003f 02       		.byte	0x2
+ 218 0040 05       		.byte	0x5
+ 219 0041 06020000 		.4byte	.LASF2
+ 220 0045 02       		.uleb128 0x2
+ 221 0046 02       		.byte	0x2
+ 222 0047 07       		.byte	0x7
+ 223 0048 C5000000 		.4byte	.LASF3
+ 224 004c 02       		.uleb128 0x2
+ 225 004d 04       		.byte	0x4
+ 226 004e 05       		.byte	0x5
+ 227 004f 17020000 		.4byte	.LASF4
+ 228 0053 02       		.uleb128 0x2
+ 229 0054 04       		.byte	0x4
+ 230 0055 07       		.byte	0x7
+ 231 0056 B3000000 		.4byte	.LASF5
+ 232 005a 02       		.uleb128 0x2
+ 233 005b 08       		.byte	0x8
+ 234 005c 05       		.byte	0x5
+ 235 005d EC010000 		.4byte	.LASF6
+ 236 0061 02       		.uleb128 0x2
+ 237 0062 08       		.byte	0x8
+ 238 0063 07       		.byte	0x7
+ 239 0064 22010000 		.4byte	.LASF7
+ 240 0068 04       		.uleb128 0x4
+ 241 0069 04       		.byte	0x4
+ 242 006a 05       		.byte	0x5
+ 243 006b 696E7400 		.ascii	"int\000"
+ 244 006f 02       		.uleb128 0x2
+ 245 0070 04       		.byte	0x4
+ 246 0071 07       		.byte	0x7
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 7
 
 
- 254              	.LC10:
- 255 006c 44495341 		.ascii	"DISABLED\015\012\000"
- 255      424C4544 
- 255      0D0A00
- 256 0077 00       		.space	1
- 257              	.LC12:
- 258 0078 466F756E 		.ascii	"Found I2C device at 0x%02X\015\012\000"
- 258      64204932 
- 258      43206465 
- 258      76696365 
- 258      20617420 
- 259 0095 000000   		.space	3
- 260              	.LC14:
- 261 0098 54656D70 		.ascii	"TempC = %.2f\011\011\000"
- 261      43203D20 
- 261      252E3266 
- 261      090900
- 262 00a7 00       		.space	1
- 263              	.LC16:
- 264 00a8 4661696C 		.ascii	"Failed to read temperature\015\012\000"
- 264      65642074 
- 264      6F207265 
- 264      61642074 
- 264      656D7065 
- 265 00c5 000000   		.space	3
- 266              	.LC18:
- 267 00c8 48756D2E 		.ascii	"Hum. %% = %.2f\015\012\000"
- 267      20252520 
- 267      3D20252E 
- 267      32660D0A 
- 267      00
- 268 00d9 000000   		.space	3
- 269              	.LC20:
- 270 00dc 4661696C 		.ascii	"Failed to read humidity\015\012\000"
- 270      65642074 
- 270      6F207265 
- 270      61642068 
- 270      756D6964 
- 271              		.bss
- 272              		.type	enableHeater, %object
- 273              		.size	enableHeater, 1
- 274              	enableHeater:
- 275 0000 00       		.space	1
- 276              		.text
- 277              	.Letext0:
- 278              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 279              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 280              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 281              		.file 5 "Generated_Source\\PSoC4/UART_SPI_UART.h"
- 282              		.file 6 "Generated_Source\\PSoC4/UART.h"
- 283              		.file 7 "Generated_Source\\PSoC4/CyLib.h"
- 284              		.file 8 "./library.h"
- 285              		.file 9 "Generated_Source\\PSoC4/I2C_I2C.h"
- 286              		.section	.debug_info,"",%progbits
- 287              	.Ldebug_info0:
- 288 0000 F7030000 		.4byte	0x3f7
- 289 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 8
+ 247 0072 15010000 		.4byte	.LASF8
+ 248 0076 02       		.uleb128 0x2
+ 249 0077 08       		.byte	0x8
+ 250 0078 04       		.byte	0x4
+ 251 0079 D7010000 		.4byte	.LASF9
+ 252 007d 02       		.uleb128 0x2
+ 253 007e 04       		.byte	0x4
+ 254 007f 07       		.byte	0x7
+ 255 0080 E3010000 		.4byte	.LASF10
+ 256 0084 02       		.uleb128 0x2
+ 257 0085 01       		.byte	0x1
+ 258 0086 08       		.byte	0x8
+ 259 0087 01020000 		.4byte	.LASF11
+ 260 008b 03       		.uleb128 0x3
+ 261 008c 39010000 		.4byte	.LASF13
+ 262 0090 03       		.byte	0x3
+ 263 0091 18       		.byte	0x18
+ 264 0092 2C000000 		.4byte	0x2c
+ 265 0096 02       		.uleb128 0x2
+ 266 0097 08       		.byte	0x8
+ 267 0098 04       		.byte	0x4
+ 268 0099 E3000000 		.4byte	.LASF14
+ 269 009d 02       		.uleb128 0x2
+ 270 009e 04       		.byte	0x4
+ 271 009f 04       		.byte	0x4
+ 272 00a0 9F000000 		.4byte	.LASF15
+ 273 00a4 05       		.uleb128 0x5
+ 274 00a5 EA000000 		.4byte	.LASF30
+ 275 00a9 01       		.byte	0x1
+ 276 00aa 0A       		.byte	0xa
+ 277 00ab 68000000 		.4byte	0x68
+ 278 00af 00000000 		.4byte	.LFB35
+ 279 00b3 A4000000 		.4byte	.LFE35-.LFB35
+ 280 00b7 01       		.uleb128 0x1
+ 281 00b8 9C       		.byte	0x9c
+ 282 00b9 33020000 		.4byte	0x233
+ 283 00bd 06       		.uleb128 0x6
+ 284 00be 65727200 		.ascii	"err\000"
+ 285 00c2 01       		.byte	0x1
+ 286 00c3 24       		.byte	0x24
+ 287 00c4 8B000000 		.4byte	0x8b
+ 288 00c8 00000000 		.4byte	.LLST0
+ 289 00cc 07       		.uleb128 0x7
+ 290 00cd 70000000 		.4byte	.LBB2
+ 291 00d1 10000000 		.4byte	.LBE2-.LBB2
+ 292 00d5 1B010000 		.4byte	0x11b
+ 293 00d9 08       		.uleb128 0x8
+ 294 00da 10020000 		.4byte	.LASF16
+ 295 00de 01       		.byte	0x1
+ 296 00df 29       		.byte	0x29
+ 297 00e0 33020000 		.4byte	0x233
+ 298 00e4 02       		.uleb128 0x2
+ 299 00e5 91       		.byte	0x91
+ 300 00e6 50       		.sleb128 -48
+ 301 00e7 09       		.uleb128 0x9
+ 302 00e8 7A000000 		.4byte	.LVL16
+ 303 00ec 5B020000 		.4byte	0x25b
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 8
 
 
- 290 0006 00000000 		.4byte	.Ldebug_abbrev0
- 291 000a 04       		.byte	0x4
- 292 000b 01       		.uleb128 0x1
- 293 000c 72010000 		.4byte	.LASF30
- 294 0010 0C       		.byte	0xc
- 295 0011 2A020000 		.4byte	.LASF31
- 296 0015 21000000 		.4byte	.LASF32
- 297 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 298 001d 00000000 		.4byte	0
- 299 0021 00000000 		.4byte	.Ldebug_line0
- 300 0025 02       		.uleb128 0x2
- 301 0026 01       		.byte	0x1
- 302 0027 06       		.byte	0x6
- 303 0028 66020000 		.4byte	.LASF0
- 304 002c 03       		.uleb128 0x3
- 305 002d 17000000 		.4byte	.LASF12
- 306 0031 02       		.byte	0x2
- 307 0032 1D       		.byte	0x1d
- 308 0033 37000000 		.4byte	0x37
- 309 0037 02       		.uleb128 0x2
- 310 0038 01       		.byte	0x1
- 311 0039 08       		.byte	0x8
- 312 003a C5000000 		.4byte	.LASF1
- 313 003e 02       		.uleb128 0x2
- 314 003f 02       		.byte	0x2
- 315 0040 05       		.byte	0x5
- 316 0041 36020000 		.4byte	.LASF2
- 317 0045 02       		.uleb128 0x2
- 318 0046 02       		.byte	0x2
- 319 0047 07       		.byte	0x7
- 320 0048 FB000000 		.4byte	.LASF3
- 321 004c 02       		.uleb128 0x2
- 322 004d 04       		.byte	0x4
- 323 004e 05       		.byte	0x5
- 324 004f 47020000 		.4byte	.LASF4
- 325 0053 02       		.uleb128 0x2
- 326 0054 04       		.byte	0x4
- 327 0055 07       		.byte	0x7
- 328 0056 E9000000 		.4byte	.LASF5
- 329 005a 02       		.uleb128 0x2
- 330 005b 08       		.byte	0x8
- 331 005c 05       		.byte	0x5
- 332 005d 1C020000 		.4byte	.LASF6
- 333 0061 02       		.uleb128 0x2
- 334 0062 08       		.byte	0x8
- 335 0063 07       		.byte	0x7
- 336 0064 4B010000 		.4byte	.LASF7
- 337 0068 04       		.uleb128 0x4
- 338 0069 04       		.byte	0x4
- 339 006a 05       		.byte	0x5
- 340 006b 696E7400 		.ascii	"int\000"
- 341 006f 02       		.uleb128 0x2
- 342 0070 04       		.byte	0x4
- 343 0071 07       		.byte	0x7
- 344 0072 3E010000 		.4byte	.LASF8
- 345 0076 02       		.uleb128 0x2
- 346 0077 08       		.byte	0x8
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 9
+ 304 00f0 0A010000 		.4byte	0x10a
+ 305 00f4 0A       		.uleb128 0xa
+ 306 00f5 01       		.uleb128 0x1
+ 307 00f6 50       		.byte	0x50
+ 308 00f7 02       		.uleb128 0x2
+ 309 00f8 7D       		.byte	0x7d
+ 310 00f9 00       		.sleb128 0
+ 311 00fa 0A       		.uleb128 0xa
+ 312 00fb 01       		.uleb128 0x1
+ 313 00fc 51       		.byte	0x51
+ 314 00fd 05       		.uleb128 0x5
+ 315 00fe 03       		.byte	0x3
+ 316 00ff 78000000 		.4byte	.LC12
+ 317 0103 0A       		.uleb128 0xa
+ 318 0104 01       		.uleb128 0x1
+ 319 0105 52       		.byte	0x52
+ 320 0106 02       		.uleb128 0x2
+ 321 0107 08       		.byte	0x8
+ 322 0108 44       		.byte	0x44
+ 323 0109 00       		.byte	0
+ 324 010a 0B       		.uleb128 0xb
+ 325 010b 80000000 		.4byte	.LVL17
+ 326 010f 66020000 		.4byte	0x266
+ 327 0113 0A       		.uleb128 0xa
+ 328 0114 01       		.uleb128 0x1
+ 329 0115 50       		.byte	0x50
+ 330 0116 02       		.uleb128 0x2
+ 331 0117 7D       		.byte	0x7d
+ 332 0118 00       		.sleb128 0
+ 333 0119 00       		.byte	0
+ 334 011a 00       		.byte	0
+ 335 011b 0C       		.uleb128 0xc
+ 336 011c 0A000000 		.4byte	.LVL0
+ 337 0120 72020000 		.4byte	0x272
+ 338 0124 09       		.uleb128 0x9
+ 339 0125 10000000 		.4byte	.LVL1
+ 340 0129 66020000 		.4byte	0x266
+ 341 012d 3B010000 		.4byte	0x13b
+ 342 0131 0A       		.uleb128 0xa
+ 343 0132 01       		.uleb128 0x1
+ 344 0133 50       		.byte	0x50
+ 345 0134 05       		.uleb128 0x5
+ 346 0135 03       		.byte	0x3
+ 347 0136 00000000 		.4byte	.LC0
+ 348 013a 00       		.byte	0
+ 349 013b 09       		.uleb128 0x9
+ 350 013c 16000000 		.4byte	.LVL2
+ 351 0140 66020000 		.4byte	0x266
+ 352 0144 52010000 		.4byte	0x152
+ 353 0148 0A       		.uleb128 0xa
+ 354 0149 01       		.uleb128 0x1
+ 355 014a 50       		.byte	0x50
+ 356 014b 05       		.uleb128 0x5
+ 357 014c 03       		.byte	0x3
+ 358 014d 20000000 		.4byte	.LC2
+ 359 0151 00       		.byte	0
+ 360 0152 09       		.uleb128 0x9
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 9
 
 
- 347 0078 04       		.byte	0x4
- 348 0079 20010000 		.4byte	.LASF9
- 349 007d 02       		.uleb128 0x2
- 350 007e 04       		.byte	0x4
- 351 007f 07       		.byte	0x7
- 352 0080 13020000 		.4byte	.LASF10
- 353 0084 02       		.uleb128 0x2
- 354 0085 01       		.byte	0x1
- 355 0086 08       		.byte	0x8
- 356 0087 31020000 		.4byte	.LASF11
- 357 008b 03       		.uleb128 0x3
- 358 008c 62010000 		.4byte	.LASF13
- 359 0090 03       		.byte	0x3
- 360 0091 18       		.byte	0x18
- 361 0092 2C000000 		.4byte	0x2c
- 362 0096 02       		.uleb128 0x2
- 363 0097 08       		.byte	0x8
- 364 0098 04       		.byte	0x4
- 365 0099 19010000 		.4byte	.LASF14
- 366 009d 02       		.uleb128 0x2
- 367 009e 04       		.byte	0x4
- 368 009f 04       		.byte	0x4
- 369 00a0 BF000000 		.4byte	.LASF15
- 370 00a4 05       		.uleb128 0x5
- 371 00a5 2C010000 		.4byte	.LASF33
- 372 00a9 01       		.byte	0x1
- 373 00aa 0A       		.byte	0xa
- 374 00ab 68000000 		.4byte	0x68
- 375 00af 00000000 		.4byte	.LFB35
- 376 00b3 28010000 		.4byte	.LFE35-.LFB35
- 377 00b7 01       		.uleb128 0x1
- 378 00b8 9C       		.byte	0x9c
- 379 00b9 3A030000 		.4byte	0x33a
- 380 00bd 06       		.uleb128 0x6
- 381 00be 65727200 		.ascii	"err\000"
- 382 00c2 01       		.byte	0x1
- 383 00c3 23       		.byte	0x23
- 384 00c4 8B000000 		.4byte	0x8b
- 385 00c8 00000000 		.4byte	.LLST0
- 386 00cc 06       		.uleb128 0x6
- 387 00cd 7400     		.ascii	"t\000"
- 388 00cf 01       		.byte	0x1
- 389 00d0 2F       		.byte	0x2f
- 390 00d1 9D000000 		.4byte	0x9d
- 391 00d5 13000000 		.4byte	.LLST1
- 392 00d9 06       		.uleb128 0x6
- 393 00da 6800     		.ascii	"h\000"
- 394 00dc 01       		.byte	0x1
- 395 00dd 30       		.byte	0x30
- 396 00de 9D000000 		.4byte	0x9d
- 397 00e2 31000000 		.4byte	.LLST2
- 398 00e6 07       		.uleb128 0x7
- 399 00e7 40020000 		.4byte	.LASF16
- 400 00eb 01       		.byte	0x1
- 401 00ec 32       		.byte	0x32
- 402 00ed 3A030000 		.4byte	0x33a
- 403 00f1 03       		.uleb128 0x3
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 10
+ 361 0153 1C000000 		.4byte	.LVL3
+ 362 0157 7D020000 		.4byte	0x27d
+ 363 015b 66010000 		.4byte	0x166
+ 364 015f 0A       		.uleb128 0xa
+ 365 0160 01       		.uleb128 0x1
+ 366 0161 50       		.byte	0x50
+ 367 0162 02       		.uleb128 0x2
+ 368 0163 08       		.byte	0x8
+ 369 0164 64       		.byte	0x64
+ 370 0165 00       		.byte	0
+ 371 0166 0C       		.uleb128 0xc
+ 372 0167 20000000 		.4byte	.LVL4
+ 373 016b 88020000 		.4byte	0x288
+ 374 016f 09       		.uleb128 0x9
+ 375 0170 2A000000 		.4byte	.LVL5
+ 376 0174 66020000 		.4byte	0x266
+ 377 0178 86010000 		.4byte	0x186
+ 378 017c 0A       		.uleb128 0xa
+ 379 017d 01       		.uleb128 0x1
+ 380 017e 50       		.byte	0x50
+ 381 017f 05       		.uleb128 0x5
+ 382 0180 03       		.byte	0x3
+ 383 0181 30000000 		.4byte	.LC4
+ 384 0185 00       		.byte	0
+ 385 0186 09       		.uleb128 0x9
+ 386 0187 30000000 		.4byte	.LVL6
+ 387 018b 66020000 		.4byte	0x266
+ 388 018f 9D010000 		.4byte	0x19d
+ 389 0193 0A       		.uleb128 0xa
+ 390 0194 01       		.uleb128 0x1
+ 391 0195 50       		.byte	0x50
+ 392 0196 05       		.uleb128 0x5
+ 393 0197 03       		.byte	0x3
+ 394 0198 48000000 		.4byte	.LC6
+ 395 019c 00       		.byte	0
+ 396 019d 0C       		.uleb128 0xc
+ 397 019e 34000000 		.4byte	.LVL7
+ 398 01a2 93020000 		.4byte	0x293
+ 399 01a6 09       		.uleb128 0x9
+ 400 01a7 3E000000 		.4byte	.LVL8
+ 401 01ab 66020000 		.4byte	0x266
+ 402 01af BD010000 		.4byte	0x1bd
+ 403 01b3 0A       		.uleb128 0xa
+ 404 01b4 01       		.uleb128 0x1
+ 405 01b5 50       		.byte	0x50
+ 406 01b6 05       		.uleb128 0x5
+ 407 01b7 03       		.byte	0x3
+ 408 01b8 60000000 		.4byte	.LC8
+ 409 01bc 00       		.byte	0
+ 410 01bd 09       		.uleb128 0x9
+ 411 01be 46000000 		.4byte	.LVL9
+ 412 01c2 66020000 		.4byte	0x266
+ 413 01c6 D4010000 		.4byte	0x1d4
+ 414 01ca 0A       		.uleb128 0xa
+ 415 01cb 01       		.uleb128 0x1
+ 416 01cc 50       		.byte	0x50
+ 417 01cd 05       		.uleb128 0x5
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 10
 
 
- 404 00f2 91       		.byte	0x91
- 405 00f3 B07F     		.sleb128 -80
- 406 00f5 08       		.uleb128 0x8
- 407 00f6 70000000 		.4byte	.LBB2
- 408 00fa 10000000 		.4byte	.LBE2-.LBB2
- 409 00fe 47010000 		.4byte	0x147
- 410 0102 07       		.uleb128 0x7
- 411 0103 40020000 		.4byte	.LASF16
- 412 0107 01       		.byte	0x1
- 413 0108 28       		.byte	0x28
- 414 0109 4A030000 		.4byte	0x34a
- 415 010d 03       		.uleb128 0x3
- 416 010e 91       		.byte	0x91
- 417 010f 907F     		.sleb128 -112
- 418 0111 09       		.uleb128 0x9
- 419 0112 7A000000 		.4byte	.LVL16
- 420 0116 72030000 		.4byte	0x372
- 421 011a 35010000 		.4byte	0x135
- 422 011e 0A       		.uleb128 0xa
- 423 011f 01       		.uleb128 0x1
- 424 0120 50       		.byte	0x50
- 425 0121 03       		.uleb128 0x3
- 426 0122 91       		.byte	0x91
- 427 0123 907F     		.sleb128 -112
- 428 0125 0A       		.uleb128 0xa
- 429 0126 01       		.uleb128 0x1
- 430 0127 51       		.byte	0x51
- 431 0128 05       		.uleb128 0x5
- 432 0129 03       		.byte	0x3
- 433 012a 78000000 		.4byte	.LC12
- 434 012e 0A       		.uleb128 0xa
- 435 012f 01       		.uleb128 0x1
- 436 0130 52       		.byte	0x52
- 437 0131 02       		.uleb128 0x2
- 438 0132 08       		.byte	0x8
- 439 0133 44       		.byte	0x44
- 440 0134 00       		.byte	0
- 441 0135 0B       		.uleb128 0xb
- 442 0136 80000000 		.4byte	.LVL17
- 443 013a 7D030000 		.4byte	0x37d
- 444 013e 0A       		.uleb128 0xa
- 445 013f 01       		.uleb128 0x1
- 446 0140 50       		.byte	0x50
- 447 0141 03       		.uleb128 0x3
- 448 0142 91       		.byte	0x91
- 449 0143 907F     		.sleb128 -112
- 450 0145 00       		.byte	0
- 451 0146 00       		.byte	0
- 452 0147 0C       		.uleb128 0xc
- 453 0148 0A000000 		.4byte	.LVL0
- 454 014c 89030000 		.4byte	0x389
- 455 0150 09       		.uleb128 0x9
- 456 0151 10000000 		.4byte	.LVL1
- 457 0155 7D030000 		.4byte	0x37d
- 458 0159 67010000 		.4byte	0x167
- 459 015d 0A       		.uleb128 0xa
- 460 015e 01       		.uleb128 0x1
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 11
+ 418 01ce 03       		.byte	0x3
+ 419 01cf 6C000000 		.4byte	.LC10
+ 420 01d3 00       		.byte	0
+ 421 01d4 09       		.uleb128 0x9
+ 422 01d5 50000000 		.4byte	.LVL10
+ 423 01d9 7D020000 		.4byte	0x27d
+ 424 01dd E8010000 		.4byte	0x1e8
+ 425 01e1 0A       		.uleb128 0xa
+ 426 01e2 01       		.uleb128 0x1
+ 427 01e3 50       		.byte	0x50
+ 428 01e4 02       		.uleb128 0x2
+ 429 01e5 75       		.byte	0x75
+ 430 01e6 00       		.sleb128 0
+ 431 01e7 00       		.byte	0
+ 432 01e8 0C       		.uleb128 0xc
+ 433 01e9 54000000 		.4byte	.LVL11
+ 434 01ed 9E020000 		.4byte	0x29e
+ 435 01f1 09       		.uleb128 0x9
+ 436 01f2 5E000000 		.4byte	.LVL12
+ 437 01f6 AA020000 		.4byte	0x2aa
+ 438 01fa 0F020000 		.4byte	0x20f
+ 439 01fe 0A       		.uleb128 0xa
+ 440 01ff 01       		.uleb128 0x1
+ 441 0200 50       		.byte	0x50
+ 442 0201 02       		.uleb128 0x2
+ 443 0202 08       		.byte	0x8
+ 444 0203 44       		.byte	0x44
+ 445 0204 0A       		.uleb128 0xa
+ 446 0205 01       		.uleb128 0x1
+ 447 0206 51       		.byte	0x51
+ 448 0207 01       		.uleb128 0x1
+ 449 0208 30       		.byte	0x30
+ 450 0209 0A       		.uleb128 0xa
+ 451 020a 01       		.uleb128 0x1
+ 452 020b 52       		.byte	0x52
+ 453 020c 01       		.uleb128 0x1
+ 454 020d 3A       		.byte	0x3a
+ 455 020e 00       		.byte	0
+ 456 020f 09       		.uleb128 0x9
+ 457 0210 66000000 		.4byte	.LVL14
+ 458 0214 B6020000 		.4byte	0x2b6
+ 459 0218 22020000 		.4byte	0x222
+ 460 021c 0A       		.uleb128 0xa
+ 461 021d 01       		.uleb128 0x1
+ 462 021e 50       		.byte	0x50
+ 463 021f 01       		.uleb128 0x1
+ 464 0220 44       		.byte	0x44
+ 465 0221 00       		.byte	0
+ 466 0222 0B       		.uleb128 0xb
+ 467 0223 6C000000 		.4byte	.LVL15
+ 468 0227 7D020000 		.4byte	0x27d
+ 469 022b 0A       		.uleb128 0xa
+ 470 022c 01       		.uleb128 0x1
+ 471 022d 50       		.byte	0x50
+ 472 022e 02       		.uleb128 0x2
+ 473 022f 75       		.byte	0x75
+ 474 0230 00       		.sleb128 0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 11
 
 
- 461 015f 50       		.byte	0x50
- 462 0160 05       		.uleb128 0x5
- 463 0161 03       		.byte	0x3
- 464 0162 00000000 		.4byte	.LC0
- 465 0166 00       		.byte	0
- 466 0167 09       		.uleb128 0x9
- 467 0168 16000000 		.4byte	.LVL2
- 468 016c 7D030000 		.4byte	0x37d
- 469 0170 7E010000 		.4byte	0x17e
- 470 0174 0A       		.uleb128 0xa
- 471 0175 01       		.uleb128 0x1
- 472 0176 50       		.byte	0x50
- 473 0177 05       		.uleb128 0x5
- 474 0178 03       		.byte	0x3
- 475 0179 20000000 		.4byte	.LC2
- 476 017d 00       		.byte	0
- 477 017e 09       		.uleb128 0x9
- 478 017f 1C000000 		.4byte	.LVL3
- 479 0183 94030000 		.4byte	0x394
- 480 0187 92010000 		.4byte	0x192
- 481 018b 0A       		.uleb128 0xa
- 482 018c 01       		.uleb128 0x1
- 483 018d 50       		.byte	0x50
- 484 018e 02       		.uleb128 0x2
- 485 018f 08       		.byte	0x8
- 486 0190 64       		.byte	0x64
- 487 0191 00       		.byte	0
- 488 0192 0C       		.uleb128 0xc
- 489 0193 20000000 		.4byte	.LVL4
- 490 0197 9F030000 		.4byte	0x39f
- 491 019b 09       		.uleb128 0x9
- 492 019c 2A000000 		.4byte	.LVL5
- 493 01a0 7D030000 		.4byte	0x37d
- 494 01a4 B2010000 		.4byte	0x1b2
- 495 01a8 0A       		.uleb128 0xa
- 496 01a9 01       		.uleb128 0x1
- 497 01aa 50       		.byte	0x50
- 498 01ab 05       		.uleb128 0x5
- 499 01ac 03       		.byte	0x3
- 500 01ad 30000000 		.4byte	.LC4
- 501 01b1 00       		.byte	0
- 502 01b2 09       		.uleb128 0x9
- 503 01b3 30000000 		.4byte	.LVL6
- 504 01b7 7D030000 		.4byte	0x37d
- 505 01bb C9010000 		.4byte	0x1c9
- 506 01bf 0A       		.uleb128 0xa
- 507 01c0 01       		.uleb128 0x1
- 508 01c1 50       		.byte	0x50
- 509 01c2 05       		.uleb128 0x5
- 510 01c3 03       		.byte	0x3
- 511 01c4 48000000 		.4byte	.LC6
- 512 01c8 00       		.byte	0
- 513 01c9 0C       		.uleb128 0xc
- 514 01ca 34000000 		.4byte	.LVL7
- 515 01ce AA030000 		.4byte	0x3aa
- 516 01d2 09       		.uleb128 0x9
- 517 01d3 3E000000 		.4byte	.LVL8
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 12
+ 475 0231 00       		.byte	0
+ 476 0232 00       		.byte	0
+ 477 0233 0D       		.uleb128 0xd
+ 478 0234 84000000 		.4byte	0x84
+ 479 0238 43020000 		.4byte	0x243
+ 480 023c 0E       		.uleb128 0xe
+ 481 023d 7D000000 		.4byte	0x7d
+ 482 0241 1F       		.byte	0x1f
+ 483 0242 00       		.byte	0
+ 484 0243 0F       		.uleb128 0xf
+ 485 0244 EF000000 		.4byte	.LASF31
+ 486 0248 01       		.byte	0x1
+ 487 0249 08       		.byte	0x8
+ 488 024a 54020000 		.4byte	0x254
+ 489 024e 05       		.uleb128 0x5
+ 490 024f 03       		.byte	0x3
+ 491 0250 00000000 		.4byte	enableHeater
+ 492 0254 02       		.uleb128 0x2
+ 493 0255 01       		.byte	0x1
+ 494 0256 02       		.byte	0x2
+ 495 0257 42020000 		.4byte	.LASF17
+ 496 025b 10       		.uleb128 0x10
+ 497 025c 41010000 		.4byte	.LASF18
+ 498 0260 41010000 		.4byte	.LASF18
+ 499 0264 04       		.byte	0x4
+ 500 0265 E7       		.byte	0xe7
+ 501 0266 11       		.uleb128 0x11
+ 502 0267 8C000000 		.4byte	.LASF19
+ 503 026b 8C000000 		.4byte	.LASF19
+ 504 026f 05       		.byte	0x5
+ 505 0270 2A03     		.2byte	0x32a
+ 506 0272 10       		.uleb128 0x10
+ 507 0273 D8000000 		.4byte	.LASF20
+ 508 0277 D8000000 		.4byte	.LASF20
+ 509 027b 06       		.byte	0x6
+ 510 027c 72       		.byte	0x72
+ 511 027d 10       		.uleb128 0x10
+ 512 027e 61020000 		.4byte	.LASF21
+ 513 0282 61020000 		.4byte	.LASF21
+ 514 0286 07       		.byte	0x7
+ 515 0287 EC       		.byte	0xec
+ 516 0288 10       		.uleb128 0x10
+ 517 0289 81000000 		.4byte	.LASF22
+ 518 028d 81000000 		.4byte	.LASF22
+ 519 0291 08       		.byte	0x8
+ 520 0292 24       		.byte	0x24
+ 521 0293 10       		.uleb128 0x10
+ 522 0294 20020000 		.4byte	.LASF23
+ 523 0298 20020000 		.4byte	.LASF23
+ 524 029c 08       		.byte	0x8
+ 525 029d 2C       		.byte	0x2c
+ 526 029e 11       		.uleb128 0x11
+ 527 029f 48020000 		.4byte	.LASF24
+ 528 02a3 48020000 		.4byte	.LASF24
+ 529 02a7 09       		.byte	0x9
+ 530 02a8 1001     		.2byte	0x110
+ 531 02aa 11       		.uleb128 0x11
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 12
 
 
- 518 01d7 7D030000 		.4byte	0x37d
- 519 01db E9010000 		.4byte	0x1e9
- 520 01df 0A       		.uleb128 0xa
- 521 01e0 01       		.uleb128 0x1
- 522 01e1 50       		.byte	0x50
- 523 01e2 05       		.uleb128 0x5
- 524 01e3 03       		.byte	0x3
- 525 01e4 60000000 		.4byte	.LC8
- 526 01e8 00       		.byte	0
- 527 01e9 09       		.uleb128 0x9
- 528 01ea 46000000 		.4byte	.LVL9
- 529 01ee 7D030000 		.4byte	0x37d
- 530 01f2 00020000 		.4byte	0x200
- 531 01f6 0A       		.uleb128 0xa
- 532 01f7 01       		.uleb128 0x1
- 533 01f8 50       		.byte	0x50
- 534 01f9 05       		.uleb128 0x5
- 535 01fa 03       		.byte	0x3
- 536 01fb 6C000000 		.4byte	.LC10
- 537 01ff 00       		.byte	0
- 538 0200 09       		.uleb128 0x9
- 539 0201 50000000 		.4byte	.LVL10
- 540 0205 94030000 		.4byte	0x394
- 541 0209 14020000 		.4byte	0x214
- 542 020d 0A       		.uleb128 0xa
- 543 020e 01       		.uleb128 0x1
- 544 020f 50       		.byte	0x50
- 545 0210 02       		.uleb128 0x2
- 546 0211 75       		.byte	0x75
- 547 0212 00       		.sleb128 0
- 548 0213 00       		.byte	0
- 549 0214 0C       		.uleb128 0xc
- 550 0215 54000000 		.4byte	.LVL11
- 551 0219 B5030000 		.4byte	0x3b5
- 552 021d 09       		.uleb128 0x9
- 553 021e 5E000000 		.4byte	.LVL12
- 554 0222 C1030000 		.4byte	0x3c1
- 555 0226 3B020000 		.4byte	0x23b
- 556 022a 0A       		.uleb128 0xa
- 557 022b 01       		.uleb128 0x1
- 558 022c 50       		.byte	0x50
- 559 022d 02       		.uleb128 0x2
- 560 022e 08       		.byte	0x8
- 561 022f 44       		.byte	0x44
- 562 0230 0A       		.uleb128 0xa
- 563 0231 01       		.uleb128 0x1
- 564 0232 51       		.byte	0x51
- 565 0233 01       		.uleb128 0x1
- 566 0234 30       		.byte	0x30
- 567 0235 0A       		.uleb128 0xa
- 568 0236 01       		.uleb128 0x1
- 569 0237 52       		.byte	0x52
- 570 0238 01       		.uleb128 0x1
- 571 0239 3A       		.byte	0x3a
- 572 023a 00       		.byte	0
- 573 023b 09       		.uleb128 0x9
- 574 023c 66000000 		.4byte	.LVL14
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 13
+ 532 02ab FC000000 		.4byte	.LASF25
+ 533 02af FC000000 		.4byte	.LASF25
+ 534 02b3 09       		.byte	0x9
+ 535 02b4 1C01     		.2byte	0x11c
+ 536 02b6 11       		.uleb128 0x11
+ 537 02b7 69020000 		.4byte	.LASF26
+ 538 02bb 69020000 		.4byte	.LASF26
+ 539 02bf 09       		.byte	0x9
+ 540 02c0 1D01     		.2byte	0x11d
+ 541 02c2 00       		.byte	0
+ 542              		.section	.debug_abbrev,"",%progbits
+ 543              	.Ldebug_abbrev0:
+ 544 0000 01       		.uleb128 0x1
+ 545 0001 11       		.uleb128 0x11
+ 546 0002 01       		.byte	0x1
+ 547 0003 25       		.uleb128 0x25
+ 548 0004 0E       		.uleb128 0xe
+ 549 0005 13       		.uleb128 0x13
+ 550 0006 0B       		.uleb128 0xb
+ 551 0007 03       		.uleb128 0x3
+ 552 0008 0E       		.uleb128 0xe
+ 553 0009 1B       		.uleb128 0x1b
+ 554 000a 0E       		.uleb128 0xe
+ 555 000b 55       		.uleb128 0x55
+ 556 000c 17       		.uleb128 0x17
+ 557 000d 11       		.uleb128 0x11
+ 558 000e 01       		.uleb128 0x1
+ 559 000f 10       		.uleb128 0x10
+ 560 0010 17       		.uleb128 0x17
+ 561 0011 00       		.byte	0
+ 562 0012 00       		.byte	0
+ 563 0013 02       		.uleb128 0x2
+ 564 0014 24       		.uleb128 0x24
+ 565 0015 00       		.byte	0
+ 566 0016 0B       		.uleb128 0xb
+ 567 0017 0B       		.uleb128 0xb
+ 568 0018 3E       		.uleb128 0x3e
+ 569 0019 0B       		.uleb128 0xb
+ 570 001a 03       		.uleb128 0x3
+ 571 001b 0E       		.uleb128 0xe
+ 572 001c 00       		.byte	0
+ 573 001d 00       		.byte	0
+ 574 001e 03       		.uleb128 0x3
+ 575 001f 16       		.uleb128 0x16
+ 576 0020 00       		.byte	0
+ 577 0021 03       		.uleb128 0x3
+ 578 0022 0E       		.uleb128 0xe
+ 579 0023 3A       		.uleb128 0x3a
+ 580 0024 0B       		.uleb128 0xb
+ 581 0025 3B       		.uleb128 0x3b
+ 582 0026 0B       		.uleb128 0xb
+ 583 0027 49       		.uleb128 0x49
+ 584 0028 13       		.uleb128 0x13
+ 585 0029 00       		.byte	0
+ 586 002a 00       		.byte	0
+ 587 002b 04       		.uleb128 0x4
+ 588 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 13
 
 
- 575 0240 CD030000 		.4byte	0x3cd
- 576 0244 4E020000 		.4byte	0x24e
- 577 0248 0A       		.uleb128 0xa
- 578 0249 01       		.uleb128 0x1
- 579 024a 50       		.byte	0x50
- 580 024b 01       		.uleb128 0x1
- 581 024c 44       		.byte	0x44
- 582 024d 00       		.byte	0
- 583 024e 09       		.uleb128 0x9
- 584 024f 6C000000 		.4byte	.LVL15
- 585 0253 94030000 		.4byte	0x394
- 586 0257 62020000 		.4byte	0x262
- 587 025b 0A       		.uleb128 0xa
- 588 025c 01       		.uleb128 0x1
- 589 025d 50       		.byte	0x50
- 590 025e 02       		.uleb128 0x2
- 591 025f 75       		.byte	0x75
- 592 0260 00       		.sleb128 0
- 593 0261 00       		.byte	0
- 594 0262 09       		.uleb128 0x9
- 595 0263 86000000 		.4byte	.LVL18
- 596 0267 94030000 		.4byte	0x394
- 597 026b 76020000 		.4byte	0x276
- 598 026f 0A       		.uleb128 0xa
- 599 0270 01       		.uleb128 0x1
- 600 0271 50       		.byte	0x50
- 601 0272 02       		.uleb128 0x2
- 602 0273 08       		.byte	0x8
- 603 0274 32       		.byte	0x32
- 604 0275 00       		.byte	0
- 605 0276 0C       		.uleb128 0xc
- 606 0277 8A000000 		.4byte	.LVL19
- 607 027b D9030000 		.4byte	0x3d9
- 608 027f 0C       		.uleb128 0xc
- 609 0280 90000000 		.4byte	.LVL21
- 610 0284 E4030000 		.4byte	0x3e4
- 611 0288 09       		.uleb128 0x9
- 612 0289 B2000000 		.4byte	.LVL26
- 613 028d EF030000 		.4byte	0x3ef
- 614 0291 AC020000 		.4byte	0x2ac
- 615 0295 0A       		.uleb128 0xa
- 616 0296 01       		.uleb128 0x1
- 617 0297 50       		.byte	0x50
- 618 0298 03       		.uleb128 0x3
- 619 0299 91       		.byte	0x91
- 620 029a B07F     		.sleb128 -80
- 621 029c 0A       		.uleb128 0xa
- 622 029d 01       		.uleb128 0x1
- 623 029e 51       		.byte	0x51
- 624 029f 02       		.uleb128 0x2
- 625 02a0 08       		.byte	0x8
- 626 02a1 40       		.byte	0x40
- 627 02a2 0A       		.uleb128 0xa
- 628 02a3 01       		.uleb128 0x1
- 629 02a4 52       		.byte	0x52
- 630 02a5 05       		.uleb128 0x5
- 631 02a6 03       		.byte	0x3
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 14
+ 589 002d 00       		.byte	0
+ 590 002e 0B       		.uleb128 0xb
+ 591 002f 0B       		.uleb128 0xb
+ 592 0030 3E       		.uleb128 0x3e
+ 593 0031 0B       		.uleb128 0xb
+ 594 0032 03       		.uleb128 0x3
+ 595 0033 08       		.uleb128 0x8
+ 596 0034 00       		.byte	0
+ 597 0035 00       		.byte	0
+ 598 0036 05       		.uleb128 0x5
+ 599 0037 2E       		.uleb128 0x2e
+ 600 0038 01       		.byte	0x1
+ 601 0039 3F       		.uleb128 0x3f
+ 602 003a 19       		.uleb128 0x19
+ 603 003b 03       		.uleb128 0x3
+ 604 003c 0E       		.uleb128 0xe
+ 605 003d 3A       		.uleb128 0x3a
+ 606 003e 0B       		.uleb128 0xb
+ 607 003f 3B       		.uleb128 0x3b
+ 608 0040 0B       		.uleb128 0xb
+ 609 0041 27       		.uleb128 0x27
+ 610 0042 19       		.uleb128 0x19
+ 611 0043 49       		.uleb128 0x49
+ 612 0044 13       		.uleb128 0x13
+ 613 0045 11       		.uleb128 0x11
+ 614 0046 01       		.uleb128 0x1
+ 615 0047 12       		.uleb128 0x12
+ 616 0048 06       		.uleb128 0x6
+ 617 0049 40       		.uleb128 0x40
+ 618 004a 18       		.uleb128 0x18
+ 619 004b 9742     		.uleb128 0x2117
+ 620 004d 19       		.uleb128 0x19
+ 621 004e 01       		.uleb128 0x1
+ 622 004f 13       		.uleb128 0x13
+ 623 0050 00       		.byte	0
+ 624 0051 00       		.byte	0
+ 625 0052 06       		.uleb128 0x6
+ 626 0053 34       		.uleb128 0x34
+ 627 0054 00       		.byte	0
+ 628 0055 03       		.uleb128 0x3
+ 629 0056 08       		.uleb128 0x8
+ 630 0057 3A       		.uleb128 0x3a
+ 631 0058 0B       		.uleb128 0xb
+ 632 0059 3B       		.uleb128 0x3b
+ 633 005a 0B       		.uleb128 0xb
+ 634 005b 49       		.uleb128 0x49
+ 635 005c 13       		.uleb128 0x13
+ 636 005d 02       		.uleb128 0x2
+ 637 005e 17       		.uleb128 0x17
+ 638 005f 00       		.byte	0
+ 639 0060 00       		.byte	0
+ 640 0061 07       		.uleb128 0x7
+ 641 0062 0B       		.uleb128 0xb
+ 642 0063 01       		.byte	0x1
+ 643 0064 11       		.uleb128 0x11
+ 644 0065 01       		.uleb128 0x1
+ 645 0066 12       		.uleb128 0x12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 14
 
 
- 632 02a7 98000000 		.4byte	.LC14
- 633 02ab 00       		.byte	0
- 634 02ac 09       		.uleb128 0x9
- 635 02ad B8000000 		.4byte	.LVL27
- 636 02b1 7D030000 		.4byte	0x37d
- 637 02b5 C1020000 		.4byte	0x2c1
- 638 02b9 0A       		.uleb128 0xa
- 639 02ba 01       		.uleb128 0x1
- 640 02bb 50       		.byte	0x50
- 641 02bc 03       		.uleb128 0x3
- 642 02bd 91       		.byte	0x91
- 643 02be B07F     		.sleb128 -80
- 644 02c0 00       		.byte	0
- 645 02c1 09       		.uleb128 0x9
- 646 02c2 C0000000 		.4byte	.LVL28
- 647 02c6 7D030000 		.4byte	0x37d
- 648 02ca D8020000 		.4byte	0x2d8
- 649 02ce 0A       		.uleb128 0xa
- 650 02cf 01       		.uleb128 0x1
- 651 02d0 50       		.byte	0x50
- 652 02d1 05       		.uleb128 0x5
- 653 02d2 03       		.byte	0x3
- 654 02d3 A8000000 		.4byte	.LC16
- 655 02d7 00       		.byte	0
- 656 02d8 09       		.uleb128 0x9
- 657 02d9 E0000000 		.4byte	.LVL31
- 658 02dd EF030000 		.4byte	0x3ef
- 659 02e1 FC020000 		.4byte	0x2fc
- 660 02e5 0A       		.uleb128 0xa
- 661 02e6 01       		.uleb128 0x1
- 662 02e7 50       		.byte	0x50
- 663 02e8 03       		.uleb128 0x3
- 664 02e9 91       		.byte	0x91
- 665 02ea B07F     		.sleb128 -80
- 666 02ec 0A       		.uleb128 0xa
- 667 02ed 01       		.uleb128 0x1
- 668 02ee 51       		.byte	0x51
- 669 02ef 02       		.uleb128 0x2
- 670 02f0 08       		.byte	0x8
- 671 02f1 40       		.byte	0x40
- 672 02f2 0A       		.uleb128 0xa
- 673 02f3 01       		.uleb128 0x1
- 674 02f4 52       		.byte	0x52
- 675 02f5 05       		.uleb128 0x5
- 676 02f6 03       		.byte	0x3
- 677 02f7 C8000000 		.4byte	.LC18
- 678 02fb 00       		.byte	0
- 679 02fc 09       		.uleb128 0x9
- 680 02fd E6000000 		.4byte	.LVL32
- 681 0301 7D030000 		.4byte	0x37d
- 682 0305 11030000 		.4byte	0x311
- 683 0309 0A       		.uleb128 0xa
- 684 030a 01       		.uleb128 0x1
- 685 030b 50       		.byte	0x50
- 686 030c 03       		.uleb128 0x3
- 687 030d 91       		.byte	0x91
- 688 030e B07F     		.sleb128 -80
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 15
+ 646 0067 06       		.uleb128 0x6
+ 647 0068 01       		.uleb128 0x1
+ 648 0069 13       		.uleb128 0x13
+ 649 006a 00       		.byte	0
+ 650 006b 00       		.byte	0
+ 651 006c 08       		.uleb128 0x8
+ 652 006d 34       		.uleb128 0x34
+ 653 006e 00       		.byte	0
+ 654 006f 03       		.uleb128 0x3
+ 655 0070 0E       		.uleb128 0xe
+ 656 0071 3A       		.uleb128 0x3a
+ 657 0072 0B       		.uleb128 0xb
+ 658 0073 3B       		.uleb128 0x3b
+ 659 0074 0B       		.uleb128 0xb
+ 660 0075 49       		.uleb128 0x49
+ 661 0076 13       		.uleb128 0x13
+ 662 0077 02       		.uleb128 0x2
+ 663 0078 18       		.uleb128 0x18
+ 664 0079 00       		.byte	0
+ 665 007a 00       		.byte	0
+ 666 007b 09       		.uleb128 0x9
+ 667 007c 898201   		.uleb128 0x4109
+ 668 007f 01       		.byte	0x1
+ 669 0080 11       		.uleb128 0x11
+ 670 0081 01       		.uleb128 0x1
+ 671 0082 31       		.uleb128 0x31
+ 672 0083 13       		.uleb128 0x13
+ 673 0084 01       		.uleb128 0x1
+ 674 0085 13       		.uleb128 0x13
+ 675 0086 00       		.byte	0
+ 676 0087 00       		.byte	0
+ 677 0088 0A       		.uleb128 0xa
+ 678 0089 8A8201   		.uleb128 0x410a
+ 679 008c 00       		.byte	0
+ 680 008d 02       		.uleb128 0x2
+ 681 008e 18       		.uleb128 0x18
+ 682 008f 9142     		.uleb128 0x2111
+ 683 0091 18       		.uleb128 0x18
+ 684 0092 00       		.byte	0
+ 685 0093 00       		.byte	0
+ 686 0094 0B       		.uleb128 0xb
+ 687 0095 898201   		.uleb128 0x4109
+ 688 0098 01       		.byte	0x1
+ 689 0099 11       		.uleb128 0x11
+ 690 009a 01       		.uleb128 0x1
+ 691 009b 31       		.uleb128 0x31
+ 692 009c 13       		.uleb128 0x13
+ 693 009d 00       		.byte	0
+ 694 009e 00       		.byte	0
+ 695 009f 0C       		.uleb128 0xc
+ 696 00a0 898201   		.uleb128 0x4109
+ 697 00a3 00       		.byte	0
+ 698 00a4 11       		.uleb128 0x11
+ 699 00a5 01       		.uleb128 0x1
+ 700 00a6 31       		.uleb128 0x31
+ 701 00a7 13       		.uleb128 0x13
+ 702 00a8 00       		.byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 15
 
 
- 689 0310 00       		.byte	0
- 690 0311 09       		.uleb128 0x9
- 691 0312 EE000000 		.4byte	.LVL33
- 692 0316 7D030000 		.4byte	0x37d
- 693 031a 28030000 		.4byte	0x328
- 694 031e 0A       		.uleb128 0xa
- 695 031f 01       		.uleb128 0x1
- 696 0320 50       		.byte	0x50
- 697 0321 05       		.uleb128 0x5
- 698 0322 03       		.byte	0x3
- 699 0323 DC000000 		.4byte	.LC20
- 700 0327 00       		.byte	0
- 701 0328 0B       		.uleb128 0xb
- 702 0329 F6000000 		.4byte	.LVL34
- 703 032d 94030000 		.4byte	0x394
- 704 0331 0A       		.uleb128 0xa
- 705 0332 01       		.uleb128 0x1
- 706 0333 50       		.byte	0x50
- 707 0334 03       		.uleb128 0x3
- 708 0335 0A       		.byte	0xa
- 709 0336 E803     		.2byte	0x3e8
- 710 0338 00       		.byte	0
- 711 0339 00       		.byte	0
- 712 033a 0D       		.uleb128 0xd
- 713 033b 84000000 		.4byte	0x84
- 714 033f 4A030000 		.4byte	0x34a
- 715 0343 0E       		.uleb128 0xe
- 716 0344 7D000000 		.4byte	0x7d
- 717 0348 3F       		.byte	0x3f
- 718 0349 00       		.byte	0
- 719 034a 0D       		.uleb128 0xd
- 720 034b 84000000 		.4byte	0x84
- 721 034f 5A030000 		.4byte	0x35a
- 722 0353 0E       		.uleb128 0xe
- 723 0354 7D000000 		.4byte	0x7d
- 724 0358 1F       		.byte	0x1f
- 725 0359 00       		.byte	0
- 726 035a 0F       		.uleb128 0xf
- 727 035b 31010000 		.4byte	.LASF34
- 728 035f 01       		.byte	0x1
- 729 0360 08       		.byte	0x8
- 730 0361 6B030000 		.4byte	0x36b
- 731 0365 05       		.uleb128 0x5
- 732 0366 03       		.byte	0x3
- 733 0367 00000000 		.4byte	enableHeater
- 734 036b 02       		.uleb128 0x2
- 735 036c 01       		.byte	0x1
- 736 036d 02       		.byte	0x2
- 737 036e 72020000 		.4byte	.LASF17
- 738 0372 10       		.uleb128 0x10
- 739 0373 6A010000 		.4byte	.LASF18
- 740 0377 6A010000 		.4byte	.LASF18
- 741 037b 04       		.byte	0x4
- 742 037c E7       		.byte	0xe7
- 743 037d 11       		.uleb128 0x11
- 744 037e AC000000 		.4byte	.LASF19
- 745 0382 AC000000 		.4byte	.LASF19
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 16
+ 703 00a9 00       		.byte	0
+ 704 00aa 0D       		.uleb128 0xd
+ 705 00ab 01       		.uleb128 0x1
+ 706 00ac 01       		.byte	0x1
+ 707 00ad 49       		.uleb128 0x49
+ 708 00ae 13       		.uleb128 0x13
+ 709 00af 01       		.uleb128 0x1
+ 710 00b0 13       		.uleb128 0x13
+ 711 00b1 00       		.byte	0
+ 712 00b2 00       		.byte	0
+ 713 00b3 0E       		.uleb128 0xe
+ 714 00b4 21       		.uleb128 0x21
+ 715 00b5 00       		.byte	0
+ 716 00b6 49       		.uleb128 0x49
+ 717 00b7 13       		.uleb128 0x13
+ 718 00b8 2F       		.uleb128 0x2f
+ 719 00b9 0B       		.uleb128 0xb
+ 720 00ba 00       		.byte	0
+ 721 00bb 00       		.byte	0
+ 722 00bc 0F       		.uleb128 0xf
+ 723 00bd 34       		.uleb128 0x34
+ 724 00be 00       		.byte	0
+ 725 00bf 03       		.uleb128 0x3
+ 726 00c0 0E       		.uleb128 0xe
+ 727 00c1 3A       		.uleb128 0x3a
+ 728 00c2 0B       		.uleb128 0xb
+ 729 00c3 3B       		.uleb128 0x3b
+ 730 00c4 0B       		.uleb128 0xb
+ 731 00c5 49       		.uleb128 0x49
+ 732 00c6 13       		.uleb128 0x13
+ 733 00c7 3F       		.uleb128 0x3f
+ 734 00c8 19       		.uleb128 0x19
+ 735 00c9 02       		.uleb128 0x2
+ 736 00ca 18       		.uleb128 0x18
+ 737 00cb 00       		.byte	0
+ 738 00cc 00       		.byte	0
+ 739 00cd 10       		.uleb128 0x10
+ 740 00ce 2E       		.uleb128 0x2e
+ 741 00cf 00       		.byte	0
+ 742 00d0 3F       		.uleb128 0x3f
+ 743 00d1 19       		.uleb128 0x19
+ 744 00d2 3C       		.uleb128 0x3c
+ 745 00d3 19       		.uleb128 0x19
+ 746 00d4 6E       		.uleb128 0x6e
+ 747 00d5 0E       		.uleb128 0xe
+ 748 00d6 03       		.uleb128 0x3
+ 749 00d7 0E       		.uleb128 0xe
+ 750 00d8 3A       		.uleb128 0x3a
+ 751 00d9 0B       		.uleb128 0xb
+ 752 00da 3B       		.uleb128 0x3b
+ 753 00db 0B       		.uleb128 0xb
+ 754 00dc 00       		.byte	0
+ 755 00dd 00       		.byte	0
+ 756 00de 11       		.uleb128 0x11
+ 757 00df 2E       		.uleb128 0x2e
+ 758 00e0 00       		.byte	0
+ 759 00e1 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 16
 
 
- 746 0386 05       		.byte	0x5
- 747 0387 2A03     		.2byte	0x32a
- 748 0389 10       		.uleb128 0x10
- 749 038a 0E010000 		.4byte	.LASF20
- 750 038e 0E010000 		.4byte	.LASF20
- 751 0392 06       		.byte	0x6
- 752 0393 72       		.byte	0x72
- 753 0394 10       		.uleb128 0x10
- 754 0395 91020000 		.4byte	.LASF21
- 755 0399 91020000 		.4byte	.LASF21
- 756 039d 07       		.byte	0x7
- 757 039e EC       		.byte	0xec
- 758 039f 10       		.uleb128 0x10
- 759 03a0 A1000000 		.4byte	.LASF22
- 760 03a4 A1000000 		.4byte	.LASF22
- 761 03a8 08       		.byte	0x8
- 762 03a9 24       		.byte	0x24
- 763 03aa 10       		.uleb128 0x10
- 764 03ab 50020000 		.4byte	.LASF23
- 765 03af 50020000 		.4byte	.LASF23
- 766 03b3 08       		.byte	0x8
- 767 03b4 2C       		.byte	0x2c
- 768 03b5 11       		.uleb128 0x11
- 769 03b6 78020000 		.4byte	.LASF24
- 770 03ba 78020000 		.4byte	.LASF24
- 771 03be 09       		.byte	0x9
- 772 03bf 1001     		.2byte	0x110
- 773 03c1 11       		.uleb128 0x11
- 774 03c2 00000000 		.4byte	.LASF25
- 775 03c6 00000000 		.4byte	.LASF25
- 776 03ca 09       		.byte	0x9
- 777 03cb 1B01     		.2byte	0x11b
- 778 03cd 11       		.uleb128 0x11
- 779 03ce 99020000 		.4byte	.LASF26
- 780 03d2 99020000 		.4byte	.LASF26
- 781 03d6 09       		.byte	0x9
- 782 03d7 1D01     		.2byte	0x11d
- 783 03d9 10       		.uleb128 0x10
- 784 03da D3000000 		.4byte	.LASF27
- 785 03de D3000000 		.4byte	.LASF27
- 786 03e2 08       		.byte	0x8
- 787 03e3 30       		.byte	0x30
- 788 03e4 10       		.uleb128 0x10
- 789 03e5 00020000 		.4byte	.LASF28
- 790 03e9 00020000 		.4byte	.LASF28
- 791 03ed 08       		.byte	0x8
- 792 03ee 32       		.byte	0x32
- 793 03ef 10       		.uleb128 0x10
- 794 03f0 98000000 		.4byte	.LASF29
- 795 03f4 98000000 		.4byte	.LASF29
- 796 03f8 04       		.byte	0x4
- 797 03f9 FD       		.byte	0xfd
- 798 03fa 00       		.byte	0
- 799              		.section	.debug_abbrev,"",%progbits
- 800              	.Ldebug_abbrev0:
- 801 0000 01       		.uleb128 0x1
- 802 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 17
+ 760 00e2 19       		.uleb128 0x19
+ 761 00e3 3C       		.uleb128 0x3c
+ 762 00e4 19       		.uleb128 0x19
+ 763 00e5 6E       		.uleb128 0x6e
+ 764 00e6 0E       		.uleb128 0xe
+ 765 00e7 03       		.uleb128 0x3
+ 766 00e8 0E       		.uleb128 0xe
+ 767 00e9 3A       		.uleb128 0x3a
+ 768 00ea 0B       		.uleb128 0xb
+ 769 00eb 3B       		.uleb128 0x3b
+ 770 00ec 05       		.uleb128 0x5
+ 771 00ed 00       		.byte	0
+ 772 00ee 00       		.byte	0
+ 773 00ef 00       		.byte	0
+ 774              		.section	.debug_loc,"",%progbits
+ 775              	.Ldebug_loc0:
+ 776              	.LLST0:
+ 777 0000 60000000 		.4byte	.LVL13
+ 778 0004 84000000 		.4byte	.LVL18
+ 779 0008 0100     		.2byte	0x1
+ 780 000a 54       		.byte	0x54
+ 781 000b 00000000 		.4byte	0
+ 782 000f 00000000 		.4byte	0
+ 783              		.section	.debug_aranges,"",%progbits
+ 784 0000 1C000000 		.4byte	0x1c
+ 785 0004 0200     		.2byte	0x2
+ 786 0006 00000000 		.4byte	.Ldebug_info0
+ 787 000a 04       		.byte	0x4
+ 788 000b 00       		.byte	0
+ 789 000c 0000     		.2byte	0
+ 790 000e 0000     		.2byte	0
+ 791 0010 00000000 		.4byte	.LFB35
+ 792 0014 A4000000 		.4byte	.LFE35-.LFB35
+ 793 0018 00000000 		.4byte	0
+ 794 001c 00000000 		.4byte	0
+ 795              		.section	.debug_ranges,"",%progbits
+ 796              	.Ldebug_ranges0:
+ 797 0000 00000000 		.4byte	.LFB35
+ 798 0004 A4000000 		.4byte	.LFE35
+ 799 0008 00000000 		.4byte	0
+ 800 000c 00000000 		.4byte	0
+ 801              		.section	.debug_line,"",%progbits
+ 802              	.Ldebug_line0:
+ 803 0000 13020000 		.section	.debug_str,"MS",%progbits,1
+ 803      0200E801 
+ 803      00000201 
+ 803      FB0E0D00 
+ 803      01010101 
+ 804              	.LASF12:
+ 805 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 805      6E74385F 
+ 805      7400
+ 806              	.LASF29:
+ 807 000a 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
+ 807      73657273 
+ 807      5C626563 
+ 807      63615C44 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 17
 
 
- 803 0002 01       		.byte	0x1
- 804 0003 25       		.uleb128 0x25
- 805 0004 0E       		.uleb128 0xe
- 806 0005 13       		.uleb128 0x13
- 807 0006 0B       		.uleb128 0xb
- 808 0007 03       		.uleb128 0x3
- 809 0008 0E       		.uleb128 0xe
- 810 0009 1B       		.uleb128 0x1b
- 811 000a 0E       		.uleb128 0xe
- 812 000b 55       		.uleb128 0x55
- 813 000c 17       		.uleb128 0x17
- 814 000d 11       		.uleb128 0x11
- 815 000e 01       		.uleb128 0x1
- 816 000f 10       		.uleb128 0x10
- 817 0010 17       		.uleb128 0x17
- 818 0011 00       		.byte	0
- 819 0012 00       		.byte	0
- 820 0013 02       		.uleb128 0x2
- 821 0014 24       		.uleb128 0x24
- 822 0015 00       		.byte	0
- 823 0016 0B       		.uleb128 0xb
- 824 0017 0B       		.uleb128 0xb
- 825 0018 3E       		.uleb128 0x3e
- 826 0019 0B       		.uleb128 0xb
- 827 001a 03       		.uleb128 0x3
- 828 001b 0E       		.uleb128 0xe
- 829 001c 00       		.byte	0
- 830 001d 00       		.byte	0
- 831 001e 03       		.uleb128 0x3
- 832 001f 16       		.uleb128 0x16
- 833 0020 00       		.byte	0
- 834 0021 03       		.uleb128 0x3
- 835 0022 0E       		.uleb128 0xe
- 836 0023 3A       		.uleb128 0x3a
- 837 0024 0B       		.uleb128 0xb
- 838 0025 3B       		.uleb128 0x3b
- 839 0026 0B       		.uleb128 0xb
- 840 0027 49       		.uleb128 0x49
- 841 0028 13       		.uleb128 0x13
- 842 0029 00       		.byte	0
- 843 002a 00       		.byte	0
- 844 002b 04       		.uleb128 0x4
- 845 002c 24       		.uleb128 0x24
- 846 002d 00       		.byte	0
- 847 002e 0B       		.uleb128 0xb
- 848 002f 0B       		.uleb128 0xb
- 849 0030 3E       		.uleb128 0x3e
- 850 0031 0B       		.uleb128 0xb
- 851 0032 03       		.uleb128 0x3
- 852 0033 08       		.uleb128 0x8
- 853 0034 00       		.byte	0
- 854 0035 00       		.byte	0
- 855 0036 05       		.uleb128 0x5
- 856 0037 2E       		.uleb128 0x2e
- 857 0038 01       		.byte	0x1
- 858 0039 3F       		.uleb128 0x3f
- 859 003a 19       		.uleb128 0x19
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 18
+ 807      6F63756D 
+ 808 0038 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\testing_sensors\\Humi"
+ 808      72645C53 
+ 808      6369656E 
+ 808      63655F53 
+ 808      656E736F 
+ 809 0068 64697479 		.ascii	"dity\\Humidity PSoC.cydsn\000"
+ 809      5C48756D 
+ 809      69646974 
+ 809      79205053 
+ 809      6F432E63 
+ 810              	.LASF22:
+ 811 0081 53485433 		.ascii	"SHT31_Init\000"
+ 811      315F496E 
+ 811      697400
+ 812              	.LASF19:
+ 813 008c 55415254 		.ascii	"UART_UartPutString\000"
+ 813      5F556172 
+ 813      74507574 
+ 813      53747269 
+ 813      6E6700
+ 814              	.LASF15:
+ 815 009f 666C6F61 		.ascii	"float\000"
+ 815      7400
+ 816              	.LASF1:
+ 817 00a5 756E7369 		.ascii	"unsigned char\000"
+ 817      676E6564 
+ 817      20636861 
+ 817      7200
+ 818              	.LASF5:
+ 819 00b3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 819      20756E73 
+ 819      69676E65 
+ 819      6420696E 
+ 819      7400
+ 820              	.LASF3:
+ 821 00c5 73686F72 		.ascii	"short unsigned int\000"
+ 821      7420756E 
+ 821      7369676E 
+ 821      65642069 
+ 821      6E7400
+ 822              	.LASF20:
+ 823 00d8 55415254 		.ascii	"UART_Start\000"
+ 823      5F537461 
+ 823      727400
+ 824              	.LASF14:
+ 825 00e3 646F7562 		.ascii	"double\000"
+ 825      6C6500
+ 826              	.LASF30:
+ 827 00ea 6D61696E 		.ascii	"main\000"
+ 827      00
+ 828              	.LASF31:
+ 829 00ef 656E6162 		.ascii	"enableHeater\000"
+ 829      6C654865 
+ 829      61746572 
+ 829      00
+ 830              	.LASF25:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 18
 
 
- 860 003b 03       		.uleb128 0x3
- 861 003c 0E       		.uleb128 0xe
- 862 003d 3A       		.uleb128 0x3a
- 863 003e 0B       		.uleb128 0xb
- 864 003f 3B       		.uleb128 0x3b
- 865 0040 0B       		.uleb128 0xb
- 866 0041 27       		.uleb128 0x27
- 867 0042 19       		.uleb128 0x19
- 868 0043 49       		.uleb128 0x49
- 869 0044 13       		.uleb128 0x13
- 870 0045 11       		.uleb128 0x11
- 871 0046 01       		.uleb128 0x1
- 872 0047 12       		.uleb128 0x12
- 873 0048 06       		.uleb128 0x6
- 874 0049 40       		.uleb128 0x40
- 875 004a 18       		.uleb128 0x18
- 876 004b 9642     		.uleb128 0x2116
- 877 004d 19       		.uleb128 0x19
- 878 004e 01       		.uleb128 0x1
- 879 004f 13       		.uleb128 0x13
- 880 0050 00       		.byte	0
- 881 0051 00       		.byte	0
- 882 0052 06       		.uleb128 0x6
- 883 0053 34       		.uleb128 0x34
- 884 0054 00       		.byte	0
- 885 0055 03       		.uleb128 0x3
- 886 0056 08       		.uleb128 0x8
- 887 0057 3A       		.uleb128 0x3a
- 888 0058 0B       		.uleb128 0xb
- 889 0059 3B       		.uleb128 0x3b
- 890 005a 0B       		.uleb128 0xb
- 891 005b 49       		.uleb128 0x49
- 892 005c 13       		.uleb128 0x13
- 893 005d 02       		.uleb128 0x2
- 894 005e 17       		.uleb128 0x17
- 895 005f 00       		.byte	0
- 896 0060 00       		.byte	0
- 897 0061 07       		.uleb128 0x7
- 898 0062 34       		.uleb128 0x34
- 899 0063 00       		.byte	0
- 900 0064 03       		.uleb128 0x3
- 901 0065 0E       		.uleb128 0xe
- 902 0066 3A       		.uleb128 0x3a
- 903 0067 0B       		.uleb128 0xb
- 904 0068 3B       		.uleb128 0x3b
- 905 0069 0B       		.uleb128 0xb
- 906 006a 49       		.uleb128 0x49
- 907 006b 13       		.uleb128 0x13
- 908 006c 02       		.uleb128 0x2
- 909 006d 18       		.uleb128 0x18
- 910 006e 00       		.byte	0
- 911 006f 00       		.byte	0
- 912 0070 08       		.uleb128 0x8
- 913 0071 0B       		.uleb128 0xb
- 914 0072 01       		.byte	0x1
- 915 0073 11       		.uleb128 0x11
- 916 0074 01       		.uleb128 0x1
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 19
+ 831 00fc 4932435F 		.ascii	"I2C_I2CMasterSendRestart\000"
+ 831      4932434D 
+ 831      61737465 
+ 831      7253656E 
+ 831      64526573 
+ 832              	.LASF8:
+ 833 0115 756E7369 		.ascii	"unsigned int\000"
+ 833      676E6564 
+ 833      20696E74 
+ 833      00
+ 834              	.LASF7:
+ 835 0122 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 835      206C6F6E 
+ 835      6720756E 
+ 835      7369676E 
+ 835      65642069 
+ 836              	.LASF13:
+ 837 0139 75696E74 		.ascii	"uint8_t\000"
+ 837      385F7400 
+ 838              	.LASF18:
+ 839 0141 73707269 		.ascii	"sprintf\000"
+ 839      6E746600 
+ 840              	.LASF27:
+ 841 0149 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 841      43313120 
+ 841      352E342E 
+ 841      31203230 
+ 841      31363036 
+ 842 017c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 842      20726576 
+ 842      6973696F 
+ 842      6E203233 
+ 842      37373135 
+ 843 01af 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 843      66756E63 
+ 843      74696F6E 
+ 843      2D736563 
+ 843      74696F6E 
+ 844              	.LASF9:
+ 845 01d7 6C6F6E67 		.ascii	"long double\000"
+ 845      20646F75 
+ 845      626C6500 
+ 846              	.LASF10:
+ 847 01e3 73697A65 		.ascii	"sizetype\000"
+ 847      74797065 
+ 847      00
+ 848              	.LASF6:
+ 849 01ec 6C6F6E67 		.ascii	"long long int\000"
+ 849      206C6F6E 
+ 849      6720696E 
+ 849      7400
+ 850              	.LASF28:
+ 851 01fa 6D61696E 		.ascii	"main.c\000"
+ 851      2E6300
+ 852              	.LASF11:
+ 853 0201 63686172 		.ascii	"char\000"
+ 853      00
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccMD6FvI.s 			page 19
 
 
- 917 0075 12       		.uleb128 0x12
- 918 0076 06       		.uleb128 0x6
- 919 0077 01       		.uleb128 0x1
- 920 0078 13       		.uleb128 0x13
- 921 0079 00       		.byte	0
- 922 007a 00       		.byte	0
- 923 007b 09       		.uleb128 0x9
- 924 007c 898201   		.uleb128 0x4109
- 925 007f 01       		.byte	0x1
- 926 0080 11       		.uleb128 0x11
- 927 0081 01       		.uleb128 0x1
- 928 0082 31       		.uleb128 0x31
- 929 0083 13       		.uleb128 0x13
- 930 0084 01       		.uleb128 0x1
- 931 0085 13       		.uleb128 0x13
- 932 0086 00       		.byte	0
- 933 0087 00       		.byte	0
- 934 0088 0A       		.uleb128 0xa
- 935 0089 8A8201   		.uleb128 0x410a
- 936 008c 00       		.byte	0
- 937 008d 02       		.uleb128 0x2
- 938 008e 18       		.uleb128 0x18
- 939 008f 9142     		.uleb128 0x2111
- 940 0091 18       		.uleb128 0x18
- 941 0092 00       		.byte	0
- 942 0093 00       		.byte	0
- 943 0094 0B       		.uleb128 0xb
- 944 0095 898201   		.uleb128 0x4109
- 945 0098 01       		.byte	0x1
- 946 0099 11       		.uleb128 0x11
- 947 009a 01       		.uleb128 0x1
- 948 009b 31       		.uleb128 0x31
- 949 009c 13       		.uleb128 0x13
- 950 009d 00       		.byte	0
- 951 009e 00       		.byte	0
- 952 009f 0C       		.uleb128 0xc
- 953 00a0 898201   		.uleb128 0x4109
- 954 00a3 00       		.byte	0
- 955 00a4 11       		.uleb128 0x11
- 956 00a5 01       		.uleb128 0x1
- 957 00a6 31       		.uleb128 0x31
- 958 00a7 13       		.uleb128 0x13
- 959 00a8 00       		.byte	0
- 960 00a9 00       		.byte	0
- 961 00aa 0D       		.uleb128 0xd
- 962 00ab 01       		.uleb128 0x1
- 963 00ac 01       		.byte	0x1
- 964 00ad 49       		.uleb128 0x49
- 965 00ae 13       		.uleb128 0x13
- 966 00af 01       		.uleb128 0x1
- 967 00b0 13       		.uleb128 0x13
- 968 00b1 00       		.byte	0
- 969 00b2 00       		.byte	0
- 970 00b3 0E       		.uleb128 0xe
- 971 00b4 21       		.uleb128 0x21
- 972 00b5 00       		.byte	0
- 973 00b6 49       		.uleb128 0x49
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 20
-
-
- 974 00b7 13       		.uleb128 0x13
- 975 00b8 2F       		.uleb128 0x2f
- 976 00b9 0B       		.uleb128 0xb
- 977 00ba 00       		.byte	0
- 978 00bb 00       		.byte	0
- 979 00bc 0F       		.uleb128 0xf
- 980 00bd 34       		.uleb128 0x34
- 981 00be 00       		.byte	0
- 982 00bf 03       		.uleb128 0x3
- 983 00c0 0E       		.uleb128 0xe
- 984 00c1 3A       		.uleb128 0x3a
- 985 00c2 0B       		.uleb128 0xb
- 986 00c3 3B       		.uleb128 0x3b
- 987 00c4 0B       		.uleb128 0xb
- 988 00c5 49       		.uleb128 0x49
- 989 00c6 13       		.uleb128 0x13
- 990 00c7 3F       		.uleb128 0x3f
- 991 00c8 19       		.uleb128 0x19
- 992 00c9 02       		.uleb128 0x2
- 993 00ca 18       		.uleb128 0x18
- 994 00cb 00       		.byte	0
- 995 00cc 00       		.byte	0
- 996 00cd 10       		.uleb128 0x10
- 997 00ce 2E       		.uleb128 0x2e
- 998 00cf 00       		.byte	0
- 999 00d0 3F       		.uleb128 0x3f
- 1000 00d1 19       		.uleb128 0x19
- 1001 00d2 3C       		.uleb128 0x3c
- 1002 00d3 19       		.uleb128 0x19
- 1003 00d4 6E       		.uleb128 0x6e
- 1004 00d5 0E       		.uleb128 0xe
- 1005 00d6 03       		.uleb128 0x3
- 1006 00d7 0E       		.uleb128 0xe
- 1007 00d8 3A       		.uleb128 0x3a
- 1008 00d9 0B       		.uleb128 0xb
- 1009 00da 3B       		.uleb128 0x3b
- 1010 00db 0B       		.uleb128 0xb
- 1011 00dc 00       		.byte	0
- 1012 00dd 00       		.byte	0
- 1013 00de 11       		.uleb128 0x11
- 1014 00df 2E       		.uleb128 0x2e
- 1015 00e0 00       		.byte	0
- 1016 00e1 3F       		.uleb128 0x3f
- 1017 00e2 19       		.uleb128 0x19
- 1018 00e3 3C       		.uleb128 0x3c
- 1019 00e4 19       		.uleb128 0x19
- 1020 00e5 6E       		.uleb128 0x6e
- 1021 00e6 0E       		.uleb128 0xe
- 1022 00e7 03       		.uleb128 0x3
- 1023 00e8 0E       		.uleb128 0xe
- 1024 00e9 3A       		.uleb128 0x3a
- 1025 00ea 0B       		.uleb128 0xb
- 1026 00eb 3B       		.uleb128 0x3b
- 1027 00ec 05       		.uleb128 0x5
- 1028 00ed 00       		.byte	0
- 1029 00ee 00       		.byte	0
- 1030 00ef 00       		.byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 21
-
-
- 1031              		.section	.debug_loc,"",%progbits
- 1032              	.Ldebug_loc0:
- 1033              	.LLST0:
- 1034 0000 60000000 		.4byte	.LVL13
- 1035 0004 8C000000 		.4byte	.LVL20
- 1036 0008 0100     		.2byte	0x1
- 1037 000a 54       		.byte	0x54
- 1038 000b 00000000 		.4byte	0
- 1039 000f 00000000 		.4byte	0
- 1040              	.LLST1:
- 1041 0013 8C000000 		.4byte	.LVL20
- 1042 0017 8F000000 		.4byte	.LVL21-1
- 1043 001b 0100     		.2byte	0x1
- 1044 001d 50       		.byte	0x50
- 1045 001e 8F000000 		.4byte	.LVL21-1
- 1046 0022 FA000000 		.4byte	.LVL35
- 1047 0026 0100     		.2byte	0x1
- 1048 0028 54       		.byte	0x54
- 1049 0029 00000000 		.4byte	0
- 1050 002d 00000000 		.4byte	0
- 1051              	.LLST2:
- 1052 0031 92000000 		.4byte	.LVL22
- 1053 0035 96000000 		.4byte	.LVL23
- 1054 0039 0100     		.2byte	0x1
- 1055 003b 50       		.byte	0x50
- 1056 003c 96000000 		.4byte	.LVL23
- 1057 0040 FA000000 		.4byte	.LVL36
- 1058 0044 0100     		.2byte	0x1
- 1059 0046 55       		.byte	0x55
- 1060 0047 00000000 		.4byte	0
- 1061 004b 00000000 		.4byte	0
- 1062              		.section	.debug_aranges,"",%progbits
- 1063 0000 1C000000 		.4byte	0x1c
- 1064 0004 0200     		.2byte	0x2
- 1065 0006 00000000 		.4byte	.Ldebug_info0
- 1066 000a 04       		.byte	0x4
- 1067 000b 00       		.byte	0
- 1068 000c 0000     		.2byte	0
- 1069 000e 0000     		.2byte	0
- 1070 0010 00000000 		.4byte	.LFB35
- 1071 0014 28010000 		.4byte	.LFE35-.LFB35
- 1072 0018 00000000 		.4byte	0
- 1073 001c 00000000 		.4byte	0
- 1074              		.section	.debug_ranges,"",%progbits
- 1075              	.Ldebug_ranges0:
- 1076 0000 00000000 		.4byte	.LFB35
- 1077 0004 28010000 		.4byte	.LFE35
- 1078 0008 00000000 		.4byte	0
- 1079 000c 00000000 		.4byte	0
- 1080              		.section	.debug_line,"",%progbits
- 1081              	.Ldebug_line0:
- 1082 0000 1D020000 		.section	.debug_str,"MS",%progbits,1
- 1082      0200E801 
- 1082      00000201 
- 1082      FB0E0D00 
- 1082      01010101 
- 1083              	.LASF25:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 22
-
-
- 1084 0000 4932435F 		.ascii	"I2C_I2CMasterSendStart\000"
- 1084      4932434D 
- 1084      61737465 
- 1084      7253656E 
- 1084      64537461 
- 1085              	.LASF12:
- 1086 0017 5F5F7569 		.ascii	"__uint8_t\000"
- 1086      6E74385F 
- 1086      7400
- 1087              	.LASF32:
- 1088 0021 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
- 1088      73657273 
- 1088      5C626563 
- 1088      63615C44 
- 1088      6F63756D 
- 1089 004f 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\testing_sensors\\Humi"
- 1089      72645C53 
- 1089      6369656E 
- 1089      63655F53 
- 1089      656E736F 
- 1090 007f 64697479 		.ascii	"dity\\Humidity PSoC.cydsn\000"
- 1090      5C48756D 
- 1090      69646974 
- 1090      79205053 
- 1090      6F432E63 
- 1091              	.LASF29:
- 1092 0098 736E7072 		.ascii	"snprintf\000"
- 1092      696E7466 
- 1092      00
- 1093              	.LASF22:
- 1094 00a1 53485433 		.ascii	"SHT31_Init\000"
- 1094      315F496E 
- 1094      697400
- 1095              	.LASF19:
- 1096 00ac 55415254 		.ascii	"UART_UartPutString\000"
- 1096      5F556172 
- 1096      74507574 
- 1096      53747269 
- 1096      6E6700
- 1097              	.LASF15:
- 1098 00bf 666C6F61 		.ascii	"float\000"
- 1098      7400
- 1099              	.LASF1:
- 1100 00c5 756E7369 		.ascii	"unsigned char\000"
- 1100      676E6564 
- 1100      20636861 
- 1100      7200
- 1101              	.LASF27:
- 1102 00d3 53485433 		.ascii	"SHT31_ReadTemperature\000"
- 1102      315F5265 
- 1102      61645465 
- 1102      6D706572 
- 1102      61747572 
- 1103              	.LASF5:
- 1104 00e9 6C6F6E67 		.ascii	"long unsigned int\000"
- 1104      20756E73 
- 1104      69676E65 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 23
-
-
- 1104      6420696E 
- 1104      7400
- 1105              	.LASF3:
- 1106 00fb 73686F72 		.ascii	"short unsigned int\000"
- 1106      7420756E 
- 1106      7369676E 
- 1106      65642069 
- 1106      6E7400
- 1107              	.LASF20:
- 1108 010e 55415254 		.ascii	"UART_Start\000"
- 1108      5F537461 
- 1108      727400
- 1109              	.LASF14:
- 1110 0119 646F7562 		.ascii	"double\000"
- 1110      6C6500
- 1111              	.LASF9:
- 1112 0120 6C6F6E67 		.ascii	"long double\000"
- 1112      20646F75 
- 1112      626C6500 
- 1113              	.LASF33:
- 1114 012c 6D61696E 		.ascii	"main\000"
- 1114      00
- 1115              	.LASF34:
- 1116 0131 656E6162 		.ascii	"enableHeater\000"
- 1116      6C654865 
- 1116      61746572 
- 1116      00
- 1117              	.LASF8:
- 1118 013e 756E7369 		.ascii	"unsigned int\000"
- 1118      676E6564 
- 1118      20696E74 
- 1118      00
- 1119              	.LASF7:
- 1120 014b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1120      206C6F6E 
- 1120      6720756E 
- 1120      7369676E 
- 1120      65642069 
- 1121              	.LASF13:
- 1122 0162 75696E74 		.ascii	"uint8_t\000"
- 1122      385F7400 
- 1123              	.LASF18:
- 1124 016a 73707269 		.ascii	"sprintf\000"
- 1124      6E746600 
- 1125              	.LASF30:
- 1126 0172 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1126      43313120 
- 1126      352E342E 
- 1126      31203230 
- 1126      31363036 
- 1127 01a5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1127      20726576 
- 1127      6973696F 
- 1127      6E203233 
- 1127      37373135 
- 1128 01d8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1128      66756E63 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 24
-
-
- 1128      74696F6E 
- 1128      2D736563 
- 1128      74696F6E 
- 1129              	.LASF28:
- 1130 0200 53485433 		.ascii	"SHT31_ReadHumidity\000"
- 1130      315F5265 
- 1130      61644875 
- 1130      6D696469 
- 1130      747900
- 1131              	.LASF10:
- 1132 0213 73697A65 		.ascii	"sizetype\000"
- 1132      74797065 
- 1132      00
- 1133              	.LASF6:
- 1134 021c 6C6F6E67 		.ascii	"long long int\000"
- 1134      206C6F6E 
- 1134      6720696E 
- 1134      7400
- 1135              	.LASF31:
- 1136 022a 6D61696E 		.ascii	"main.c\000"
- 1136      2E6300
- 1137              	.LASF11:
- 1138 0231 63686172 		.ascii	"char\000"
- 1138      00
- 1139              	.LASF2:
- 1140 0236 73686F72 		.ascii	"short int\000"
- 1140      7420696E 
- 1140      7400
- 1141              	.LASF16:
- 1142 0240 62756666 		.ascii	"buffer\000"
- 1142      657200
- 1143              	.LASF4:
- 1144 0247 6C6F6E67 		.ascii	"long int\000"
- 1144      20696E74 
- 1144      00
- 1145              	.LASF23:
- 1146 0250 53485433 		.ascii	"SHT31_IsHeaterEnabled\000"
- 1146      315F4973 
- 1146      48656174 
- 1146      6572456E 
- 1146      61626C65 
- 1147              	.LASF0:
- 1148 0266 7369676E 		.ascii	"signed char\000"
- 1148      65642063 
- 1148      68617200 
- 1149              	.LASF17:
- 1150 0272 5F426F6F 		.ascii	"_Bool\000"
- 1150      6C00
- 1151              	.LASF24:
- 1152 0278 4932435F 		.ascii	"I2C_I2CMasterClearStatus\000"
- 1152      4932434D 
- 1152      61737465 
- 1152      72436C65 
- 1152      61725374 
- 1153              	.LASF21:
- 1154 0291 43794465 		.ascii	"CyDelay\000"
- 1154      6C617900 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccdF5QXC.s 			page 25
-
-
- 1155              	.LASF26:
- 1156 0299 4932435F 		.ascii	"I2C_I2CMasterSendStop\000"
- 1156      4932434D 
- 1156      61737465 
- 1156      7253656E 
- 1156      6453746F 
- 1157              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 854              	.LASF2:
+ 855 0206 73686F72 		.ascii	"short int\000"
+ 855      7420696E 
+ 855      7400
+ 856              	.LASF16:
+ 857 0210 62756666 		.ascii	"buffer\000"
+ 857      657200
+ 858              	.LASF4:
+ 859 0217 6C6F6E67 		.ascii	"long int\000"
+ 859      20696E74 
+ 859      00
+ 860              	.LASF23:
+ 861 0220 53485433 		.ascii	"SHT31_IsHeaterEnabled\000"
+ 861      315F4973 
+ 861      48656174 
+ 861      6572456E 
+ 861      61626C65 
+ 862              	.LASF0:
+ 863 0236 7369676E 		.ascii	"signed char\000"
+ 863      65642063 
+ 863      68617200 
+ 864              	.LASF17:
+ 865 0242 5F426F6F 		.ascii	"_Bool\000"
+ 865      6C00
+ 866              	.LASF24:
+ 867 0248 4932435F 		.ascii	"I2C_I2CMasterClearStatus\000"
+ 867      4932434D 
+ 867      61737465 
+ 867      72436C65 
+ 867      61725374 
+ 868              	.LASF21:
+ 869 0261 43794465 		.ascii	"CyDelay\000"
+ 869      6C617900 
+ 870              	.LASF26:
+ 871 0269 4932435F 		.ascii	"I2C_I2CMasterSendStop\000"
+ 871      4932434D 
+ 871      61737465 
+ 871      7253656E 
+ 871      6453746F 
+ 872              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

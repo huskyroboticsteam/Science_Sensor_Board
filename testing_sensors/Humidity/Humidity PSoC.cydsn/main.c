@@ -22,6 +22,7 @@ int main(void)
         UART_UartPutString("Couldn't find SHT31\r\n");
     }
     
+    
     UART_UartPutString("Heater Enabled State: ");
     if (SHT31_IsHeaterEnabled()) {
         UART_UartPutString("ENABLED\r\n");
@@ -32,7 +33,7 @@ int main(void)
     CyDelay(1000);
     
     I2C_I2CMasterClearStatus();
-    uint8_t err = I2C_I2CMasterSendStart(0x44, I2C_I2C_WRITE_XFER_MODE, 10);
+    uint8_t err = I2C_I2CMasterSendRestart(0x44, I2C_I2C_WRITE_XFER_MODE, 10);
     I2C_I2CMasterSendStop(TIMEOUT);
     
     CyDelay(1000);
@@ -41,7 +42,7 @@ int main(void)
         sprintf(buffer, "Found I2C device at 0x%02X\r\n", 0x44);
         UART_UartPutString(buffer);
     } 
-    
+    /*
     CyDelay(50);
     //for(;;){
         float t = SHT31_ReadTemperature();
@@ -64,7 +65,7 @@ int main(void)
         }
 
         CyDelay(1000);
-
+        */
     //}
     
    
