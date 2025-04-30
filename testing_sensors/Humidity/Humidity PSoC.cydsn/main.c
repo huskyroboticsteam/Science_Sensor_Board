@@ -14,7 +14,6 @@ int main(void)
     UART_Start();
     
     UART_UartPutString("__________________________\r\n");
-    UART_UartPutString("SHT31 test\r\n");
     
     CyDelay(100);
     
@@ -23,11 +22,11 @@ int main(void)
     }
     
     
-    UART_UartPutString("Heater Enabled State: ");
+    //UART_UartPutString("Heater Enabled State: ");
     if (SHT31_IsHeaterEnabled()) {
-        UART_UartPutString("ENABLED\r\n");
+        //UART_UartPutString("ENABLED\r\n");
     } else {
-        UART_UartPutString("DISABLED\r\n");
+        //UART_UartPutString("DISABLED\r\n");
     }
     
     CyDelay(100);
@@ -52,31 +51,32 @@ int main(void)
     */
     
     CyDelay(50);
-    //for(;;){
-        float t = SHT31_ReadTemperature();
-        //float h = SHT31_ReadHumidity();
+    for(;;){
+        float temperature = 0;
+        float humidity = 0;
+        bool status = SHT31_ReadTempHum(&temperature, &humidity);
 
         char buffer[64];
         
-        if (!isnan(t)) {
-            snprintf(buffer, sizeof(buffer), "TempC = %.2f\t\t", t);
+        int hum = humidity;
+        int temp = temperature;
+        
+        if (!isnan(temperature) && status) {
+            snprintf(buffer, sizeof(buffer), "Temperature (degrees Celcius) = %d\t\t", temp);
             UART_UartPutString(buffer);
         } else {
             UART_UartPutString("Failed to read temperature\r\n");
         }
-        /*
-        if (!isnan(h)) {
-            snprintf(buffer, sizeof(buffer), "Hum. %% = %.2f\r\n", h);
+        
+        if (!isnan(humidity) && status) {
+            snprintf(buffer, sizeof(buffer), "Humidity (percentage) = %d\r\n", hum);
             UART_UartPutString(buffer);
         } else {
             UART_UartPutString("Failed to read humidity\r\n");
         }
 
         CyDelay(1000);
-        */
-    //}
-    
-   
-    
+        
+    }   
 }
 
