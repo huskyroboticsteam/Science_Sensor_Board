@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\TopDesign">
 <ExpandedNodeIds>
 <v>Humidity</v>
 <v>Humidity\Humidity PSoC</v>
@@ -350,6 +350,7 @@
 <name v=".\Humidity PSoC.cydsn\library.h" />
 <name v=".\Humidity PSoC.cydsn\Humidity PSoC.cydwr" />
 <name v=".\Humidity PSoC.cydsn\Generated_Source\PSoC4\I2C_I2C.h" />
+<name v=".\Humidity PSoC.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -357,7 +358,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1107, 508" SelectedTabbedMdiWindow="0443a492-1604-4440-a39b-84931aa2b7e6"><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\main.c" Guid="194a8338-b82d-4bef-b623-c3eb13a53d7e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.c" Guid="0443a492-1604-4440-a39b-84931aa2b7e6" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.h" Guid="8847e1bb-7e6f-4e83-a617-71a6bbe226da" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cydwr" Guid="9ae51d68-23ee-467b-9732-91c52ca60cf8" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4\I2C_I2C.h" Guid="5897a5dd-c941-41e0-8033-3ec7bebaa378" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1121, 508" SelectedTabbedMdiWindow="18d65fbe-649e-4c5a-89e1-6f310ba7a9fe"><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\main.c" Guid="194a8338-b82d-4bef-b623-c3eb13a53d7e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.c" Guid="0443a492-1604-4440-a39b-84931aa2b7e6" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\library.h" Guid="8847e1bb-7e6f-4e83-a617-71a6bbe226da" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cydwr" Guid="9ae51d68-23ee-467b-9732-91c52ca60cf8" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Generated_Source\PSoC4\I2C_I2C.h" Guid="5897a5dd-c941-41e0-8033-3ec7bebaa378" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\TopDesign\TopDesign.cysch" Guid="18d65fbe-649e-4c5a-89e1-6f310ba7a9fe" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
