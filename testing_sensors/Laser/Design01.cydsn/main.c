@@ -17,7 +17,7 @@ int main(void)
 {
     CyGlobalIntEnable; // Enable global interrupts
 
-
+    /*
     for(;;)
     {
         ComponentPin_Write(1); // Power ON the component
@@ -26,4 +26,6 @@ int main(void)
         ComponentPin_Write(0); // Power OFF the component
         CyDelay(1000);         // Wait 1 second
     }
+    */
+    ComponentPin_Write(1); // Power ON the component 
 }

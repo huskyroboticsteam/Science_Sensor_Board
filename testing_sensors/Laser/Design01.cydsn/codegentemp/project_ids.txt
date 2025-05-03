@@ -1,6 +1,8 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|400db595-db82-499b-a0f8-2c0e9dc3f633
 C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a1097e3b-335a-46d9-b46d-b8de583f0a55
 C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|f8c61971-a307-4cc4-9817-e7bf8107c4ef
 C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ca3aa885-91d9-4e6a-a3dd-da042ef02e27
 C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c7d4d1a3-de05-429c-8b30-07d7641063ab
 C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0beb209c-6735-422b-8ac1-c238cb3f892e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|7da18756-060f-4533-8ada-13abde572005
 C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Laser\Design01.cydsn\Design01.cyprj|f846a4be-e4ac-491a-8dff-eadbedc1ecb5
