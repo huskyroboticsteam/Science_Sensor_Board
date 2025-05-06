@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
   28:Generated_Source\PSoC4/PWM_2_PM.c **** * Summary:
   29:Generated_Source\PSoC4/PWM_2_PM.c **** *  All configuration registers are retention. Nothing to save here.
   30:Generated_Source\PSoC4/PWM_2_PM.c **** *
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 2
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 2
 
 
   31:Generated_Source\PSoC4/PWM_2_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
   53              		.cfi_offset 4, -8
   54              		.cfi_offset 14, -4
   60:Generated_Source\PSoC4/PWM_2_PM.c ****     if(0u != (PWM_2_BLOCK_CONTROL_REG & PWM_2_MASK))
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 3
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 3
 
 
   55              		.loc 1 60 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
   77:Generated_Source\PSoC4/PWM_2_PM.c **** *
   78:Generated_Source\PSoC4/PWM_2_PM.c **** * Summary:
   79:Generated_Source\PSoC4/PWM_2_PM.c **** *  All configuration registers are retention. Nothing to restore here.
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 4
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 4
 
 
   80:Generated_Source\PSoC4/PWM_2_PM.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  117              		.cfi_def_cfa_offset 8
  118              		.cfi_offset 4, -8
  119              		.cfi_offset 14, -4
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 5
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 5
 
 
  110:Generated_Source\PSoC4/PWM_2_PM.c ****     PWM_2_RestoreConfig();
@@ -285,36 +285,36 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  154 0006 00000000 		.4byte	.Ldebug_abbrev0
  155 000a 04       		.byte	0x4
  156 000b 01       		.uleb128 0x1
- 157 000c 9C010000 		.4byte	.LASF24
+ 157 000c 25010000 		.4byte	.LASF24
  158 0010 0C       		.byte	0xc
  159 0011 85000000 		.4byte	.LASF25
- 160 0015 D8000000 		.4byte	.LASF26
+ 160 0015 DE010000 		.4byte	.LASF26
  161 0019 00000000 		.4byte	.Ldebug_ranges0+0
  162 001d 00000000 		.4byte	0
  163 0021 00000000 		.4byte	.Ldebug_line0
  164 0025 02       		.uleb128 0x2
  165 0026 01       		.byte	0x1
  166 0027 06       		.byte	0x6
- 167 0028 3D020000 		.4byte	.LASF0
+ 167 0028 C6010000 		.4byte	.LASF0
  168 002c 02       		.uleb128 0x2
  169 002d 01       		.byte	0x1
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 6
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 6
 
 
  170 002e 08       		.byte	0x8
- 171 002f 4F010000 		.4byte	.LASF1
+ 171 002f D8000000 		.4byte	.LASF1
  172 0033 02       		.uleb128 0x2
  173 0034 02       		.byte	0x2
  174 0035 05       		.byte	0x5
- 175 0036 55020000 		.4byte	.LASF2
+ 175 0036 5E020000 		.4byte	.LASF2
  176 003a 02       		.uleb128 0x2
  177 003b 02       		.byte	0x2
  178 003c 07       		.byte	0x7
- 179 003d 2A020000 		.4byte	.LASF3
+ 179 003d B3010000 		.4byte	.LASF3
  180 0041 02       		.uleb128 0x2
  181 0042 04       		.byte	0x4
  182 0043 05       		.byte	0x5
- 183 0044 6D010000 		.4byte	.LASF4
+ 183 0044 F6000000 		.4byte	.LASF4
  184 0048 02       		.uleb128 0x2
  185 0049 04       		.byte	0x4
  186 004a 07       		.byte	0x7
@@ -352,16 +352,16 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  218 008a 02       		.uleb128 0x2
  219 008b 08       		.byte	0x8
  220 008c 04       		.byte	0x4
- 221 008d 8F010000 		.4byte	.LASF12
+ 221 008d 18010000 		.4byte	.LASF12
  222 0091 02       		.uleb128 0x2
  223 0092 01       		.byte	0x1
  224 0093 08       		.byte	0x8
- 225 0094 5D010000 		.4byte	.LASF13
+ 225 0094 E6000000 		.4byte	.LASF13
  226 0098 04       		.uleb128 0x4
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 7
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 7
 
 
- 227 0099 96010000 		.4byte	.LASF14
+ 227 0099 1F010000 		.4byte	.LASF14
  228 009d 02       		.byte	0x2
  229 009e A702     		.2byte	0x2a7
  230 00a0 A4000000 		.4byte	0xa4
@@ -370,11 +370,11 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  233 00a9 02       		.uleb128 0x2
  234 00aa 08       		.byte	0x8
  235 00ab 04       		.byte	0x4
- 236 00ac 49020000 		.4byte	.LASF15
+ 236 00ac D2010000 		.4byte	.LASF15
  237 00b0 02       		.uleb128 0x2
  238 00b1 04       		.byte	0x4
  239 00b2 07       		.byte	0x7
- 240 00b3 5F020000 		.4byte	.LASF16
+ 240 00b3 68020000 		.4byte	.LASF16
  241 00b7 06       		.uleb128 0x6
  242 00b8 01       		.byte	0x1
  243 00b9 03       		.byte	0x3
@@ -401,7 +401,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  264 00e6 01       		.uleb128 0x1
  265 00e7 9C       		.byte	0x9c
  266 00e8 0A       		.uleb128 0xa
- 267 00e9 76010000 		.4byte	.LASF20
+ 267 00e9 FF000000 		.4byte	.LASF20
  268 00ed 01       		.byte	0x1
  269 00ee 3A       		.byte	0x3a
  270 00ef 00000000 		.4byte	.LFB2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  281 010c 01       		.byte	0x1
  282 010d 58       		.byte	0x58
  283 010e 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 8
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 8
 
 
  284 0112 02000000 		.4byte	.LFE3-.LFB3
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  298 0132 54010000 		.4byte	0x154
  299 0136 00       		.byte	0
  300 0137 0C       		.uleb128 0xc
- 301 0138 82010000 		.4byte	.LASF28
+ 301 0138 0B010000 		.4byte	.LASF28
  302 013c 01       		.byte	0x1
  303 013d 15       		.byte	0x15
  304 013e CC000000 		.4byte	0xcc
@@ -446,8 +446,8 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  306 0143 03       		.byte	0x3
  307 0144 00000000 		.4byte	PWM_2_backup
  308 0148 0D       		.uleb128 0xd
- 309 0149 62010000 		.4byte	.LASF22
- 310 014d 62010000 		.4byte	.LASF22
+ 309 0149 EB000000 		.4byte	.LASF22
+ 310 014d EB000000 		.4byte	.LASF22
  311 0151 03       		.byte	0x3
  312 0152 3301     		.2byte	0x133
  313 0154 0D       		.uleb128 0xd
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  338 0011 00       		.byte	0
  339 0012 00       		.byte	0
  340 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 9
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 9
 
 
  341 0014 24       		.uleb128 0x24
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  395 004a 07       		.uleb128 0x7
  396 004b 0D       		.uleb128 0xd
  397 004c 00       		.byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 10
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 10
 
 
  398 004d 03       		.uleb128 0x3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  452 0084 0E       		.uleb128 0xe
  453 0085 3A       		.uleb128 0x3a
  454 0086 0B       		.uleb128 0xb
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 11
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 11
 
 
  455 0087 3B       		.uleb128 0x3b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  509 00c0 05       		.uleb128 0x5
  510 00c1 00       		.byte	0
  511 00c2 00       		.byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 12
 
 
  512 00c3 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  553      00
  554              	.LASF21:
  555 002e 50574D5F 		.ascii	"PWM_2_Wakeup\000"
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 13
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 13
 
 
  555      325F5761 
@@ -771,95 +771,95 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 1
  572              	.LASF11:
  573 00d2 666C6F61 		.ascii	"float\000"
  573      7400
- 574              	.LASF26:
- 575 00d8 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
- 575      73657273 
- 575      5C626563 
- 575      63615C44 
- 575      6F63756D 
- 576 0106 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\testing_sensors\\Humi"
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 14
+ 574              	.LASF1:
+ 575 00d8 756E7369 		.ascii	"unsigned char\000"
+ 575      676E6564 
+ 575      20636861 
+ 575      7200
+ 576              	.LASF13:
+ 577 00e6 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 14
 
 
- 576      72645C53 
- 576      6369656E 
- 576      63655F53 
- 576      656E736F 
- 577 0136 64697479 		.ascii	"dity\\Humidity PSoC.cydsn\000"
- 577      5C48756D 
- 577      69646974 
- 577      79205053 
- 577      6F432E63 
- 578              	.LASF1:
- 579 014f 756E7369 		.ascii	"unsigned char\000"
- 579      676E6564 
- 579      20636861 
- 579      7200
- 580              	.LASF13:
- 581 015d 63686172 		.ascii	"char\000"
+ 577      00
+ 578              	.LASF22:
+ 579 00eb 50574D5F 		.ascii	"PWM_2_Stop\000"
+ 579      325F5374 
+ 579      6F7000
+ 580              	.LASF4:
+ 581 00f6 6C6F6E67 		.ascii	"long int\000"
+ 581      20696E74 
  581      00
- 582              	.LASF22:
- 583 0162 50574D5F 		.ascii	"PWM_2_Stop\000"
- 583      325F5374 
- 583      6F7000
- 584              	.LASF4:
- 585 016d 6C6F6E67 		.ascii	"long int\000"
- 585      20696E74 
+ 582              	.LASF20:
+ 583 00ff 50574D5F 		.ascii	"PWM_2_Sleep\000"
+ 583      325F536C 
+ 583      65657000 
+ 584              	.LASF28:
+ 585 010b 50574D5F 		.ascii	"PWM_2_backup\000"
+ 585      325F6261 
+ 585      636B7570 
  585      00
- 586              	.LASF20:
- 587 0176 50574D5F 		.ascii	"PWM_2_Sleep\000"
- 587      325F536C 
- 587      65657000 
- 588              	.LASF28:
- 589 0182 50574D5F 		.ascii	"PWM_2_backup\000"
- 589      325F6261 
- 589      636B7570 
- 589      00
- 590              	.LASF12:
- 591 018f 646F7562 		.ascii	"double\000"
- 591      6C6500
- 592              	.LASF14:
- 593 0196 72656733 		.ascii	"reg32\000"
- 593      3200
- 594              	.LASF24:
- 595 019c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 595      43313120 
- 595      352E342E 
- 595      31203230 
- 595      31363036 
- 596 01cf 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 596      20726576 
- 596      6973696F 
- 596      6E203233 
- 596      37373135 
- 597 0202 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 597      66756E63 
- 597      74696F6E 
- 597      2D736563 
- 597      74696F6E 
- 598              	.LASF3:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccOlCNbu.s 			page 15
+ 586              	.LASF12:
+ 587 0118 646F7562 		.ascii	"double\000"
+ 587      6C6500
+ 588              	.LASF14:
+ 589 011f 72656733 		.ascii	"reg32\000"
+ 589      3200
+ 590              	.LASF24:
+ 591 0125 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 591      43313120 
+ 591      352E342E 
+ 591      31203230 
+ 591      31363036 
+ 592 0158 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 592      20726576 
+ 592      6973696F 
+ 592      6E203233 
+ 592      37373135 
+ 593 018b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 593      66756E63 
+ 593      74696F6E 
+ 593      2D736563 
+ 593      74696F6E 
+ 594              	.LASF3:
+ 595 01b3 73686F72 		.ascii	"short unsigned int\000"
+ 595      7420756E 
+ 595      7369676E 
+ 595      65642069 
+ 595      6E7400
+ 596              	.LASF0:
+ 597 01c6 7369676E 		.ascii	"signed char\000"
+ 597      65642063 
+ 597      68617200 
+ 598              	.LASF15:
+ 599 01d2 6C6F6E67 		.ascii	"long double\000"
+ 599      20646F75 
+ 599      626C6500 
+ 600              	.LASF26:
+ 601 01de 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
+ 601      73657273 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccbMzJAG.s 			page 15
 
 
- 599 022a 73686F72 		.ascii	"short unsigned int\000"
- 599      7420756E 
- 599      7369676E 
- 599      65642069 
- 599      6E7400
- 600              	.LASF0:
- 601 023d 7369676E 		.ascii	"signed char\000"
- 601      65642063 
- 601      68617200 
- 602              	.LASF15:
- 603 0249 6C6F6E67 		.ascii	"long double\000"
- 603      20646F75 
- 603      626C6500 
+ 601      5C626563 
+ 601      63615C44 
+ 601      6F63756D 
+ 602 020c 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\working sensors\\Humi"
+ 602      72645C53 
+ 602      6369656E 
+ 602      63655F53 
+ 602      656E736F 
+ 603 023c 64697479 		.ascii	"dityTempFinal\\Humidity PSoC.cydsn\000"
+ 603      54656D70 
+ 603      46696E61 
+ 603      6C5C4875 
+ 603      6D696469 
  604              	.LASF2:
- 605 0255 73686F72 		.ascii	"short int\000"
+ 605 025e 73686F72 		.ascii	"short int\000"
  605      7420696E 
  605      7400
  606              	.LASF16:
- 607 025f 73697A65 		.ascii	"sizetype\000"
+ 607 0268 73697A65 		.ascii	"sizetype\000"
  607      74797065 
  607      00
  608              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

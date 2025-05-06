@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Humidity\Humidity PSoC\Source Files\library.c">
 <ExpandedNodeIds>
 <v>Humidity</v>
 <v>Humidity\Humidity PSoC</v>
@@ -287,7 +287,7 @@
 <v>Humidity</v>
 <v>Humidity\Humidity PSoC</v>
 <v>Humidity\Humidity PSoC\PSoC 4 Architecture TRM</v>
-<v>Humidity\Humidity PSoC\PSoC 4200M Family Datasheet</v>
+<v>Humidity\Humidity PSoC\PSoC 4200L Family Datasheet</v>
 <v>Humidity\Humidity PSoC\System Reference Guides</v>
 <v>Humidity\Humidity PSoC\System Reference Guides\cy_boot_v6_0</v>
 <v>Humidity\Humidity PSoC\System Reference Guides\cy_dmac_v1_10</v>
@@ -314,7 +314,7 @@
 <v>Humidity</v>
 <v>Humidity\Humidity PSoC</v>
 <v>Humidity\Humidity PSoC\PSoC 4 Architecture TRM</v>
-<v>Humidity\Humidity PSoC\PSoC 4200M Family Datasheet</v>
+<v>Humidity\Humidity PSoC\PSoC 4200L Family Datasheet</v>
 <v>Humidity\Humidity PSoC\System Reference Guides</v>
 <v>Humidity\Humidity PSoC\System Reference Guides\cy_boot_v6_0</v>
 <v>Humidity\Humidity PSoC\System Reference Guides\cy_dmac_v1_10</v>

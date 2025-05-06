@@ -1,6 +1,6 @@
 // ======================================================================
 // Humidity PSoC.v generated from TopDesign.cysch
-// 04/19/2025 at 12:49
+// 05/05/2025 at 18:29
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -104,7 +104,7 @@
 `define CYDEV_CHIP_MEMBER_FM4 38
 `define CYDEV_CHIP_REVISION_FM4_PRODUCTION 0
 `define CYDEV_CHIP_FAMILY_USED 2
-`define CYDEV_CHIP_MEMBER_USED 29
+`define CYDEV_CHIP_MEMBER_USED 31
 `define CYDEV_CHIP_REVISION_USED 0
 // Component: OneTerminal
 `ifdef CY_BLK_DIR

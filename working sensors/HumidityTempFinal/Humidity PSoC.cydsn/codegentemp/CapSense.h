@@ -239,7 +239,7 @@ void CapSense_NormalizeWidgets(uint32 widgetsNum, uint8 dataPtr[]);
 /* Number of bits for each pin in HSIOM register. */
 #define CapSense_HSIOM_PIN_CFG_SIZE         (0x04u)
 
-#define CapSense_CFG_REG_TBL_SIZE           (8u)
+#define CapSense_CFG_REG_TBL_SIZE           (13u)
 
 /***************************************
 *             Registers
@@ -322,6 +322,21 @@ void CapSense_NormalizeWidgets(uint32 widgetsNum, uint8 dataPtr[]);
 #define CapSense_PORT_SEL7_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL7 )
 #define CapSense_PORT_SEL7_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL7 )
 
+#define CapSense_PORT_SEL8_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL8 )
+#define CapSense_PORT_SEL8_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL8 )
+
+#define CapSense_PORT_SEL9_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL9 )
+#define CapSense_PORT_SEL9_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL9 )
+
+#define CapSense_PORT_SEL10_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL10 )
+#define CapSense_PORT_SEL10_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL10 )
+
+#define CapSense_PORT_SEL11_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL11 )
+#define CapSense_PORT_SEL11_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL11 )
+
+#define CapSense_PORT_SEL12_REG          (*(reg32 *) CYREG_HSIOM_PORT_SEL12 )
+#define CapSense_PORT_SEL12_PTR          (*(reg32 *) CYREG_HSIOM_PORT_SEL12 )
+
 
 #define CapSense_PORT0_PC_REG          (*(reg32 *) CYREG_GPIO_PRT0_PC )
 #define CapSense_PORT0_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT0_PC )
@@ -347,6 +362,21 @@ void CapSense_NormalizeWidgets(uint32 widgetsNum, uint8 dataPtr[]);
 #define CapSense_PORT7_PC_REG          (*(reg32 *) CYREG_GPIO_PRT7_PC )
 #define CapSense_PORT7_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT7_PC )
 
+#define CapSense_PORT8_PC_REG          (*(reg32 *) CYREG_GPIO_PRT8_PC )
+#define CapSense_PORT8_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT8_PC )
+
+#define CapSense_PORT9_PC_REG          (*(reg32 *) CYREG_GPIO_PRT9_PC )
+#define CapSense_PORT9_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT9_PC )
+
+#define CapSense_PORT10_PC_REG          (*(reg32 *) CYREG_GPIO_PRT10_PC )
+#define CapSense_PORT10_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT10_PC )
+
+#define CapSense_PORT11_PC_REG          (*(reg32 *) CYREG_GPIO_PRT11_PC )
+#define CapSense_PORT11_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT11_PC )
+
+#define CapSense_PORT12_PC_REG          (*(reg32 *) CYREG_GPIO_PRT12_PC )
+#define CapSense_PORT12_PC_PTR          (*(reg32 *) CYREG_GPIO_PRT12_PC )
+
 
 #define CapSense_PORT0_DR_REG          (*(reg32 *) CYREG_GPIO_PRT0_DR )
 #define CapSense_PORT0_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT0_DR )
@@ -371,6 +401,21 @@ void CapSense_NormalizeWidgets(uint32 widgetsNum, uint8 dataPtr[]);
 
 #define CapSense_PORT7_DR_REG          (*(reg32 *) CYREG_GPIO_PRT7_DR )
 #define CapSense_PORT7_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT7_DR )
+
+#define CapSense_PORT8_DR_REG          (*(reg32 *) CYREG_GPIO_PRT8_DR )
+#define CapSense_PORT8_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT8_DR )
+
+#define CapSense_PORT9_DR_REG          (*(reg32 *) CYREG_GPIO_PRT9_DR )
+#define CapSense_PORT9_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT9_DR )
+
+#define CapSense_PORT10_DR_REG          (*(reg32 *) CYREG_GPIO_PRT10_DR )
+#define CapSense_PORT10_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT10_DR )
+
+#define CapSense_PORT11_DR_REG          (*(reg32 *) CYREG_GPIO_PRT11_DR )
+#define CapSense_PORT11_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT11_DR )
+
+#define CapSense_PORT12_DR_REG          (*(reg32 *) CYREG_GPIO_PRT12_DR )
+#define CapSense_PORT12_DR_PTR          (*(reg32 *) CYREG_GPIO_PRT12_DR )
 
 
 

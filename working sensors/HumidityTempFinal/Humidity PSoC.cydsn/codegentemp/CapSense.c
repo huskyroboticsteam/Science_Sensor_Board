@@ -110,6 +110,11 @@ reg32* const CapSense_prtSelTbl[CapSense_CFG_REG_TBL_SIZE] = {
     ((reg32 *) CYREG_HSIOM_PORT_SEL5),
     ((reg32 *) CYREG_HSIOM_PORT_SEL6),
     ((reg32 *) CYREG_HSIOM_PORT_SEL7),
+    ((reg32 *) CYREG_HSIOM_PORT_SEL8),
+    ((reg32 *) CYREG_HSIOM_PORT_SEL9),
+    ((reg32 *) CYREG_HSIOM_PORT_SEL10),
+    ((reg32 *) CYREG_HSIOM_PORT_SEL11),
+    ((reg32 *) CYREG_HSIOM_PORT_SEL12),
 };
 
 reg32* const CapSense_prtCfgTbl[CapSense_CFG_REG_TBL_SIZE] = {
@@ -121,6 +126,11 @@ reg32* const CapSense_prtCfgTbl[CapSense_CFG_REG_TBL_SIZE] = {
     ((reg32 *) CYREG_GPIO_PRT5_PC),
     ((reg32 *) CYREG_GPIO_PRT6_PC),
     ((reg32 *) CYREG_GPIO_PRT7_PC),
+    ((reg32 *) CYREG_GPIO_PRT8_PC),
+    ((reg32 *) CYREG_GPIO_PRT9_PC),
+    ((reg32 *) CYREG_GPIO_PRT10_PC),
+    ((reg32 *) CYREG_GPIO_PRT11_PC),
+    ((reg32 *) CYREG_GPIO_PRT12_PC),
 };
 
 reg32* const CapSense_prtDRTbl[CapSense_CFG_REG_TBL_SIZE] = {
@@ -132,6 +142,11 @@ reg32* const CapSense_prtDRTbl[CapSense_CFG_REG_TBL_SIZE] = {
     ((reg32 *) CYREG_GPIO_PRT5_DR),
     ((reg32 *) CYREG_GPIO_PRT6_DR),
     ((reg32 *) CYREG_GPIO_PRT7_DR),
+    ((reg32 *) CYREG_GPIO_PRT8_DR),
+    ((reg32 *) CYREG_GPIO_PRT9_DR),
+    ((reg32 *) CYREG_GPIO_PRT10_DR),
+    ((reg32 *) CYREG_GPIO_PRT11_DR),
+    ((reg32 *) CYREG_GPIO_PRT12_DR),
 };
 
 

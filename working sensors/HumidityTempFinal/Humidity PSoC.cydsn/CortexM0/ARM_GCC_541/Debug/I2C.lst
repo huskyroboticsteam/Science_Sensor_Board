@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
   29:Generated_Source\PSoC4/I2C.c ****     #include "I2C_SPI_UART_PVT.h"
   30:Generated_Source\PSoC4/I2C.c **** #endif /* (I2C_SCB_MODE_SPI_INC || I2C_SCB_MODE_UART_INC) */
   31:Generated_Source\PSoC4/I2C.c **** 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 2
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 2
 
 
   32:Generated_Source\PSoC4/I2C.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
   86:Generated_Source\PSoC4/I2C.c ****     /** This global variable stores TX interrupt sources after 
   87:Generated_Source\PSoC4/I2C.c ****     * I2C_Stop() is called. Only these TX interrupt sources 
   88:Generated_Source\PSoC4/I2C.c ****     * will be restored on a subsequent I2C_Enable() call.
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 3
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 3
 
 
   89:Generated_Source\PSoC4/I2C.c ****     */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  143:Generated_Source\PSoC4/I2C.c **** 
  144:Generated_Source\PSoC4/I2C.c **** #elif (I2C_SCB_MODE_EZI2C_CONST_CFG)
  145:Generated_Source\PSoC4/I2C.c ****     I2C_EzI2CInit();
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 4
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 4
 
 
  146:Generated_Source\PSoC4/I2C.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  200:Generated_Source\PSoC4/I2C.c **** *  After this function call, the component is enabled and ready for operation.
  201:Generated_Source\PSoC4/I2C.c **** *  When configuration is set to "Unconfigured SCB", the component must first be
  202:Generated_Source\PSoC4/I2C.c **** *  initialized to operate in one of the following configurations: I2C, SPI, UART
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 5
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 5
 
 
  203:Generated_Source\PSoC4/I2C.c **** *  or EZI2C. Otherwise this function does not enable the component.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  257:Generated_Source\PSoC4/I2C.c ****     * is disabled.
  258:Generated_Source\PSoC4/I2C.c ****     */
  259:Generated_Source\PSoC4/I2C.c ****     I2C_SetTxInterruptMode(I2C_NO_INTR_SOURCES);
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 6
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 6
 
 
  260:Generated_Source\PSoC4/I2C.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  314:Generated_Source\PSoC4/I2C.c **** }
  315:Generated_Source\PSoC4/I2C.c **** 
  316:Generated_Source\PSoC4/I2C.c **** 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 7
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 7
 
 
  317:Generated_Source\PSoC4/I2C.c **** #if (I2C_SCB_IRQ_INTERNAL)
@@ -418,13 +418,13 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  363:Generated_Source\PSoC4/I2C.c ****             I2C_EnableInt();
  364:Generated_Source\PSoC4/I2C.c ****         }
  365:Generated_Source\PSoC4/I2C.c **** 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 8
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 8
 
 
  366:Generated_Source\PSoC4/I2C.c ****     #else
  367:Generated_Source\PSoC4/I2C.c ****         I2C_EnableInt();
   35              		.loc 1 367 0
-  36 0002 0920     		movs	r0, #9
+  36 0002 0B20     		movs	r0, #11
   37 0004 FFF7FEFF 		bl	CyIntEnable
   38              	.LVL0:
  368:Generated_Source\PSoC4/I2C.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  403:Generated_Source\PSoC4/I2C.c ****     I2C_UartPostEnable();
  404:Generated_Source\PSoC4/I2C.c **** 
  405:Generated_Source\PSoC4/I2C.c **** #else
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 9
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 9
 
 
  406:Generated_Source\PSoC4/I2C.c ****     /* Unknown mode: do nothing */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  449:Generated_Source\PSoC4/I2C.c **** #elif (I2C_SCB_MODE_SPI_CONST_CFG)
  450:Generated_Source\PSoC4/I2C.c ****     I2C_SpiStop();
  451:Generated_Source\PSoC4/I2C.c **** 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 10
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 10
 
 
  452:Generated_Source\PSoC4/I2C.c **** #elif (I2C_SCB_MODE_UART_CONST_CFG)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  106 0000 10B5     		push	{r4, lr}
  107              		.cfi_def_cfa_offset 8
  108              		.cfi_offset 4, -8
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 11
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 11
 
 
  109              		.cfi_offset 14, -4
@@ -621,7 +621,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  123              	.L6:
  124              		.align	2
  125              	.L5:
- 126 0014 00002540 		.word	1076166656
+ 126 0014 00002640 		.word	1076232192
  127              		.cfi_endproc
  128              	.LFE2:
  129              		.size	I2C_Enable, .-I2C_Enable
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  156 0010 024B     		ldr	r3, .L9
  157 0012 1A70     		strb	r2, [r3]
  158              	.L8:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 12
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 12
 
 
  218:Generated_Source\PSoC4/I2C.c **** }
@@ -695,7 +695,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  187              		.cfi_offset 14, -4
  242:Generated_Source\PSoC4/I2C.c **** #endif /* (I2C_SCB_IRQ_INTERNAL) */
  188              		.loc 1 242 0
- 189 0002 0920     		movs	r0, #9
+ 189 0002 0B20     		movs	r0, #11
  190 0004 FFF7FEFF 		bl	CyIntDisable
  191              	.LVL6:
  246:Generated_Source\PSoC4/I2C.c **** 
@@ -716,9 +716,9 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  204 001a 1A60     		str	r2, [r3]
  262:Generated_Source\PSoC4/I2C.c **** #endif /* (I2C_SCB_IRQ_INTERNAL) */
  205              		.loc 1 262 0
- 206 001c 0920     		movs	r0, #9
+ 206 001c 0B20     		movs	r0, #11
  207 001e FFF7FEFF 		bl	CyIntClearPending
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 13
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 13
 
 
  208              	.LVL8:
@@ -729,8 +729,8 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  212              	.L13:
  213              		.align	2
  214              	.L12:
- 215 0024 00002540 		.word	1076166656
- 216 0028 880F2540 		.word	1076170632
+ 215 0024 00002640 		.word	1076232192
+ 216 0028 880F2640 		.word	1076236168
  217              		.cfi_endproc
  218              	.LFE4:
  219              		.size	I2C_Stop, .-I2C_Stop
@@ -775,10 +775,10 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  252              	.L16:
  253              		.align	2
  254              	.L15:
- 255 0010 04032540 		.word	1076167428
+ 255 0010 04032640 		.word	1076232964
  256              		.cfi_endproc
  257              	.LFE5:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 14
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 14
 
 
  258              		.size	I2C_SetRxFifoLevel, .-I2C_SetRxFifoLevel
@@ -823,7 +823,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  291              	.L19:
  292              		.align	2
  293              	.L18:
- 294 0010 04022540 		.word	1076167172
+ 294 0010 04022640 		.word	1076232708
  295              		.cfi_endproc
  296              	.LFE6:
  297              		.size	I2C_SetTxFifoLevel, .-I2C_SetTxFifoLevel
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  336:Generated_Source\PSoC4/I2C.c ****     #if !defined (CY_REMOVE_I2C_CUSTOM_INTR_HANDLER)
  306              		.loc 1 336 0
  307              		.cfi_startproc
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 15
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 15
 
 
  308              		@ args = 0, pretend = 0, frame = 0
@@ -886,48 +886,48 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  348 0006 00000000 		.4byte	.Ldebug_abbrev0
  349 000a 04       		.byte	0x4
  350 000b 01       		.uleb128 0x1
- 351 000c CA010000 		.4byte	.LASF37
+ 351 000c 53010000 		.4byte	.LASF37
  352 0010 0C       		.byte	0xc
- 353 0011 D3000000 		.4byte	.LASF38
- 354 0015 17000000 		.4byte	.LASF39
+ 353 0011 5C000000 		.4byte	.LASF38
+ 354 0015 4C020000 		.4byte	.LASF39
  355 0019 00000000 		.4byte	.Ldebug_ranges0+0
  356 001d 00000000 		.4byte	0
  357 0021 00000000 		.4byte	.Ldebug_line0
  358 0025 02       		.uleb128 0x2
  359 0026 01       		.byte	0x1
  360 0027 06       		.byte	0x6
- 361 0028 DB020000 		.4byte	.LASF0
+ 361 0028 E4020000 		.4byte	.LASF0
  362 002c 02       		.uleb128 0x2
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 16
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 16
 
 
  363 002d 01       		.byte	0x1
  364 002e 08       		.byte	0x8
- 365 002f F0000000 		.4byte	.LASF1
+ 365 002f 79000000 		.4byte	.LASF1
  366 0033 02       		.uleb128 0x2
  367 0034 02       		.byte	0x2
  368 0035 05       		.byte	0x5
- 369 0036 5C010000 		.4byte	.LASF2
+ 369 0036 E5000000 		.4byte	.LASF2
  370 003a 02       		.uleb128 0x2
  371 003b 02       		.byte	0x2
  372 003c 07       		.byte	0x7
- 373 003d 8E000000 		.4byte	.LASF3
+ 373 003d 17000000 		.4byte	.LASF3
  374 0041 02       		.uleb128 0x2
  375 0042 04       		.byte	0x4
  376 0043 05       		.byte	0x5
- 377 0044 BA020000 		.4byte	.LASF4
+ 377 0044 43020000 		.4byte	.LASF4
  378 0048 02       		.uleb128 0x2
  379 0049 04       		.byte	0x4
  380 004a 07       		.byte	0x7
- 381 004b 21010000 		.4byte	.LASF5
+ 381 004b AA000000 		.4byte	.LASF5
  382 004f 02       		.uleb128 0x2
  383 0050 08       		.byte	0x8
  384 0051 05       		.byte	0x5
- 385 0052 6A020000 		.4byte	.LASF6
+ 385 0052 F3010000 		.4byte	.LASF6
  386 0056 02       		.uleb128 0x2
  387 0057 08       		.byte	0x8
  388 0058 07       		.byte	0x7
- 389 0059 A1010000 		.4byte	.LASF7
+ 389 0059 2A010000 		.4byte	.LASF7
  390 005d 03       		.uleb128 0x3
  391 005e 04       		.byte	0x4
  392 005f 05       		.byte	0x5
@@ -935,30 +935,30 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  394 0064 02       		.uleb128 0x2
  395 0065 04       		.byte	0x4
  396 0066 07       		.byte	0x7
- 397 0067 94010000 		.4byte	.LASF8
+ 397 0067 1D010000 		.4byte	.LASF8
  398 006b 04       		.uleb128 0x4
- 399 006c 33010000 		.4byte	.LASF9
+ 399 006c BC000000 		.4byte	.LASF9
  400 0070 02       		.byte	0x2
  401 0071 FB01     		.2byte	0x1fb
  402 0073 2C000000 		.4byte	0x2c
  403 0077 04       		.uleb128 0x4
- 404 0078 8D010000 		.4byte	.LASF10
+ 404 0078 16010000 		.4byte	.LASF10
  405 007c 02       		.byte	0x2
  406 007d FD01     		.2byte	0x1fd
  407 007f 48000000 		.4byte	0x48
  408 0083 02       		.uleb128 0x2
  409 0084 04       		.byte	0x4
  410 0085 04       		.byte	0x4
- 411 0086 78020000 		.4byte	.LASF11
+ 411 0086 01020000 		.4byte	.LASF11
  412 008a 02       		.uleb128 0x2
  413 008b 08       		.byte	0x8
  414 008c 04       		.byte	0x4
- 415 008d 44010000 		.4byte	.LASF12
+ 415 008d CD000000 		.4byte	.LASF12
  416 0091 02       		.uleb128 0x2
  417 0092 01       		.byte	0x1
  418 0093 08       		.byte	0x8
- 419 0094 7E020000 		.4byte	.LASF13
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 17
+ 419 0094 07020000 		.4byte	.LASF13
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 17
 
 
  420 0098 04       		.uleb128 0x4
@@ -975,13 +975,13 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  431 00b0 02       		.uleb128 0x2
  432 00b1 08       		.byte	0x8
  433 00b2 04       		.byte	0x4
- 434 00b3 C3020000 		.4byte	.LASF15
+ 434 00b3 CC020000 		.4byte	.LASF15
  435 00b7 02       		.uleb128 0x2
  436 00b8 04       		.byte	0x4
  437 00b9 07       		.byte	0x7
- 438 00ba 61020000 		.4byte	.LASF16
+ 438 00ba EA010000 		.4byte	.LASF16
  439 00be 08       		.uleb128 0x8
- 440 00bf B7000000 		.4byte	.LASF17
+ 440 00bf 40000000 		.4byte	.LASF17
  441 00c3 01       		.byte	0x1
  442 00c4 6401     		.2byte	0x164
  443 00c6 00000000 		.4byte	.LFB8
@@ -996,11 +996,11 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  452 00de 01       		.uleb128 0x1
  453 00df 50       		.byte	0x50
  454 00e0 01       		.uleb128 0x1
- 455 00e1 39       		.byte	0x39
+ 455 00e1 3B       		.byte	0x3b
  456 00e2 00       		.byte	0
  457 00e3 00       		.byte	0
  458 00e4 08       		.uleb128 0x8
- 459 00e5 11010000 		.4byte	.LASF18
+ 459 00e5 9A000000 		.4byte	.LASF18
  460 00e9 01       		.byte	0x1
  461 00ea A201     		.2byte	0x1a2
  462 00ec 00000000 		.4byte	.LFB10
@@ -1013,12 +1013,12 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  469 00ff 6B020000 		.4byte	0x26b
  470 0103 00       		.byte	0
  471 0104 0C       		.uleb128 0xc
- 472 0105 58020000 		.4byte	.LASF19
+ 472 0105 E1010000 		.4byte	.LASF19
  473 0109 01       		.byte	0x1
  474 010a 7B       		.byte	0x7b
  475 010b 00000000 		.4byte	.LFB1
  476 010f 08000000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 18
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 18
 
 
  477 0113 01       		.uleb128 0x1
@@ -1029,7 +1029,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  482 011e 76020000 		.4byte	0x276
  483 0122 00       		.byte	0
  484 0123 0C       		.uleb128 0xc
- 485 0124 39010000 		.4byte	.LASF20
+ 485 0124 C2000000 		.4byte	.LASF20
  486 0128 01       		.byte	0x1
  487 0129 AB       		.byte	0xab
  488 012a 00000000 		.4byte	.LFB2
@@ -1042,7 +1042,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  495 013d BE000000 		.4byte	0xbe
  496 0141 00       		.byte	0
  497 0142 0C       		.uleb128 0xc
- 498 0143 C9000000 		.4byte	.LASF21
+ 498 0143 52000000 		.4byte	.LASF21
  499 0147 01       		.byte	0x1
  500 0148 D2       		.byte	0xd2
  501 0149 00000000 		.4byte	.LFB3
@@ -1058,7 +1058,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  511 0165 23010000 		.4byte	0x123
  512 0169 00       		.byte	0
  513 016a 0C       		.uleb128 0xc
- 514 016b 84010000 		.4byte	.LASF22
+ 514 016b 0D010000 		.4byte	.LASF22
  515 016f 01       		.byte	0x1
  516 0170 EF       		.byte	0xef
  517 0171 00000000 		.4byte	.LFB4
@@ -1074,11 +1074,11 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  527 018d 01       		.uleb128 0x1
  528 018e 50       		.byte	0x50
  529 018f 01       		.uleb128 0x1
- 530 0190 39       		.byte	0x39
+ 530 0190 3B       		.byte	0x3b
  531 0191 00       		.byte	0
  532 0192 0B       		.uleb128 0xb
  533 0193 0C000000 		.4byte	.LVL7
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 19
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 19
 
 
  534 0197 E4000000 		.4byte	0xe4
@@ -1089,11 +1089,11 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  539 01a5 01       		.uleb128 0x1
  540 01a6 50       		.byte	0x50
  541 01a7 01       		.uleb128 0x1
- 542 01a8 39       		.byte	0x39
+ 542 01a8 3B       		.byte	0x3b
  543 01a9 00       		.byte	0
  544 01aa 00       		.byte	0
  545 01ab 0E       		.uleb128 0xe
- 546 01ac 9C020000 		.4byte	.LASF23
+ 546 01ac 25020000 		.4byte	.LASF23
  547 01b0 01       		.byte	0x1
  548 01b1 1701     		.2byte	0x117
  549 01b3 00000000 		.4byte	.LFB5
@@ -1108,14 +1108,14 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  558 01c9 77000000 		.4byte	0x77
  559 01cd 00000000 		.4byte	.LLST0
  560 01d1 10       		.uleb128 0x10
- 561 01d2 AF020000 		.4byte	.LASF26
+ 561 01d2 38020000 		.4byte	.LASF26
  562 01d6 01       		.byte	0x1
  563 01d7 1901     		.2byte	0x119
  564 01d9 77000000 		.4byte	0x77
  565 01dd 21000000 		.4byte	.LLST1
  566 01e1 00       		.byte	0
  567 01e2 0E       		.uleb128 0xe
- 568 01e3 FE000000 		.4byte	.LASF24
+ 568 01e3 87000000 		.4byte	.LASF24
  569 01e7 01       		.byte	0x1
  570 01e8 3001     		.2byte	0x130
  571 01ea 00000000 		.4byte	.LFB6
@@ -1137,8 +1137,8 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  587 0214 60000000 		.4byte	.LLST3
  588 0218 00       		.byte	0
  589 0219 0E       		.uleb128 0xe
- 590 021a 66010000 		.4byte	.LASF28
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 20
+ 590 021a EF000000 		.4byte	.LASF28
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 20
 
 
  591 021e 01       		.byte	0x1
@@ -1149,7 +1149,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  596 022a 9C       		.byte	0x9c
  597 022b 3E020000 		.4byte	0x23e
  598 022f 11       		.uleb128 0x11
- 599 0230 57010000 		.4byte	.LASF29
+ 599 0230 E0000000 		.4byte	.LASF29
  600 0234 01       		.byte	0x1
  601 0235 4F01     		.2byte	0x14f
  602 0237 A9000000 		.4byte	0xa9
@@ -1157,7 +1157,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  604 023c 50       		.byte	0x50
  605 023d 00       		.byte	0
  606 023e 12       		.uleb128 0x12
- 607 023f E7020000 		.4byte	.LASF30
+ 607 023f F0020000 		.4byte	.LASF30
  608 0243 01       		.byte	0x1
  609 0244 51       		.byte	0x51
  610 0245 6B000000 		.4byte	0x6b
@@ -1165,7 +1165,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  612 024a 03       		.byte	0x3
  613 024b 00000000 		.4byte	I2C_initVar
  614 024f 12       		.uleb128 0x12
- 615 0250 A1000000 		.4byte	.LASF31
+ 615 0250 2A000000 		.4byte	.LASF31
  616 0254 01       		.byte	0x1
  617 0255 61       		.byte	0x61
  618 0256 A9000000 		.4byte	0xa9
@@ -1173,32 +1173,32 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  620 025b 03       		.byte	0x3
  621 025c 00000000 		.4byte	I2C_customIntrHandler
  622 0260 13       		.uleb128 0x13
- 623 0261 CF020000 		.4byte	.LASF32
- 624 0265 CF020000 		.4byte	.LASF32
+ 623 0261 D8020000 		.4byte	.LASF32
+ 624 0265 D8020000 		.4byte	.LASF32
  625 0269 03       		.byte	0x3
  626 026a D6       		.byte	0xd6
  627 026b 13       		.uleb128 0x13
- 628 026c 90020000 		.4byte	.LASF33
- 629 0270 90020000 		.4byte	.LASF33
+ 628 026c 19020000 		.4byte	.LASF33
+ 629 0270 19020000 		.4byte	.LASF33
  630 0274 04       		.byte	0x4
  631 0275 4C       		.byte	0x4c
  632 0276 13       		.uleb128 0x13
- 633 0277 4B010000 		.4byte	.LASF34
- 634 027b 4B010000 		.4byte	.LASF34
+ 633 0277 D4000000 		.4byte	.LASF34
+ 634 027b D4000000 		.4byte	.LASF34
  635 027f 04       		.byte	0x4
  636 0280 49       		.byte	0x49
  637 0281 13       		.uleb128 0x13
- 638 0282 83020000 		.4byte	.LASF35
- 639 0286 83020000 		.4byte	.LASF35
+ 638 0282 0C020000 		.4byte	.LASF35
+ 639 0286 0C020000 		.4byte	.LASF35
  640 028a 03       		.byte	0x3
  641 028b D8       		.byte	0xd8
  642 028c 13       		.uleb128 0x13
- 643 028d B8010000 		.4byte	.LASF36
- 644 0291 B8010000 		.4byte	.LASF36
+ 643 028d 41010000 		.4byte	.LASF36
+ 644 0291 41010000 		.4byte	.LASF36
  645 0295 03       		.byte	0x3
  646 0296 DB       		.byte	0xdb
  647 0297 00       		.byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 21
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 21
 
 
  648              		.section	.debug_abbrev,"",%progbits
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  702 0034 00       		.byte	0
  703 0035 00       		.byte	0
  704 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 22
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 22
 
 
  705 0037 35       		.uleb128 0x35
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  759 0070 0A       		.uleb128 0xa
  760 0071 8A8201   		.uleb128 0x410a
  761 0074 00       		.byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 23
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 23
 
 
  762 0075 02       		.uleb128 0x2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  816 00b1 3F       		.uleb128 0x3f
  817 00b2 19       		.uleb128 0x19
  818 00b3 03       		.uleb128 0x3
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 24
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 24
 
 
  819 00b4 0E       		.uleb128 0xe
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  873 00eb 3A       		.uleb128 0x3a
  874 00ec 0B       		.uleb128 0xb
  875 00ed 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 25
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 25
 
 
  876 00ee 05       		.uleb128 0x5
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  930 0017 50       		.byte	0x50
  931 0018 9F       		.byte	0x9f
  932 0019 00000000 		.4byte	0
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 26
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 26
 
 
  933 001d 00000000 		.4byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  987 0034 20000000 		.4byte	.LFE3-.LFB3
  988 0038 00000000 		.4byte	.LFB4
  989 003c 2C000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 27
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 27
 
 
  990 0040 00000000 		.4byte	.LFB5
@@ -1608,207 +1608,207 @@ ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 1
  1027              	.LASF25:
  1028 0011 6C657665 		.ascii	"level\000"
  1028      6C00
- 1029              	.LASF39:
- 1030 0017 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
- 1030      73657273 
- 1030      5C626563 
- 1030      63615C44 
- 1030      6F63756D 
- 1031 0045 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\testing_sensors\\Humi"
- 1031      72645C53 
- 1031      6369656E 
- 1031      63655F53 
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 28
+ 1029              	.LASF3:
+ 1030 0017 73686F72 		.ascii	"short unsigned int\000"
+ 1030      7420756E 
+ 1030      7369676E 
+ 1030      65642069 
+ 1030      6E7400
+ 1031              	.LASF31:
+ 1032 002a 4932435F 		.ascii	"I2C_customIntrHandler\000"
+ 1032      63757374 
+ 1032      6F6D496E 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 28
 
 
- 1031      656E736F 
- 1032 0075 64697479 		.ascii	"dity\\Humidity PSoC.cydsn\000"
- 1032      5C48756D 
- 1032      69646974 
- 1032      79205053 
- 1032      6F432E63 
- 1033              	.LASF3:
- 1034 008e 73686F72 		.ascii	"short unsigned int\000"
- 1034      7420756E 
- 1034      7369676E 
- 1034      65642069 
- 1034      6E7400
- 1035              	.LASF31:
- 1036 00a1 4932435F 		.ascii	"I2C_customIntrHandler\000"
- 1036      63757374 
- 1036      6F6D496E 
- 1036      74724861 
- 1036      6E646C65 
- 1037              	.LASF17:
- 1038 00b7 4932435F 		.ascii	"I2C_ScbEnableIntr\000"
- 1038      53636245 
- 1038      6E61626C 
- 1038      65496E74 
- 1038      7200
- 1039              	.LASF21:
- 1040 00c9 4932435F 		.ascii	"I2C_Start\000"
- 1040      53746172 
- 1040      7400
- 1041              	.LASF38:
- 1042 00d3 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C.c\000"
- 1042      72617465 
- 1042      645F536F 
- 1042      75726365 
- 1042      5C50536F 
- 1043              	.LASF1:
- 1044 00f0 756E7369 		.ascii	"unsigned char\000"
- 1044      676E6564 
- 1044      20636861 
- 1044      7200
- 1045              	.LASF24:
- 1046 00fe 4932435F 		.ascii	"I2C_SetTxFifoLevel\000"
- 1046      53657454 
- 1046      78466966 
- 1046      6F4C6576 
- 1046      656C00
- 1047              	.LASF18:
- 1048 0111 4932435F 		.ascii	"I2C_ScbModeStop\000"
- 1048      5363624D 
- 1048      6F646553 
- 1048      746F7000 
- 1049              	.LASF5:
- 1050 0121 6C6F6E67 		.ascii	"long unsigned int\000"
- 1050      20756E73 
- 1050      69676E65 
- 1050      6420696E 
- 1050      7400
- 1051              	.LASF9:
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 29
+ 1032      74724861 
+ 1032      6E646C65 
+ 1033              	.LASF17:
+ 1034 0040 4932435F 		.ascii	"I2C_ScbEnableIntr\000"
+ 1034      53636245 
+ 1034      6E61626C 
+ 1034      65496E74 
+ 1034      7200
+ 1035              	.LASF21:
+ 1036 0052 4932435F 		.ascii	"I2C_Start\000"
+ 1036      53746172 
+ 1036      7400
+ 1037              	.LASF38:
+ 1038 005c 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C.c\000"
+ 1038      72617465 
+ 1038      645F536F 
+ 1038      75726365 
+ 1038      5C50536F 
+ 1039              	.LASF1:
+ 1040 0079 756E7369 		.ascii	"unsigned char\000"
+ 1040      676E6564 
+ 1040      20636861 
+ 1040      7200
+ 1041              	.LASF24:
+ 1042 0087 4932435F 		.ascii	"I2C_SetTxFifoLevel\000"
+ 1042      53657454 
+ 1042      78466966 
+ 1042      6F4C6576 
+ 1042      656C00
+ 1043              	.LASF18:
+ 1044 009a 4932435F 		.ascii	"I2C_ScbModeStop\000"
+ 1044      5363624D 
+ 1044      6F646553 
+ 1044      746F7000 
+ 1045              	.LASF5:
+ 1046 00aa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1046      20756E73 
+ 1046      69676E65 
+ 1046      6420696E 
+ 1046      7400
+ 1047              	.LASF9:
+ 1048 00bc 75696E74 		.ascii	"uint8\000"
+ 1048      3800
+ 1049              	.LASF20:
+ 1050 00c2 4932435F 		.ascii	"I2C_Enable\000"
+ 1050      456E6162 
+ 1050      6C6500
+ 1051              	.LASF12:
+ 1052 00cd 646F7562 		.ascii	"double\000"
+ 1052      6C6500
+ 1053              	.LASF34:
+ 1054 00d4 4932435F 		.ascii	"I2C_I2CInit\000"
+ 1054      49324349 
+ 1054      6E697400 
+ 1055              	.LASF29:
+ 1056 00e0 66756E63 		.ascii	"func\000"
+ 1056      00
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 29
 
 
- 1052 0133 75696E74 		.ascii	"uint8\000"
- 1052      3800
- 1053              	.LASF20:
- 1054 0139 4932435F 		.ascii	"I2C_Enable\000"
- 1054      456E6162 
- 1054      6C6500
- 1055              	.LASF12:
- 1056 0144 646F7562 		.ascii	"double\000"
- 1056      6C6500
- 1057              	.LASF34:
- 1058 014b 4932435F 		.ascii	"I2C_I2CInit\000"
- 1058      49324349 
- 1058      6E697400 
- 1059              	.LASF29:
- 1060 0157 66756E63 		.ascii	"func\000"
- 1060      00
- 1061              	.LASF2:
- 1062 015c 73686F72 		.ascii	"short int\000"
- 1062      7420696E 
- 1062      7400
- 1063              	.LASF28:
- 1064 0166 4932435F 		.ascii	"I2C_SetCustomInterruptHandler\000"
- 1064      53657443 
- 1064      7573746F 
- 1064      6D496E74 
- 1064      65727275 
- 1065              	.LASF22:
- 1066 0184 4932435F 		.ascii	"I2C_Stop\000"
- 1066      53746F70 
+ 1057              	.LASF2:
+ 1058 00e5 73686F72 		.ascii	"short int\000"
+ 1058      7420696E 
+ 1058      7400
+ 1059              	.LASF28:
+ 1060 00ef 4932435F 		.ascii	"I2C_SetCustomInterruptHandler\000"
+ 1060      53657443 
+ 1060      7573746F 
+ 1060      6D496E74 
+ 1060      65727275 
+ 1061              	.LASF22:
+ 1062 010d 4932435F 		.ascii	"I2C_Stop\000"
+ 1062      53746F70 
+ 1062      00
+ 1063              	.LASF10:
+ 1064 0116 75696E74 		.ascii	"uint32\000"
+ 1064      333200
+ 1065              	.LASF8:
+ 1066 011d 756E7369 		.ascii	"unsigned int\000"
+ 1066      676E6564 
+ 1066      20696E74 
  1066      00
- 1067              	.LASF10:
- 1068 018d 75696E74 		.ascii	"uint32\000"
- 1068      333200
- 1069              	.LASF8:
- 1070 0194 756E7369 		.ascii	"unsigned int\000"
- 1070      676E6564 
- 1070      20696E74 
- 1070      00
- 1071              	.LASF7:
- 1072 01a1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1072      206C6F6E 
- 1072      6720756E 
- 1072      7369676E 
- 1072      65642069 
- 1073              	.LASF36:
- 1074 01b8 4379496E 		.ascii	"CyIntClearPending\000"
- 1074      74436C65 
- 1074      61725065 
- 1074      6E64696E 
- 1074      6700
- 1075              	.LASF37:
- 1076 01ca 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1076      43313120 
- 1076      352E342E 
- 1076      31203230 
- 1076      31363036 
- 1077 01fd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 30
+ 1067              	.LASF7:
+ 1068 012a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1068      206C6F6E 
+ 1068      6720756E 
+ 1068      7369676E 
+ 1068      65642069 
+ 1069              	.LASF36:
+ 1070 0141 4379496E 		.ascii	"CyIntClearPending\000"
+ 1070      74436C65 
+ 1070      61725065 
+ 1070      6E64696E 
+ 1070      6700
+ 1071              	.LASF37:
+ 1072 0153 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1072      43313120 
+ 1072      352E342E 
+ 1072      31203230 
+ 1072      31363036 
+ 1073 0186 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1073      20726576 
+ 1073      6973696F 
+ 1073      6E203233 
+ 1073      37373135 
+ 1074 01b9 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1074      66756E63 
+ 1074      74696F6E 
+ 1074      2D736563 
+ 1074      74696F6E 
+ 1075              	.LASF19:
+ 1076 01e1 4932435F 		.ascii	"I2C_Init\000"
+ 1076      496E6974 
+ 1076      00
+ 1077              	.LASF16:
+ 1078 01ea 73697A65 		.ascii	"sizetype\000"
+ 1078      74797065 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 30
 
 
- 1077      20726576 
- 1077      6973696F 
- 1077      6E203233 
- 1077      37373135 
- 1078 0230 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1078      66756E63 
- 1078      74696F6E 
- 1078      2D736563 
- 1078      74696F6E 
- 1079              	.LASF19:
- 1080 0258 4932435F 		.ascii	"I2C_Init\000"
- 1080      496E6974 
- 1080      00
- 1081              	.LASF16:
- 1082 0261 73697A65 		.ascii	"sizetype\000"
- 1082      74797065 
- 1082      00
- 1083              	.LASF6:
- 1084 026a 6C6F6E67 		.ascii	"long long int\000"
- 1084      206C6F6E 
- 1084      6720696E 
- 1084      7400
- 1085              	.LASF11:
- 1086 0278 666C6F61 		.ascii	"float\000"
- 1086      7400
- 1087              	.LASF13:
- 1088 027e 63686172 		.ascii	"char\000"
- 1088      00
- 1089              	.LASF35:
- 1090 0283 4379496E 		.ascii	"CyIntDisable\000"
- 1090      74446973 
- 1090      61626C65 
- 1090      00
- 1091              	.LASF33:
- 1092 0290 4932435F 		.ascii	"I2C_I2CStop\000"
- 1092      49324353 
- 1092      746F7000 
- 1093              	.LASF23:
- 1094 029c 4932435F 		.ascii	"I2C_SetRxFifoLevel\000"
- 1094      53657452 
- 1094      78466966 
- 1094      6F4C6576 
- 1094      656C00
- 1095              	.LASF26:
- 1096 02af 72784669 		.ascii	"rxFifoCtrl\000"
- 1096      666F4374 
- 1096      726C00
- 1097              	.LASF4:
- 1098 02ba 6C6F6E67 		.ascii	"long int\000"
- 1098      20696E74 
- 1098      00
+ 1078      00
+ 1079              	.LASF6:
+ 1080 01f3 6C6F6E67 		.ascii	"long long int\000"
+ 1080      206C6F6E 
+ 1080      6720696E 
+ 1080      7400
+ 1081              	.LASF11:
+ 1082 0201 666C6F61 		.ascii	"float\000"
+ 1082      7400
+ 1083              	.LASF13:
+ 1084 0207 63686172 		.ascii	"char\000"
+ 1084      00
+ 1085              	.LASF35:
+ 1086 020c 4379496E 		.ascii	"CyIntDisable\000"
+ 1086      74446973 
+ 1086      61626C65 
+ 1086      00
+ 1087              	.LASF33:
+ 1088 0219 4932435F 		.ascii	"I2C_I2CStop\000"
+ 1088      49324353 
+ 1088      746F7000 
+ 1089              	.LASF23:
+ 1090 0225 4932435F 		.ascii	"I2C_SetRxFifoLevel\000"
+ 1090      53657452 
+ 1090      78466966 
+ 1090      6F4C6576 
+ 1090      656C00
+ 1091              	.LASF26:
+ 1092 0238 72784669 		.ascii	"rxFifoCtrl\000"
+ 1092      666F4374 
+ 1092      726C00
+ 1093              	.LASF4:
+ 1094 0243 6C6F6E67 		.ascii	"long int\000"
+ 1094      20696E74 
+ 1094      00
+ 1095              	.LASF39:
+ 1096 024c 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
+ 1096      73657273 
+ 1096      5C626563 
+ 1096      63615C44 
+ 1096      6F63756D 
+ 1097 027a 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\working sensors\\Humi"
+ 1097      72645C53 
+ 1097      6369656E 
+ 1097      63655F53 
+ 1097      656E736F 
+ 1098 02aa 64697479 		.ascii	"dityTempFinal\\Humidity PSoC.cydsn\000"
+ 1098      54656D70 
+ 1098      46696E61 
+ 1098      6C5C4875 
+ 1098      6D696469 
  1099              	.LASF15:
- 1100 02c3 6C6F6E67 		.ascii	"long double\000"
+ 1100 02cc 6C6F6E67 		.ascii	"long double\000"
  1100      20646F75 
  1100      626C6500 
  1101              	.LASF32:
- 1102 02cf 4379496E 		.ascii	"CyIntEnable\000"
-ARM GAS  C:\Users\becca\AppData\Local\Temp\ccmkKVE4.s 			page 31
+ 1102 02d8 4379496E 		.ascii	"CyIntEnable\000"
+ARM GAS  C:\Users\becca\AppData\Local\Temp\ccvBruBJ.s 			page 31
 
 
  1102      74456E61 
  1102      626C6500 
  1103              	.LASF0:
- 1104 02db 7369676E 		.ascii	"signed char\000"
+ 1104 02e4 7369676E 		.ascii	"signed char\000"
  1104      65642063 
  1104      68617200 
  1105              	.LASF30:
- 1106 02e7 4932435F 		.ascii	"I2C_initVar\000"
+ 1106 02f0 4932435F 		.ascii	"I2C_initVar\000"
  1106      696E6974 
  1106      56617200 
  1107              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

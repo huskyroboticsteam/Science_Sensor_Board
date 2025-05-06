@@ -1,6 +1,6 @@
-C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\Humidity\Humidity PSoC.cydsn\Humidity PSoC.cyprj|859c1ea2-251b-4057-98ec-b5fa353ca08b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e3b77572-6d0b-4b0d-9eb8-ccd4f06b8b09
-C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7d5501c2-cba6-431a-b6cf-17167d9e4623
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2802650b-3116-4c4f-8b77-ffa28f35e706
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d1e2c0f1-bec2-4805-bde5-ac295c4d0bdb
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8a40fe57-abaa-4964-92aa-e8ec3096d229
+C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\working sensors\HumidityTempFinal\Humidity PSoC.cydsn\Humidity PSoC.cyprj|af6117a1-6109-4aae-afeb-bdbe523e9b62
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3c8fcc77-782f-4af3-adfc-e15c1962cf38
+C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|448ec98c-6f70-44c4-b603-41a264564652
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8c1dd601-6f88-4cd0-93ed-9715b9d82b94
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|84faebb4-3b28-4451-9ceb-1a740a823f2c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a9c114e2-9adc-476d-86a3-0b98a88f797d
