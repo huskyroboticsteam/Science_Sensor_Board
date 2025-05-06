@@ -3,11 +3,12 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Humidity" persistent="Humidity.cywrk" platform="NOT_USED">
-<current_project name=".\Humidity PSoC.cydsn\Humidity PSoC.cyprj" />
+<current_project name="..\..\CAN Compilation.cydsn\CAN Compilation.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
 <v>.\Humidity PSoC.cydsn\Humidity PSoC.cyprj</v>
+<v>..\..\CAN Compilation.cydsn\CAN Compilation.cyprj</v>
 </projects>
 <workspace_id v="5b604f02-e6c3-483b-bc49-c58ed47b86a6" />
 <WriteAppVersionLastSavedWith v="4.4.0.80" />
