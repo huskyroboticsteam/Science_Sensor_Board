@@ -1,4 +1,4 @@
---------------- Build Started: 05/07/2025 18:58:16 Project: CAN, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 05/07/2025 19:00:49 Project: CAN, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 In file included from main.c:25:0:
@@ -63,4 +63,4 @@ TempHum_Lib.h:30:13: warning: 'readData' declared 'static' but never defined [-W
 HindsightCAN\PortFiles\PortAT90CANxxx.c:6:18: fatal error: Port.h: No such file or directory
 compilation terminated.
 The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
---------------- Build Failed: 05/07/2025 18:58:17 ---------------
+--------------- Build Failed: 05/07/2025 19:00:50 ---------------
