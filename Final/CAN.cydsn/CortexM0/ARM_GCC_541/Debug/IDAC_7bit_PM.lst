@@ -1,0 +1,869 @@
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"IDAC_7bit_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.IDAC_7bit_SaveConfig,"ax",%progbits
+  20              		.align	2
+  21              		.global	IDAC_7bit_SaveConfig
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	IDAC_7bit_SaveConfig, %function
+  25              	IDAC_7bit_SaveConfig:
+  26              	.LFB1:
+  27              		.file 1 "Generated_Source\\PSoC4\\IDAC_7bit_PM.c"
+   1:Generated_Source\PSoC4/IDAC_7bit_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * File Name: IDAC_7bit_PM.c
+   3:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Version 1.10
+   4:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+   5:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Description:
+   6:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  This file provides Low power mode APIs for IDAC_P4 component.
+   7:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+   8:Generated_Source\PSoC4/IDAC_7bit_PM.c **** ********************************************************************************
+   9:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *******************************************************************************/
+  14:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  15:Generated_Source\PSoC4/IDAC_7bit_PM.c **** #include "IDAC_7bit.h"
+  16:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  17:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  18:Generated_Source\PSoC4/IDAC_7bit_PM.c **** static IDAC_7bit_BACKUP_STRUCT IDAC_7bit_backup;
+  19:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  20:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  21:Generated_Source\PSoC4/IDAC_7bit_PM.c **** /*******************************************************************************
+  22:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Function Name: IDAC_7bit_SaveConfig
+  23:Generated_Source\PSoC4/IDAC_7bit_PM.c **** ********************************************************************************
+  24:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  25:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Summary:
+  26:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  Saves component state before sleep
+  27:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Parameters:
+  28:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  29:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  30:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Return:
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 2
+
+
+  31:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  32:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  33:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Global Variables:
+  34:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  35:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  36:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *******************************************************************************/
+  37:Generated_Source\PSoC4/IDAC_7bit_PM.c **** void IDAC_7bit_SaveConfig(void)
+  38:Generated_Source\PSoC4/IDAC_7bit_PM.c **** {
+  28              		.loc 1 38 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  39:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     /* All registers are retention - nothing to save */
+  40:Generated_Source\PSoC4/IDAC_7bit_PM.c **** }
+  33              		.loc 1 40 0
+  34              		@ sp needed
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE1:
+  38              		.size	IDAC_7bit_SaveConfig, .-IDAC_7bit_SaveConfig
+  39 0002 C046     		.section	.text.IDAC_7bit_Sleep,"ax",%progbits
+  40              		.align	2
+  41              		.global	IDAC_7bit_Sleep
+  42              		.code	16
+  43              		.thumb_func
+  44              		.type	IDAC_7bit_Sleep, %function
+  45              	IDAC_7bit_Sleep:
+  46              	.LFB2:
+  41:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  42:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  43:Generated_Source\PSoC4/IDAC_7bit_PM.c **** /*******************************************************************************
+  44:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Function Name: IDAC_7bit_Sleep
+  45:Generated_Source\PSoC4/IDAC_7bit_PM.c **** ********************************************************************************
+  46:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  47:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Summary:
+  48:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  Calls _SaveConfig() function
+  49:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Parameters:
+  50:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  51:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  52:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Return:
+  53:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  54:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  55:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *******************************************************************************/
+  56:Generated_Source\PSoC4/IDAC_7bit_PM.c **** void IDAC_7bit_Sleep(void)
+  57:Generated_Source\PSoC4/IDAC_7bit_PM.c **** {
+  47              		.loc 1 57 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51 0000 10B5     		push	{r4, lr}
+  52              		.cfi_def_cfa_offset 8
+  53              		.cfi_offset 4, -8
+  54              		.cfi_offset 14, -4
+  58:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         if(0u != (IDAC_7bit_IDAC_CONTROL_REG & ((uint32)IDAC_7bit_IDAC_MODE_MASK <<
+  55              		.loc 1 58 0
+  56 0002 084B     		ldr	r3, .L5
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 3
+
+
+  57 0004 1A68     		ldr	r2, [r3]
+  58 0006 C023     		movs	r3, #192
+  59 0008 9B04     		lsls	r3, r3, #18
+  60 000a 1A42     		tst	r2, r3
+  61 000c 03D0     		beq	.L3
+  59:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         IDAC_7bit_IDAC_MODE_POSITION)))
+  60:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         {
+  61:Generated_Source\PSoC4/IDAC_7bit_PM.c ****             IDAC_7bit_backup.enableState = 1u;
+  62              		.loc 1 61 0
+  63 000e 0122     		movs	r2, #1
+  64 0010 054B     		ldr	r3, .L5+4
+  65 0012 1A70     		strb	r2, [r3]
+  66 0014 02E0     		b	.L4
+  67              	.L3:
+  62:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         }
+  63:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         else
+  64:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         {
+  65:Generated_Source\PSoC4/IDAC_7bit_PM.c ****             IDAC_7bit_backup.enableState = 0u;
+  68              		.loc 1 65 0
+  69 0016 0022     		movs	r2, #0
+  70 0018 034B     		ldr	r3, .L5+4
+  71 001a 1A70     		strb	r2, [r3]
+  72              	.L4:
+  66:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         }
+  67:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  68:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     IDAC_7bit_Stop();
+  73              		.loc 1 68 0
+  74 001c FFF7FEFF 		bl	IDAC_7bit_Stop
+  75              	.LVL0:
+  69:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     IDAC_7bit_SaveConfig();
+  70:Generated_Source\PSoC4/IDAC_7bit_PM.c **** }
+  76              		.loc 1 70 0
+  77              		@ sp needed
+  78 0020 10BD     		pop	{r4, pc}
+  79              	.L6:
+  80 0022 C046     		.align	2
+  81              	.L5:
+  82 0024 08002940 		.word	1076428808
+  83 0028 00000000 		.word	.LANCHOR0
+  84              		.cfi_endproc
+  85              	.LFE2:
+  86              		.size	IDAC_7bit_Sleep, .-IDAC_7bit_Sleep
+  87              		.section	.text.IDAC_7bit_RestoreConfig,"ax",%progbits
+  88              		.align	2
+  89              		.global	IDAC_7bit_RestoreConfig
+  90              		.code	16
+  91              		.thumb_func
+  92              		.type	IDAC_7bit_RestoreConfig, %function
+  93              	IDAC_7bit_RestoreConfig:
+  94              	.LFB3:
+  71:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  72:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  73:Generated_Source\PSoC4/IDAC_7bit_PM.c **** /*******************************************************************************
+  74:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Function Name: IDAC_7bit_RestoreConfig
+  75:Generated_Source\PSoC4/IDAC_7bit_PM.c **** ********************************************************************************
+  76:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  77:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Summary:
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 4
+
+
+  78:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  Restores component state after wakeup
+  79:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Parameters:
+  80:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  81:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  82:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Return:
+  83:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  84:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  85:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Global Variables:
+  86:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+  87:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  88:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *******************************************************************************/
+  89:Generated_Source\PSoC4/IDAC_7bit_PM.c **** void IDAC_7bit_RestoreConfig(void)
+  90:Generated_Source\PSoC4/IDAC_7bit_PM.c **** {
+  95              		.loc 1 90 0
+  96              		.cfi_startproc
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+  91:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     /* All registers are retention - nothing to save */
+  92:Generated_Source\PSoC4/IDAC_7bit_PM.c **** }
+ 100              		.loc 1 92 0
+ 101              		@ sp needed
+ 102 0000 7047     		bx	lr
+ 103              		.cfi_endproc
+ 104              	.LFE3:
+ 105              		.size	IDAC_7bit_RestoreConfig, .-IDAC_7bit_RestoreConfig
+ 106 0002 C046     		.section	.text.IDAC_7bit_Wakeup,"ax",%progbits
+ 107              		.align	2
+ 108              		.global	IDAC_7bit_Wakeup
+ 109              		.code	16
+ 110              		.thumb_func
+ 111              		.type	IDAC_7bit_Wakeup, %function
+ 112              	IDAC_7bit_Wakeup:
+ 113              	.LFB4:
+  93:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  94:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+  95:Generated_Source\PSoC4/IDAC_7bit_PM.c **** /*******************************************************************************
+  96:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Function Name: IDAC_7bit_Wakeup
+  97:Generated_Source\PSoC4/IDAC_7bit_PM.c **** ********************************************************************************
+  98:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+  99:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Summary:
+ 100:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  Calls _RestoreConfig() function
+ 101:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Parameters:
+ 102:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+ 103:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+ 104:Generated_Source\PSoC4/IDAC_7bit_PM.c **** * Return:
+ 105:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *  None
+ 106:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *
+ 107:Generated_Source\PSoC4/IDAC_7bit_PM.c **** *******************************************************************************/
+ 108:Generated_Source\PSoC4/IDAC_7bit_PM.c **** void IDAC_7bit_Wakeup(void)
+ 109:Generated_Source\PSoC4/IDAC_7bit_PM.c **** {
+ 114              		.loc 1 109 0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 0
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118 0000 10B5     		push	{r4, lr}
+ 119              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 5
+
+
+ 120              		.cfi_offset 4, -8
+ 121              		.cfi_offset 14, -4
+ 110:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     /* Restore IDAC register settings */
+ 111:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     IDAC_7bit_RestoreConfig();
+ 112:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     if(IDAC_7bit_backup.enableState == 1u)
+ 122              		.loc 1 112 0
+ 123 0002 034B     		ldr	r3, .L10
+ 124 0004 1B78     		ldrb	r3, [r3]
+ 125 0006 012B     		cmp	r3, #1
+ 126 0008 01D1     		bne	.L8
+ 113:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     {
+ 114:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         /* Enable operation */
+ 115:Generated_Source\PSoC4/IDAC_7bit_PM.c ****         IDAC_7bit_Enable();
+ 127              		.loc 1 115 0
+ 128 000a FFF7FEFF 		bl	IDAC_7bit_Enable
+ 129              	.LVL1:
+ 130              	.L8:
+ 116:Generated_Source\PSoC4/IDAC_7bit_PM.c ****     } /* Do nothing if the component was disabled before */
+ 117:Generated_Source\PSoC4/IDAC_7bit_PM.c **** 
+ 118:Generated_Source\PSoC4/IDAC_7bit_PM.c **** }
+ 131              		.loc 1 118 0
+ 132              		@ sp needed
+ 133 000e 10BD     		pop	{r4, pc}
+ 134              	.L11:
+ 135              		.align	2
+ 136              	.L10:
+ 137 0010 00000000 		.word	.LANCHOR0
+ 138              		.cfi_endproc
+ 139              	.LFE4:
+ 140              		.size	IDAC_7bit_Wakeup, .-IDAC_7bit_Wakeup
+ 141              		.bss
+ 142              		.align	2
+ 143              		.set	.LANCHOR0,. + 0
+ 144              		.type	IDAC_7bit_backup, %object
+ 145              		.size	IDAC_7bit_backup, 1
+ 146              	IDAC_7bit_backup:
+ 147 0000 00       		.space	1
+ 148              		.text
+ 149              	.Letext0:
+ 150              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 151              		.file 3 "Generated_Source\\PSoC4\\IDAC_7bit.h"
+ 152              		.section	.debug_info,"",%progbits
+ 153              	.Ldebug_info0:
+ 154 0000 5B010000 		.4byte	0x15b
+ 155 0004 0400     		.2byte	0x4
+ 156 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 157 000a 04       		.byte	0x4
+ 158 000b 01       		.uleb128 0x1
+ 159 000c 57010000 		.4byte	.LASF24
+ 160 0010 0C       		.byte	0xc
+ 161 0011 06020000 		.4byte	.LASF25
+ 162 0015 0A010000 		.4byte	.LASF26
+ 163 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 164 001d 00000000 		.4byte	0
+ 165 0021 00000000 		.4byte	.Ldebug_line0
+ 166 0025 02       		.uleb128 0x2
+ 167 0026 01       		.byte	0x1
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 6
+
+
+ 168 0027 06       		.byte	0x6
+ 169 0028 FA010000 		.4byte	.LASF0
+ 170 002c 02       		.uleb128 0x2
+ 171 002d 01       		.byte	0x1
+ 172 002e 08       		.byte	0x8
+ 173 002f AF000000 		.4byte	.LASF1
+ 174 0033 02       		.uleb128 0x2
+ 175 0034 02       		.byte	0x2
+ 176 0035 05       		.byte	0x5
+ 177 0036 49020000 		.4byte	.LASF2
+ 178 003a 02       		.uleb128 0x2
+ 179 003b 02       		.byte	0x2
+ 180 003c 07       		.byte	0x7
+ 181 003d 96000000 		.4byte	.LASF3
+ 182 0041 02       		.uleb128 0x2
+ 183 0042 04       		.byte	0x4
+ 184 0043 05       		.byte	0x5
+ 185 0044 D3000000 		.4byte	.LASF4
+ 186 0048 02       		.uleb128 0x2
+ 187 0049 04       		.byte	0x4
+ 188 004a 07       		.byte	0x7
+ 189 004b 6D000000 		.4byte	.LASF5
+ 190 004f 02       		.uleb128 0x2
+ 191 0050 08       		.byte	0x8
+ 192 0051 05       		.byte	0x5
+ 193 0052 00000000 		.4byte	.LASF6
+ 194 0056 02       		.uleb128 0x2
+ 195 0057 08       		.byte	0x8
+ 196 0058 07       		.byte	0x7
+ 197 0059 7F000000 		.4byte	.LASF7
+ 198 005d 03       		.uleb128 0x3
+ 199 005e 04       		.byte	0x4
+ 200 005f 05       		.byte	0x5
+ 201 0060 696E7400 		.ascii	"int\000"
+ 202 0064 02       		.uleb128 0x2
+ 203 0065 04       		.byte	0x4
+ 204 0066 07       		.byte	0x7
+ 205 0067 21000000 		.4byte	.LASF8
+ 206 006b 04       		.uleb128 0x4
+ 207 006c 67000000 		.4byte	.LASF9
+ 208 0070 02       		.byte	0x2
+ 209 0071 FB01     		.2byte	0x1fb
+ 210 0073 2C000000 		.4byte	0x2c
+ 211 0077 04       		.uleb128 0x4
+ 212 0078 0E000000 		.4byte	.LASF10
+ 213 007c 02       		.byte	0x2
+ 214 007d FD01     		.2byte	0x1fd
+ 215 007f 48000000 		.4byte	0x48
+ 216 0083 02       		.uleb128 0x2
+ 217 0084 04       		.byte	0x4
+ 218 0085 04       		.byte	0x4
+ 219 0086 A9000000 		.4byte	.LASF11
+ 220 008a 02       		.uleb128 0x2
+ 221 008b 08       		.byte	0x8
+ 222 008c 04       		.byte	0x4
+ 223 008d 03010000 		.4byte	.LASF12
+ 224 0091 02       		.uleb128 0x2
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 7
+
+
+ 225 0092 01       		.byte	0x1
+ 226 0093 08       		.byte	0x8
+ 227 0094 CE000000 		.4byte	.LASF13
+ 228 0098 04       		.uleb128 0x4
+ 229 0099 51010000 		.4byte	.LASF14
+ 230 009d 02       		.byte	0x2
+ 231 009e A702     		.2byte	0x2a7
+ 232 00a0 A4000000 		.4byte	0xa4
+ 233 00a4 05       		.uleb128 0x5
+ 234 00a5 77000000 		.4byte	0x77
+ 235 00a9 02       		.uleb128 0x2
+ 236 00aa 08       		.byte	0x8
+ 237 00ab 04       		.byte	0x4
+ 238 00ac 3D020000 		.4byte	.LASF15
+ 239 00b0 02       		.uleb128 0x2
+ 240 00b1 04       		.byte	0x4
+ 241 00b2 07       		.byte	0x7
+ 242 00b3 53020000 		.4byte	.LASF16
+ 243 00b7 06       		.uleb128 0x6
+ 244 00b8 01       		.byte	0x1
+ 245 00b9 03       		.byte	0x3
+ 246 00ba 1D       		.byte	0x1d
+ 247 00bb CC000000 		.4byte	0xcc
+ 248 00bf 07       		.uleb128 0x7
+ 249 00c0 15000000 		.4byte	.LASF27
+ 250 00c4 03       		.byte	0x3
+ 251 00c5 1F       		.byte	0x1f
+ 252 00c6 6B000000 		.4byte	0x6b
+ 253 00ca 00       		.byte	0
+ 254 00cb 00       		.byte	0
+ 255 00cc 08       		.uleb128 0x8
+ 256 00cd EB000000 		.4byte	.LASF17
+ 257 00d1 03       		.byte	0x3
+ 258 00d2 20       		.byte	0x20
+ 259 00d3 B7000000 		.4byte	0xb7
+ 260 00d7 09       		.uleb128 0x9
+ 261 00d8 E5010000 		.4byte	.LASF18
+ 262 00dc 01       		.byte	0x1
+ 263 00dd 25       		.byte	0x25
+ 264 00de 00000000 		.4byte	.LFB1
+ 265 00e2 02000000 		.4byte	.LFE1-.LFB1
+ 266 00e6 01       		.uleb128 0x1
+ 267 00e7 9C       		.byte	0x9c
+ 268 00e8 0A       		.uleb128 0xa
+ 269 00e9 2E000000 		.4byte	.LASF20
+ 270 00ed 01       		.byte	0x1
+ 271 00ee 38       		.byte	0x38
+ 272 00ef 00000000 		.4byte	.LFB2
+ 273 00f3 2C000000 		.4byte	.LFE2-.LFB2
+ 274 00f7 01       		.uleb128 0x1
+ 275 00f8 9C       		.byte	0x9c
+ 276 00f9 07010000 		.4byte	0x107
+ 277 00fd 0B       		.uleb128 0xb
+ 278 00fe 20000000 		.4byte	.LVL0
+ 279 0102 48010000 		.4byte	0x148
+ 280 0106 00       		.byte	0
+ 281 0107 09       		.uleb128 0x9
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 8
+
+
+ 282 0108 4F000000 		.4byte	.LASF19
+ 283 010c 01       		.byte	0x1
+ 284 010d 59       		.byte	0x59
+ 285 010e 00000000 		.4byte	.LFB3
+ 286 0112 02000000 		.4byte	.LFE3-.LFB3
+ 287 0116 01       		.uleb128 0x1
+ 288 0117 9C       		.byte	0x9c
+ 289 0118 0A       		.uleb128 0xa
+ 290 0119 BD000000 		.4byte	.LASF21
+ 291 011d 01       		.byte	0x1
+ 292 011e 6C       		.byte	0x6c
+ 293 011f 00000000 		.4byte	.LFB4
+ 294 0123 14000000 		.4byte	.LFE4-.LFB4
+ 295 0127 01       		.uleb128 0x1
+ 296 0128 9C       		.byte	0x9c
+ 297 0129 37010000 		.4byte	0x137
+ 298 012d 0B       		.uleb128 0xb
+ 299 012e 0E000000 		.4byte	.LVL1
+ 300 0132 53010000 		.4byte	0x153
+ 301 0136 00       		.byte	0
+ 302 0137 0C       		.uleb128 0xc
+ 303 0138 2C020000 		.4byte	.LASF28
+ 304 013c 01       		.byte	0x1
+ 305 013d 12       		.byte	0x12
+ 306 013e CC000000 		.4byte	0xcc
+ 307 0142 05       		.uleb128 0x5
+ 308 0143 03       		.byte	0x3
+ 309 0144 00000000 		.4byte	IDAC_7bit_backup
+ 310 0148 0D       		.uleb128 0xd
+ 311 0149 DC000000 		.4byte	.LASF22
+ 312 014d DC000000 		.4byte	.LASF22
+ 313 0151 03       		.byte	0x3
+ 314 0152 53       		.byte	0x53
+ 315 0153 0D       		.uleb128 0xd
+ 316 0154 3E000000 		.4byte	.LASF23
+ 317 0158 3E000000 		.4byte	.LASF23
+ 318 015c 03       		.byte	0x3
+ 319 015d 51       		.byte	0x51
+ 320 015e 00       		.byte	0
+ 321              		.section	.debug_abbrev,"",%progbits
+ 322              	.Ldebug_abbrev0:
+ 323 0000 01       		.uleb128 0x1
+ 324 0001 11       		.uleb128 0x11
+ 325 0002 01       		.byte	0x1
+ 326 0003 25       		.uleb128 0x25
+ 327 0004 0E       		.uleb128 0xe
+ 328 0005 13       		.uleb128 0x13
+ 329 0006 0B       		.uleb128 0xb
+ 330 0007 03       		.uleb128 0x3
+ 331 0008 0E       		.uleb128 0xe
+ 332 0009 1B       		.uleb128 0x1b
+ 333 000a 0E       		.uleb128 0xe
+ 334 000b 55       		.uleb128 0x55
+ 335 000c 17       		.uleb128 0x17
+ 336 000d 11       		.uleb128 0x11
+ 337 000e 01       		.uleb128 0x1
+ 338 000f 10       		.uleb128 0x10
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 9
+
+
+ 339 0010 17       		.uleb128 0x17
+ 340 0011 00       		.byte	0
+ 341 0012 00       		.byte	0
+ 342 0013 02       		.uleb128 0x2
+ 343 0014 24       		.uleb128 0x24
+ 344 0015 00       		.byte	0
+ 345 0016 0B       		.uleb128 0xb
+ 346 0017 0B       		.uleb128 0xb
+ 347 0018 3E       		.uleb128 0x3e
+ 348 0019 0B       		.uleb128 0xb
+ 349 001a 03       		.uleb128 0x3
+ 350 001b 0E       		.uleb128 0xe
+ 351 001c 00       		.byte	0
+ 352 001d 00       		.byte	0
+ 353 001e 03       		.uleb128 0x3
+ 354 001f 24       		.uleb128 0x24
+ 355 0020 00       		.byte	0
+ 356 0021 0B       		.uleb128 0xb
+ 357 0022 0B       		.uleb128 0xb
+ 358 0023 3E       		.uleb128 0x3e
+ 359 0024 0B       		.uleb128 0xb
+ 360 0025 03       		.uleb128 0x3
+ 361 0026 08       		.uleb128 0x8
+ 362 0027 00       		.byte	0
+ 363 0028 00       		.byte	0
+ 364 0029 04       		.uleb128 0x4
+ 365 002a 16       		.uleb128 0x16
+ 366 002b 00       		.byte	0
+ 367 002c 03       		.uleb128 0x3
+ 368 002d 0E       		.uleb128 0xe
+ 369 002e 3A       		.uleb128 0x3a
+ 370 002f 0B       		.uleb128 0xb
+ 371 0030 3B       		.uleb128 0x3b
+ 372 0031 05       		.uleb128 0x5
+ 373 0032 49       		.uleb128 0x49
+ 374 0033 13       		.uleb128 0x13
+ 375 0034 00       		.byte	0
+ 376 0035 00       		.byte	0
+ 377 0036 05       		.uleb128 0x5
+ 378 0037 35       		.uleb128 0x35
+ 379 0038 00       		.byte	0
+ 380 0039 49       		.uleb128 0x49
+ 381 003a 13       		.uleb128 0x13
+ 382 003b 00       		.byte	0
+ 383 003c 00       		.byte	0
+ 384 003d 06       		.uleb128 0x6
+ 385 003e 13       		.uleb128 0x13
+ 386 003f 01       		.byte	0x1
+ 387 0040 0B       		.uleb128 0xb
+ 388 0041 0B       		.uleb128 0xb
+ 389 0042 3A       		.uleb128 0x3a
+ 390 0043 0B       		.uleb128 0xb
+ 391 0044 3B       		.uleb128 0x3b
+ 392 0045 0B       		.uleb128 0xb
+ 393 0046 01       		.uleb128 0x1
+ 394 0047 13       		.uleb128 0x13
+ 395 0048 00       		.byte	0
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 10
+
+
+ 396 0049 00       		.byte	0
+ 397 004a 07       		.uleb128 0x7
+ 398 004b 0D       		.uleb128 0xd
+ 399 004c 00       		.byte	0
+ 400 004d 03       		.uleb128 0x3
+ 401 004e 0E       		.uleb128 0xe
+ 402 004f 3A       		.uleb128 0x3a
+ 403 0050 0B       		.uleb128 0xb
+ 404 0051 3B       		.uleb128 0x3b
+ 405 0052 0B       		.uleb128 0xb
+ 406 0053 49       		.uleb128 0x49
+ 407 0054 13       		.uleb128 0x13
+ 408 0055 38       		.uleb128 0x38
+ 409 0056 0B       		.uleb128 0xb
+ 410 0057 00       		.byte	0
+ 411 0058 00       		.byte	0
+ 412 0059 08       		.uleb128 0x8
+ 413 005a 16       		.uleb128 0x16
+ 414 005b 00       		.byte	0
+ 415 005c 03       		.uleb128 0x3
+ 416 005d 0E       		.uleb128 0xe
+ 417 005e 3A       		.uleb128 0x3a
+ 418 005f 0B       		.uleb128 0xb
+ 419 0060 3B       		.uleb128 0x3b
+ 420 0061 0B       		.uleb128 0xb
+ 421 0062 49       		.uleb128 0x49
+ 422 0063 13       		.uleb128 0x13
+ 423 0064 00       		.byte	0
+ 424 0065 00       		.byte	0
+ 425 0066 09       		.uleb128 0x9
+ 426 0067 2E       		.uleb128 0x2e
+ 427 0068 00       		.byte	0
+ 428 0069 3F       		.uleb128 0x3f
+ 429 006a 19       		.uleb128 0x19
+ 430 006b 03       		.uleb128 0x3
+ 431 006c 0E       		.uleb128 0xe
+ 432 006d 3A       		.uleb128 0x3a
+ 433 006e 0B       		.uleb128 0xb
+ 434 006f 3B       		.uleb128 0x3b
+ 435 0070 0B       		.uleb128 0xb
+ 436 0071 27       		.uleb128 0x27
+ 437 0072 19       		.uleb128 0x19
+ 438 0073 11       		.uleb128 0x11
+ 439 0074 01       		.uleb128 0x1
+ 440 0075 12       		.uleb128 0x12
+ 441 0076 06       		.uleb128 0x6
+ 442 0077 40       		.uleb128 0x40
+ 443 0078 18       		.uleb128 0x18
+ 444 0079 9742     		.uleb128 0x2117
+ 445 007b 19       		.uleb128 0x19
+ 446 007c 00       		.byte	0
+ 447 007d 00       		.byte	0
+ 448 007e 0A       		.uleb128 0xa
+ 449 007f 2E       		.uleb128 0x2e
+ 450 0080 01       		.byte	0x1
+ 451 0081 3F       		.uleb128 0x3f
+ 452 0082 19       		.uleb128 0x19
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 11
+
+
+ 453 0083 03       		.uleb128 0x3
+ 454 0084 0E       		.uleb128 0xe
+ 455 0085 3A       		.uleb128 0x3a
+ 456 0086 0B       		.uleb128 0xb
+ 457 0087 3B       		.uleb128 0x3b
+ 458 0088 0B       		.uleb128 0xb
+ 459 0089 27       		.uleb128 0x27
+ 460 008a 19       		.uleb128 0x19
+ 461 008b 11       		.uleb128 0x11
+ 462 008c 01       		.uleb128 0x1
+ 463 008d 12       		.uleb128 0x12
+ 464 008e 06       		.uleb128 0x6
+ 465 008f 40       		.uleb128 0x40
+ 466 0090 18       		.uleb128 0x18
+ 467 0091 9742     		.uleb128 0x2117
+ 468 0093 19       		.uleb128 0x19
+ 469 0094 01       		.uleb128 0x1
+ 470 0095 13       		.uleb128 0x13
+ 471 0096 00       		.byte	0
+ 472 0097 00       		.byte	0
+ 473 0098 0B       		.uleb128 0xb
+ 474 0099 898201   		.uleb128 0x4109
+ 475 009c 00       		.byte	0
+ 476 009d 11       		.uleb128 0x11
+ 477 009e 01       		.uleb128 0x1
+ 478 009f 31       		.uleb128 0x31
+ 479 00a0 13       		.uleb128 0x13
+ 480 00a1 00       		.byte	0
+ 481 00a2 00       		.byte	0
+ 482 00a3 0C       		.uleb128 0xc
+ 483 00a4 34       		.uleb128 0x34
+ 484 00a5 00       		.byte	0
+ 485 00a6 03       		.uleb128 0x3
+ 486 00a7 0E       		.uleb128 0xe
+ 487 00a8 3A       		.uleb128 0x3a
+ 488 00a9 0B       		.uleb128 0xb
+ 489 00aa 3B       		.uleb128 0x3b
+ 490 00ab 0B       		.uleb128 0xb
+ 491 00ac 49       		.uleb128 0x49
+ 492 00ad 13       		.uleb128 0x13
+ 493 00ae 02       		.uleb128 0x2
+ 494 00af 18       		.uleb128 0x18
+ 495 00b0 00       		.byte	0
+ 496 00b1 00       		.byte	0
+ 497 00b2 0D       		.uleb128 0xd
+ 498 00b3 2E       		.uleb128 0x2e
+ 499 00b4 00       		.byte	0
+ 500 00b5 3F       		.uleb128 0x3f
+ 501 00b6 19       		.uleb128 0x19
+ 502 00b7 3C       		.uleb128 0x3c
+ 503 00b8 19       		.uleb128 0x19
+ 504 00b9 6E       		.uleb128 0x6e
+ 505 00ba 0E       		.uleb128 0xe
+ 506 00bb 03       		.uleb128 0x3
+ 507 00bc 0E       		.uleb128 0xe
+ 508 00bd 3A       		.uleb128 0x3a
+ 509 00be 0B       		.uleb128 0xb
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 12
+
+
+ 510 00bf 3B       		.uleb128 0x3b
+ 511 00c0 0B       		.uleb128 0xb
+ 512 00c1 00       		.byte	0
+ 513 00c2 00       		.byte	0
+ 514 00c3 00       		.byte	0
+ 515              		.section	.debug_aranges,"",%progbits
+ 516 0000 34000000 		.4byte	0x34
+ 517 0004 0200     		.2byte	0x2
+ 518 0006 00000000 		.4byte	.Ldebug_info0
+ 519 000a 04       		.byte	0x4
+ 520 000b 00       		.byte	0
+ 521 000c 0000     		.2byte	0
+ 522 000e 0000     		.2byte	0
+ 523 0010 00000000 		.4byte	.LFB1
+ 524 0014 02000000 		.4byte	.LFE1-.LFB1
+ 525 0018 00000000 		.4byte	.LFB2
+ 526 001c 2C000000 		.4byte	.LFE2-.LFB2
+ 527 0020 00000000 		.4byte	.LFB3
+ 528 0024 02000000 		.4byte	.LFE3-.LFB3
+ 529 0028 00000000 		.4byte	.LFB4
+ 530 002c 14000000 		.4byte	.LFE4-.LFB4
+ 531 0030 00000000 		.4byte	0
+ 532 0034 00000000 		.4byte	0
+ 533              		.section	.debug_ranges,"",%progbits
+ 534              	.Ldebug_ranges0:
+ 535 0000 00000000 		.4byte	.LFB1
+ 536 0004 02000000 		.4byte	.LFE1
+ 537 0008 00000000 		.4byte	.LFB2
+ 538 000c 2C000000 		.4byte	.LFE2
+ 539 0010 00000000 		.4byte	.LFB3
+ 540 0014 02000000 		.4byte	.LFE3
+ 541 0018 00000000 		.4byte	.LFB4
+ 542 001c 14000000 		.4byte	.LFE4
+ 543 0020 00000000 		.4byte	0
+ 544 0024 00000000 		.4byte	0
+ 545              		.section	.debug_line,"",%progbits
+ 546              	.Ldebug_line0:
+ 547 0000 A6000000 		.section	.debug_str,"MS",%progbits,1
+ 547      02005800 
+ 547      00000201 
+ 547      FB0E0D00 
+ 547      01010101 
+ 548              	.LASF6:
+ 549 0000 6C6F6E67 		.ascii	"long long int\000"
+ 549      206C6F6E 
+ 549      6720696E 
+ 549      7400
+ 550              	.LASF10:
+ 551 000e 75696E74 		.ascii	"uint32\000"
+ 551      333200
+ 552              	.LASF27:
+ 553 0015 656E6162 		.ascii	"enableState\000"
+ 553      6C655374 
+ 553      61746500 
+ 554              	.LASF8:
+ 555 0021 756E7369 		.ascii	"unsigned int\000"
+ 555      676E6564 
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 13
+
+
+ 555      20696E74 
+ 555      00
+ 556              	.LASF20:
+ 557 002e 49444143 		.ascii	"IDAC_7bit_Sleep\000"
+ 557      5F376269 
+ 557      745F536C 
+ 557      65657000 
+ 558              	.LASF23:
+ 559 003e 49444143 		.ascii	"IDAC_7bit_Enable\000"
+ 559      5F376269 
+ 559      745F456E 
+ 559      61626C65 
+ 559      00
+ 560              	.LASF19:
+ 561 004f 49444143 		.ascii	"IDAC_7bit_RestoreConfig\000"
+ 561      5F376269 
+ 561      745F5265 
+ 561      73746F72 
+ 561      65436F6E 
+ 562              	.LASF9:
+ 563 0067 75696E74 		.ascii	"uint8\000"
+ 563      3800
+ 564              	.LASF5:
+ 565 006d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 565      20756E73 
+ 565      69676E65 
+ 565      6420696E 
+ 565      7400
+ 566              	.LASF7:
+ 567 007f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 567      206C6F6E 
+ 567      6720756E 
+ 567      7369676E 
+ 567      65642069 
+ 568              	.LASF3:
+ 569 0096 73686F72 		.ascii	"short unsigned int\000"
+ 569      7420756E 
+ 569      7369676E 
+ 569      65642069 
+ 569      6E7400
+ 570              	.LASF11:
+ 571 00a9 666C6F61 		.ascii	"float\000"
+ 571      7400
+ 572              	.LASF1:
+ 573 00af 756E7369 		.ascii	"unsigned char\000"
+ 573      676E6564 
+ 573      20636861 
+ 573      7200
+ 574              	.LASF21:
+ 575 00bd 49444143 		.ascii	"IDAC_7bit_Wakeup\000"
+ 575      5F376269 
+ 575      745F5761 
+ 575      6B657570 
+ 575      00
+ 576              	.LASF13:
+ 577 00ce 63686172 		.ascii	"char\000"
+ 577      00
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 14
+
+
+ 578              	.LASF4:
+ 579 00d3 6C6F6E67 		.ascii	"long int\000"
+ 579      20696E74 
+ 579      00
+ 580              	.LASF22:
+ 581 00dc 49444143 		.ascii	"IDAC_7bit_Stop\000"
+ 581      5F376269 
+ 581      745F5374 
+ 581      6F7000
+ 582              	.LASF17:
+ 583 00eb 49444143 		.ascii	"IDAC_7bit_BACKUP_STRUCT\000"
+ 583      5F376269 
+ 583      745F4241 
+ 583      434B5550 
+ 583      5F535452 
+ 584              	.LASF12:
+ 585 0103 646F7562 		.ascii	"double\000"
+ 585      6C6500
+ 586              	.LASF26:
+ 587 010a 433A5C55 		.ascii	"C:\\Users\\shahnaz\\Documents\\GitHub\\Science_Sens"
+ 587      73657273 
+ 587      5C736861 
+ 587      686E617A 
+ 587      5C446F63 
+ 588 0138 6F725F42 		.ascii	"or_Board\\Final\\CAN.cydsn\000"
+ 588      6F617264 
+ 588      5C46696E 
+ 588      616C5C43 
+ 588      414E2E63 
+ 589              	.LASF14:
+ 590 0151 72656733 		.ascii	"reg32\000"
+ 590      3200
+ 591              	.LASF24:
+ 592 0157 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 592      43313120 
+ 592      352E342E 
+ 592      31203230 
+ 592      31363036 
+ 593 018a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 593      20726576 
+ 593      6973696F 
+ 593      6E203233 
+ 593      37373135 
+ 594 01bd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 594      66756E63 
+ 594      74696F6E 
+ 594      2D736563 
+ 594      74696F6E 
+ 595              	.LASF18:
+ 596 01e5 49444143 		.ascii	"IDAC_7bit_SaveConfig\000"
+ 596      5F376269 
+ 596      745F5361 
+ 596      7665436F 
+ 596      6E666967 
+ 597              	.LASF0:
+ 598 01fa 7369676E 		.ascii	"signed char\000"
+ 598      65642063 
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccbsrLpv.s 			page 15
+
+
+ 598      68617200 
+ 599              	.LASF25:
+ 600 0206 47656E65 		.ascii	"Generated_Source\\PSoC4\\IDAC_7bit_PM.c\000"
+ 600      72617465 
+ 600      645F536F 
+ 600      75726365 
+ 600      5C50536F 
+ 601              	.LASF28:
+ 602 022c 49444143 		.ascii	"IDAC_7bit_backup\000"
+ 602      5F376269 
+ 602      745F6261 
+ 602      636B7570 
+ 602      00
+ 603              	.LASF15:
+ 604 023d 6C6F6E67 		.ascii	"long double\000"
+ 604      20646F75 
+ 604      626C6500 
+ 605              	.LASF2:
+ 606 0249 73686F72 		.ascii	"short int\000"
+ 606      7420696E 
+ 606      7400
+ 607              	.LASF16:
+ 608 0253 73697A65 		.ascii	"sizetype\000"
+ 608      74797065 
+ 608      00
+ 609              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

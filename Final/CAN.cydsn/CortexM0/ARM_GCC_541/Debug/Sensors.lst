@@ -1,0 +1,794 @@
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Sensors.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_f2iz
+  20              		.section	.text.getTemp,"ax",%progbits
+  21              		.align	2
+  22              		.global	getTemp
+  23              		.code	16
+  24              		.thumb_func
+  25              		.type	getTemp, %function
+  26              	getTemp:
+  27              	.LFB35:
+  28              		.file 1 "Sensors.c"
+   1:Sensors.c     **** #include <stdio.h>
+   2:Sensors.c     **** #include <stdbool.h>
+   3:Sensors.c     **** #include <math.h>
+   4:Sensors.c     **** #include <TempHum_Lib.h>
+   5:Sensors.c     **** #include <project.h>
+   6:Sensors.c     **** #include <HumTemp_I2C.h>
+   7:Sensors.c     **** 
+   8:Sensors.c     **** int32_t getTemp(){
+  29              		.loc 1 8 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 00B5     		push	{lr}
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 14, -4
+  36 0002 83B0     		sub	sp, sp, #12
+  37              		.cfi_def_cfa_offset 16
+   9:Sensors.c     ****     float temp, hum;
+  10:Sensors.c     ****     bool status;
+  11:Sensors.c     ****     status = SHT31_IsHeaterEnabled();
+  38              		.loc 1 11 0
+  39 0004 FFF7FEFF 		bl	SHT31_IsHeaterEnabled
+  40              	.LVL0:
+  12:Sensors.c     ****     if(!status){
+  41              		.loc 1 12 0
+  42 0008 0028     		cmp	r0, #0
+  43 000a 09D0     		beq	.L3
+  13:Sensors.c     ****         return -1;
+  14:Sensors.c     ****     }
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 2
+
+
+  15:Sensors.c     ****     status = SHT31_ReadTempHum(&temp, &hum);
+  44              		.loc 1 15 0
+  45 000c 6946     		mov	r1, sp
+  46 000e 01A8     		add	r0, sp, #4
+  47              	.LVL1:
+  48 0010 FFF7FEFF 		bl	SHT31_ReadTempHum
+  49              	.LVL2:
+  16:Sensors.c     ****     if(!status){
+  50              		.loc 1 16 0
+  51 0014 0028     		cmp	r0, #0
+  52 0016 06D0     		beq	.L4
+  17:Sensors.c     ****         return -1;
+  18:Sensors.c     ****     }
+  19:Sensors.c     ****     return (int32_t) temp;
+  53              		.loc 1 19 0
+  54 0018 0198     		ldr	r0, [sp, #4]
+  55              	.LVL3:
+  56 001a FFF7FEFF 		bl	__aeabi_f2iz
+  57              	.LVL4:
+  58 001e 04E0     		b	.L2
+  59              	.LVL5:
+  60              	.L3:
+  13:Sensors.c     ****     }
+  61              		.loc 1 13 0
+  62 0020 0120     		movs	r0, #1
+  63              	.LVL6:
+  64 0022 4042     		rsbs	r0, r0, #0
+  65 0024 01E0     		b	.L2
+  66              	.LVL7:
+  67              	.L4:
+  17:Sensors.c     ****         return -1;
+  68              		.loc 1 17 0
+  69 0026 0120     		movs	r0, #1
+  70              	.LVL8:
+  71 0028 4042     		rsbs	r0, r0, #0
+  72              	.L2:
+  20:Sensors.c     **** }
+  73              		.loc 1 20 0
+  74 002a 03B0     		add	sp, sp, #12
+  75              		@ sp needed
+  76 002c 00BD     		pop	{pc}
+  77              		.cfi_endproc
+  78              	.LFE35:
+  79              		.size	getTemp, .-getTemp
+  80 002e C046     		.section	.text.getHum,"ax",%progbits
+  81              		.align	2
+  82              		.global	getHum
+  83              		.code	16
+  84              		.thumb_func
+  85              		.type	getHum, %function
+  86              	getHum:
+  87              	.LFB36:
+  21:Sensors.c     **** 
+  22:Sensors.c     **** int32_t getHum(){
+  88              		.loc 1 22 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 3
+
+
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92 0000 00B5     		push	{lr}
+  93              		.cfi_def_cfa_offset 4
+  94              		.cfi_offset 14, -4
+  95 0002 83B0     		sub	sp, sp, #12
+  96              		.cfi_def_cfa_offset 16
+  23:Sensors.c     ****     float temp, hum;
+  24:Sensors.c     ****     bool status;
+  25:Sensors.c     ****     status = SHT31_IsHeaterEnabled();
+  97              		.loc 1 25 0
+  98 0004 FFF7FEFF 		bl	SHT31_IsHeaterEnabled
+  99              	.LVL9:
+  26:Sensors.c     ****     if(!status){
+ 100              		.loc 1 26 0
+ 101 0008 0028     		cmp	r0, #0
+ 102 000a 09D0     		beq	.L7
+  27:Sensors.c     ****         return -1;
+  28:Sensors.c     ****     }
+  29:Sensors.c     ****     status = SHT31_ReadTempHum(&temp, &hum);
+ 103              		.loc 1 29 0
+ 104 000c 6946     		mov	r1, sp
+ 105 000e 01A8     		add	r0, sp, #4
+ 106              	.LVL10:
+ 107 0010 FFF7FEFF 		bl	SHT31_ReadTempHum
+ 108              	.LVL11:
+  30:Sensors.c     ****     if(!status){
+ 109              		.loc 1 30 0
+ 110 0014 0028     		cmp	r0, #0
+ 111 0016 06D0     		beq	.L8
+  31:Sensors.c     ****         return -1;
+  32:Sensors.c     ****     }
+  33:Sensors.c     ****     return (int32_t) temp;
+ 112              		.loc 1 33 0
+ 113 0018 0198     		ldr	r0, [sp, #4]
+ 114              	.LVL12:
+ 115 001a FFF7FEFF 		bl	__aeabi_f2iz
+ 116              	.LVL13:
+ 117 001e 04E0     		b	.L6
+ 118              	.LVL14:
+ 119              	.L7:
+  27:Sensors.c     ****     }
+ 120              		.loc 1 27 0
+ 121 0020 0120     		movs	r0, #1
+ 122              	.LVL15:
+ 123 0022 4042     		rsbs	r0, r0, #0
+ 124 0024 01E0     		b	.L6
+ 125              	.LVL16:
+ 126              	.L8:
+  31:Sensors.c     ****         return -1;
+ 127              		.loc 1 31 0
+ 128 0026 0120     		movs	r0, #1
+ 129              	.LVL17:
+ 130 0028 4042     		rsbs	r0, r0, #0
+ 131              	.L6:
+  34:Sensors.c     **** }
+ 132              		.loc 1 34 0
+ 133 002a 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 4
+
+
+ 134              		@ sp needed
+ 135 002c 00BD     		pop	{pc}
+ 136              		.cfi_endproc
+ 137              	.LFE36:
+ 138              		.size	getHum, .-getHum
+ 139 002e C046     		.text
+ 140              	.Letext0:
+ 141              		.file 2 "c:\\users\\shahnaz\\desktop\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\ar
+ 142              		.file 3 "c:\\users\\shahnaz\\desktop\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\ar
+ 143              		.file 4 "./TempHum_Lib.h"
+ 144              		.section	.debug_info,"",%progbits
+ 145              	.Ldebug_info0:
+ 146 0000 86010000 		.4byte	0x186
+ 147 0004 0400     		.2byte	0x4
+ 148 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 149 000a 04       		.byte	0x4
+ 150 000b 01       		.uleb128 0x1
+ 151 000c FA000000 		.4byte	.LASF23
+ 152 0010 0C       		.byte	0xc
+ 153 0011 3F000000 		.4byte	.LASF24
+ 154 0015 B3000000 		.4byte	.LASF25
+ 155 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 156 001d 00000000 		.4byte	0
+ 157 0021 00000000 		.4byte	.Ldebug_line0
+ 158 0025 02       		.uleb128 0x2
+ 159 0026 01       		.byte	0x1
+ 160 0027 06       		.byte	0x6
+ 161 0028 9B010000 		.4byte	.LASF0
+ 162 002c 02       		.uleb128 0x2
+ 163 002d 01       		.byte	0x1
+ 164 002e 08       		.byte	0x8
+ 165 002f 31000000 		.4byte	.LASF1
+ 166 0033 02       		.uleb128 0x2
+ 167 0034 02       		.byte	0x2
+ 168 0035 05       		.byte	0x5
+ 169 0036 CA010000 		.4byte	.LASF2
+ 170 003a 02       		.uleb128 0x2
+ 171 003b 02       		.byte	0x2
+ 172 003c 07       		.byte	0x7
+ 173 003d 88010000 		.4byte	.LASF3
+ 174 0041 03       		.uleb128 0x3
+ 175 0042 B3010000 		.4byte	.LASF12
+ 176 0046 02       		.byte	0x2
+ 177 0047 3F       		.byte	0x3f
+ 178 0048 4C000000 		.4byte	0x4c
+ 179 004c 02       		.uleb128 0x2
+ 180 004d 04       		.byte	0x4
+ 181 004e 05       		.byte	0x5
+ 182 004f 9D000000 		.4byte	.LASF4
+ 183 0053 02       		.uleb128 0x2
+ 184 0054 04       		.byte	0x4
+ 185 0055 07       		.byte	0x7
+ 186 0056 56000000 		.4byte	.LASF5
+ 187 005a 02       		.uleb128 0x2
+ 188 005b 08       		.byte	0x8
+ 189 005c 05       		.byte	0x5
+ 190 005d 00000000 		.4byte	.LASF6
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 5
+
+
+ 191 0061 02       		.uleb128 0x2
+ 192 0062 08       		.byte	0x8
+ 193 0063 07       		.byte	0x7
+ 194 0064 6F000000 		.4byte	.LASF7
+ 195 0068 04       		.uleb128 0x4
+ 196 0069 04       		.byte	0x4
+ 197 006a 05       		.byte	0x5
+ 198 006b 696E7400 		.ascii	"int\000"
+ 199 006f 02       		.uleb128 0x2
+ 200 0070 04       		.byte	0x4
+ 201 0071 07       		.byte	0x7
+ 202 0072 24000000 		.4byte	.LASF8
+ 203 0076 02       		.uleb128 0x2
+ 204 0077 08       		.byte	0x8
+ 205 0078 04       		.byte	0x4
+ 206 0079 A7010000 		.4byte	.LASF9
+ 207 007d 02       		.uleb128 0x2
+ 208 007e 04       		.byte	0x4
+ 209 007f 07       		.byte	0x7
+ 210 0080 DC010000 		.4byte	.LASF10
+ 211 0084 02       		.uleb128 0x2
+ 212 0085 01       		.byte	0x1
+ 213 0086 08       		.byte	0x8
+ 214 0087 98000000 		.4byte	.LASF11
+ 215 008b 03       		.uleb128 0x3
+ 216 008c D4010000 		.4byte	.LASF13
+ 217 0090 03       		.byte	0x3
+ 218 0091 2C       		.byte	0x2c
+ 219 0092 41000000 		.4byte	0x41
+ 220 0096 02       		.uleb128 0x2
+ 221 0097 08       		.byte	0x8
+ 222 0098 04       		.byte	0x4
+ 223 0099 A6000000 		.4byte	.LASF14
+ 224 009d 02       		.uleb128 0x2
+ 225 009e 04       		.byte	0x4
+ 226 009f 04       		.byte	0x4
+ 227 00a0 C4010000 		.4byte	.LASF15
+ 228 00a4 05       		.uleb128 0x5
+ 229 00a5 4E000000 		.4byte	.LASF19
+ 230 00a9 01       		.byte	0x1
+ 231 00aa 08       		.byte	0x8
+ 232 00ab 8B000000 		.4byte	0x8b
+ 233 00af 00000000 		.4byte	.LFB35
+ 234 00b3 2E000000 		.4byte	.LFE35-.LFB35
+ 235 00b7 01       		.uleb128 0x1
+ 236 00b8 9C       		.byte	0x9c
+ 237 00b9 08010000 		.4byte	0x108
+ 238 00bd 06       		.uleb128 0x6
+ 239 00be 49000000 		.4byte	.LASF16
+ 240 00c2 01       		.byte	0x1
+ 241 00c3 09       		.byte	0x9
+ 242 00c4 9D000000 		.4byte	0x9d
+ 243 00c8 02       		.uleb128 0x2
+ 244 00c9 91       		.byte	0x91
+ 245 00ca 74       		.sleb128 -12
+ 246 00cb 07       		.uleb128 0x7
+ 247 00cc 68756D00 		.ascii	"hum\000"
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 6
+
+
+ 248 00d0 01       		.byte	0x1
+ 249 00d1 09       		.byte	0x9
+ 250 00d2 9D000000 		.4byte	0x9d
+ 251 00d6 02       		.uleb128 0x2
+ 252 00d7 91       		.byte	0x91
+ 253 00d8 70       		.sleb128 -16
+ 254 00d9 08       		.uleb128 0x8
+ 255 00da 68000000 		.4byte	.LASF17
+ 256 00de 01       		.byte	0x1
+ 257 00df 0A       		.byte	0xa
+ 258 00e0 08010000 		.4byte	0x108
+ 259 00e4 00000000 		.4byte	.LLST0
+ 260 00e8 09       		.uleb128 0x9
+ 261 00e9 08000000 		.4byte	.LVL0
+ 262 00ed 73010000 		.4byte	0x173
+ 263 00f1 0A       		.uleb128 0xa
+ 264 00f2 14000000 		.4byte	.LVL2
+ 265 00f6 7E010000 		.4byte	0x17e
+ 266 00fa 0B       		.uleb128 0xb
+ 267 00fb 01       		.uleb128 0x1
+ 268 00fc 50       		.byte	0x50
+ 269 00fd 02       		.uleb128 0x2
+ 270 00fe 91       		.byte	0x91
+ 271 00ff 74       		.sleb128 -12
+ 272 0100 0B       		.uleb128 0xb
+ 273 0101 01       		.uleb128 0x1
+ 274 0102 51       		.byte	0x51
+ 275 0103 02       		.uleb128 0x2
+ 276 0104 7D       		.byte	0x7d
+ 277 0105 00       		.sleb128 0
+ 278 0106 00       		.byte	0
+ 279 0107 00       		.byte	0
+ 280 0108 02       		.uleb128 0x2
+ 281 0109 01       		.byte	0x1
+ 282 010a 02       		.byte	0x2
+ 283 010b AD000000 		.4byte	.LASF18
+ 284 010f 05       		.uleb128 0x5
+ 285 0110 BD010000 		.4byte	.LASF20
+ 286 0114 01       		.byte	0x1
+ 287 0115 16       		.byte	0x16
+ 288 0116 8B000000 		.4byte	0x8b
+ 289 011a 00000000 		.4byte	.LFB36
+ 290 011e 2E000000 		.4byte	.LFE36-.LFB36
+ 291 0122 01       		.uleb128 0x1
+ 292 0123 9C       		.byte	0x9c
+ 293 0124 73010000 		.4byte	0x173
+ 294 0128 06       		.uleb128 0x6
+ 295 0129 49000000 		.4byte	.LASF16
+ 296 012d 01       		.byte	0x1
+ 297 012e 17       		.byte	0x17
+ 298 012f 9D000000 		.4byte	0x9d
+ 299 0133 02       		.uleb128 0x2
+ 300 0134 91       		.byte	0x91
+ 301 0135 74       		.sleb128 -12
+ 302 0136 07       		.uleb128 0x7
+ 303 0137 68756D00 		.ascii	"hum\000"
+ 304 013b 01       		.byte	0x1
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 7
+
+
+ 305 013c 17       		.byte	0x17
+ 306 013d 9D000000 		.4byte	0x9d
+ 307 0141 02       		.uleb128 0x2
+ 308 0142 91       		.byte	0x91
+ 309 0143 70       		.sleb128 -16
+ 310 0144 08       		.uleb128 0x8
+ 311 0145 68000000 		.4byte	.LASF17
+ 312 0149 01       		.byte	0x1
+ 313 014a 18       		.byte	0x18
+ 314 014b 08010000 		.4byte	0x108
+ 315 014f 34000000 		.4byte	.LLST1
+ 316 0153 09       		.uleb128 0x9
+ 317 0154 08000000 		.4byte	.LVL9
+ 318 0158 73010000 		.4byte	0x173
+ 319 015c 0A       		.uleb128 0xa
+ 320 015d 14000000 		.4byte	.LVL11
+ 321 0161 7E010000 		.4byte	0x17e
+ 322 0165 0B       		.uleb128 0xb
+ 323 0166 01       		.uleb128 0x1
+ 324 0167 50       		.byte	0x50
+ 325 0168 02       		.uleb128 0x2
+ 326 0169 91       		.byte	0x91
+ 327 016a 74       		.sleb128 -12
+ 328 016b 0B       		.uleb128 0xb
+ 329 016c 01       		.uleb128 0x1
+ 330 016d 51       		.byte	0x51
+ 331 016e 02       		.uleb128 0x2
+ 332 016f 7D       		.byte	0x7d
+ 333 0170 00       		.sleb128 0
+ 334 0171 00       		.byte	0
+ 335 0172 00       		.byte	0
+ 336 0173 0C       		.uleb128 0xc
+ 337 0174 0E000000 		.4byte	.LASF21
+ 338 0178 0E000000 		.4byte	.LASF21
+ 339 017c 04       		.byte	0x4
+ 340 017d 28       		.byte	0x28
+ 341 017e 0C       		.uleb128 0xc
+ 342 017f 86000000 		.4byte	.LASF22
+ 343 0183 86000000 		.4byte	.LASF22
+ 344 0187 04       		.byte	0x4
+ 345 0188 2A       		.byte	0x2a
+ 346 0189 00       		.byte	0
+ 347              		.section	.debug_abbrev,"",%progbits
+ 348              	.Ldebug_abbrev0:
+ 349 0000 01       		.uleb128 0x1
+ 350 0001 11       		.uleb128 0x11
+ 351 0002 01       		.byte	0x1
+ 352 0003 25       		.uleb128 0x25
+ 353 0004 0E       		.uleb128 0xe
+ 354 0005 13       		.uleb128 0x13
+ 355 0006 0B       		.uleb128 0xb
+ 356 0007 03       		.uleb128 0x3
+ 357 0008 0E       		.uleb128 0xe
+ 358 0009 1B       		.uleb128 0x1b
+ 359 000a 0E       		.uleb128 0xe
+ 360 000b 55       		.uleb128 0x55
+ 361 000c 17       		.uleb128 0x17
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 8
+
+
+ 362 000d 11       		.uleb128 0x11
+ 363 000e 01       		.uleb128 0x1
+ 364 000f 10       		.uleb128 0x10
+ 365 0010 17       		.uleb128 0x17
+ 366 0011 00       		.byte	0
+ 367 0012 00       		.byte	0
+ 368 0013 02       		.uleb128 0x2
+ 369 0014 24       		.uleb128 0x24
+ 370 0015 00       		.byte	0
+ 371 0016 0B       		.uleb128 0xb
+ 372 0017 0B       		.uleb128 0xb
+ 373 0018 3E       		.uleb128 0x3e
+ 374 0019 0B       		.uleb128 0xb
+ 375 001a 03       		.uleb128 0x3
+ 376 001b 0E       		.uleb128 0xe
+ 377 001c 00       		.byte	0
+ 378 001d 00       		.byte	0
+ 379 001e 03       		.uleb128 0x3
+ 380 001f 16       		.uleb128 0x16
+ 381 0020 00       		.byte	0
+ 382 0021 03       		.uleb128 0x3
+ 383 0022 0E       		.uleb128 0xe
+ 384 0023 3A       		.uleb128 0x3a
+ 385 0024 0B       		.uleb128 0xb
+ 386 0025 3B       		.uleb128 0x3b
+ 387 0026 0B       		.uleb128 0xb
+ 388 0027 49       		.uleb128 0x49
+ 389 0028 13       		.uleb128 0x13
+ 390 0029 00       		.byte	0
+ 391 002a 00       		.byte	0
+ 392 002b 04       		.uleb128 0x4
+ 393 002c 24       		.uleb128 0x24
+ 394 002d 00       		.byte	0
+ 395 002e 0B       		.uleb128 0xb
+ 396 002f 0B       		.uleb128 0xb
+ 397 0030 3E       		.uleb128 0x3e
+ 398 0031 0B       		.uleb128 0xb
+ 399 0032 03       		.uleb128 0x3
+ 400 0033 08       		.uleb128 0x8
+ 401 0034 00       		.byte	0
+ 402 0035 00       		.byte	0
+ 403 0036 05       		.uleb128 0x5
+ 404 0037 2E       		.uleb128 0x2e
+ 405 0038 01       		.byte	0x1
+ 406 0039 3F       		.uleb128 0x3f
+ 407 003a 19       		.uleb128 0x19
+ 408 003b 03       		.uleb128 0x3
+ 409 003c 0E       		.uleb128 0xe
+ 410 003d 3A       		.uleb128 0x3a
+ 411 003e 0B       		.uleb128 0xb
+ 412 003f 3B       		.uleb128 0x3b
+ 413 0040 0B       		.uleb128 0xb
+ 414 0041 49       		.uleb128 0x49
+ 415 0042 13       		.uleb128 0x13
+ 416 0043 11       		.uleb128 0x11
+ 417 0044 01       		.uleb128 0x1
+ 418 0045 12       		.uleb128 0x12
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 9
+
+
+ 419 0046 06       		.uleb128 0x6
+ 420 0047 40       		.uleb128 0x40
+ 421 0048 18       		.uleb128 0x18
+ 422 0049 9642     		.uleb128 0x2116
+ 423 004b 19       		.uleb128 0x19
+ 424 004c 01       		.uleb128 0x1
+ 425 004d 13       		.uleb128 0x13
+ 426 004e 00       		.byte	0
+ 427 004f 00       		.byte	0
+ 428 0050 06       		.uleb128 0x6
+ 429 0051 34       		.uleb128 0x34
+ 430 0052 00       		.byte	0
+ 431 0053 03       		.uleb128 0x3
+ 432 0054 0E       		.uleb128 0xe
+ 433 0055 3A       		.uleb128 0x3a
+ 434 0056 0B       		.uleb128 0xb
+ 435 0057 3B       		.uleb128 0x3b
+ 436 0058 0B       		.uleb128 0xb
+ 437 0059 49       		.uleb128 0x49
+ 438 005a 13       		.uleb128 0x13
+ 439 005b 02       		.uleb128 0x2
+ 440 005c 18       		.uleb128 0x18
+ 441 005d 00       		.byte	0
+ 442 005e 00       		.byte	0
+ 443 005f 07       		.uleb128 0x7
+ 444 0060 34       		.uleb128 0x34
+ 445 0061 00       		.byte	0
+ 446 0062 03       		.uleb128 0x3
+ 447 0063 08       		.uleb128 0x8
+ 448 0064 3A       		.uleb128 0x3a
+ 449 0065 0B       		.uleb128 0xb
+ 450 0066 3B       		.uleb128 0x3b
+ 451 0067 0B       		.uleb128 0xb
+ 452 0068 49       		.uleb128 0x49
+ 453 0069 13       		.uleb128 0x13
+ 454 006a 02       		.uleb128 0x2
+ 455 006b 18       		.uleb128 0x18
+ 456 006c 00       		.byte	0
+ 457 006d 00       		.byte	0
+ 458 006e 08       		.uleb128 0x8
+ 459 006f 34       		.uleb128 0x34
+ 460 0070 00       		.byte	0
+ 461 0071 03       		.uleb128 0x3
+ 462 0072 0E       		.uleb128 0xe
+ 463 0073 3A       		.uleb128 0x3a
+ 464 0074 0B       		.uleb128 0xb
+ 465 0075 3B       		.uleb128 0x3b
+ 466 0076 0B       		.uleb128 0xb
+ 467 0077 49       		.uleb128 0x49
+ 468 0078 13       		.uleb128 0x13
+ 469 0079 02       		.uleb128 0x2
+ 470 007a 17       		.uleb128 0x17
+ 471 007b 00       		.byte	0
+ 472 007c 00       		.byte	0
+ 473 007d 09       		.uleb128 0x9
+ 474 007e 898201   		.uleb128 0x4109
+ 475 0081 00       		.byte	0
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 10
+
+
+ 476 0082 11       		.uleb128 0x11
+ 477 0083 01       		.uleb128 0x1
+ 478 0084 31       		.uleb128 0x31
+ 479 0085 13       		.uleb128 0x13
+ 480 0086 00       		.byte	0
+ 481 0087 00       		.byte	0
+ 482 0088 0A       		.uleb128 0xa
+ 483 0089 898201   		.uleb128 0x4109
+ 484 008c 01       		.byte	0x1
+ 485 008d 11       		.uleb128 0x11
+ 486 008e 01       		.uleb128 0x1
+ 487 008f 31       		.uleb128 0x31
+ 488 0090 13       		.uleb128 0x13
+ 489 0091 00       		.byte	0
+ 490 0092 00       		.byte	0
+ 491 0093 0B       		.uleb128 0xb
+ 492 0094 8A8201   		.uleb128 0x410a
+ 493 0097 00       		.byte	0
+ 494 0098 02       		.uleb128 0x2
+ 495 0099 18       		.uleb128 0x18
+ 496 009a 9142     		.uleb128 0x2111
+ 497 009c 18       		.uleb128 0x18
+ 498 009d 00       		.byte	0
+ 499 009e 00       		.byte	0
+ 500 009f 0C       		.uleb128 0xc
+ 501 00a0 2E       		.uleb128 0x2e
+ 502 00a1 00       		.byte	0
+ 503 00a2 3F       		.uleb128 0x3f
+ 504 00a3 19       		.uleb128 0x19
+ 505 00a4 3C       		.uleb128 0x3c
+ 506 00a5 19       		.uleb128 0x19
+ 507 00a6 6E       		.uleb128 0x6e
+ 508 00a7 0E       		.uleb128 0xe
+ 509 00a8 03       		.uleb128 0x3
+ 510 00a9 0E       		.uleb128 0xe
+ 511 00aa 3A       		.uleb128 0x3a
+ 512 00ab 0B       		.uleb128 0xb
+ 513 00ac 3B       		.uleb128 0x3b
+ 514 00ad 0B       		.uleb128 0xb
+ 515 00ae 00       		.byte	0
+ 516 00af 00       		.byte	0
+ 517 00b0 00       		.byte	0
+ 518              		.section	.debug_loc,"",%progbits
+ 519              	.Ldebug_loc0:
+ 520              	.LLST0:
+ 521 0000 08000000 		.4byte	.LVL0
+ 522 0004 10000000 		.4byte	.LVL1
+ 523 0008 0100     		.2byte	0x1
+ 524 000a 50       		.byte	0x50
+ 525 000b 14000000 		.4byte	.LVL2
+ 526 000f 1A000000 		.4byte	.LVL3
+ 527 0013 0100     		.2byte	0x1
+ 528 0015 50       		.byte	0x50
+ 529 0016 20000000 		.4byte	.LVL5
+ 530 001a 22000000 		.4byte	.LVL6
+ 531 001e 0100     		.2byte	0x1
+ 532 0020 50       		.byte	0x50
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 11
+
+
+ 533 0021 26000000 		.4byte	.LVL7
+ 534 0025 28000000 		.4byte	.LVL8
+ 535 0029 0100     		.2byte	0x1
+ 536 002b 50       		.byte	0x50
+ 537 002c 00000000 		.4byte	0
+ 538 0030 00000000 		.4byte	0
+ 539              	.LLST1:
+ 540 0034 08000000 		.4byte	.LVL9
+ 541 0038 10000000 		.4byte	.LVL10
+ 542 003c 0100     		.2byte	0x1
+ 543 003e 50       		.byte	0x50
+ 544 003f 14000000 		.4byte	.LVL11
+ 545 0043 1A000000 		.4byte	.LVL12
+ 546 0047 0100     		.2byte	0x1
+ 547 0049 50       		.byte	0x50
+ 548 004a 20000000 		.4byte	.LVL14
+ 549 004e 22000000 		.4byte	.LVL15
+ 550 0052 0100     		.2byte	0x1
+ 551 0054 50       		.byte	0x50
+ 552 0055 26000000 		.4byte	.LVL16
+ 553 0059 28000000 		.4byte	.LVL17
+ 554 005d 0100     		.2byte	0x1
+ 555 005f 50       		.byte	0x50
+ 556 0060 00000000 		.4byte	0
+ 557 0064 00000000 		.4byte	0
+ 558              		.section	.debug_aranges,"",%progbits
+ 559 0000 24000000 		.4byte	0x24
+ 560 0004 0200     		.2byte	0x2
+ 561 0006 00000000 		.4byte	.Ldebug_info0
+ 562 000a 04       		.byte	0x4
+ 563 000b 00       		.byte	0
+ 564 000c 0000     		.2byte	0
+ 565 000e 0000     		.2byte	0
+ 566 0010 00000000 		.4byte	.LFB35
+ 567 0014 2E000000 		.4byte	.LFE35-.LFB35
+ 568 0018 00000000 		.4byte	.LFB36
+ 569 001c 2E000000 		.4byte	.LFE36-.LFB36
+ 570 0020 00000000 		.4byte	0
+ 571 0024 00000000 		.4byte	0
+ 572              		.section	.debug_ranges,"",%progbits
+ 573              	.Ldebug_ranges0:
+ 574 0000 00000000 		.4byte	.LFB35
+ 575 0004 2E000000 		.4byte	.LFE35
+ 576 0008 00000000 		.4byte	.LFB36
+ 577 000c 2E000000 		.4byte	.LFE36
+ 578 0010 00000000 		.4byte	0
+ 579 0014 00000000 		.4byte	0
+ 580              		.section	.debug_line,"",%progbits
+ 581              	.Ldebug_line0:
+ 582 0000 5A010000 		.section	.debug_str,"MS",%progbits,1
+ 582      02002401 
+ 582      00000201 
+ 582      FB0E0D00 
+ 582      01010101 
+ 583              	.LASF6:
+ 584 0000 6C6F6E67 		.ascii	"long long int\000"
+ 584      206C6F6E 
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 12
+
+
+ 584      6720696E 
+ 584      7400
+ 585              	.LASF21:
+ 586 000e 53485433 		.ascii	"SHT31_IsHeaterEnabled\000"
+ 586      315F4973 
+ 586      48656174 
+ 586      6572456E 
+ 586      61626C65 
+ 587              	.LASF8:
+ 588 0024 756E7369 		.ascii	"unsigned int\000"
+ 588      676E6564 
+ 588      20696E74 
+ 588      00
+ 589              	.LASF1:
+ 590 0031 756E7369 		.ascii	"unsigned char\000"
+ 590      676E6564 
+ 590      20636861 
+ 590      7200
+ 591              	.LASF24:
+ 592 003f 53656E73 		.ascii	"Sensors.c\000"
+ 592      6F72732E 
+ 592      6300
+ 593              	.LASF16:
+ 594 0049 74656D70 		.ascii	"temp\000"
+ 594      00
+ 595              	.LASF19:
+ 596 004e 67657454 		.ascii	"getTemp\000"
+ 596      656D7000 
+ 597              	.LASF5:
+ 598 0056 6C6F6E67 		.ascii	"long unsigned int\000"
+ 598      20756E73 
+ 598      69676E65 
+ 598      6420696E 
+ 598      7400
+ 599              	.LASF17:
+ 600 0068 73746174 		.ascii	"status\000"
+ 600      757300
+ 601              	.LASF7:
+ 602 006f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 602      206C6F6E 
+ 602      6720756E 
+ 602      7369676E 
+ 602      65642069 
+ 603              	.LASF22:
+ 604 0086 53485433 		.ascii	"SHT31_ReadTempHum\000"
+ 604      315F5265 
+ 604      61645465 
+ 604      6D704875 
+ 604      6D00
+ 605              	.LASF11:
+ 606 0098 63686172 		.ascii	"char\000"
+ 606      00
+ 607              	.LASF4:
+ 608 009d 6C6F6E67 		.ascii	"long int\000"
+ 608      20696E74 
+ 608      00
+ 609              	.LASF14:
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 13
+
+
+ 610 00a6 646F7562 		.ascii	"double\000"
+ 610      6C6500
+ 611              	.LASF18:
+ 612 00ad 5F426F6F 		.ascii	"_Bool\000"
+ 612      6C00
+ 613              	.LASF25:
+ 614 00b3 433A5C55 		.ascii	"C:\\Users\\shahnaz\\Documents\\GitHub\\Science_Sens"
+ 614      73657273 
+ 614      5C736861 
+ 614      686E617A 
+ 614      5C446F63 
+ 615 00e1 6F725F42 		.ascii	"or_Board\\Final\\CAN.cydsn\000"
+ 615      6F617264 
+ 615      5C46696E 
+ 615      616C5C43 
+ 615      414E2E63 
+ 616              	.LASF23:
+ 617 00fa 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 617      43313120 
+ 617      352E342E 
+ 617      31203230 
+ 617      31363036 
+ 618 012d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 618      20726576 
+ 618      6973696F 
+ 618      6E203233 
+ 618      37373135 
+ 619 0160 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 619      66756E63 
+ 619      74696F6E 
+ 619      2D736563 
+ 619      74696F6E 
+ 620              	.LASF3:
+ 621 0188 73686F72 		.ascii	"short unsigned int\000"
+ 621      7420756E 
+ 621      7369676E 
+ 621      65642069 
+ 621      6E7400
+ 622              	.LASF0:
+ 623 019b 7369676E 		.ascii	"signed char\000"
+ 623      65642063 
+ 623      68617200 
+ 624              	.LASF9:
+ 625 01a7 6C6F6E67 		.ascii	"long double\000"
+ 625      20646F75 
+ 625      626C6500 
+ 626              	.LASF12:
+ 627 01b3 5F5F696E 		.ascii	"__int32_t\000"
+ 627      7433325F 
+ 627      7400
+ 628              	.LASF20:
+ 629 01bd 67657448 		.ascii	"getHum\000"
+ 629      756D00
+ 630              	.LASF15:
+ 631 01c4 666C6F61 		.ascii	"float\000"
+ 631      7400
+ 632              	.LASF2:
+ARM GAS  C:\Users\shahnaz\AppData\Local\Temp\ccyXwqLD.s 			page 14
+
+
+ 633 01ca 73686F72 		.ascii	"short int\000"
+ 633      7420696E 
+ 633      7400
+ 634              	.LASF13:
+ 635 01d4 696E7433 		.ascii	"int32_t\000"
+ 635      325F7400 
+ 636              	.LASF10:
+ 637 01dc 73697A65 		.ascii	"sizetype\000"
+ 637      74797065 
+ 637      00
+ 638              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

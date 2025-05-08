@@ -3,7 +3,7 @@
 #include <project.h>
 #include <math.h>
 #include <stdbool.h>
-#include <I2C.h>
+#include <HumTemp_I2C.h>
 
 #define SHT31_I2C_ADDR 0x44
 #define TIMEOUT 20

@@ -1,0 +1,119 @@
+--------------- Build Started: 05/07/2025 18:49:00 Project: CAN, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I/HindsightCAN/ -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+In file included from main.c:25:0:
+TempHum_Lib.h:12:42: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_LOWREP_STRETCH 0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/                                              \
+                                          ^
+TempHum_Lib.h:14:35: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_HIGHREP 0x2400 // Measurement High Repeatability with Clock Stretch Disabled /                                                     \
+                                   ^
+main.c: In function 'main':
+main.c:46:19: warning: implicit declaration of function 'ProcessCAN' [-Wimplicit-function-declaration]
+             err = ProcessCAN(&can_recieve, &can_send);
+                   ^
+main.c:39:9: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+     int err;
+         ^
+main.c: In function 'Initialize':
+main.c:59:12: warning: unused variable 'err' [-Wunused-variable]
+     uint32 err;
+            ^
+In file included from main.c:25:0:
+main.c: At top level:
+TempHum_Lib.h:26:16: warning: 'crc8' declared 'static' but never defined [-Wunused-function]
+ static uint8_t crc8(const uint8_t *data, int len);
+                ^
+TempHum_Lib.h:28:13: warning: 'writeCommand' declared 'static' but never defined [-Wunused-function]
+ static bool writeCommand(uint16_t command);
+             ^
+TempHum_Lib.h:30:13: warning: 'readData' declared 'static' but never defined [-Wunused-function]
+ static bool readData(uint8_t *buffer, uint8_t len);
+             ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I/HindsightCAN/ -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Science_CAN.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c Science_CAN.c -o .\CortexM0\ARM_GCC_541\Debug\Science_CAN.o
+In file included from Science_CAN.c:18:0:
+TempHum_Lib.h:12:42: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_LOWREP_STRETCH 0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/                                              \
+                                          ^
+TempHum_Lib.h:14:35: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_HIGHREP 0x2400 // Measurement High Repeatability with Clock Stretch Disabled /                                                     \
+                                   ^
+Science_CAN.c: In function 'ProcessCAN':
+Science_CAN.c:35:10: warning: unused variable 'status' [-Wunused-variable]
+     bool status;
+          ^
+Science_CAN.c:34:17: warning: unused variable 'hum' [-Wunused-variable]
+     float temp, hum;
+                 ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I/HindsightCAN/ -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Sensors.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c Sensors.c -o .\CortexM0\ARM_GCC_541\Debug\Sensors.o
+Science_CAN.c:34:11: warning: unused variable 'temp' [-Wunused-variable]
+     float temp, hum;
+           ^
+In file included from Science_CAN.c:18:0:
+Science_CAN.c: At top level:
+TempHum_Lib.h:26:16: warning: 'crc8' declared 'static' but never defined [-Wunused-function]
+ static uint8_t crc8(const uint8_t *data, int len);
+                ^
+TempHum_Lib.h:28:13: warning: 'writeCommand' declared 'static' but never defined [-Wunused-function]
+ static bool writeCommand(uint16_t command);
+             ^
+TempHum_Lib.h:30:13: warning: 'readData' declared 'static' but never defined [-Wunused-function]
+ static bool readData(uint8_t *buffer, uint8_t len);
+             ^
+In file included from Sensors.c:4:0:
+./TempHum_Lib.h:12:42: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_LOWREP_STRETCH 0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/                                              \
+                                          ^
+./TempHum_Lib.h:14:35: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_HIGHREP 0x2400 // Measurement High Repeatability with Clock Stretch Disabled /                                                     \
+                                   ^
+./TempHum_Lib.h:26:16: warning: 'crc8' declared 'static' but never defined [-Wunused-function]
+ static uint8_t crc8(const uint8_t *data, int len);
+                ^
+./TempHum_Lib.h:28:13: warning: 'writeCommand' declared 'static' but never defined [-Wunused-function]
+ static bool writeCommand(uint16_t command);
+             ^
+./TempHum_Lib.h:30:13: warning: 'readData' declared 'static' but never defined [-Wunused-function]
+ static bool readData(uint8_t *buffer, uint8_t len);
+             ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I/HindsightCAN/ -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/TempHum_Lib.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c TempHum_Lib.c -o .\CortexM0\ARM_GCC_541\Debug\TempHum_Lib.o
+In file included from TempHum_Lib.c:3:0:
+./TempHum_Lib.h:12:42: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_LOWREP_STRETCH 0x2C10 // Measurement Low Repeatability with Clock Stretch Enabled*/                                              \
+                                          ^
+./TempHum_Lib.h:14:35: warning: multi-line comment [-Wcomment]
+ #define SHT31_MEAS_HIGHREP 0x2400 // Measurement High Repeatability with Clock Stretch Disabled /                                                     \
+                                   ^
+TempHum_Lib.c: In function 'writeCommand':
+TempHum_Lib.c:39:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+         sprintf(buffer, "err = %d\n", err);
+         ^
+TempHum_Lib.c:39:9: warning: incompatible implicit declaration of built-in function 'sprintf'
+TempHum_Lib.c:39:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+TempHum_Lib.c:52:9: warning: incompatible implicit declaration of built-in function 'sprintf'
+         sprintf(buffer, "err = %d\n", err);
+         ^
+TempHum_Lib.c:52:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+TempHum_Lib.c:57:9: warning: incompatible implicit declaration of built-in function 'sprintf'
+         sprintf(buffer, "err = %d\n", err);
+         ^
+TempHum_Lib.c:57:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+TempHum_Lib.c: In function 'SHT31_Init':
+TempHum_Lib.c:71:13: warning: unused variable 'status' [-Wunused-variable]
+     uint8_t status = 0;
+             ^
+TempHum_Lib.c: In function 'SHT31_ReadTempHum':
+TempHum_Lib.c:162:13: warning: incompatible implicit declaration of built-in function 'sprintf'
+             sprintf(buffer, "i = %d\t", i);
+             ^
+TempHum_Lib.c:162:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+In file included from TempHum_Lib.c:3:0:
+TempHum_Lib.c: At top level:
+./TempHum_Lib.h:30:13: warning: 'readData' declared 'static' but never defined [-Wunused-function]
+ static bool readData(uint8_t *buffer, uint8_t len);
+             ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I/HindsightCAN/ -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortAT90CANxxx.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c HindsightCAN\PortFiles\PortAT90CANxxx.c -o .\CortexM0\ARM_GCC_541\Debug\PortAT90CANxxx.o
+HindsightCAN\PortFiles\PortAT90CANxxx.c:6:18: fatal error: Port.h: No such file or directory
+compilation terminated.
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 05/07/2025 18:49:03 ---------------

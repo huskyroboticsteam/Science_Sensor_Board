@@ -1,7 +1,7 @@
 #include <project.h>
 #include <math.h>
 #include <TempHum_Lib.h>
-#include <I2C.h>
+#include <HumTemp_I2C.h>
 
 // CRC-8 calculation for SHT31 (Polynomial 0x31)
 static uint8_t crc8(const uint8_t *data, int len) {
@@ -27,41 +27,41 @@ static bool writeCommand(uint16_t command) {
     uint8_t err2 = 0;
     
     // Ensure bus is free (clear any old errors)
-    I2C_I2CMasterClearStatus();
+    HumTemp_I2C_I2CMasterClearStatus();
 
     // 1) Send a true START for the first byte
-    err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
+    err = HumTemp_I2C_I2CMasterSendStart(SHT31_I2C_ADDR, HumTemp_I2C_I2C_WRITE_XFER_MODE, TIMEOUT);
     
     char buffer[64];
     
-    if(err != I2C_I2C_MSTR_NO_ERROR){
+    if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with write Command sendStart\r\n");
         sprintf(buffer, "err = %d\n", err);
         UART_UartPutString(buffer);
         
     }
     
-    err = I2C_I2CMasterWriteByte(cmd[0], TIMEOUT);
+    err = HumTemp_I2C_I2CMasterWriteByte(cmd[0], TIMEOUT);
     
     
-    err2 = I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
+    err2 = HumTemp_I2C_I2CMasterWriteByte(cmd[1], TIMEOUT);
     
 
-    if(err != I2C_I2C_MSTR_NO_ERROR){
+    if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with writeCommand: writeByte\r\n");
         sprintf(buffer, "err = %d\n", err);
         UART_UartPutString(buffer);
     }
-        if(err2 != I2C_I2C_MSTR_NO_ERROR){
+        if(err2 != HumTemp_I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with writeCommand: writeByte2\r\n");
         sprintf(buffer, "err = %d\n", err);
         UART_UartPutString(buffer);
     }
         
-    if (err != I2C_I2C_MSTR_NO_ERROR)
+    if (err != HumTemp_I2C_I2C_MSTR_NO_ERROR)
         return false;
     
-    I2C_I2CMasterSendStop(TIMEOUT);
+    HumTemp_I2C_I2CMasterSendStop(TIMEOUT);
     
     return true;
 }
@@ -69,7 +69,7 @@ static bool writeCommand(uint16_t command) {
 
 bool SHT31_Init() {
     uint8_t status = 0;
-    I2C_Start();
+    HumTemp_I2C_Start();
     
     writeCommand(SHT31_SOFTRESET);
     
@@ -85,26 +85,26 @@ uint16_t SHT31_ReadStatus(void) {
         UART_UartPutString("Error with Read Status: writeCommand\r\n");
     }
 
-    I2C_I2CMasterClearStatus();
+    HumTemp_I2C_I2CMasterClearStatus();
     
-    err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+    err = HumTemp_I2C_I2CMasterSendStart(SHT31_I2C_ADDR, HumTemp_I2C_I2C_READ_XFER_MODE, TIMEOUT);
     
     uint8_t data[3] = {0};
     
-    if(err != I2C_I2C_MSTR_NO_ERROR){
+    if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
         UART_UartPutString("Error with Read Status: SendStart\r\n");
     }
     
-    err = I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[0], TIMEOUT);
+    err = HumTemp_I2C_I2CMasterReadByte(HumTemp_I2C_I2C_ACK_DATA, &data[0], TIMEOUT);
     CyDelay(50);
-    err = I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &data[1], TIMEOUT);
+    err = HumTemp_I2C_I2CMasterReadByte(HumTemp_I2C_I2C_ACK_DATA, &data[1], TIMEOUT);
     CyDelay(50);
-    err = I2C_I2CMasterReadByte(I2C_I2C_NAK_DATA, &data[2], TIMEOUT);
+    err = HumTemp_I2C_I2CMasterReadByte(HumTemp_I2C_I2C_NAK_DATA, &data[2], TIMEOUT);
     CyDelay(50);
     
-    I2C_I2CMasterSendStop(TIMEOUT);
+    HumTemp_I2C_I2CMasterSendStop(TIMEOUT);
     
-    if(err != I2C_I2C_MSTR_NO_ERROR){
+    if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
          UART_UartPutString("Error with Read Status: ReadBuf\r\n");
     }
     
@@ -143,21 +143,21 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     
     CyDelay(50);
     
-    I2C_I2CMasterClearStatus();
+    HumTemp_I2C_I2CMasterClearStatus();
     
-    err = I2C_I2CMasterSendStart(SHT31_I2C_ADDR, I2C_I2C_READ_XFER_MODE, TIMEOUT);
+    err = HumTemp_I2C_I2CMasterSendStart(SHT31_I2C_ADDR, HumTemp_I2C_I2C_READ_XFER_MODE, TIMEOUT);
     
     CyDelay(50);
     
-        if(err != I2C_I2C_MSTR_NO_ERROR){
+        if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
             UART_UartPutString("Error with Read Temp Hum: SendStart\r\n");
-            I2C_I2CMasterSendStop(TIMEOUT);
+            HumTemp_I2C_I2CMasterSendStop(TIMEOUT);
            }
         
     for(int i = 0; i < 6; i++){ //get data byte by byte
         CyDelay(50);
-        err = I2C_I2CMasterReadByte((i<5) ? I2C_I2C_ACK_DATA : I2C_I2C_NAK_DATA, &readbuffer[i], TIMEOUT);
-        if(err != I2C_I2C_MSTR_NO_ERROR){
+        err = HumTemp_I2C_I2CMasterReadByte((i<5) ? HumTemp_I2C_I2C_ACK_DATA : HumTemp_I2C_I2C_NAK_DATA, &readbuffer[i], TIMEOUT);
+        if(err != HumTemp_I2C_I2C_MSTR_NO_ERROR){
             UART_UartPutString("Error with Read Temp Hum: readByte\r\n");
             sprintf(buffer, "i = %d\t", i);
             UART_UartPutString(buffer);
@@ -181,7 +181,7 @@ bool SHT31_ReadTempHum(float *outTemp, float *outHum) {
     *outTemp = temp; //assign variables to og temp var
     *outHum = humidity; //assign variables to og temp var
     
-    I2C_I2CMasterSendStop(TIMEOUT);
+    HumTemp_I2C_I2CMasterSendStop(TIMEOUT);
 
     return true; 
 }

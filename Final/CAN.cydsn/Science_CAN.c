@@ -11,9 +11,15 @@
 */
 
 #include <stdio.h>
+#include <math.h>
+#include <CAN.h>
+#include <stdbool.h>
+#include "main.h"
+#include "TempHum_Lib.h"
+#include "Sensors.h"
 #include "Science_CAN.h"
-#include "./HindsightCAN/CANLibrary.h"
-#include "./HindsightCAN/CANScience.h"
+#include "HindsightCAN/Port.h"
+
 
 extern char txData[TX_DATA_SIZE];
 extern uint8 address;
@@ -25,9 +31,12 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
     uint8_t sender_SN = GetSenderDeviceSerialNumber(receivedPacket);
     int32_t data = 0;
     int err = 0;
+    float temp, hum;
+    bool status;
     
     switch(packageID){            
         // Common Packets
+        
         case(ID_ESTOP):
             Print("\r\n\r\nSTOP\r\n\r\n");
             err = ESTOP_ERR_GENERAL;
@@ -36,14 +45,14 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
         case(ID_TELEMETRY_PULL):            
             switch(DecodeTelemetryType(receivedPacket))
             {                
-                case(CAN_SCIENCE_SENSOR_TEMPERATURE):
-                    data = ReadSensorTemperature();
+                case(PACKET_TELEMETRY_SENSOR1):
+                    data = getTemp();
                     break;
                 case(PACKET_TELEMETRY_SENSOR2):
                     data = 0; // TODO
                     break;
-                case(CAN_SCIENCE_SENSOR_MOISTURE):
-                    data = ReadSensorHumidity();
+                case(PACKET_TELEMETRY_SENSOR3):
+                    data = getHum();
                     break;
                 case(PACKET_TELEMETRY_SENSOR4):
                     data = 0; // TODO
@@ -62,7 +71,7 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             // Assemble and send packet
             AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, receivedPacket->data[3], data);
             
-            if (err == 0)
+            if (err == 0 && data != -1)
                 SendCANPacket(packetToSend);
             
             break;
