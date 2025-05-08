@@ -1,0 +1,1241 @@
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"IDAC_7bit.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.IDAC_7bit_Init,"ax",%progbits
+  20              		.align	2
+  21              		.global	IDAC_7bit_Init
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	IDAC_7bit_Init, %function
+  25              	IDAC_7bit_Init:
+  26              	.LFB1:
+  27              		.file 1 "Generated_Source\\PSoC4\\IDAC_7bit.c"
+   1:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/IDAC_7bit.c **** * File Name: IDAC_7bit.c
+   3:Generated_Source\PSoC4/IDAC_7bit.c **** * Version 1.10
+   4:Generated_Source\PSoC4/IDAC_7bit.c **** *
+   5:Generated_Source\PSoC4/IDAC_7bit.c **** * Description:
+   6:Generated_Source\PSoC4/IDAC_7bit.c **** *  This file provides the source code of APIs for the IDAC_P4 component.
+   7:Generated_Source\PSoC4/IDAC_7bit.c **** *
+   8:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************
+   9:Generated_Source\PSoC4/IDAC_7bit.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC4/IDAC_7bit.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC4/IDAC_7bit.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC4/IDAC_7bit.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+  14:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  15:Generated_Source\PSoC4/IDAC_7bit.c **** #include "IDAC_7bit.h"
+  16:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  17:Generated_Source\PSoC4/IDAC_7bit.c **** uint32 IDAC_7bit_initVar = 0u;
+  18:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  19:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  20:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+  21:Generated_Source\PSoC4/IDAC_7bit.c **** * Function Name: IDAC_7bit_Init
+  22:Generated_Source\PSoC4/IDAC_7bit.c **** ********************************************************************************
+  23:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  24:Generated_Source\PSoC4/IDAC_7bit.c **** * Summary:
+  25:Generated_Source\PSoC4/IDAC_7bit.c **** *  Initializes IDAC registers with initial values provided from customizer.
+  26:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  27:Generated_Source\PSoC4/IDAC_7bit.c **** * Parameters:
+  28:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  29:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  30:Generated_Source\PSoC4/IDAC_7bit.c **** * Return:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 2
+
+
+  31:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  32:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  33:Generated_Source\PSoC4/IDAC_7bit.c **** * Global variables:
+  34:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  35:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  36:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+  37:Generated_Source\PSoC4/IDAC_7bit.c **** void IDAC_7bit_Init(void)
+  38:Generated_Source\PSoC4/IDAC_7bit.c **** {
+  28              		.loc 1 38 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  39:Generated_Source\PSoC4/IDAC_7bit.c ****     uint32 regVal;
+  40:Generated_Source\PSoC4/IDAC_7bit.c ****     uint8 enableInterrupts;
+  41:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  42:Generated_Source\PSoC4/IDAC_7bit.c ****     /* Set initial configuration */
+  43:Generated_Source\PSoC4/IDAC_7bit.c ****     enableInterrupts = CyEnterCriticalSection();
+  36              		.loc 1 43 0
+  37 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  38              	.LVL0:
+  44:Generated_Source\PSoC4/IDAC_7bit.c ****     
+  45:Generated_Source\PSoC4/IDAC_7bit.c ****     #if(IDAC_7bit_MODE_SOURCE == IDAC_7bit_IDAC_POLARITY)
+  46:Generated_Source\PSoC4/IDAC_7bit.c ****         regVal  = IDAC_7bit_CSD_TRIM1_REG & ~(IDAC_7bit_CSD_IDAC_TRIM1_MASK);
+  47:Generated_Source\PSoC4/IDAC_7bit.c ****         regVal |=  (IDAC_7bit_SFLASH_TRIM1_REG & IDAC_7bit_CSD_IDAC_TRIM1_MASK);
+  48:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_CSD_TRIM1_REG = regVal;
+  49:Generated_Source\PSoC4/IDAC_7bit.c ****     #else
+  50:Generated_Source\PSoC4/IDAC_7bit.c ****         regVal  = IDAC_7bit_CSD_TRIM2_REG & ~(IDAC_7bit_CSD_IDAC_TRIM2_MASK);
+  39              		.loc 1 50 0
+  40 0006 1049     		ldr	r1, .L2
+  41 0008 0B68     		ldr	r3, [r1]
+  42 000a F022     		movs	r2, #240
+  43 000c 9343     		bics	r3, r2
+  44 000e 1A00     		movs	r2, r3
+  45              	.LVL1:
+  51:Generated_Source\PSoC4/IDAC_7bit.c ****         regVal |=  (IDAC_7bit_SFLASH_TRIM2_REG & IDAC_7bit_CSD_IDAC_TRIM2_MASK);
+  46              		.loc 1 51 0
+  47 0010 0E4B     		ldr	r3, .L2+4
+  48 0012 1B78     		ldrb	r3, [r3]
+  49 0014 0F24     		movs	r4, #15
+  50 0016 A343     		bics	r3, r4
+  51 0018 1343     		orrs	r3, r2
+  52              	.LVL2:
+  52:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_CSD_TRIM2_REG = regVal;
+  53              		.loc 1 52 0
+  54 001a 0B60     		str	r3, [r1]
+  53:Generated_Source\PSoC4/IDAC_7bit.c ****     #endif /* (IDAC_7bit_MODE_SOURCE == IDAC_7bit_IDAC_POLARITY) */
+  54:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  55:Generated_Source\PSoC4/IDAC_7bit.c ****     /* clear previous values */
+  56:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_CONTROL_REG &= ((uint32)~((uint32)IDAC_7bit_IDAC_VALUE_MASK <<
+  55              		.loc 1 56 0
+  56 001c 0C4A     		ldr	r2, .L2+8
+  57 001e 1368     		ldr	r3, [r2]
+  58              	.LVL3:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 3
+
+
+  59 0020 1360     		str	r3, [r2]
+  60              	.LVL4:
+  57:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_VALUE_POSITION)) | ((uint32)~((uint32)IDAC_7bit_IDAC_MODE_MASK <<
+  58:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_MODE_POSITION))  | ((uint32)~((uint32)IDAC_7bit_IDAC_RANGE_MASK  <<
+  59:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_RANGE_POSITION));
+  60:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  61:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_POLARITY_CONTROL_REG &= (~(uint32)((uint32)IDAC_7bit_IDAC_POLARITY_MASK <<
+  61              		.loc 1 61 0
+  62 0022 0C4B     		ldr	r3, .L2+12
+  63 0024 1C68     		ldr	r4, [r3]
+  64 0026 0C49     		ldr	r1, .L2+16
+  65 0028 2140     		ands	r1, r4
+  66 002a 1960     		str	r1, [r3]
+  62:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_POLARITY_POSITION));
+  63:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  64:Generated_Source\PSoC4/IDAC_7bit.c ****     /* set new configuration */
+  65:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_CONTROL_REG |= (((uint32)IDAC_7bit_IDAC_INIT_VALUE <<
+  67              		.loc 1 65 0
+  68 002c 1168     		ldr	r1, [r2]
+  69 002e 8F24     		movs	r4, #143
+  70 0030 E404     		lsls	r4, r4, #19
+  71 0032 2143     		orrs	r1, r4
+  72 0034 1160     		str	r1, [r2]
+  66:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_VALUE_POSITION) | ((uint32)IDAC_7bit_IDAC_RANGE <<
+  67:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_RANGE_POSITION));
+  68:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  69:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_POLARITY_CONTROL_REG |= ((uint32)IDAC_7bit_IDAC_POLARITY <<
+  73              		.loc 1 69 0
+  74 0036 1A68     		ldr	r2, [r3]
+  75 0038 8021     		movs	r1, #128
+  76 003a 8902     		lsls	r1, r1, #10
+  77 003c 0A43     		orrs	r2, r1
+  78 003e 1A60     		str	r2, [r3]
+  70:Generated_Source\PSoC4/IDAC_7bit.c ****                                                            IDAC_7bit_IDAC_POLARITY_POSITION);
+  71:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  72:Generated_Source\PSoC4/IDAC_7bit.c ****     CyExitCriticalSection(enableInterrupts);
+  79              		.loc 1 72 0
+  80 0040 FFF7FEFF 		bl	CyExitCriticalSection
+  81              	.LVL5:
+  73:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  74:Generated_Source\PSoC4/IDAC_7bit.c **** }
+  82              		.loc 1 74 0
+  83              		@ sp needed
+  84 0044 10BD     		pop	{r4, pc}
+  85              	.L3:
+  86 0046 C046     		.align	2
+  87              	.L2:
+  88 0048 04FF2940 		.word	1076494084
+  89 004c 61F2FF0F 		.word	268431969
+  90 0050 08002940 		.word	1076428808
+  91 0054 04002940 		.word	1076428804
+  92 0058 FFFFFDFF 		.word	-131073
+  93              		.cfi_endproc
+  94              	.LFE1:
+  95              		.size	IDAC_7bit_Init, .-IDAC_7bit_Init
+  96              		.section	.text.IDAC_7bit_Enable,"ax",%progbits
+  97              		.align	2
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 4
+
+
+  98              		.global	IDAC_7bit_Enable
+  99              		.code	16
+ 100              		.thumb_func
+ 101              		.type	IDAC_7bit_Enable, %function
+ 102              	IDAC_7bit_Enable:
+ 103              	.LFB2:
+  75:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  76:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  77:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+  78:Generated_Source\PSoC4/IDAC_7bit.c **** * Function Name: IDAC_7bit_Enable
+  79:Generated_Source\PSoC4/IDAC_7bit.c **** ********************************************************************************
+  80:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  81:Generated_Source\PSoC4/IDAC_7bit.c **** * Summary:
+  82:Generated_Source\PSoC4/IDAC_7bit.c **** *  Enables IDAC operations.
+  83:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  84:Generated_Source\PSoC4/IDAC_7bit.c **** * Parameters:
+  85:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  86:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  87:Generated_Source\PSoC4/IDAC_7bit.c **** * Return:
+  88:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  89:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  90:Generated_Source\PSoC4/IDAC_7bit.c **** * Global variables:
+  91:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+  92:Generated_Source\PSoC4/IDAC_7bit.c **** *
+  93:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+  94:Generated_Source\PSoC4/IDAC_7bit.c **** void IDAC_7bit_Enable(void)
+  95:Generated_Source\PSoC4/IDAC_7bit.c **** {
+ 104              		.loc 1 95 0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108 0000 10B5     		push	{r4, lr}
+ 109              		.cfi_def_cfa_offset 8
+ 110              		.cfi_offset 4, -8
+ 111              		.cfi_offset 14, -4
+  96:Generated_Source\PSoC4/IDAC_7bit.c ****     uint8 enableInterrupts;
+  97:Generated_Source\PSoC4/IDAC_7bit.c **** 
+  98:Generated_Source\PSoC4/IDAC_7bit.c ****     enableInterrupts = CyEnterCriticalSection();
+ 112              		.loc 1 98 0
+ 113 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+ 114              	.LVL6:
+  99:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 100:Generated_Source\PSoC4/IDAC_7bit.c ****     /* Enable the IDAC */
+ 101:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_CONTROL_REG |= ((uint32)IDAC_7bit_IDAC_EN_MODE <<
+ 115              		.loc 1 101 0
+ 116 0006 074A     		ldr	r2, .L5
+ 117 0008 1368     		ldr	r3, [r2]
+ 118 000a C021     		movs	r1, #192
+ 119 000c 8904     		lsls	r1, r1, #18
+ 120 000e 0B43     		orrs	r3, r1
+ 121 0010 1360     		str	r3, [r2]
+ 102:Generated_Source\PSoC4/IDAC_7bit.c ****                                                   IDAC_7bit_IDAC_MODE_POSITION);
+ 103:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_POLARITY_CONTROL_REG |= ((uint32)IDAC_7bit_IDAC_CSD_EN <<
+ 122              		.loc 1 103 0
+ 123 0012 054A     		ldr	r2, .L5+4
+ 124 0014 1368     		ldr	r3, [r2]
+ 125 0016 8021     		movs	r1, #128
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 5
+
+
+ 126 0018 0906     		lsls	r1, r1, #24
+ 127 001a 0B43     		orrs	r3, r1
+ 128 001c 1360     		str	r3, [r2]
+ 104:Generated_Source\PSoC4/IDAC_7bit.c ****                                                            IDAC_7bit_IDAC_CSD_EN_POSITION);
+ 105:Generated_Source\PSoC4/IDAC_7bit.c ****     CyExitCriticalSection(enableInterrupts);
+ 129              		.loc 1 105 0
+ 130 001e FFF7FEFF 		bl	CyExitCriticalSection
+ 131              	.LVL7:
+ 106:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 107:Generated_Source\PSoC4/IDAC_7bit.c **** }
+ 132              		.loc 1 107 0
+ 133              		@ sp needed
+ 134 0022 10BD     		pop	{r4, pc}
+ 135              	.L6:
+ 136              		.align	2
+ 137              	.L5:
+ 138 0024 08002940 		.word	1076428808
+ 139 0028 04002940 		.word	1076428804
+ 140              		.cfi_endproc
+ 141              	.LFE2:
+ 142              		.size	IDAC_7bit_Enable, .-IDAC_7bit_Enable
+ 143              		.section	.text.IDAC_7bit_Start,"ax",%progbits
+ 144              		.align	2
+ 145              		.global	IDAC_7bit_Start
+ 146              		.code	16
+ 147              		.thumb_func
+ 148              		.type	IDAC_7bit_Start, %function
+ 149              	IDAC_7bit_Start:
+ 150              	.LFB3:
+ 108:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 109:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 110:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+ 111:Generated_Source\PSoC4/IDAC_7bit.c **** * Function Name: IDAC_7bit_Start
+ 112:Generated_Source\PSoC4/IDAC_7bit.c **** ********************************************************************************
+ 113:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 114:Generated_Source\PSoC4/IDAC_7bit.c **** * Summary:
+ 115:Generated_Source\PSoC4/IDAC_7bit.c **** *  Starts the IDAC hardware.
+ 116:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 117:Generated_Source\PSoC4/IDAC_7bit.c **** * Parameters:
+ 118:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 119:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 120:Generated_Source\PSoC4/IDAC_7bit.c **** * Return:
+ 121:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 122:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 123:Generated_Source\PSoC4/IDAC_7bit.c **** * Global variables:
+ 124:Generated_Source\PSoC4/IDAC_7bit.c **** *  IDAC_7bit_initVar
+ 125:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 126:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+ 127:Generated_Source\PSoC4/IDAC_7bit.c **** void IDAC_7bit_Start(void)
+ 128:Generated_Source\PSoC4/IDAC_7bit.c **** {
+ 151              		.loc 1 128 0
+ 152              		.cfi_startproc
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155 0000 10B5     		push	{r4, lr}
+ 156              		.cfi_def_cfa_offset 8
+ 157              		.cfi_offset 4, -8
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 6
+
+
+ 158              		.cfi_offset 14, -4
+ 129:Generated_Source\PSoC4/IDAC_7bit.c ****     if(0u == IDAC_7bit_initVar)
+ 159              		.loc 1 129 0
+ 160 0002 064B     		ldr	r3, .L9
+ 161 0004 1B68     		ldr	r3, [r3]
+ 162 0006 002B     		cmp	r3, #0
+ 163 0008 04D1     		bne	.L8
+ 130:Generated_Source\PSoC4/IDAC_7bit.c ****     {
+ 131:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_Init();
+ 164              		.loc 1 131 0
+ 165 000a FFF7FEFF 		bl	IDAC_7bit_Init
+ 166              	.LVL8:
+ 132:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_initVar = 1u;
+ 167              		.loc 1 132 0
+ 168 000e 0122     		movs	r2, #1
+ 169 0010 024B     		ldr	r3, .L9
+ 170 0012 1A60     		str	r2, [r3]
+ 171              	.L8:
+ 133:Generated_Source\PSoC4/IDAC_7bit.c ****     }
+ 134:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 135:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_Enable();
+ 172              		.loc 1 135 0
+ 173 0014 FFF7FEFF 		bl	IDAC_7bit_Enable
+ 174              	.LVL9:
+ 136:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 137:Generated_Source\PSoC4/IDAC_7bit.c **** }
+ 175              		.loc 1 137 0
+ 176              		@ sp needed
+ 177 0018 10BD     		pop	{r4, pc}
+ 178              	.L10:
+ 179 001a C046     		.align	2
+ 180              	.L9:
+ 181 001c 00000000 		.word	.LANCHOR0
+ 182              		.cfi_endproc
+ 183              	.LFE3:
+ 184              		.size	IDAC_7bit_Start, .-IDAC_7bit_Start
+ 185              		.section	.text.IDAC_7bit_Stop,"ax",%progbits
+ 186              		.align	2
+ 187              		.global	IDAC_7bit_Stop
+ 188              		.code	16
+ 189              		.thumb_func
+ 190              		.type	IDAC_7bit_Stop, %function
+ 191              	IDAC_7bit_Stop:
+ 192              	.LFB4:
+ 138:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 139:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 140:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+ 141:Generated_Source\PSoC4/IDAC_7bit.c **** * Function Name: IDAC_7bit_Stop
+ 142:Generated_Source\PSoC4/IDAC_7bit.c **** ********************************************************************************
+ 143:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 144:Generated_Source\PSoC4/IDAC_7bit.c **** * Summary:
+ 145:Generated_Source\PSoC4/IDAC_7bit.c **** *  Stops the IDAC hardware.
+ 146:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 147:Generated_Source\PSoC4/IDAC_7bit.c **** * Parameters:
+ 148:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 149:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 150:Generated_Source\PSoC4/IDAC_7bit.c **** * Return:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 7
+
+
+ 151:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 152:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 153:Generated_Source\PSoC4/IDAC_7bit.c **** * Global variables:
+ 154:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 155:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 156:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+ 157:Generated_Source\PSoC4/IDAC_7bit.c **** void IDAC_7bit_Stop(void)
+ 158:Generated_Source\PSoC4/IDAC_7bit.c **** {
+ 193              		.loc 1 158 0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 10B5     		push	{r4, lr}
+ 198              		.cfi_def_cfa_offset 8
+ 199              		.cfi_offset 4, -8
+ 200              		.cfi_offset 14, -4
+ 159:Generated_Source\PSoC4/IDAC_7bit.c ****     uint8 enableInterrupts;
+ 160:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 161:Generated_Source\PSoC4/IDAC_7bit.c ****     enableInterrupts = CyEnterCriticalSection();
+ 201              		.loc 1 161 0
+ 202 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+ 203              	.LVL10:
+ 162:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 163:Generated_Source\PSoC4/IDAC_7bit.c ****     /* Disable the IDAC */
+ 164:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_CONTROL_REG &= ((uint32)~((uint32)IDAC_7bit_IDAC_MODE_MASK <<
+ 204              		.loc 1 164 0
+ 205 0006 044A     		ldr	r2, .L12
+ 206 0008 1168     		ldr	r1, [r2]
+ 207 000a 044B     		ldr	r3, .L12+4
+ 208 000c 0B40     		ands	r3, r1
+ 209 000e 1360     		str	r3, [r2]
+ 165:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_MODE_POSITION));
+ 166:Generated_Source\PSoC4/IDAC_7bit.c ****     CyExitCriticalSection(enableInterrupts);
+ 210              		.loc 1 166 0
+ 211 0010 FFF7FEFF 		bl	CyExitCriticalSection
+ 212              	.LVL11:
+ 167:Generated_Source\PSoC4/IDAC_7bit.c **** }
+ 213              		.loc 1 167 0
+ 214              		@ sp needed
+ 215 0014 10BD     		pop	{r4, pc}
+ 216              	.L13:
+ 217 0016 C046     		.align	2
+ 218              	.L12:
+ 219 0018 08002940 		.word	1076428808
+ 220 001c FFFFFFFC 		.word	-50331649
+ 221              		.cfi_endproc
+ 222              	.LFE4:
+ 223              		.size	IDAC_7bit_Stop, .-IDAC_7bit_Stop
+ 224              		.section	.text.IDAC_7bit_SetValue,"ax",%progbits
+ 225              		.align	2
+ 226              		.global	IDAC_7bit_SetValue
+ 227              		.code	16
+ 228              		.thumb_func
+ 229              		.type	IDAC_7bit_SetValue, %function
+ 230              	IDAC_7bit_SetValue:
+ 231              	.LFB5:
+ 168:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 8
+
+
+ 169:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 170:Generated_Source\PSoC4/IDAC_7bit.c **** /*******************************************************************************
+ 171:Generated_Source\PSoC4/IDAC_7bit.c **** * Function Name: IDAC_7bit_SetValue
+ 172:Generated_Source\PSoC4/IDAC_7bit.c **** ********************************************************************************
+ 173:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 174:Generated_Source\PSoC4/IDAC_7bit.c **** * Summary:
+ 175:Generated_Source\PSoC4/IDAC_7bit.c **** *  Sets the IDAC value.
+ 176:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 177:Generated_Source\PSoC4/IDAC_7bit.c **** * Parameters:
+ 178:Generated_Source\PSoC4/IDAC_7bit.c **** *  uint32 value
+ 179:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 180:Generated_Source\PSoC4/IDAC_7bit.c **** * Return:
+ 181:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 182:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 183:Generated_Source\PSoC4/IDAC_7bit.c **** * Global variables:
+ 184:Generated_Source\PSoC4/IDAC_7bit.c **** *  None
+ 185:Generated_Source\PSoC4/IDAC_7bit.c **** *
+ 186:Generated_Source\PSoC4/IDAC_7bit.c **** *******************************************************************************/
+ 187:Generated_Source\PSoC4/IDAC_7bit.c **** void IDAC_7bit_SetValue(uint32 value)
+ 188:Generated_Source\PSoC4/IDAC_7bit.c **** {
+ 232              		.loc 1 188 0
+ 233              		.cfi_startproc
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236              	.LVL12:
+ 237 0000 10B5     		push	{r4, lr}
+ 238              		.cfi_def_cfa_offset 8
+ 239              		.cfi_offset 4, -8
+ 240              		.cfi_offset 14, -4
+ 241 0002 0400     		movs	r4, r0
+ 189:Generated_Source\PSoC4/IDAC_7bit.c ****     uint8 enableInterrupts;
+ 190:Generated_Source\PSoC4/IDAC_7bit.c ****     uint32 newRegisterValue;
+ 191:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 192:Generated_Source\PSoC4/IDAC_7bit.c ****     enableInterrupts = CyEnterCriticalSection();
+ 242              		.loc 1 192 0
+ 243 0004 FFF7FEFF 		bl	CyEnterCriticalSection
+ 244              	.LVL13:
+ 193:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 194:Generated_Source\PSoC4/IDAC_7bit.c ****     #if(IDAC_7bit_IDAC_VALUE_POSITION != 0u)
+ 195:Generated_Source\PSoC4/IDAC_7bit.c ****         newRegisterValue = ((IDAC_7bit_IDAC_CONTROL_REG & (~(uint32)((uint32)IDAC_7bit_IDAC_VALUE_M
+ 245              		.loc 1 195 0
+ 246 0008 044A     		ldr	r2, .L15
+ 247 000a 1168     		ldr	r1, [r2]
+ 248 000c 044B     		ldr	r3, .L15+4
+ 249 000e 0B40     		ands	r3, r1
+ 196:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_VALUE_POSITION))) | (value << IDAC_7bit_IDAC_VALUE_POSITION));
+ 250              		.loc 1 196 0
+ 251 0010 2404     		lsls	r4, r4, #16
+ 252              	.LVL14:
+ 195:Generated_Source\PSoC4/IDAC_7bit.c ****         IDAC_7bit_IDAC_VALUE_POSITION))) | (value << IDAC_7bit_IDAC_VALUE_POSITION));
+ 253              		.loc 1 195 0
+ 254 0012 1C43     		orrs	r4, r3
+ 255              	.LVL15:
+ 197:Generated_Source\PSoC4/IDAC_7bit.c ****     #else
+ 198:Generated_Source\PSoC4/IDAC_7bit.c ****         newRegisterValue = ((IDAC_7bit_IDAC_CONTROL_REG & (~(uint32)IDAC_7bit_IDAC_VALUE_MASK)) | v
+ 199:Generated_Source\PSoC4/IDAC_7bit.c ****     #endif /* IDAC_7bit_IDAC_VALUE_POSITION != 0u */
+ 200:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 9
+
+
+ 201:Generated_Source\PSoC4/IDAC_7bit.c ****     IDAC_7bit_IDAC_CONTROL_REG = newRegisterValue;
+ 256              		.loc 1 201 0
+ 257 0014 1460     		str	r4, [r2]
+ 202:Generated_Source\PSoC4/IDAC_7bit.c **** 
+ 203:Generated_Source\PSoC4/IDAC_7bit.c ****     CyExitCriticalSection(enableInterrupts);
+ 258              		.loc 1 203 0
+ 259 0016 FFF7FEFF 		bl	CyExitCriticalSection
+ 260              	.LVL16:
+ 204:Generated_Source\PSoC4/IDAC_7bit.c **** }
+ 261              		.loc 1 204 0
+ 262              		@ sp needed
+ 263              	.LVL17:
+ 264 001a 10BD     		pop	{r4, pc}
+ 265              	.L16:
+ 266              		.align	2
+ 267              	.L15:
+ 268 001c 08002940 		.word	1076428808
+ 269 0020 FFFF80FF 		.word	-8323073
+ 270              		.cfi_endproc
+ 271              	.LFE5:
+ 272              		.size	IDAC_7bit_SetValue, .-IDAC_7bit_SetValue
+ 273              		.global	IDAC_7bit_initVar
+ 274              		.bss
+ 275              		.align	2
+ 276              		.set	.LANCHOR0,. + 0
+ 277              		.type	IDAC_7bit_initVar, %object
+ 278              		.size	IDAC_7bit_initVar, 4
+ 279              	IDAC_7bit_initVar:
+ 280 0000 00000000 		.space	4
+ 281              		.text
+ 282              	.Letext0:
+ 283              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 284              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
+ 285              		.section	.debug_info,"",%progbits
+ 286              	.Ldebug_info0:
+ 287 0000 1D020000 		.4byte	0x21d
+ 288 0004 0400     		.2byte	0x4
+ 289 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 290 000a 04       		.byte	0x4
+ 291 000b 01       		.uleb128 0x1
+ 292 000c 8B010000 		.4byte	.LASF28
+ 293 0010 0C       		.byte	0xc
+ 294 0011 B6000000 		.4byte	.LASF29
+ 295 0015 1A010000 		.4byte	.LASF30
+ 296 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 297 001d 00000000 		.4byte	0
+ 298 0021 00000000 		.4byte	.Ldebug_line0
+ 299 0025 02       		.uleb128 0x2
+ 300 0026 01       		.byte	0x1
+ 301 0027 06       		.byte	0x6
+ 302 0028 8A020000 		.4byte	.LASF0
+ 303 002c 02       		.uleb128 0x2
+ 304 002d 01       		.byte	0x1
+ 305 002e 08       		.byte	0x8
+ 306 002f 6C000000 		.4byte	.LASF1
+ 307 0033 02       		.uleb128 0x2
+ 308 0034 02       		.byte	0x2
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 10
+
+
+ 309 0035 05       		.byte	0x5
+ 310 0036 6B020000 		.4byte	.LASF2
+ 311 003a 02       		.uleb128 0x2
+ 312 003b 02       		.byte	0x2
+ 313 003c 07       		.byte	0x7
+ 314 003d 1C000000 		.4byte	.LASF3
+ 315 0041 02       		.uleb128 0x2
+ 316 0042 04       		.byte	0x4
+ 317 0043 05       		.byte	0x5
+ 318 0044 75020000 		.4byte	.LASF4
+ 319 0048 02       		.uleb128 0x2
+ 320 0049 04       		.byte	0x4
+ 321 004a 07       		.byte	0x7
+ 322 004b 7F000000 		.4byte	.LASF5
+ 323 004f 02       		.uleb128 0x2
+ 324 0050 08       		.byte	0x8
+ 325 0051 05       		.byte	0x5
+ 326 0052 46020000 		.4byte	.LASF6
+ 327 0056 02       		.uleb128 0x2
+ 328 0057 08       		.byte	0x8
+ 329 0058 07       		.byte	0x7
+ 330 0059 55000000 		.4byte	.LASF7
+ 331 005d 03       		.uleb128 0x3
+ 332 005e 04       		.byte	0x4
+ 333 005f 05       		.byte	0x5
+ 334 0060 696E7400 		.ascii	"int\000"
+ 335 0064 02       		.uleb128 0x2
+ 336 0065 04       		.byte	0x4
+ 337 0066 07       		.byte	0x7
+ 338 0067 F7000000 		.4byte	.LASF8
+ 339 006b 04       		.uleb128 0x4
+ 340 006c 91000000 		.4byte	.LASF9
+ 341 0070 02       		.byte	0x2
+ 342 0071 FB01     		.2byte	0x1fb
+ 343 0073 2C000000 		.4byte	0x2c
+ 344 0077 04       		.uleb128 0x4
+ 345 0078 D9000000 		.4byte	.LASF10
+ 346 007c 02       		.byte	0x2
+ 347 007d FD01     		.2byte	0x1fd
+ 348 007f 48000000 		.4byte	0x48
+ 349 0083 02       		.uleb128 0x2
+ 350 0084 04       		.byte	0x4
+ 351 0085 04       		.byte	0x4
+ 352 0086 40000000 		.4byte	.LASF11
+ 353 008a 02       		.uleb128 0x2
+ 354 008b 08       		.byte	0x8
+ 355 008c 04       		.byte	0x4
+ 356 008d A8000000 		.4byte	.LASF12
+ 357 0091 02       		.uleb128 0x2
+ 358 0092 01       		.byte	0x1
+ 359 0093 08       		.byte	0x8
+ 360 0094 66020000 		.4byte	.LASF13
+ 361 0098 04       		.uleb128 0x4
+ 362 0099 7A000000 		.4byte	.LASF14
+ 363 009d 02       		.byte	0x2
+ 364 009e A502     		.2byte	0x2a5
+ 365 00a0 A4000000 		.4byte	0xa4
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 11
+
+
+ 366 00a4 05       		.uleb128 0x5
+ 367 00a5 6B000000 		.4byte	0x6b
+ 368 00a9 04       		.uleb128 0x4
+ 369 00aa 10000000 		.4byte	.LASF15
+ 370 00ae 02       		.byte	0x2
+ 371 00af A702     		.2byte	0x2a7
+ 372 00b1 B5000000 		.4byte	0xb5
+ 373 00b5 05       		.uleb128 0x5
+ 374 00b6 77000000 		.4byte	0x77
+ 375 00ba 02       		.uleb128 0x2
+ 376 00bb 08       		.byte	0x8
+ 377 00bc 04       		.byte	0x4
+ 378 00bd 7E020000 		.4byte	.LASF16
+ 379 00c1 02       		.uleb128 0x2
+ 380 00c2 04       		.byte	0x4
+ 381 00c3 07       		.byte	0x7
+ 382 00c4 2A020000 		.4byte	.LASF17
+ 383 00c8 06       		.uleb128 0x6
+ 384 00c9 96020000 		.4byte	.LASF20
+ 385 00cd 01       		.byte	0x1
+ 386 00ce 25       		.byte	0x25
+ 387 00cf 00000000 		.4byte	.LFB1
+ 388 00d3 5C000000 		.4byte	.LFE1-.LFB1
+ 389 00d7 01       		.uleb128 0x1
+ 390 00d8 9C       		.byte	0x9c
+ 391 00d9 0E010000 		.4byte	0x10e
+ 392 00dd 07       		.uleb128 0x7
+ 393 00de AF000000 		.4byte	.LASF18
+ 394 00e2 01       		.byte	0x1
+ 395 00e3 27       		.byte	0x27
+ 396 00e4 77000000 		.4byte	0x77
+ 397 00e8 00000000 		.4byte	.LLST0
+ 398 00ec 07       		.uleb128 0x7
+ 399 00ed 97000000 		.4byte	.LASF19
+ 400 00f1 01       		.byte	0x1
+ 401 00f2 28       		.byte	0x28
+ 402 00f3 6B000000 		.4byte	0x6b
+ 403 00f7 2A000000 		.4byte	.LLST1
+ 404 00fb 08       		.uleb128 0x8
+ 405 00fc 06000000 		.4byte	.LVL0
+ 406 0100 0A020000 		.4byte	0x20a
+ 407 0104 08       		.uleb128 0x8
+ 408 0105 44000000 		.4byte	.LVL5
+ 409 0109 15020000 		.4byte	0x215
+ 410 010d 00       		.byte	0
+ 411 010e 06       		.uleb128 0x6
+ 412 010f 2F000000 		.4byte	.LASF21
+ 413 0113 01       		.byte	0x1
+ 414 0114 5E       		.byte	0x5e
+ 415 0115 00000000 		.4byte	.LFB2
+ 416 0119 2C000000 		.4byte	.LFE2-.LFB2
+ 417 011d 01       		.uleb128 0x1
+ 418 011e 9C       		.byte	0x9c
+ 419 011f 45010000 		.4byte	0x145
+ 420 0123 07       		.uleb128 0x7
+ 421 0124 97000000 		.4byte	.LASF19
+ 422 0128 01       		.byte	0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 12
+
+
+ 423 0129 60       		.byte	0x60
+ 424 012a 6B000000 		.4byte	0x6b
+ 425 012e 3D000000 		.4byte	.LLST2
+ 426 0132 08       		.uleb128 0x8
+ 427 0133 06000000 		.4byte	.LVL6
+ 428 0137 0A020000 		.4byte	0x20a
+ 429 013b 08       		.uleb128 0x8
+ 430 013c 22000000 		.4byte	.LVL7
+ 431 0140 15020000 		.4byte	0x215
+ 432 0144 00       		.byte	0
+ 433 0145 06       		.uleb128 0x6
+ 434 0146 00000000 		.4byte	.LASF22
+ 435 014a 01       		.byte	0x1
+ 436 014b 7F       		.byte	0x7f
+ 437 014c 00000000 		.4byte	.LFB3
+ 438 0150 20000000 		.4byte	.LFE3-.LFB3
+ 439 0154 01       		.uleb128 0x1
+ 440 0155 9C       		.byte	0x9c
+ 441 0156 6D010000 		.4byte	0x16d
+ 442 015a 08       		.uleb128 0x8
+ 443 015b 0E000000 		.4byte	.LVL8
+ 444 015f C8000000 		.4byte	0xc8
+ 445 0163 08       		.uleb128 0x8
+ 446 0164 18000000 		.4byte	.LVL9
+ 447 0168 0E010000 		.4byte	0x10e
+ 448 016c 00       		.byte	0
+ 449 016d 06       		.uleb128 0x6
+ 450 016e 46000000 		.4byte	.LASF23
+ 451 0172 01       		.byte	0x1
+ 452 0173 9D       		.byte	0x9d
+ 453 0174 00000000 		.4byte	.LFB4
+ 454 0178 20000000 		.4byte	.LFE4-.LFB4
+ 455 017c 01       		.uleb128 0x1
+ 456 017d 9C       		.byte	0x9c
+ 457 017e A4010000 		.4byte	0x1a4
+ 458 0182 07       		.uleb128 0x7
+ 459 0183 97000000 		.4byte	.LASF19
+ 460 0187 01       		.byte	0x1
+ 461 0188 9F       		.byte	0x9f
+ 462 0189 6B000000 		.4byte	0x6b
+ 463 018d 50000000 		.4byte	.LLST3
+ 464 0191 08       		.uleb128 0x8
+ 465 0192 06000000 		.4byte	.LVL10
+ 466 0196 0A020000 		.4byte	0x20a
+ 467 019a 08       		.uleb128 0x8
+ 468 019b 14000000 		.4byte	.LVL11
+ 469 019f 15020000 		.4byte	0x215
+ 470 01a3 00       		.byte	0
+ 471 01a4 06       		.uleb128 0x6
+ 472 01a5 33020000 		.4byte	.LASF24
+ 473 01a9 01       		.byte	0x1
+ 474 01aa BB       		.byte	0xbb
+ 475 01ab 00000000 		.4byte	.LFB5
+ 476 01af 24000000 		.4byte	.LFE5-.LFB5
+ 477 01b3 01       		.uleb128 0x1
+ 478 01b4 9C       		.byte	0x9c
+ 479 01b5 F9010000 		.4byte	0x1f9
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 13
+
+
+ 480 01b9 09       		.uleb128 0x9
+ 481 01ba 16000000 		.4byte	.LASF31
+ 482 01be 01       		.byte	0x1
+ 483 01bf BB       		.byte	0xbb
+ 484 01c0 77000000 		.4byte	0x77
+ 485 01c4 63000000 		.4byte	.LLST4
+ 486 01c8 07       		.uleb128 0x7
+ 487 01c9 97000000 		.4byte	.LASF19
+ 488 01cd 01       		.byte	0x1
+ 489 01ce BD       		.byte	0xbd
+ 490 01cf 6B000000 		.4byte	0x6b
+ 491 01d3 8F000000 		.4byte	.LLST5
+ 492 01d7 07       		.uleb128 0x7
+ 493 01d8 19020000 		.4byte	.LASF25
+ 494 01dc 01       		.byte	0x1
+ 495 01dd BE       		.byte	0xbe
+ 496 01de 77000000 		.4byte	0x77
+ 497 01e2 A2000000 		.4byte	.LLST6
+ 498 01e6 08       		.uleb128 0x8
+ 499 01e7 08000000 		.4byte	.LVL13
+ 500 01eb 0A020000 		.4byte	0x20a
+ 501 01ef 08       		.uleb128 0x8
+ 502 01f0 1A000000 		.4byte	.LVL16
+ 503 01f4 15020000 		.4byte	0x215
+ 504 01f8 00       		.byte	0
+ 505 01f9 0A       		.uleb128 0xa
+ 506 01fa 54020000 		.4byte	.LASF32
+ 507 01fe 01       		.byte	0x1
+ 508 01ff 11       		.byte	0x11
+ 509 0200 77000000 		.4byte	0x77
+ 510 0204 05       		.uleb128 0x5
+ 511 0205 03       		.byte	0x3
+ 512 0206 00000000 		.4byte	IDAC_7bit_initVar
+ 513 020a 0B       		.uleb128 0xb
+ 514 020b E0000000 		.4byte	.LASF26
+ 515 020f E0000000 		.4byte	.LASF26
+ 516 0213 03       		.byte	0x3
+ 517 0214 F8       		.byte	0xf8
+ 518 0215 0B       		.uleb128 0xb
+ 519 0216 04010000 		.4byte	.LASF27
+ 520 021a 04010000 		.4byte	.LASF27
+ 521 021e 03       		.byte	0x3
+ 522 021f F9       		.byte	0xf9
+ 523 0220 00       		.byte	0
+ 524              		.section	.debug_abbrev,"",%progbits
+ 525              	.Ldebug_abbrev0:
+ 526 0000 01       		.uleb128 0x1
+ 527 0001 11       		.uleb128 0x11
+ 528 0002 01       		.byte	0x1
+ 529 0003 25       		.uleb128 0x25
+ 530 0004 0E       		.uleb128 0xe
+ 531 0005 13       		.uleb128 0x13
+ 532 0006 0B       		.uleb128 0xb
+ 533 0007 03       		.uleb128 0x3
+ 534 0008 0E       		.uleb128 0xe
+ 535 0009 1B       		.uleb128 0x1b
+ 536 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 14
+
+
+ 537 000b 55       		.uleb128 0x55
+ 538 000c 17       		.uleb128 0x17
+ 539 000d 11       		.uleb128 0x11
+ 540 000e 01       		.uleb128 0x1
+ 541 000f 10       		.uleb128 0x10
+ 542 0010 17       		.uleb128 0x17
+ 543 0011 00       		.byte	0
+ 544 0012 00       		.byte	0
+ 545 0013 02       		.uleb128 0x2
+ 546 0014 24       		.uleb128 0x24
+ 547 0015 00       		.byte	0
+ 548 0016 0B       		.uleb128 0xb
+ 549 0017 0B       		.uleb128 0xb
+ 550 0018 3E       		.uleb128 0x3e
+ 551 0019 0B       		.uleb128 0xb
+ 552 001a 03       		.uleb128 0x3
+ 553 001b 0E       		.uleb128 0xe
+ 554 001c 00       		.byte	0
+ 555 001d 00       		.byte	0
+ 556 001e 03       		.uleb128 0x3
+ 557 001f 24       		.uleb128 0x24
+ 558 0020 00       		.byte	0
+ 559 0021 0B       		.uleb128 0xb
+ 560 0022 0B       		.uleb128 0xb
+ 561 0023 3E       		.uleb128 0x3e
+ 562 0024 0B       		.uleb128 0xb
+ 563 0025 03       		.uleb128 0x3
+ 564 0026 08       		.uleb128 0x8
+ 565 0027 00       		.byte	0
+ 566 0028 00       		.byte	0
+ 567 0029 04       		.uleb128 0x4
+ 568 002a 16       		.uleb128 0x16
+ 569 002b 00       		.byte	0
+ 570 002c 03       		.uleb128 0x3
+ 571 002d 0E       		.uleb128 0xe
+ 572 002e 3A       		.uleb128 0x3a
+ 573 002f 0B       		.uleb128 0xb
+ 574 0030 3B       		.uleb128 0x3b
+ 575 0031 05       		.uleb128 0x5
+ 576 0032 49       		.uleb128 0x49
+ 577 0033 13       		.uleb128 0x13
+ 578 0034 00       		.byte	0
+ 579 0035 00       		.byte	0
+ 580 0036 05       		.uleb128 0x5
+ 581 0037 35       		.uleb128 0x35
+ 582 0038 00       		.byte	0
+ 583 0039 49       		.uleb128 0x49
+ 584 003a 13       		.uleb128 0x13
+ 585 003b 00       		.byte	0
+ 586 003c 00       		.byte	0
+ 587 003d 06       		.uleb128 0x6
+ 588 003e 2E       		.uleb128 0x2e
+ 589 003f 01       		.byte	0x1
+ 590 0040 3F       		.uleb128 0x3f
+ 591 0041 19       		.uleb128 0x19
+ 592 0042 03       		.uleb128 0x3
+ 593 0043 0E       		.uleb128 0xe
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 15
+
+
+ 594 0044 3A       		.uleb128 0x3a
+ 595 0045 0B       		.uleb128 0xb
+ 596 0046 3B       		.uleb128 0x3b
+ 597 0047 0B       		.uleb128 0xb
+ 598 0048 27       		.uleb128 0x27
+ 599 0049 19       		.uleb128 0x19
+ 600 004a 11       		.uleb128 0x11
+ 601 004b 01       		.uleb128 0x1
+ 602 004c 12       		.uleb128 0x12
+ 603 004d 06       		.uleb128 0x6
+ 604 004e 40       		.uleb128 0x40
+ 605 004f 18       		.uleb128 0x18
+ 606 0050 9742     		.uleb128 0x2117
+ 607 0052 19       		.uleb128 0x19
+ 608 0053 01       		.uleb128 0x1
+ 609 0054 13       		.uleb128 0x13
+ 610 0055 00       		.byte	0
+ 611 0056 00       		.byte	0
+ 612 0057 07       		.uleb128 0x7
+ 613 0058 34       		.uleb128 0x34
+ 614 0059 00       		.byte	0
+ 615 005a 03       		.uleb128 0x3
+ 616 005b 0E       		.uleb128 0xe
+ 617 005c 3A       		.uleb128 0x3a
+ 618 005d 0B       		.uleb128 0xb
+ 619 005e 3B       		.uleb128 0x3b
+ 620 005f 0B       		.uleb128 0xb
+ 621 0060 49       		.uleb128 0x49
+ 622 0061 13       		.uleb128 0x13
+ 623 0062 02       		.uleb128 0x2
+ 624 0063 17       		.uleb128 0x17
+ 625 0064 00       		.byte	0
+ 626 0065 00       		.byte	0
+ 627 0066 08       		.uleb128 0x8
+ 628 0067 898201   		.uleb128 0x4109
+ 629 006a 00       		.byte	0
+ 630 006b 11       		.uleb128 0x11
+ 631 006c 01       		.uleb128 0x1
+ 632 006d 31       		.uleb128 0x31
+ 633 006e 13       		.uleb128 0x13
+ 634 006f 00       		.byte	0
+ 635 0070 00       		.byte	0
+ 636 0071 09       		.uleb128 0x9
+ 637 0072 05       		.uleb128 0x5
+ 638 0073 00       		.byte	0
+ 639 0074 03       		.uleb128 0x3
+ 640 0075 0E       		.uleb128 0xe
+ 641 0076 3A       		.uleb128 0x3a
+ 642 0077 0B       		.uleb128 0xb
+ 643 0078 3B       		.uleb128 0x3b
+ 644 0079 0B       		.uleb128 0xb
+ 645 007a 49       		.uleb128 0x49
+ 646 007b 13       		.uleb128 0x13
+ 647 007c 02       		.uleb128 0x2
+ 648 007d 17       		.uleb128 0x17
+ 649 007e 00       		.byte	0
+ 650 007f 00       		.byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 16
+
+
+ 651 0080 0A       		.uleb128 0xa
+ 652 0081 34       		.uleb128 0x34
+ 653 0082 00       		.byte	0
+ 654 0083 03       		.uleb128 0x3
+ 655 0084 0E       		.uleb128 0xe
+ 656 0085 3A       		.uleb128 0x3a
+ 657 0086 0B       		.uleb128 0xb
+ 658 0087 3B       		.uleb128 0x3b
+ 659 0088 0B       		.uleb128 0xb
+ 660 0089 49       		.uleb128 0x49
+ 661 008a 13       		.uleb128 0x13
+ 662 008b 3F       		.uleb128 0x3f
+ 663 008c 19       		.uleb128 0x19
+ 664 008d 02       		.uleb128 0x2
+ 665 008e 18       		.uleb128 0x18
+ 666 008f 00       		.byte	0
+ 667 0090 00       		.byte	0
+ 668 0091 0B       		.uleb128 0xb
+ 669 0092 2E       		.uleb128 0x2e
+ 670 0093 00       		.byte	0
+ 671 0094 3F       		.uleb128 0x3f
+ 672 0095 19       		.uleb128 0x19
+ 673 0096 3C       		.uleb128 0x3c
+ 674 0097 19       		.uleb128 0x19
+ 675 0098 6E       		.uleb128 0x6e
+ 676 0099 0E       		.uleb128 0xe
+ 677 009a 03       		.uleb128 0x3
+ 678 009b 0E       		.uleb128 0xe
+ 679 009c 3A       		.uleb128 0x3a
+ 680 009d 0B       		.uleb128 0xb
+ 681 009e 3B       		.uleb128 0x3b
+ 682 009f 0B       		.uleb128 0xb
+ 683 00a0 00       		.byte	0
+ 684 00a1 00       		.byte	0
+ 685 00a2 00       		.byte	0
+ 686              		.section	.debug_loc,"",%progbits
+ 687              	.Ldebug_loc0:
+ 688              	.LLST0:
+ 689 0000 10000000 		.4byte	.LVL1
+ 690 0004 1A000000 		.4byte	.LVL2
+ 691 0008 0100     		.2byte	0x1
+ 692 000a 52       		.byte	0x52
+ 693 000b 1A000000 		.4byte	.LVL2
+ 694 000f 20000000 		.4byte	.LVL3
+ 695 0013 0100     		.2byte	0x1
+ 696 0015 53       		.byte	0x53
+ 697 0016 20000000 		.4byte	.LVL3
+ 698 001a 22000000 		.4byte	.LVL4
+ 699 001e 0200     		.2byte	0x2
+ 700 0020 71       		.byte	0x71
+ 701 0021 00       		.sleb128 0
+ 702 0022 00000000 		.4byte	0
+ 703 0026 00000000 		.4byte	0
+ 704              	.LLST1:
+ 705 002a 06000000 		.4byte	.LVL0
+ 706 002e 43000000 		.4byte	.LVL5-1
+ 707 0032 0100     		.2byte	0x1
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 17
+
+
+ 708 0034 50       		.byte	0x50
+ 709 0035 00000000 		.4byte	0
+ 710 0039 00000000 		.4byte	0
+ 711              	.LLST2:
+ 712 003d 06000000 		.4byte	.LVL6
+ 713 0041 21000000 		.4byte	.LVL7-1
+ 714 0045 0100     		.2byte	0x1
+ 715 0047 50       		.byte	0x50
+ 716 0048 00000000 		.4byte	0
+ 717 004c 00000000 		.4byte	0
+ 718              	.LLST3:
+ 719 0050 06000000 		.4byte	.LVL10
+ 720 0054 13000000 		.4byte	.LVL11-1
+ 721 0058 0100     		.2byte	0x1
+ 722 005a 50       		.byte	0x50
+ 723 005b 00000000 		.4byte	0
+ 724 005f 00000000 		.4byte	0
+ 725              	.LLST4:
+ 726 0063 00000000 		.4byte	.LVL12
+ 727 0067 07000000 		.4byte	.LVL13-1
+ 728 006b 0100     		.2byte	0x1
+ 729 006d 50       		.byte	0x50
+ 730 006e 07000000 		.4byte	.LVL13-1
+ 731 0072 12000000 		.4byte	.LVL14
+ 732 0076 0100     		.2byte	0x1
+ 733 0078 54       		.byte	0x54
+ 734 0079 12000000 		.4byte	.LVL14
+ 735 007d 24000000 		.4byte	.LFE5
+ 736 0081 0400     		.2byte	0x4
+ 737 0083 F3       		.byte	0xf3
+ 738 0084 01       		.uleb128 0x1
+ 739 0085 50       		.byte	0x50
+ 740 0086 9F       		.byte	0x9f
+ 741 0087 00000000 		.4byte	0
+ 742 008b 00000000 		.4byte	0
+ 743              	.LLST5:
+ 744 008f 08000000 		.4byte	.LVL13
+ 745 0093 19000000 		.4byte	.LVL16-1
+ 746 0097 0100     		.2byte	0x1
+ 747 0099 50       		.byte	0x50
+ 748 009a 00000000 		.4byte	0
+ 749 009e 00000000 		.4byte	0
+ 750              	.LLST6:
+ 751 00a2 14000000 		.4byte	.LVL15
+ 752 00a6 1A000000 		.4byte	.LVL17
+ 753 00aa 0100     		.2byte	0x1
+ 754 00ac 54       		.byte	0x54
+ 755 00ad 00000000 		.4byte	0
+ 756 00b1 00000000 		.4byte	0
+ 757              		.section	.debug_aranges,"",%progbits
+ 758 0000 3C000000 		.4byte	0x3c
+ 759 0004 0200     		.2byte	0x2
+ 760 0006 00000000 		.4byte	.Ldebug_info0
+ 761 000a 04       		.byte	0x4
+ 762 000b 00       		.byte	0
+ 763 000c 0000     		.2byte	0
+ 764 000e 0000     		.2byte	0
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 18
+
+
+ 765 0010 00000000 		.4byte	.LFB1
+ 766 0014 5C000000 		.4byte	.LFE1-.LFB1
+ 767 0018 00000000 		.4byte	.LFB2
+ 768 001c 2C000000 		.4byte	.LFE2-.LFB2
+ 769 0020 00000000 		.4byte	.LFB3
+ 770 0024 20000000 		.4byte	.LFE3-.LFB3
+ 771 0028 00000000 		.4byte	.LFB4
+ 772 002c 20000000 		.4byte	.LFE4-.LFB4
+ 773 0030 00000000 		.4byte	.LFB5
+ 774 0034 24000000 		.4byte	.LFE5-.LFB5
+ 775 0038 00000000 		.4byte	0
+ 776 003c 00000000 		.4byte	0
+ 777              		.section	.debug_ranges,"",%progbits
+ 778              	.Ldebug_ranges0:
+ 779 0000 00000000 		.4byte	.LFB1
+ 780 0004 5C000000 		.4byte	.LFE1
+ 781 0008 00000000 		.4byte	.LFB2
+ 782 000c 2C000000 		.4byte	.LFE2
+ 783 0010 00000000 		.4byte	.LFB3
+ 784 0014 20000000 		.4byte	.LFE3
+ 785 0018 00000000 		.4byte	.LFB4
+ 786 001c 20000000 		.4byte	.LFE4
+ 787 0020 00000000 		.4byte	.LFB5
+ 788 0024 24000000 		.4byte	.LFE5
+ 789 0028 00000000 		.4byte	0
+ 790 002c 00000000 		.4byte	0
+ 791              		.section	.debug_line,"",%progbits
+ 792              	.Ldebug_line0:
+ 793 0000 C5000000 		.section	.debug_str,"MS",%progbits,1
+ 793      02005100 
+ 793      00000201 
+ 793      FB0E0D00 
+ 793      01010101 
+ 794              	.LASF22:
+ 795 0000 49444143 		.ascii	"IDAC_7bit_Start\000"
+ 795      5F376269 
+ 795      745F5374 
+ 795      61727400 
+ 796              	.LASF15:
+ 797 0010 72656733 		.ascii	"reg32\000"
+ 797      3200
+ 798              	.LASF31:
+ 799 0016 76616C75 		.ascii	"value\000"
+ 799      6500
+ 800              	.LASF3:
+ 801 001c 73686F72 		.ascii	"short unsigned int\000"
+ 801      7420756E 
+ 801      7369676E 
+ 801      65642069 
+ 801      6E7400
+ 802              	.LASF21:
+ 803 002f 49444143 		.ascii	"IDAC_7bit_Enable\000"
+ 803      5F376269 
+ 803      745F456E 
+ 803      61626C65 
+ 803      00
+ 804              	.LASF11:
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 19
+
+
+ 805 0040 666C6F61 		.ascii	"float\000"
+ 805      7400
+ 806              	.LASF23:
+ 807 0046 49444143 		.ascii	"IDAC_7bit_Stop\000"
+ 807      5F376269 
+ 807      745F5374 
+ 807      6F7000
+ 808              	.LASF7:
+ 809 0055 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 809      206C6F6E 
+ 809      6720756E 
+ 809      7369676E 
+ 809      65642069 
+ 810              	.LASF1:
+ 811 006c 756E7369 		.ascii	"unsigned char\000"
+ 811      676E6564 
+ 811      20636861 
+ 811      7200
+ 812              	.LASF14:
+ 813 007a 72656738 		.ascii	"reg8\000"
+ 813      00
+ 814              	.LASF5:
+ 815 007f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 815      20756E73 
+ 815      69676E65 
+ 815      6420696E 
+ 815      7400
+ 816              	.LASF9:
+ 817 0091 75696E74 		.ascii	"uint8\000"
+ 817      3800
+ 818              	.LASF19:
+ 819 0097 656E6162 		.ascii	"enableInterrupts\000"
+ 819      6C65496E 
+ 819      74657272 
+ 819      75707473 
+ 819      00
+ 820              	.LASF12:
+ 821 00a8 646F7562 		.ascii	"double\000"
+ 821      6C6500
+ 822              	.LASF18:
+ 823 00af 72656756 		.ascii	"regVal\000"
+ 823      616C00
+ 824              	.LASF29:
+ 825 00b6 47656E65 		.ascii	"Generated_Source\\PSoC4\\IDAC_7bit.c\000"
+ 825      72617465 
+ 825      645F536F 
+ 825      75726365 
+ 825      5C50536F 
+ 826              	.LASF10:
+ 827 00d9 75696E74 		.ascii	"uint32\000"
+ 827      333200
+ 828              	.LASF26:
+ 829 00e0 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 829      74657243 
+ 829      72697469 
+ 829      63616C53 
+ 829      65637469 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 20
+
+
+ 830              	.LASF8:
+ 831 00f7 756E7369 		.ascii	"unsigned int\000"
+ 831      676E6564 
+ 831      20696E74 
+ 831      00
+ 832              	.LASF27:
+ 833 0104 43794578 		.ascii	"CyExitCriticalSection\000"
+ 833      69744372 
+ 833      69746963 
+ 833      616C5365 
+ 833      6374696F 
+ 834              	.LASF30:
+ 835 011a 433A5C55 		.ascii	"C:\\Users\\becca\\Documents\\GitHub\\Science_Sensor"
+ 835      73657273 
+ 835      5C626563 
+ 835      63615C44 
+ 835      6F63756D 
+ 836 0148 5F426F61 		.ascii	"_Board\\Science_Sensor_Board\\testing_sensors\\CO2 "
+ 836      72645C53 
+ 836      6369656E 
+ 836      63655F53 
+ 836      656E736F 
+ 837 0178 50536F43 		.ascii	"PSoC\\CO2\\CO2.cydsn\000"
+ 837      5C434F32 
+ 837      5C434F32 
+ 837      2E637964 
+ 837      736E00
+ 838              	.LASF28:
+ 839 018b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 839      43313120 
+ 839      352E342E 
+ 839      31203230 
+ 839      31363036 
+ 840 01be 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 840      20726576 
+ 840      6973696F 
+ 840      6E203233 
+ 840      37373135 
+ 841 01f1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 841      66756E63 
+ 841      74696F6E 
+ 841      2D736563 
+ 841      74696F6E 
+ 842              	.LASF25:
+ 843 0219 6E657752 		.ascii	"newRegisterValue\000"
+ 843      65676973 
+ 843      74657256 
+ 843      616C7565 
+ 843      00
+ 844              	.LASF17:
+ 845 022a 73697A65 		.ascii	"sizetype\000"
+ 845      74797065 
+ 845      00
+ 846              	.LASF24:
+ 847 0233 49444143 		.ascii	"IDAC_7bit_SetValue\000"
+ 847      5F376269 
+ 847      745F5365 
+ARM GAS  C:\Users\becca\AppData\Local\Temp\cclBfPDS.s 			page 21
+
+
+ 847      7456616C 
+ 847      756500
+ 848              	.LASF6:
+ 849 0246 6C6F6E67 		.ascii	"long long int\000"
+ 849      206C6F6E 
+ 849      6720696E 
+ 849      7400
+ 850              	.LASF32:
+ 851 0254 49444143 		.ascii	"IDAC_7bit_initVar\000"
+ 851      5F376269 
+ 851      745F696E 
+ 851      69745661 
+ 851      7200
+ 852              	.LASF13:
+ 853 0266 63686172 		.ascii	"char\000"
+ 853      00
+ 854              	.LASF2:
+ 855 026b 73686F72 		.ascii	"short int\000"
+ 855      7420696E 
+ 855      7400
+ 856              	.LASF4:
+ 857 0275 6C6F6E67 		.ascii	"long int\000"
+ 857      20696E74 
+ 857      00
+ 858              	.LASF16:
+ 859 027e 6C6F6E67 		.ascii	"long double\000"
+ 859      20646F75 
+ 859      626C6500 
+ 860              	.LASF0:
+ 861 028a 7369676E 		.ascii	"signed char\000"
+ 861      65642063 
+ 861      68617200 
+ 862              	.LASF20:
+ 863 0296 49444143 		.ascii	"IDAC_7bit_Init\000"
+ 863      5F376269 
+ 863      745F496E 
+ 863      697400
+ 864              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

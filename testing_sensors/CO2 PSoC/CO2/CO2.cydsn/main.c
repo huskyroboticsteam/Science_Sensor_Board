@@ -8,7 +8,8 @@
 
 /* Hardware & calibration macros */
 #define DC_GAIN                   (8.5f)
-#define ZERO_POINT_VOLTAGE        (3.328f/DC_GAIN)   
+#define ZERO_POINT_VOLTAGE        (3.328f/DC_GAIN) 
+
 #define REACTION_VOLTAGE          (0.030f)          
 #define ADC_COUNTS                (4095.0f)  /* 12-bit */
 #define VREF                      (5.0f)     /* volts */
@@ -32,7 +33,7 @@ int main(void)
     CyGlobalIntEnable;          /* Enable global interrupts */
     
     UART_Start();             /* Initialize UART at 9600bps */ 
-    ADC_SAR_Start();          /* Initialize SAR ADC */ 
+    ADC_Start();          /* Initialize SAR ADC */ 
     
     UART_PutString("MG-811 Demonstration\r\n");
     
@@ -58,7 +59,7 @@ int main(void)
         }
         else
         {
-            UART_1_PutString("=====BOOL is LOW=======\r\n");
+            UART_PutString("=====BOOL is LOW=======\r\n");
         }
         
         CyDelay(500);
@@ -80,9 +81,9 @@ float MG_ReadVoltage(void)
     
     for (i = 0; i < READ_SAMPLE_TIMES; i++)
     {
-        ADC_SAR_StartConvert();
-        ADC_SAR_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
-        sample = ADC_SAR_GetResult16();
+        ADC_StartConvert();
+        ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+        sample = ADC_GetResult16();
         sum   += sample;
         CyDelay(READ_SAMPLE_INTERVAL);
     }
