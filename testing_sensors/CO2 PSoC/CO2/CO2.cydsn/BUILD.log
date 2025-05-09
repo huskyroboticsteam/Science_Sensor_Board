@@ -1,0 +1,21 @@
+--------------- Build Started: 05/07/2025 18:38:26 Project: CO2, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:38:5: warning: implicit declaration of function 'UART_PutString' [-Wimplicit-function-declaration]
+     UART_PutString("MG-811 Demonstration\r\n");
+     ^
+main.c:56:13: warning: implicit declaration of function 'BOOL_PIN_Read' [-Wimplicit-function-declaration]
+         if (BOOL_PIN_Read() == 1)
+             ^
+main.c: In function 'MG_ReadVoltage':
+main.c:86:18: error: too few arguments to function 'ADC_GetResult16'
+         sample = ADC_GetResult16();
+                  ^
+In file included from Generated_Source\PSoC4/project.h:73:0,
+                 from main.c:5:
+Generated_Source\PSoC4/ADC.h:160:7: note: declared here
+ int16 ADC_GetResult16(uint32 chan);
+       ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 05/07/2025 18:38:27 ---------------
