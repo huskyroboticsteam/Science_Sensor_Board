@@ -16,6 +16,9 @@ int32_t getTemp(){
     if(!status){
         return -1;
     }
+     char buffer[64];
+    snprintf(buffer, sizeof(buffer), "Temperature (degrees Celcius) = %d\t\t", (int) temp);
+    UART_UartPutString(buffer);
     return (int32_t) temp;
 }
 
@@ -30,5 +33,8 @@ int32_t getHum(){
     if(!status){
         return -1;
     }
-    return (int32_t) temp;
+     char buffer[64];
+    snprintf(buffer, sizeof(buffer), "Temperature (degrees Celcius) = %d\t\t", (int) hum);
+    UART_UartPutString(buffer);
+    return (int32_t) hum;
 }

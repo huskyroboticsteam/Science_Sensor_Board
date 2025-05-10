@@ -1,4 +1,4 @@
---------------- Build Started: 05/08/2025 19:07:01 Project: CAN, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 05/10/2025 12:33:45 Project: CAN, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 In file included from main.c:25:0:
@@ -67,6 +67,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\shahnaz\Documents\GitHub\Science_Sensor_Board\Final\CAN.cydsn\CortexM0\ARM_GCC_541\Debug\CAN.elf
-Flash used: 14134 of 262144 bytes (5.4%).
+Flash used: 14334 of 262144 bytes (5.5%).
 SRAM used: 3024 of 32768 bytes (9.2%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 05/08/2025 19:07:04 ---------------
+--------------- Build Succeeded: 05/10/2025 12:33:47 ---------------
