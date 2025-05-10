@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Input_1_Int.c  
-* Version 1.70
+* Version 1.71
 *
 *  Description:
 *   API for controlling the state of an interrupt.
@@ -252,7 +252,7 @@ void Input_1_Int_SetPriority(uint8 priority)
     uint32 priorityOffset = ((Input_1_Int__INTC_NUMBER % 4u) * 8u) + 6u;
     
 	interruptState = CyEnterCriticalSection();
-    *Input_1_Int_INTC_PRIOR = (*Input_1_Int_INTC_PRIOR & (uint32)(~Input_1_Int__INTC_PRIOR_MASK)) |
+    *Input_1_Int_INTC_PRIOR = (*Input_1_Int_INTC_PRIOR & (uint32)(~(uint32)Input_1_Int__INTC_PRIOR_MASK)) |
                                     ((uint32)priority << priorityOffset);
 	CyExitCriticalSection(interruptState);
 }

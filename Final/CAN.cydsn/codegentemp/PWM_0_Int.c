@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: PWM_0_Int.c  
-* Version 1.70
+* Version 1.71
 *
 *  Description:
 *   API for controlling the state of an interrupt.
@@ -252,7 +252,7 @@ void PWM_0_Int_SetPriority(uint8 priority)
     uint32 priorityOffset = ((PWM_0_Int__INTC_NUMBER % 4u) * 8u) + 6u;
     
 	interruptState = CyEnterCriticalSection();
-    *PWM_0_Int_INTC_PRIOR = (*PWM_0_Int_INTC_PRIOR & (uint32)(~PWM_0_Int__INTC_PRIOR_MASK)) |
+    *PWM_0_Int_INTC_PRIOR = (*PWM_0_Int_INTC_PRIOR & (uint32)(~(uint32)PWM_0_Int__INTC_PRIOR_MASK)) |
                                     ((uint32)priority << priorityOffset);
 	CyExitCriticalSection(interruptState);
 }

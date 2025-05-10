@@ -1,5 +1,4 @@
 #pragma once
-
 #include <stdio.h>
 
 int32_t getTemp();

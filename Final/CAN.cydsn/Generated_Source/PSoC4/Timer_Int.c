@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Timer_Int.c  
-* Version 1.70
+* Version 1.71
 *
 *  Description:
 *   API for controlling the state of an interrupt.
@@ -252,7 +252,7 @@ void Timer_Int_SetPriority(uint8 priority)
     uint32 priorityOffset = ((Timer_Int__INTC_NUMBER % 4u) * 8u) + 6u;
     
 	interruptState = CyEnterCriticalSection();
-    *Timer_Int_INTC_PRIOR = (*Timer_Int_INTC_PRIOR & (uint32)(~Timer_Int__INTC_PRIOR_MASK)) |
+    *Timer_Int_INTC_PRIOR = (*Timer_Int_INTC_PRIOR & (uint32)(~(uint32)Timer_Int__INTC_PRIOR_MASK)) |
                                     ((uint32)priority << priorityOffset);
 	CyExitCriticalSection(interruptState);
 }

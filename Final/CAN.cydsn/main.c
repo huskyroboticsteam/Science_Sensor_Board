@@ -42,16 +42,38 @@ int main(void)
     {
         err = 0;
         
+        /*
+        uint16_t packageID = 0xF5;
+        uint8_t sender_DG = 0x07;
+        uint8_t sender_SN = 0x00;
+        int32_t data = 0;
+        
+        CANPacket p; 
+        
+        p.id = (1|7|0);
+        
+        p.data[0] = 0xF5;
+        p.data[1] = 0x07;
+        p.data[2] = 0x00;
+        p.data[3] = 0x16;
+        
+        if(SendCANPacket(&p) == 0){
+           Print("Sent");
+        }else{
+            Print("Not Sent");
+        }
+        */
         if (!PollAndReceiveCANPacket(&can_recieve)) {
             err = ProcessCAN(&can_recieve, &can_send);
         }
+        
         
         /*
         if (UART_SpiUartGetRxBufferSize()) {
             DebugPrint(UART_UartGetByte());
         }
         */
-        CyDelay(10);
+        CyDelay(1000);
     }
 }
 
@@ -59,21 +81,21 @@ void Initialize(void) {
     uint32 err;
     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
     
+    UART_Start();
+    
     sprintf(txData, "\r\nHello\r\n");
     Print(txData);
     
     address = 0; // TODO replace with science sensor address
     
-    UART_Start();
     SHT31_Init();
     InitCAN(DEVICE_GROUP_SCIENCE, (int) address);
-    //Timer_Period_Reset_Start();
-    //isr_Period_Reset_StartEx(Period_Reset_Handler);
     
     sprintf(txData, "Address: %x \r\n", address);
     Print(txData);
     
     CyDelay(30); // ensure sensors are initialized
 }
+
 
 /* [] END OF FILE */

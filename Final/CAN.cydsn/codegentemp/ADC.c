@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: ADC.c
-* Version 2.50
+* Version 2.60
 *
 * Description:
 *  This file provides the source code to the API for the Sequencing Successive

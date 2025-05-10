@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: ADC_PM.c
-* Version 2.50
+* Version 2.60
 *
 * Description:
 *  This file provides Sleep/WakeUp APIs functionality.

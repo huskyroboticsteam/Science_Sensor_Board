@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     May 7 2025 18:53:38
+#File Generated:     May 10 2025 14:53:27
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name CAN --netlist-vh2 CAN_p.vh2 --arch p4_udb2x4 --arch-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata --ip-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/ip_blocks.cydata --rrg-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata --irq-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/irqconn.cydata --drq-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/triggerconn.cydata --dsi-conn-file C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/dsiconn.cydata --pins-file pins_64-TQFP.xml --lib-file CAN_p.lib --sdc-file CAN.sdc --io-pcf CAN.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name CAN --netlist-vh2 CAN_p.vh2 --arch p4_udb2x4 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/dsiconn.cydata --pins-file pins_64-TQFP.xml --lib-file CAN_p.lib --sdc-file CAN.sdc --io-pcf CAN.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -23,7 +23,7 @@ Build Date : Sep  9 2019	11:45:12
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - CAN_p.vh2
-Architecture file         - C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata
 Package                   - 
 Defparam file             - 
 SDC file                  - CAN.sdc
@@ -34,7 +34,7 @@ IO Placement file         - CAN.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "CAN_p.vh2"
-D2065: Reading arch file : "C:\Users\shahnaz\Desktop\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design
@@ -111,5 +111,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.6 sec.
+I2076: Total run-time: 0.5 sec.
 

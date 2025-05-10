@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: LPComp_Int.c  
-* Version 1.70
+* Version 1.71
 *
 *  Description:
 *   API for controlling the state of an interrupt.
@@ -252,7 +252,7 @@ void LPComp_Int_SetPriority(uint8 priority)
     uint32 priorityOffset = ((LPComp_Int__INTC_NUMBER % 4u) * 8u) + 6u;
     
 	interruptState = CyEnterCriticalSection();
-    *LPComp_Int_INTC_PRIOR = (*LPComp_Int_INTC_PRIOR & (uint32)(~LPComp_Int__INTC_PRIOR_MASK)) |
+    *LPComp_Int_INTC_PRIOR = (*LPComp_Int_INTC_PRIOR & (uint32)(~(uint32)LPComp_Int__INTC_PRIOR_MASK)) |
                                     ((uint32)priority << priorityOffset);
 	CyExitCriticalSection(interruptState);
 }

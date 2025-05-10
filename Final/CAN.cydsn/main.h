@@ -14,6 +14,8 @@
 #include "cyapicallbacks.h"
 #include <stdint.h>
 #include <stdlib.h>
+#include <CAN.h>
+#include "HindsightCAN/CANLibrary.h"
 
 #define TX_DATA_SIZE            (100u)
 
@@ -26,6 +28,6 @@ void Initialize(void);
 int getSerialAddress();
 void DebugPrint(char input);
 void DisplayErrorCode(uint8_t code);
-
+void InitCAN();
 
 /* [] END OF FILE */

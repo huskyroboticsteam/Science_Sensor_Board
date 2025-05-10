@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: ADC.h
-* Version 2.50
+* Version 2.60
 *
 * Description:
 *  This file contains the function prototypes and constants used in

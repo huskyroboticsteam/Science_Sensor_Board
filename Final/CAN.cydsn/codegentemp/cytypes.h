@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cytypes.h
-* \version 6.0
+* \version 6.10
 *
 * \brief CyTypes provides register access macros and approved types for use in
 * firmware.
@@ -16,7 +16,7 @@
 *
 ********************************************************************************
 * \copyright
-* Copyright 2008-2020, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2008-2021, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -498,7 +498,8 @@
 #define CY_BOOT_5_81            (581u)
 #define CY_BOOT_5_90            (590u)
 #define CY_BOOT_6_0             (600u)
-#define CY_BOOT_VERSION         (CY_BOOT_6_0)
+#define CY_BOOT_6_10            (610u)
+#define CY_BOOT_VERSION         (CY_BOOT_6_10)
 
 
 /*******************************************************************************

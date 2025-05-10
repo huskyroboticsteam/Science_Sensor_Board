@@ -4,16 +4,16 @@
 #include <TempHum_Lib.h>
 #include <project.h>
 #include <HumTemp_I2C.h>
+#include "main.h"
 
 int32_t getTemp(){
     float temp, hum;
     bool status;
     status = SHT31_IsHeaterEnabled();
-    if(!status){
-        return -1;
-    }
+
     status = SHT31_ReadTempHum(&temp, &hum);
     if(!status){
+        Print("readTempHum fail");
         return -1;
     }
      char buffer[64];
@@ -26,9 +26,6 @@ int32_t getHum(){
     float temp, hum;
     bool status;
     status = SHT31_IsHeaterEnabled();
-    if(!status){
-        return -1;
-    }
     status = SHT31_ReadTempHum(&temp, &hum);
     if(!status){
         return -1;

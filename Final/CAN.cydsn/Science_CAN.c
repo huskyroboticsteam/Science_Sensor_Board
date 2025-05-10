@@ -20,6 +20,9 @@
 #include "Science_CAN.h"
 #include "HindsightCAN/Port.h"
 
+CAN_RX_CFG rxMailbox;
+
+CY_ISR_PROTO(CAN_FLAG_ISR);
 
 extern char txData[TX_DATA_SIZE];
 extern uint8 address;
@@ -34,6 +37,8 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
     float temp, hum;
     bool status;
     
+    Print("\r\n\r\nBeginning of Science_CAN\r\n\r\n");
+    
     switch(packageID){            
         // Common Packets
         
@@ -47,23 +52,30 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             {                
                 case(PACKET_TELEMETRY_SENSOR1):
                     data = getTemp();
+                    Print("temp");
                     break;
                 case(PACKET_TELEMETRY_SENSOR2):
+                    Print("sensor2");
                     data = 0; // TODO
                     break;
                 case(PACKET_TELEMETRY_SENSOR3):
+                    Print("hum");
                     data = getHum();
                     break;
                 case(PACKET_TELEMETRY_SENSOR4):
+                    Print("sensor 4");
                     data = 0; // TODO
                     break;
                 case(PACKET_TELEMETRY_SENSOR5):
                     data = 0; // TODO
+                    Print("sensor 5");
                     break;
                 case(PACKET_TELEMETRY_SENSOR6):
                     data = 0; // TODO
+                    Print("sensor 6");
                     break;
                 default:
+                    Print("Default");
                     err = ERROR_INVALID_TTC;
                     break;
             }
@@ -71,9 +83,9 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             // Assemble and send packet
             AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, receivedPacket->data[3], data);
             
-            if (err == 0 && data != -1)
+            if (err == 0 ){
                 SendCANPacket(packetToSend);
-            
+            }
             break;
             
         default: //recieved Packet with non-valid ID
@@ -94,5 +106,18 @@ void PrintCanPacket(CANPacket packet){
     Print(txData);
 }
 
+void InitCANN() {
+    CAN_Start(); // must name CAN Top Design block as "CAN"
+    
+    // sets up mailbox to recieve EVERYTHING
+    rxMailbox.rxmailbox = 0;
+    rxMailbox.rxacr = 0x00000000;
+    rxMailbox.rxamr = 0xFFFFFFFF;
+    rxMailbox.rxcmd = CAN_RX_CMD_REG(CAN_RX_MAILBOX_0);
+    CAN_RxBufConfig(&rxMailbox);
+    
+    CAN_GlobalIntEnable();
+    CyIntSetVector(CAN_ISR_NUMBER, CAN_FLAG_ISR);
+}
 
 /* [] END OF FILE */

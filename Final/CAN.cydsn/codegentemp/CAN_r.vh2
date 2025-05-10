@@ -1,5 +1,5 @@
 -- Project:   CAN
--- Generated: 05/07/2025 18:53:39
+-- Generated: 05/10/2025 14:53:27
 -- PSoC Creator  4.4
 
 ENTITY CAN IS
@@ -217,15 +217,15 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF Output_Pin_0(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF Output_Pin_0(0) : LABEL IS "P1[3]";
+    ATTRIBUTE Location OF Output_Pin_0(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF Output_Pin_1(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF Output_Pin_1(0) : LABEL IS "P1[4]";
+    ATTRIBUTE Location OF Output_Pin_1(0) : LABEL IS "P1[6]";
     ATTRIBUTE Location OF Input_Pin_0 : LABEL IS "F(PICU,2)";
     ATTRIBUTE lib_model OF Input_Pin_0(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF Input_Pin_0(0) : LABEL IS "P2[2]";
+    ATTRIBUTE Location OF Input_Pin_0(0) : LABEL IS "P2[3]";
     ATTRIBUTE Location OF Input_Pin_1 : LABEL IS "F(PICU,1)";
     ATTRIBUTE lib_model OF Input_Pin_1(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF Input_Pin_1(0) : LABEL IS "P1[2]";
+    ATTRIBUTE Location OF Input_Pin_1(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF CompP_0(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF CompP_0(0) : LABEL IS "P0[0]";
     ATTRIBUTE lib_model OF CompM_0(0) : LABEL IS "iocell6";
@@ -236,7 +236,7 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE Location OF CompM_1(0) : LABEL IS "P0[3]";
     ATTRIBUTE Location OF Wakeup_Pin : LABEL IS "F(PICU,3)";
     ATTRIBUTE lib_model OF Wakeup_Pin(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF Wakeup_Pin(0) : LABEL IS "P3[0]";
+    ATTRIBUTE Location OF Wakeup_Pin(0) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF Timer_Pin(0) : LABEL IS "iocell10";
     ATTRIBUTE Location OF Timer_Pin(0) : LABEL IS "P1[1]";
     ATTRIBUTE lib_model OF \CapSense:Cmod(0)\ : LABEL IS "iocell11";
@@ -250,29 +250,29 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE lib_model OF IDAC_7bit_In(0) : LABEL IS "iocell15";
     ATTRIBUTE Location OF IDAC_7bit_In(0) : LABEL IS "P5[3]";
     ATTRIBUTE lib_model OF ADC_0(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF ADC_0(0) : LABEL IS "P2[5]";
+    ATTRIBUTE Location OF ADC_0(0) : LABEL IS "P2[4]";
     ATTRIBUTE lib_model OF ADC_1P(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF ADC_1P(0) : LABEL IS "P2[0]";
+    ATTRIBUTE Location OF ADC_1P(0) : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF ADC_1M(0) : LABEL IS "iocell18";
-    ATTRIBUTE Location OF ADC_1M(0) : LABEL IS "P2[1]";
+    ATTRIBUTE Location OF ADC_1M(0) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF ADC_2(0) : LABEL IS "iocell19";
     ATTRIBUTE Location OF ADC_2(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF ADC_3(0) : LABEL IS "iocell20";
     ATTRIBUTE Location OF ADC_3(0) : LABEL IS "P1[0]";
     ATTRIBUTE lib_model OF PWM_0_Out(0) : LABEL IS "iocell21";
-    ATTRIBUTE Location OF PWM_0_Out(0) : LABEL IS "P2[6]";
+    ATTRIBUTE Location OF PWM_0_Out(0) : LABEL IS "P3[4]";
     ATTRIBUTE lib_model OF PWM_1_Out(0) : LABEL IS "iocell22";
-    ATTRIBUTE Location OF PWM_1_Out(0) : LABEL IS "P3[4]";
+    ATTRIBUTE Location OF PWM_1_Out(0) : LABEL IS "P1[2]";
     ATTRIBUTE lib_model OF PWM_2_Out(0) : LABEL IS "iocell23";
-    ATTRIBUTE Location OF PWM_2_Out(0) : LABEL IS "P2[4]";
+    ATTRIBUTE Location OF PWM_2_Out(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF \SPI:ss_s(0)\ : LABEL IS "iocell24";
     ATTRIBUTE Location OF \SPI:ss_s(0)\ : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF \SPI:miso_s(0)\ : LABEL IS "iocell25";
-    ATTRIBUTE Location OF \SPI:miso_s(0)\ : LABEL IS "P0[5]";
+    ATTRIBUTE Location OF \SPI:miso_s(0)\ : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF \SPI:sclk_s(0)\ : LABEL IS "iocell26";
-    ATTRIBUTE Location OF \SPI:sclk_s(0)\ : LABEL IS "P0[6]";
+    ATTRIBUTE Location OF \SPI:sclk_s(0)\ : LABEL IS "P2[2]";
     ATTRIBUTE lib_model OF \SPI:mosi_s(0)\ : LABEL IS "iocell27";
-    ATTRIBUTE Location OF \SPI:mosi_s(0)\ : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF \SPI:mosi_s(0)\ : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF \HumTemp_I2C:sda(0)\ : LABEL IS "iocell28";
     ATTRIBUTE Location OF \HumTemp_I2C:sda(0)\ : LABEL IS "P5[1]";
     ATTRIBUTE lib_model OF \HumTemp_I2C:scl(0)\ : LABEL IS "iocell29";
@@ -291,7 +291,7 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE Location OF \Comp_1:cy_psoc4_lpcomp_1\ : LABEL IS "F(LPCOMP,1)";
     ATTRIBUTE Location OF LPComp_Int : LABEL IS "[IntrContainer=(0)][IntrId=(7)]";
     ATTRIBUTE Location OF Wakeup_Pin_Int : LABEL IS "[IntrContainer=(0)][IntrId=(3)]";
-    ATTRIBUTE Location OF Timer_Int : LABEL IS "[IntrContainer=(0)][IntrId=(23)]";
+    ATTRIBUTE Location OF Timer_Int : LABEL IS "[IntrContainer=(0)][IntrId=(21)]";
     ATTRIBUTE Location OF \CapSense:CSD_FFB\ : LABEL IS "F(CSD,0)";
     ATTRIBUTE Location OF \CapSense:ISR\ : LABEL IS "[IntrContainer=(0)][IntrId=(18)]";
     ATTRIBUTE Location OF \CapSense:IDAC2:cy_psoc4_idac\ : LABEL IS "F(CSIDAC7,0)";
@@ -305,11 +305,11 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE Location OF \ADC_3_Buffer:cy_psoc4_abuf\ : LABEL IS "F(OA,0)";
     ATTRIBUTE Location OF \ADC:IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(17)]";
     ATTRIBUTE Location OF \ADC:cy_psoc4_sar\ : LABEL IS "F(SARADC,0)";
-    ATTRIBUTE Location OF PWM_0_Int : LABEL IS "[IntrContainer=(0)][IntrId=(21)]";
-    ATTRIBUTE Location OF \Timer:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,3)";
+    ATTRIBUTE Location OF PWM_0_Int : LABEL IS "[IntrContainer=(0)][IntrId=(22)]";
+    ATTRIBUTE Location OF \Timer:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,1)";
     ATTRIBUTE Location OF \PWM_2:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,0)";
-    ATTRIBUTE Location OF \PWM_1:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,2)";
-    ATTRIBUTE Location OF \PWM_0:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,1)";
+    ATTRIBUTE Location OF \PWM_1:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,3)";
+    ATTRIBUTE Location OF \PWM_0:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,2)";
     ATTRIBUTE Location OF \SPI:SCB\ : LABEL IS "F(SCB,1)";
     ATTRIBUTE Location OF \HumTemp_I2C:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(11)]";
     ATTRIBUTE Location OF \HumTemp_I2C:SCB\ : LABEL IS "F(SCB,2)";
@@ -677,9 +677,9 @@ BEGIN
             ff_div_3 => \SPI:Net_847_ff2\,
             ff_div_4 => \HumTemp_I2C:Net_847_ff3\,
             ff_div_11 => Net_4214_ff13,
-            ff_div_12 => Net_4214_ff11,
-            ff_div_13 => Net_4214_ff12,
-            ff_div_14 => Net_4214_ff14,
+            ff_div_12 => Net_4214_ff14,
+            ff_div_13 => Net_4214_ff11,
+            ff_div_14 => Net_4214_ff12,
             ff_div_10 => \ADC:Net_1845_ff10\);
 
     Output_Pin_0:logicalport

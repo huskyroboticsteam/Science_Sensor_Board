@@ -1,6 +1,12 @@
 # CAN
-# 2025-05-08 01:53:38Z
+# 2025-05-10 21:53:27Z
 
+# IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
+dont_use_io iocell 0 4
+# IO_5@[IOP=(0)][IoId=(5)] is reserved: KhzXtalEnabled
+dont_use_io iocell 0 5
+# IO_6@[IOP=(0)][IoId=(6)] is reserved: ExtClkEnabled
+dont_use_io iocell 0 6
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
@@ -15,9 +21,9 @@ set_io "\CapSense:Sns(0)\" iocell 4 3
 set_io "\CapSense:Sns(1)\" iocell 7 0
 set_io "IDAC_8bit_Out(0)" iocell 5 2
 set_io "IDAC_7bit_In(0)" iocell 5 3
-set_io "ADC_0(0)" iocell 2 5
-set_io "ADC_1P(0)" iocell 2 0
-set_io "ADC_1M(0)" iocell 2 1
+set_io "ADC_0(0)" iocell 2 4
+set_io "ADC_1P(0)" iocell 2 6
+set_io "ADC_1M(0)" iocell 2 7
 set_io "ADC_2(0)" iocell 1 5
 set_io "ADC_3(0)" iocell 1 0
 set_io "\HumTemp_I2C:sda(0)\" iocell 5 1

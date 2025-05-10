@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file CyLib.c
-* \version 6.0
+* \version 6.10
 *
 * \brief Provides a system API for the Clocking, Interrupts, SysTick, and
 * Voltage Detect.
@@ -10,7 +10,7 @@
 *
 ********************************************************************************
 * \copyright
-* Copyright 2010-2020, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2010-2021, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -219,7 +219,7 @@ void CySysClkImoStop(void)
 
             #endif  /* (CY_IP_SRSSV2) */
 
-            CY_SYS_CLK_IMO_TRIM1_REG = 0;
+            CY_SYS_CLK_IMO_TRIM1_REG = 0u;
 
             /* For the WCO locking mode, the IMO gain needs to be CY_SYS_CLK_IMO_TRIM4_GAIN */
             #if(CY_IP_SRSSV2)
@@ -1626,7 +1626,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
                 wDTrim = (maxAmplitude < CY_SYS_CLK_ECO_TRIM_BOUNDARY) ? ((maxAmplitude/200u) - 2u) : 3u;
 
                 /* Calculate amplifier gain trim. */
-                gmMin = (uint32) (((((CY_SYS_CLK_ECO_GMMIN_COEFFICIENT * freq * cLoad) / 1000) * ((freq * cLoad * esr) / 1000)) / 100u) / 4500000u);
+                gmMin = (uint32) (((((CY_SYS_CLK_ECO_GMMIN_COEFFICIENT * freq * cLoad) / 1000u) * ((freq * cLoad * esr) / 1000u)) / 100u) / 4500000u);
                 if (gmMin > 3u)
                 {
                     returnStatus = CYRET_BAD_PARAM;
@@ -1723,7 +1723,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
         uint8  interruptState;
         cystatus returnStatus = CYRET_SUCCESS;
 
-        if((pll < CY_IP_PLL_NR) && (wait <= 1u))
+        if((pll < (uint32)CY_IP_PLL_NR) && (wait <= 1u))
         {
             interruptState = CyEnterCriticalSection();
 
@@ -1789,7 +1789,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
         uint8  interruptState;
         uint32 returnStatus;
 
-        CYASSERT(pll < CY_IP_PLL_NR);
+        CYASSERT(pll < (uint32)CY_IP_PLL_NR);
 
         interruptState = CyEnterCriticalSection();
 
@@ -1825,7 +1825,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
     {
         uint8  interruptState;
 
-        if (pll < CY_IP_PLL_NR)
+        if (pll < (uint32)CY_IP_PLL_NR)
         {
             interruptState = CyEnterCriticalSection();
             CY_SYS_CLK_PLL_BASE.pll[pll].config &= (uint32) ~(CY_SYS_CLK_PLL_CONFIG_ISOLATE | CY_SYS_CLK_PLL_CONFIG_ENABLE);
@@ -1877,7 +1877,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
 
         tmp = CySysClkPllConfigChangeAllowed(pll);
 
-        if ((pll < CY_IP_PLL_NR) &&
+        if ((pll < (uint32)CY_IP_PLL_NR) &&
             (feedback  >= CY_SYS_CLK_PLL_CONFIG_FEEDBACK_DIV_MIN)  && (feedback  <= CY_SYS_CLK_PLL_CONFIG_FEEDBACK_DIV_MAX)  &&
             (reference >= CY_SYS_CLK_PLL_CONFIG_REFERENCE_DIV_MIN) && (reference <= CY_SYS_CLK_PLL_CONFIG_REFERENCE_DIV_MAX) &&
             (current   >= CY_SYS_CLK_PLL_CONFIG_ICP_SEL_MIN )      && (current   <= CY_SYS_CLK_PLL_CONFIG_ICP_SEL_MAX) &&
@@ -1941,7 +1941,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
 
         interruptState = CyEnterCriticalSection();
 
-        if ((pll < CY_IP_PLL_NR) && (bypass <= CY_SYS_PLL_BYPASS_PLL_OUT))
+        if ((pll < (uint32)CY_IP_PLL_NR) && (bypass <= CY_SYS_PLL_BYPASS_PLL_OUT))
         {
             regTmp  = CY_SYS_CLK_PLL_BASE.pll[pll].config & (uint32) ~CY_SYS_CLK_PLL_CONFIG_BYPASS_SEL_MASK;
             regTmp |=  (uint32)(bypass << CY_SYS_CLK_PLL_CONFIG_BYPASS_SEL_SHIFT);
@@ -1968,7 +1968,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
         uint32 returnValue;
         uint8  interruptState;
 
-        CYASSERT(pll < CY_IP_PLL_NR);
+        CYASSERT(pll < (uint32)CY_IP_PLL_NR);
 
         interruptState = CyEnterCriticalSection();
 
@@ -2111,7 +2111,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
 
         tmp = CySysClkPllConfigChangeAllowed(pll);
 
-        if ((pll < CY_IP_PLL_NR) &&
+        if ((pll < (uint32)CY_IP_PLL_NR) &&
             (inputFreq  >= CY_SYS_CLK_PLL_INPUT_FREQ_MIN )  && (inputFreq  <= CY_SYS_CLK_PLL_INPUT_FREQ_MAX) &&
             (pllFreq >= CY_SYS_CLK_PLL_OUTPUT_FREQ_MIN ) && (pllFreq <= CY_SYS_CLK_PLL_OUTPUT_FREQ_MAX) &&
             (divider <= CY_SYS_PLL_OUTPUT_DIV8) &&
@@ -2201,7 +2201,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
 
         interruptState = CyEnterCriticalSection();
 
-        if (pll < CY_IP_PLL_NR)
+        if (pll < (uint32)CY_IP_PLL_NR)
         {
             #if(CY_IP_SRSSV2)
                 regTmp = CY_SYS_CLK_SELECT_REG & (uint32) ~CY_SYS_CLK_SELECT_PLL_MASK(pll);
@@ -2271,7 +2271,7 @@ void CySysClkWriteSysclkDiv(uint32 divider)
 
         tmp = CySysClkPllConfigChangeAllowed(pll);
 
-        if ((pll < CY_IP_PLL_NR) && (CYRET_SUCCESS == tmp) && (divider <= CY_SYS_PLL_OUTPUT_DIV8))
+        if ((pll < (uint32)CY_IP_PLL_NR) && (CYRET_SUCCESS == tmp) && (divider <= CY_SYS_PLL_OUTPUT_DIV8))
         {
             tmpReg  = CY_SYS_CLK_PLL_BASE.pll[pll].config & (uint32) ~(CY_SYS_CLK_PLL_CONFIG_OUTPUT_DIV_MASK);
             tmpReg |= ((divider << CY_SYS_CLK_PLL_CONFIG_OUTPUT_DIV_SHIFT) & CY_SYS_CLK_PLL_CONFIG_OUTPUT_DIV_MASK);

@@ -1,5 +1,5 @@
 -- Project:   CAN
--- Generated: 05/07/2025 18:53:38
+-- Generated: 05/10/2025 14:53:27
 -- PSoC Creator  4.4
 
 ENTITY CAN IS
@@ -239,11 +239,11 @@ ARCHITECTURE __DEFAULT__ OF CAN IS
     ATTRIBUTE lib_model OF IDAC_7bit_In(0) : LABEL IS "iocell15";
     ATTRIBUTE Location OF IDAC_7bit_In(0) : LABEL IS "P5[3]";
     ATTRIBUTE lib_model OF ADC_0(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF ADC_0(0) : LABEL IS "P2[5]";
+    ATTRIBUTE Location OF ADC_0(0) : LABEL IS "P2[4]";
     ATTRIBUTE lib_model OF ADC_1P(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF ADC_1P(0) : LABEL IS "P2[0]";
+    ATTRIBUTE Location OF ADC_1P(0) : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF ADC_1M(0) : LABEL IS "iocell18";
-    ATTRIBUTE Location OF ADC_1M(0) : LABEL IS "P2[1]";
+    ATTRIBUTE Location OF ADC_1M(0) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF ADC_2(0) : LABEL IS "iocell19";
     ATTRIBUTE Location OF ADC_2(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF ADC_3(0) : LABEL IS "iocell20";
