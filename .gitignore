@@ -2,3 +2,5 @@
 /.vscode/
 
 **/*/codegentemp/
+
+**/*/CortexM0/
