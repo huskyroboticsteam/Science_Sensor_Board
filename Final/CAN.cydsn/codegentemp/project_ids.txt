@@ -1,6 +1,0 @@
-C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\CAN.cyprj|84cafcd0-b3fa-4446-b4f0-3bc4a2dbbfb7
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b6b0160d-b513-46d2-826e-9b04a64ff27c
-C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|55713ca9-4e4e-4a85-a90a-cc1498f6285a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|26e9ba84-1749-4e26-ac60-d14e722c0822
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cc0f8087-841c-4178-83ae-924dfcc4eb3f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|60714652-8f7d-4b6b-b09d-3fa1a0271896
