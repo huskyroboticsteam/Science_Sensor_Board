@@ -21,6 +21,7 @@
 #include "HindsightCAN/Port.h"
 #include "HindsightCAN/CANScience.h"
 #include "HindsightCAN/CANCommon.h"
+#include "DigitalPeripheral.h"
 
 CAN_RX_CFG rxMailbox;
 
@@ -35,6 +36,7 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
     uint8_t sender_DG = GetSenderDeviceGroupCode(receivedPacket);
     uint8_t sender_SN = GetSenderDeviceSerialNumber(receivedPacket);
     int32_t data = 0;
+    uint8_t digitalSetValue = 0;
     int err = 0;
     float temp, hum;
     bool status;
@@ -91,16 +93,20 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             break;
         
         case(ID_DIGITAL_SET):
-            switch (GetDigitalSetAddress(receivedPacket))
+            digitalSetValue = GetDigitalSetValueFromPacket(receivedPacket);
+            switch (GetDigitalSetAddrFromPacket(receivedPacket))
             {
                 case(SCIENCE_SENSOR_LASER):
                     Print("laser");
+                    setLaser(digitalSetValue);
                     break;
                 case(SCIENCE_SENSOR_WATER_PUMP_1):
                     Print("water pump 1");
+                    setWaterPump1(digitalSetValue);
                     break;
                 case(SCIENCE_SENSOR_WATER_PUMP_2):
                     Print("water pump 2");
+                    setWaterPump2(digitalSetValue);
                     break;
                 default:
                     Print("Default");

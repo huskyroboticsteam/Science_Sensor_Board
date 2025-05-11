@@ -6100,45 +6100,6 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" hidden="false" />
     </register>
   </block>
-  <block name="ADC_3_Buffer" BASE="0x0" SIZE="0x0" desc="OpAmp" visible="true" hidden="false">
-    <block name="cy_analog_noconnect_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_analog_virtualmux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_analog_virtualmux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_psoc4_abuf" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="CTBM_CTRL" address="0x40300000" bitWidth="32" desc="Global CTB IP and power control" hidden="false">
-      <field name="DEEPSLEEP_ON" from="30" to="30" access="RW" resetVal="" desc="Selects component behavior in DeepSleep power mode" hidden="false">
-        <value name="DISABLE" value="0" desc="CTB IP disabled off during DeepSleep power mode" />
-        <value name="ENABLE" value="1" desc="CTB IP remains enabled during DeepSleep power mode (if ENABLED=1)" />
-      </field>
-      <field name="ENABLED" from="31" to="31" access="RW" resetVal="" desc="Selects component behavior in DeepSleep power mode" hidden="false">
-        <value name="DISABLE" value="0" desc="CTB IP disabled (put analog in power down, open all switches)" />
-        <value name="ENABLE" value="1" desc="CTB IP enabledCTB IP enabled" />
-      </field>
-    </register>
-    <register name="OA_RES_CTRL" address="0x40300004" bitWidth="32" desc="Opamp and resistor control" hidden="false">
-      <field name="OA_PWR_MODE" from="1" to="0" access="RW" resetVal="" desc="Selects power for opamp" hidden="false">
-        <value name="OFF" value="00" desc="Off" />
-        <value name="LOW" value="01" desc="Low power" />
-        <value name="MED" value="10" desc="Medium power" />
-        <value name="HIGH" value="11" desc="High power" />
-      </field>
-      <field name="OA0_DRIVE_STR_SEL" from="2" to="2" access="RW" resetVal="" desc="Opamp output strenght select" hidden="false">
-        <value name="1x" value="0" desc="Internal only" />
-        <value name="10x" value="1" desc="Output to pin" />
-      </field>
-      <field name="OA_PUMP_EN" from="11" to="11" access="RW" resetVal="" desc="Selects pump" hidden="false">
-        <value name="DISABLE" value="0" desc="Pump disabled" />
-        <value name="ENABLE" value="1" desc="Pump enabled" />
-      </field>
-    </register>
-    <register name="OA_COMP_TRIM" address="0x40300F08" bitWidth="32" desc="Opamp Compenation Capacitor Trim" hidden="false">
-      <field name="OA_COMP_TRIM" from="1" to="0" access="RW" resetVal="" desc="Opamp Compenation Capacitor Trim" hidden="false">
-        <value name="HIGH_SPEED" value="01" desc="High Speed" />
-        <value name="BALANCED" value="10" desc="Balanced" />
-        <value name="HIGH_STABILITY" value="11" desc="High Stability" />
-      </field>
-    </register>
-  </block>
   <block name="CompM_0" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="CompP_0" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Comp_0" BASE="0x0" SIZE="0x0" desc="Low Power Comparator" visible="true" hidden="false">
@@ -6308,16 +6269,48 @@
   <block name="Input_0_Int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Input_Pin_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LPCompInt" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="IDAC_8bit" BASE="0x0" SIZE="0x0" desc="IDAC" visible="true" hidden="false">
-    <block name="cy_psoc4_idac" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="CSD_IDAC_POLARITY" address="0x40290004" bitWidth="32" desc=" CSD IDAC Polarity" hidden="false" />
-    <register name="CSD_IDAC" address="0x40290008" bitWidth="32" desc=" CSD IDAC register" hidden="false" />
-    <register name="CSD_TRIM1" address="0x4029FF00" bitWidth="32" desc=" CSD IDAC TRIM1" hidden="false" />
-    <register name="CSD_TRIM2" address="0x4029FF04" bitWidth="32" desc=" CSD IDAC TRIM2" hidden="false" />
+  <block name="Laser" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="WaterPump1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="WaterPump2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="ADC_3_Buffer" BASE="0x0" SIZE="0x0" desc="OpAmp" visible="true" hidden="false">
+    <block name="cy_analog_noconnect_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_analog_virtualmux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_analog_virtualmux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_psoc4_abuf" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="CTBM_CTRL" address="0x40300000" bitWidth="32" desc="Global CTB IP and power control" hidden="false">
+      <field name="DEEPSLEEP_ON" from="30" to="30" access="RW" resetVal="" desc="Selects component behavior in DeepSleep power mode" hidden="false">
+        <value name="DISABLE" value="0" desc="CTB IP disabled off during DeepSleep power mode" />
+        <value name="ENABLE" value="1" desc="CTB IP remains enabled during DeepSleep power mode (if ENABLED=1)" />
+      </field>
+      <field name="ENABLED" from="31" to="31" access="RW" resetVal="" desc="Selects component behavior in DeepSleep power mode" hidden="false">
+        <value name="DISABLE" value="0" desc="CTB IP disabled (put analog in power down, open all switches)" />
+        <value name="ENABLE" value="1" desc="CTB IP enabledCTB IP enabled" />
+      </field>
+    </register>
+    <register name="OA_RES_CTRL" address="0x40300004" bitWidth="32" desc="Opamp and resistor control" hidden="false">
+      <field name="OA_PWR_MODE" from="1" to="0" access="RW" resetVal="" desc="Selects power for opamp" hidden="false">
+        <value name="OFF" value="00" desc="Off" />
+        <value name="LOW" value="01" desc="Low power" />
+        <value name="MED" value="10" desc="Medium power" />
+        <value name="HIGH" value="11" desc="High power" />
+      </field>
+      <field name="OA0_DRIVE_STR_SEL" from="2" to="2" access="RW" resetVal="" desc="Opamp output strenght select" hidden="false">
+        <value name="1x" value="0" desc="Internal only" />
+        <value name="10x" value="1" desc="Output to pin" />
+      </field>
+      <field name="OA_PUMP_EN" from="11" to="11" access="RW" resetVal="" desc="Selects pump" hidden="false">
+        <value name="DISABLE" value="0" desc="Pump disabled" />
+        <value name="ENABLE" value="1" desc="Pump enabled" />
+      </field>
+    </register>
+    <register name="OA_COMP_TRIM" address="0x40300F08" bitWidth="32" desc="Opamp Compenation Capacitor Trim" hidden="false">
+      <field name="OA_COMP_TRIM" from="1" to="0" access="RW" resetVal="" desc="Opamp Compenation Capacitor Trim" hidden="false">
+        <value name="HIGH_SPEED" value="01" desc="High Speed" />
+        <value name="BALANCED" value="10" desc="Balanced" />
+        <value name="HIGH_STABILITY" value="11" desc="High Stability" />
+      </field>
+    </register>
   </block>
-  <block name="IDAC_7bit_In" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="IDAC_8bit_Out" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_2_Buffer" BASE="0x0" SIZE="0x0" desc="OpAmp" visible="true" hidden="false">
     <block name="cy_analog_noconnect_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_analog_virtualmux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -6358,14 +6351,6 @@
     </register>
   </block>
   <block name="ADC_EOC_Int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="IDAC_7bit" BASE="0x0" SIZE="0x0" desc="IDAC" visible="true" hidden="false">
-    <block name="cy_psoc4_idac" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="CSD_IDAC_POLARITY" address="0x40290004" bitWidth="32" desc=" CSD IDAC Polarity" hidden="false" />
-    <register name="CSD_IDAC" address="0x40290008" bitWidth="32" desc=" CSD IDAC register" hidden="false" />
-    <register name="CSD_TRIM1" address="0x4029FF00" bitWidth="32" desc=" CSD IDAC TRIM1" hidden="false" />
-    <register name="CSD_TRIM2" address="0x4029FF04" bitWidth="32" desc=" CSD IDAC TRIM2" hidden="false" />
-  </block>
   <block name="Wakeup_Pin_Int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Wakeup_Pin" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LPComp_Int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

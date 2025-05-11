@@ -32751,180 +32751,6 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>ADC_3_Buffer</name>
-      <description>OpAmp</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>CTBM_CTRL</name>
-          <description>Global CTB IP and power control</description>
-          <addressOffset>0x40300000</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DEEPSLEEP_ON</name>
-              <description>Selects component behavior in DeepSleep power mode</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>CTB IP disabled off during DeepSleep power mode</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>CTB IP remains enabled during DeepSleep power mode (if ENABLED=1)</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>ENABLED</name>
-              <description>Selects component behavior in DeepSleep power mode</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>CTB IP disabled (put analog in power down, open all switches)</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>CTB IP enabledCTB IP enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>OA_RES_CTRL</name>
-          <description>Opamp and resistor control</description>
-          <addressOffset>0x40300004</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>OA_PWR_MODE</name>
-              <description>Selects power for opamp</description>
-              <lsb>0</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>OFF</name>
-                  <description>Off</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <description>Low power</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MED</name>
-                  <description>Medium power</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <description>High power</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>OA0_DRIVE_STR_SEL</name>
-              <description>Opamp output strenght select</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>Cy1x</name>
-                  <description>Internal only</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Cy10x</name>
-                  <description>Output to pin</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>OA_PUMP_EN</name>
-              <description>Selects pump</description>
-              <lsb>11</lsb>
-              <msb>11</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Pump disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Pump enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>OA_COMP_TRIM</name>
-          <description>Opamp Compenation Capacitor Trim</description>
-          <addressOffset>0x40300F08</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>OA_COMP_TRIM</name>
-              <description>Opamp Compenation Capacitor Trim</description>
-              <lsb>0</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>HIGH_SPEED</name>
-                  <description>High Speed</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>BALANCED</name>
-                  <description>Balanced</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH_STABILITY</name>
-                  <description>High Stability</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
       <name>Comp_0</name>
       <description>Low Power Comparator</description>
       <baseAddress>0x0</baseAddress>
@@ -33751,8 +33577,8 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>IDAC_8bit</name>
-      <description>IDAC</description>
+      <name>ADC_3_Buffer</name>
+      <description>OpAmp</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
@@ -33761,40 +33587,166 @@
       </addressBlock>
       <registers>
         <register>
-          <name>CSD_IDAC_POLARITY</name>
-          <description> CSD IDAC Polarity</description>
-          <addressOffset>0x40290004</addressOffset>
+          <name>CTBM_CTRL</name>
+          <description>Global CTB IP and power control</description>
+          <addressOffset>0x40300000</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DEEPSLEEP_ON</name>
+              <description>Selects component behavior in DeepSleep power mode</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISABLE</name>
+                  <description>CTB IP disabled off during DeepSleep power mode</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLE</name>
+                  <description>CTB IP remains enabled during DeepSleep power mode (if ENABLED=1)</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ENABLED</name>
+              <description>Selects component behavior in DeepSleep power mode</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISABLE</name>
+                  <description>CTB IP disabled (put analog in power down, open all switches)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLE</name>
+                  <description>CTB IP enabledCTB IP enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>CSD_IDAC</name>
-          <description> CSD IDAC register</description>
-          <addressOffset>0x40290008</addressOffset>
+          <name>OA_RES_CTRL</name>
+          <description>Opamp and resistor control</description>
+          <addressOffset>0x40300004</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>OA_PWR_MODE</name>
+              <description>Selects power for opamp</description>
+              <lsb>0</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>OFF</name>
+                  <description>Off</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Low power</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MED</name>
+                  <description>Medium power</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>High power</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OA0_DRIVE_STR_SEL</name>
+              <description>Opamp output strenght select</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>Cy1x</name>
+                  <description>Internal only</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Cy10x</name>
+                  <description>Output to pin</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OA_PUMP_EN</name>
+              <description>Selects pump</description>
+              <lsb>11</lsb>
+              <msb>11</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISABLE</name>
+                  <description>Pump disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLE</name>
+                  <description>Pump enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>CSD_TRIM1</name>
-          <description> CSD IDAC TRIM1</description>
-          <addressOffset>0x4029FF00</addressOffset>
+          <name>OA_COMP_TRIM</name>
+          <description>Opamp Compenation Capacitor Trim</description>
+          <addressOffset>0x40300F08</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CSD_TRIM2</name>
-          <description> CSD IDAC TRIM2</description>
-          <addressOffset>0x4029FF04</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>OA_COMP_TRIM</name>
+              <description>Opamp Compenation Capacitor Trim</description>
+              <lsb>0</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>HIGH_SPEED</name>
+                  <description>High Speed</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BALANCED</name>
+                  <description>Balanced</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH_STABILITY</name>
+                  <description>High Stability</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
         </register>
       </registers>
     </peripheral>
@@ -33969,54 +33921,6 @@
               </enumeratedValues>
             </field>
           </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>IDAC_7bit</name>
-      <description>IDAC</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>CSD_IDAC_POLARITY</name>
-          <description> CSD IDAC Polarity</description>
-          <addressOffset>0x40290004</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CSD_IDAC</name>
-          <description> CSD IDAC register</description>
-          <addressOffset>0x40290008</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CSD_TRIM1</name>
-          <description> CSD IDAC TRIM1</description>
-          <addressOffset>0x4029FF00</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CSD_TRIM2</name>
-          <description> CSD IDAC TRIM2</description>
-          <addressOffset>0x4029FF04</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
         </register>
       </registers>
     </peripheral>
