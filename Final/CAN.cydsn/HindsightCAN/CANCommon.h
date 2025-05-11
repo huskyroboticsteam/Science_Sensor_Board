@@ -75,6 +75,16 @@ void AssembleRGBColorPacket(CANPacket *packetToAssemble,
     uint8_t G,
     uint8_t B);
 
+void AssembleDigitalSetPacket(CANPacket *packetToAssemble,
+    uint8_t targetGroup,
+    uint8_t targetSerial,
+    uint8_t pinAddr,
+    uint8_t setValue);
+
+uint8_t GetDigitalSetAddrFromPacket(CANPacket *packet);
+
+uint8_t GetDigitalSetValueFromPacket(CANPacket *packet);
+
 // Common Mode Packet IDs
 #define ID_ESTOP                        (uint8_t) 0xF0
 #define ID_HEARTBEAT                    (uint8_t) 0xF1
@@ -86,6 +96,7 @@ void AssembleRGBColorPacket(CANPacket *packetToAssemble,
 #define ID_LED_COLOR                    (uint8_t) 0xF7
 #define ID_CHIP_TYPE_PULL               (uint8_t) 0xF8
 #define ID_CHIP_TYPE_REP                (uint8_t) 0xF9
+#define ID_DIGITAL_SET                  (uint8_t) 0xFA
 
 // DLC Common Mode Packets 
 #define DLC_ESTOP                        (uint8_t) 0x04
@@ -98,6 +109,7 @@ void AssembleRGBColorPacket(CANPacket *packetToAssemble,
 #define DLC_LED_COLOR                    (uint8_t) 0x06
 #define DLC_CHIP_TYPE_PULL               (uint8_t) 0x04
 #define DLC_CHIP_TYPE_REP                (uint8_t) 0x04
+#define DLC_DIGITAL_SET                  (uint8_t) 0x03
 
 //Packet priorities
 #define PRIO_CHIP_TYPE_REP               PACKET_PRIORITY_NORMAL

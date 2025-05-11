@@ -258,3 +258,26 @@ void AssembleRGBColorPacket(CANPacket *packetToAssemble,
     packetToAssemble->data[nextByte + 2] = B;
     packetToAssemble->data[nextByte + 3] = addrLED;   
 }
+
+void AssembleDigitalSetPacket(CANPacket *packetToAssemble,
+    uint8_t targetGroup,
+    uint8_t targetSerial,
+    uint8_t pinAddr,
+    uint8_t setValue)
+{
+    packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+    packetToAssemble->dlc = DLC_DIGITAL_SET;
+    int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_DIGITAL_SET);
+    packetToAssemble->data[nextByte] = pinAddr;
+    packetToAssemble->data[nextByte + 1] = setValue;   
+}
+
+uint8_t GetDigitalSetAddrFromPacket(CANPacket *packet)
+{
+    return packet->data[1];
+}
+
+uint8_t GetDigitalSetValueFromPacket(CANPacket *packet)
+{
+    return packet->data[2];
+}

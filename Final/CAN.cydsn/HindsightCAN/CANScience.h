@@ -27,6 +27,21 @@
  */
 #define ID_SCIENCE_CONT_SERVO_POWER_SET ((uint8_t) 0x0E)
 
+/**
+  Sensor board address for the laser control.
+ */
+#define SCIENCE_SENSOR_LASER ((uint8_t) 0x01)
+
+/**
+  Sensor board address for the water pump 1 control.
+ */
+#define SCIENCE_SENSOR_WATER_PUMP_1 ((uint8_t) 0x02)
+
+/**
+  Sensor board address for the water pump 2 control.
+ */
+#define SCIENCE_SENSOR_WATER_PUMP_2 ((uint8_t) 0x03)
+
 #include "CANPacket.h"
 
 /**

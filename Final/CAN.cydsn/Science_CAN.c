@@ -19,6 +19,8 @@
 #include "Sensors.h"
 #include "Science_CAN.h"
 #include "HindsightCAN/Port.h"
+#include "HindsightCAN/CANScience.h"
+#include "HindsightCAN/CANCommon.h"
 
 CAN_RX_CFG rxMailbox;
 
@@ -87,7 +89,25 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
                 SendCANPacket(packetToSend);
             }
             break;
-            
+        
+        case(ID_DIGITAL_SET):
+            switch (GetDigitalSetAddress(receivedPacket))
+            {
+                case(SCIENCE_SENSOR_LASER):
+                    Print("laser");
+                    break;
+                case(SCIENCE_SENSOR_WATER_PUMP_1):
+                    Print("water pump 1");
+                    break;
+                case(SCIENCE_SENSOR_WATER_PUMP_2):
+                    Print("water pump 2");
+                    break;
+                default:
+                    Print("Default");
+                    err = ERROR_INVALID_ARG;
+                    break;
+            }   
+
         default: //recieved Packet with non-valid ID
             return ERROR_INVALID_PACKET;
     }
