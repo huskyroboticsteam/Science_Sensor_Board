@@ -112,7 +112,7 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
                     Print("Default");
                     err = ERROR_INVALID_ARG;
                     break;
-            }   
+            }
 
         default: //recieved Packet with non-valid ID
             return ERROR_INVALID_PACKET;

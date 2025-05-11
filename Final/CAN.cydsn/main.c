@@ -73,7 +73,7 @@ int main(void)
             DebugPrint(UART_UartGetByte());
         }
         */
-        CyDelay(1000);
+        CyDelay(100);
     }
 }
 
