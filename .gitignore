@@ -2,8 +2,9 @@
 /.vscode/
 
 **/*/codegentemp/
-
 **/*/CortexM0/
+**/*/Generated_Source/
+**/*/Export/
 
 *.html
 *.log
