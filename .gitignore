@@ -4,3 +4,7 @@
 **/*/codegentemp/
 
 **/*/CortexM0/
+
+*.html
+*.log
+*.rpt
