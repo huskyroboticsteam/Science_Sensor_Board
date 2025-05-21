@@ -1,6 +1,0 @@
-C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\testing_sensors\CO2 PSoC\CO2\CO2.cydsn\CO2.cyprj|500c9726-b4ee-4e83-83a4-30a71e4e8b5c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f8d66295-690c-452d-a13b-4749f0ebd5a1
-C:\Users\becca\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|c52a3820-f56a-4b82-b7a9-f243984a33eb
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8926c242-4c79-415c-b449-1b7d7842be5a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|be91d62b-ca69-46d3-b1bd-28d1a697f0d0
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e656a5aa-6d1a-4e46-b051-4fb2e61263b3
