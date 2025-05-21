@@ -12,7 +12,7 @@
 
 #define REACTION_VOLTAGE          (0.030f)          
 #define ADC_COUNTS                (4095.0f)  /* 12-bit */
-#define VREF                      (5.0f)     /* volts */
+#define VREF                      (3.3f)     /* volts */
 
 /* CO2 curve: { x = log10(ppm), y = sensor voltage @ that ppm, slope } */
 static float CO2Curve[3] = {
@@ -35,7 +35,7 @@ int main(void)
     UART_Start();             /* Initialize UART at 9600bps */ 
     ADC_Start();          /* Initialize SAR ADC */ 
     
-    UART_PutString("MG-811 Demonstration\r\n");
+    UART_UartPutString("MG-811 Demonstration\r\n");
     
     for (;;)
     {
@@ -50,23 +50,13 @@ int main(void)
                 volts,
                 (ppm < 0) ? "<" : "",
                 (ppm < 0) ? 400 : ppm);
-        UART_PutString(buf);
-        
-        /* 4) Read BOOL_PIN and print its state */
-        if (BOOL_PIN_Read() == 1)
-        {
-            UART_PutString("=====BOOL is HIGH======\r\n");
-        }
-        else
-        {
-            UART_PutString("=====BOOL is LOW=======\r\n");
-        }
+        UART_UartPutString(buf);
         
         CyDelay(500);
     }
 }
 
-
+char txData[200];
 /**
  * @brief  Take multiple ADC readings, average, and convert to voltage.
  * @return Sensor voltage in volts.
@@ -83,8 +73,10 @@ float MG_ReadVoltage(void)
     {
         ADC_StartConvert();
         ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
-        sample = ADC_GetResult16();
+        sample = ADC_GetResult16(0);
         sum   += sample;
+        sprintf(txData, "Sample: %d\n\r", sample);
+        UART_UartPutString(txData);
         CyDelay(READ_SAMPLE_INTERVAL);
     }
     
