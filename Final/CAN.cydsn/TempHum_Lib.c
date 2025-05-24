@@ -17,6 +17,17 @@ static uint8_t crc8(const uint8_t *data, int len) {
     return crc;
 }
 
+bool SHT31_Init() {
+    uint8_t status = 0;
+    HumTemp_I2C_Start();
+    
+    writeCommand(SHT31_SOFTRESET);
+    
+    CyDelay(10);
+
+    return (SHT31_ReadStatus() != 0xFFFF);
+}
+
 static bool writeCommand(uint16_t command) {
     
     uint8_t cmd[2];
@@ -64,18 +75,6 @@ static bool writeCommand(uint16_t command) {
     HumTemp_I2C_I2CMasterSendStop(TIMEOUT);
     
     return true;
-}
-
-
-bool SHT31_Init() {
-    uint8_t status = 0;
-    HumTemp_I2C_Start();
-    
-    writeCommand(SHT31_SOFTRESET);
-    
-    CyDelay(10);
-
-    return (SHT31_ReadStatus() != 0xFFFF);
 }
 
 uint16_t SHT31_ReadStatus(void) {

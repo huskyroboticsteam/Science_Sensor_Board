@@ -54,13 +54,15 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
         case(ID_TELEMETRY_PULL):            
             switch(DecodeTelemetryType(receivedPacket))
             {                
-                case(PACKET_TELEMETRY_SENSOR1):
+                case(PACKET_TELEMETRY_SENSOR1): //
                     data = getTemp();
-                    Print("temp");
+                    Print("temp"); 
                     break;
                 case(PACKET_TELEMETRY_SENSOR2):
-                    Print("sensor2");
-                    data = 0; // TODO
+                    Print("CO2");
+                    CyDelay(500);
+                    data = getCO2();
+                    CyDelay(500);
                     break;
                 case(PACKET_TELEMETRY_SENSOR3):
                     Print("hum");
@@ -92,11 +94,11 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             }
             break;
         
-        case(ID_DIGITAL_SET):
+        case(ID_DIGITAL_SET): //CAN format is 1 07 00 FA XX 0/1
             digitalSetValue = GetDigitalSetValueFromPacket(receivedPacket);
             switch (GetDigitalSetAddrFromPacket(receivedPacket))
             {
-                case(SCIENCE_SENSOR_LASER):
+                case(SCIENCE_SENSOR_LASER): 
                     Print("laser");
                     setLaser(digitalSetValue);
                     break;
@@ -130,20 +132,6 @@ void PrintCanPacket(CANPacket packet){
     sprintf(txData,"ID:%x %x %x\r\n",packet.id >> 10, 
         (packet.id >> 6) & 0xF , packet.id & 0x3F);
     Print(txData);
-}
-
-void InitCANN() {
-    CAN_Start(); // must name CAN Top Design block as "CAN"
-    
-    // sets up mailbox to recieve EVERYTHING
-    rxMailbox.rxmailbox = 0;
-    rxMailbox.rxacr = 0x00000000;
-    rxMailbox.rxamr = 0xFFFFFFFF;
-    rxMailbox.rxcmd = CAN_RX_CMD_REG(CAN_RX_MAILBOX_0);
-    CAN_RxBufConfig(&rxMailbox);
-    
-    CAN_GlobalIntEnable();
-    CyIntSetVector(CAN_ISR_NUMBER, CAN_FLAG_ISR);
 }
 
 /* [] END OF FILE */

@@ -17,6 +17,7 @@
 #include "cyapicallbacks.h"
 #include <CAN.h>
 #include "HindsightCAN/CANLibrary.h"
+#include <Sensors.h>
 //#include "HindsightCAN/CANScience.h"
 
 #include <project.h>
@@ -42,38 +43,13 @@ int main(void)
     {
         err = 0;
         
-        /*
-        uint16_t packageID = 0xF5;
-        uint8_t sender_DG = 0x07;
-        uint8_t sender_SN = 0x00;
-        int32_t data = 0;
-        
-        CANPacket p; 
-        
-        p.id = (1|7|0);
-        
-        p.data[0] = 0xF5;
-        p.data[1] = 0x07;
-        p.data[2] = 0x00;
-        p.data[3] = 0x16;
-        
-        if(SendCANPacket(&p) == 0){
-           Print("Sent");
-        }else{
-            Print("Not Sent");
-        }
-        */
         if (!PollAndReceiveCANPacket(&can_recieve)) {
             err = ProcessCAN(&can_recieve, &can_send);
         }
-        
-        
-        /*
-        if (UART_SpiUartGetRxBufferSize()) {
-            DebugPrint(UART_UartGetByte());
-        }
-        */
-        CyDelay(100);
+        sprintf(txData, "%d\n\r", getCO2());
+        UART_UartPutString(txData);
+        //getCO2();
+        CyDelay(1000);
     }
 }
 
@@ -82,6 +58,8 @@ void Initialize(void) {
     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
     
     UART_Start();
+    
+    ADC_Start();          /* Initialize SAR ADC */ 
     
     sprintf(txData, "\r\nHello\r\n");
     Print(txData);

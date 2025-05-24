@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Final\CAN\Header Files\TempHum_Lib.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Final\CAN\Header Files\Sensors.h">
 <ExpandedNodeIds>
 <v>Final</v>
 <v>Final\CAN</v>
@@ -44,6 +44,7 @@
 <v>Final\CAN\Source Files\Science_CAN.c</v>
 <v>Final\CAN\Source Files\Sensors.c</v>
 <v>Final\CAN\Source Files\TempHum_Lib.c</v>
+<v>Final\CAN\Generated_Source</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Final</v>
@@ -60,17 +61,20 @@
 <v>Final\CAN\CAN.cydwr\Flash Security</v>
 <v>Final\CAN\Header Files</v>
 <v>Final\CAN\Header Files\cyapicallbacks.h</v>
+<v>Final\CAN\Header Files\DigitalPeripheral.h</v>
 <v>Final\CAN\Header Files\main.h</v>
 <v>Final\CAN\Header Files\Science_CAN.h</v>
 <v>Final\CAN\Header Files\Sensors.h</v>
 <v>Final\CAN\Header Files\TempHum_Lib.h</v>
 <v>Final\CAN\HindsightCAN</v>
 <v>Final\CAN\Source Files</v>
+<v>Final\CAN\Source Files\DigitalPeripheral.c</v>
 <v>Final\CAN\Source Files\main.c</v>
 <v>Final\CAN\Source Files\Science_CAN.c</v>
 <v>Final\CAN\Source Files\Sensors.c</v>
 <v>Final\CAN\Source Files\TempHum_Lib.c</v>
 <v>Final\CAN\Generated_Source</v>
+<v>Final\CAN\Generated_Source\PSoC4</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -160,6 +164,7 @@
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\DigitalPeripheral.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C_BOOT.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C_I2C.lst</v>
@@ -173,20 +178,14 @@
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C_scl_PM.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C_sda.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\HumTemp_I2C_sda_PM.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_7bit.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_7bit_In.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_7bit_In_PM.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_7bit_PM.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_8bit.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_8bit_Out.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_8bit_Out_PM.lst</v>
-<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\IDAC_8bit_PM.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_0_Int.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_1_Int.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_0_PM.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Input_Pin_1_PM.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Laser.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Laser_PM.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\LPComp_Int.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Output_Pin_0.lst</v>
@@ -249,6 +248,10 @@
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Wakeup_Pin.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Wakeup_Pin_Int.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\Wakeup_Pin_PM.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\WaterPump1.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\WaterPump1_PM.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\WaterPump2.lst</v>
+<v>Final\CAN\CortexM0\ARM_GCC_541\Debug\Listing Files\WaterPump2_PM.lst</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\CAN.elf</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\CAN.hex</v>
 <v>Final\CAN\CortexM0\ARM_GCC_541\Debug\CAN.map</v>
@@ -322,8 +325,6 @@
 <v>Final\CAN\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
 <v>Final\CAN\cy_pins_v2_20</v>
 <v>Final\CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Final\CAN\IDAC_P4_v1_10</v>
-<v>Final\CAN\IDAC_P4_v1_10\IDAC_P4_v1_10.pdf</v>
 <v>Final\CAN\LPComp_P4_v2_20</v>
 <v>Final\CAN\LPComp_P4_v2_20\LPComp_P4_v2_20.pdf</v>
 <v>Final\CAN\OpAmp_P4_v1_20</v>
@@ -351,8 +352,6 @@
 <v>Final\CAN\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
 <v>Final\CAN\cy_pins_v2_20</v>
 <v>Final\CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Final\CAN\IDAC_P4_v1_10</v>
-<v>Final\CAN\IDAC_P4_v1_10\IDAC_P4_v1_10.pdf</v>
 <v>Final\CAN\LPComp_P4_v2_20</v>
 <v>Final\CAN\LPComp_P4_v2_20\LPComp_P4_v2_20.pdf</v>
 <v>Final\CAN\OpAmp_P4_v1_20</v>
@@ -370,13 +369,19 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\CAN.cydsn\main.h" />
-<name v=".\CAN.cydsn\main.c" />
 <name v=".\CAN.cydsn\Science_CAN.h" />
 <name v=".\CAN.cydsn\Science_CAN.c" />
 <name v=".\CAN.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\CAN.cydsn\CAN.cydwr" />
 <name v=".\CAN.cydsn\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
+<name v=".\CAN.cydsn\Sensors.h" />
+<name v=".\CAN.cydsn\Sensors.c" />
+<name v=".\CAN.cydsn\TempHum_Lib.h" />
+<name v=".\CAN.cydsn\DigitalPeripheral.h" />
+<name v=".\CAN.cydsn\DigitalPeripheral.c" />
+<name v=".\CAN.cydsn\TempHum_Lib.c" />
+<name v=".\CAN.cydsn\main.c" />
+<name v=".\CAN.cydsn\main.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -384,7 +389,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1012, 556" SelectedTabbedMdiWindow="b0d99c67-6514-4759-a283-40c0ba9af6a6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\main.h" Guid="171639b3-0d72-42b7-ba2f-ba28f03d9c0b" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\main.c" Guid="b0d99c67-6514-4759-a283-40c0ba9af6a6" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Science_CAN.h" Guid="e99c6ba9-64a6-44b6-a117-ddb07c4c2864" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Science_CAN.c" Guid="e058b784-3177-49f8-b505-6696ec052440" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\TopDesign\TopDesign.cysch" Guid="9f4be3f8-d39f-4eab-b511-51ed5c159a54" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\CAN.cydwr" Guid="9604738d-ad6a-4051-987d-6abf0636b86b" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="eae45a38-bcbb-4658-89ff-d79aaabf6032" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1012, 556" SelectedTabbedMdiWindow="1394d341-d0a9-41ac-ace5-8a477c5d2595"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="56d4da32-e190-448e-947f-c0c001713bfe" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Science_CAN.h" Guid="e99c6ba9-64a6-44b6-a117-ddb07c4c2864" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Science_CAN.c" Guid="e058b784-3177-49f8-b505-6696ec052440" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\TopDesign\TopDesign.cysch" Guid="9f4be3f8-d39f-4eab-b511-51ed5c159a54" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\CAN.cydwr" Guid="9604738d-ad6a-4051-987d-6abf0636b86b" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="eae45a38-bcbb-4658-89ff-d79aaabf6032" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Sensors.h" Guid="a7adf6c7-5d4b-4598-ab94-63bc9c507e7e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\Sensors.c" Guid="5d937e4a-3f36-4d01-a85d-135232b0ac8f" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\TempHum_Lib.h" Guid="d496d415-82ad-442d-afc7-066f1aaf6eaa" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\DigitalPeripheral.h" Guid="53a50940-a2bc-4711-891d-c7fc08f451cf" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\DigitalPeripheral.c" Guid="028ac89f-8f07-41ff-8219-c9fa3c757f5f" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\TempHum_Lib.c" Guid="bea6b09d-0ba1-41d4-b2cf-89013856d78e" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\main.c" Guid="1394d341-d0a9-41ac-ace5-8a477c5d2595" /><DocumentWindow Key="C:\Users\becca\Documents\GitHub\Science_Sensor_Board\Science_Sensor_Board\Final\CAN.cydsn\main.h" Guid="5ceee750-de65-41d6-a697-e74980ce04c3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
