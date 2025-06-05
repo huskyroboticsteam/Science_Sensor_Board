@@ -64,7 +64,7 @@ void Initialize(void) {
     sprintf(txData, "\r\nHello\r\n");
     Print(txData);
     
-    address = 0; // TODO replace with science sensor address
+    address = 6; // TODO replace with science sensor address
     
     SHT31_Init();
     InitCAN(DEVICE_GROUP_SCIENCE, (int) address);
