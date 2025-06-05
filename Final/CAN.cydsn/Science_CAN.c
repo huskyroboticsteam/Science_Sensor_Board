@@ -54,17 +54,17 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
         case(ID_TELEMETRY_PULL):            
             switch(DecodeTelemetryType(receivedPacket))
             {                
-                case(PACKET_TELEMETRY_SENSOR1): //
+                case(1): //PACKET_TELEMETRY_SENSOR1): //
                     data = getTemp();
                     Print("temp"); 
                     break;
-                case(PACKET_TELEMETRY_SENSOR2):
+                case(2)://PACKET_TELEMETRY_SENSOR2):
                     Print("CO2");
                     CyDelay(500);
                     data = getCO2();
                     CyDelay(500);
                     break;
-                case(PACKET_TELEMETRY_SENSOR3):
+                case(3)://PACKET_TELEMETRY_SENSOR3):
                     Print("hum");
                     data = getHum();
                     break;
